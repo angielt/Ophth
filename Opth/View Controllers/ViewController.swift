@@ -20,7 +20,7 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        parse.csv(data:"/Users/Angie/Desktop/test/SmallTes.txt")
+        parse.csv(data:"SmallTes.txt")
         status.printContents()
 
         
