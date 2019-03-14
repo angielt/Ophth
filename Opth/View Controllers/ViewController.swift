@@ -20,8 +20,8 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        parse.csv(data:"SmallTes.txt")
-        status.printContents()
+//        parse.csv(data: "/Users/Itzel/Desktop/SmallTes.txt")
+//        status.printContents()
 
         
         //cardFront.text = status.getFront(index: 0)

@@ -6,9 +6,11 @@
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
-import UIKit
 
-extension Topic {
+// add search here
+
+import UIKit
+import Foundation
 
 //populate the table
 struct cellData {
@@ -18,51 +20,29 @@ struct cellData {
 }
 
 class TableViewController: UITableViewController {
-
-    //var dictTopics = [CFStringGetCString]
-    //var arrayTopics = NSMutableArray()
-    
     var tableViewData = [cellData]()
-    var topic: Topic?
+    var topic:Topic = Topic(topic: "null")
+    var subTopic:Topic = Topic(topic: "null")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //parse.csv(data:"SmallTes.txt")
-        //status.printContents()
+        parse.csv(data: "/Users/Itzel/Desktop/SmallTes.txt")
+        status.printContents()
         
-        //let path = Bundle.main.path(forResource: "SmallTes", ofType: "txt")
+        topic = status.CategoryList[0].topics[0]
         
-        //  var fileContents: String? = "txt"
-        /* do {
-         let fileContents = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-         let readings = fileContents.components(separatedBy: "\t") as [String]
-         for row in readings.dropFirst() {
-         
-         arrayTopics.add(dictTopics)
-         }
-         } catch _ as NSError {
-         print("Error")
-         }*/
-
-        tableViewData = [cellData(opened: false, topic: topic?.topicName, subTopic: topic?.subtopics ?? [])]
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        tableViewData = [cellData(opened: false, topic: topic.topicName, subTopic: topic.subtopics)]
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return tableViewData.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // shows subtopics when topic is clicked
         if tableViewData[section].opened == true {
             return tableViewData[section].subTopic.count + 1
         }
@@ -73,7 +53,7 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dataIndex = indexPath.row - 1
+        //let dataIndex = indexPath.row - 1
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
@@ -90,7 +70,7 @@ class TableViewController: UITableViewController {
     }
     
 
-    // within this function, program so that subtoic goes to card
+    // write within this function in order to make subtopic redirect to card
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // to make sure that subtopic doesn't close up and goes somewhere else
         if indexPath.row == 0 {
@@ -152,5 +132,4 @@ class TableViewController: UITableViewController {
     }
     */
 
-}
 }
