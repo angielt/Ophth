@@ -8,6 +8,7 @@
 
 
 // add search here
+// need category, topic, subtopics all nested within each other
 
 import UIKit
 import Foundation
@@ -15,14 +16,14 @@ import Foundation
 //populate the table
 struct cellData {
     var opened = Bool()
-    var topic: String?
-    var subTopic: [Subtopic]
+    var topic: String
+    var subtopic: [String]
 }
 
 class TableViewController: UITableViewController {
     var tableViewData = [cellData]()
     var topic:Topic = Topic(topic: "null")
-    var subTopic:Topic = Topic(topic: "null")
+    //var subtopic:Subtopic = Subtopic(subtopic: "null")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,11 @@ class TableViewController: UITableViewController {
         status.printContents()
         
         topic = status.CategoryList[0].topics[0]
+        print(topic.subtopics[0].subtopicName)
         
-        tableViewData = [cellData(opened: false, topic: topic.topicName, subTopic: topic.subtopics)]
+        tableViewData = [cellData(opened: false, topic: topic.topicName, subtopic: [topic.subtopics[0].subtopicName])]
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -44,7 +46,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // shows subtopics when topic is clicked
         if tableViewData[section].opened == true {
-            return tableViewData[section].subTopic.count + 1
+            return tableViewData[section].subtopic.count + 1
         }
         else {
             return 1
@@ -53,7 +55,7 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let dataIndex = indexPath.row - 1
+        let dataIndex = indexPath.row - 1
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
@@ -64,7 +66,7 @@ class TableViewController: UITableViewController {
             // use different cell identifier if needed
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            //cell.textLabel?.text = tableViewData[indexPath.section].subTopic[dataIndex]
+            cell.textLabel?.text = tableViewData[indexPath.section].subtopic[dataIndex]
             return cell
         }
     }
