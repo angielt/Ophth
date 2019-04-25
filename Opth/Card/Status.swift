@@ -91,6 +91,7 @@ class Status{
         if(matchExists == false){
             let newSubtopic = Subtopic(subtopic: subtopic)
             if(img != nil){
+                print(img)
                 newSubtopic.addImg(img: img!)
             }
             subtopicTopic.subtopics.append(newSubtopic)

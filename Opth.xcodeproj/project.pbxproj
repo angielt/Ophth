@@ -17,8 +17,10 @@
 		FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6D22387E1D003CBB68 /* Topic.swift */; };
 		FD056E702238811E003CBB68 /* Subtopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6F2238811E003CBB68 /* Subtopic.swift */; };
 		FD056E722238818C003CBB68 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E712238818C003CBB68 /* Card.swift */; };
+		FD0A0BE3227111F800254698 /* CardRevealImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A0BE2227111F800254698 /* CardRevealImageViewController.swift */; };
 		FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */; };
 		FD2B771E221E27E800A41328 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B771D221E27E800A41328 /* Parse.swift */; };
+		FD8A27E622715C08006DA873 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A27E522715C08006DA873 /* SpacedRepetition.swift */; };
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
@@ -67,8 +69,10 @@
 		FD056E6D22387E1D003CBB68 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		FD056E6F2238811E003CBB68 /* Subtopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtopic.swift; sourceTree = "<group>"; };
 		FD056E712238818C003CBB68 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FD0A0BE2227111F800254698 /* CardRevealImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRevealImageViewController.swift; sourceTree = "<group>"; };
 		FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRevealViewController.swift; sourceTree = "<group>"; };
 		FD2B771D221E27E800A41328 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		FD8A27E522715C08006DA873 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
 				BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */,
 				62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */,
+				FD0A0BE2227111F800254698 /* CardRevealImageViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -188,6 +193,7 @@
 				FD056E6D22387E1D003CBB68 /* Topic.swift */,
 				FD056E6F2238811E003CBB68 /* Subtopic.swift */,
 				FD056E712238818C003CBB68 /* Card.swift */,
+				FD8A27E522715C08006DA873 /* SpacedRepetition.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -485,7 +491,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
+				FD0A0BE3227111F800254698 /* CardRevealImageViewController.swift in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
+				FD8A27E622715C08006DA873 /* SpacedRepetition.swift in Sources */,
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
 				FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */,

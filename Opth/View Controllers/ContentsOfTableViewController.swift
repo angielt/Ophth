@@ -16,7 +16,8 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        //parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data: "/Users/Angie/Desktop/test/biggerdata.txt")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

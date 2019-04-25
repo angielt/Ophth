@@ -1,21 +1,23 @@
 //
-//  CardRevealViewController.swift
+//  CardRevealImageViewController.swift
 //  Opth
 //
-//  Created by Angie Ta on 2/18/19.
+//  Created by Angie Ta on 4/24/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
-
-
-
-
 import Foundation
 
 import UIKit
 
-class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class CardRevealImageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    @IBOutlet weak var subtopicImageCollectionView: UICollectionView!
+    
+    @IBOutlet weak var subtopicImagePageControl: UIPageControl!
     
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
+    
+    var imageArr:[UIImage] = []
     //count how many taps
     var counter = 0
     var index = 0
@@ -23,22 +25,22 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     var showInfo = false
     let tap = UITapGestureRecognizer()
     let currentIndex = status.curReviewIndex
-//    subtopicTableView.addGestureRecognizer(tap)
+    //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
     @IBAction func easyOnClick(_ sender: Any) {
         print("easy")
-       // status.curReviewIndex = status.curReviewIndex + 1
+        
         dismiss(animated: true, completion: nil)
     }
     @IBAction func unsureOnClick(_ sender: Any) {
         print("unsure")
-        //status.curReviewIndex = status.curReviewIndex + 1
+        
         dismiss(animated: true, completion: nil)
     }
     @IBAction func hardOnClick(_ sender: Any) {
         print("hard")
-        //status.curReviewIndex = status.curReviewIndex + 1
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -50,17 +52,18 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         // programmically add uiview
         let currentReviewIndex = status.curReviewIndex
-//        if(status.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
-//            UIView image_view = UI
-//        }
+        if(status.ReviewList[currentReviewIndex].img_list.count != 0){
+            
+        }
+        
         subtopicTableView.rowHeight = UITableView.automaticDimension
-        let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealImageViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
         
-//        // occlusion
+        //        // occlusion
         
     }
     // tap occlusion
@@ -103,13 +106,13 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
-
+        
         
         // fill cell contents
         if(indexPath.row < status.ReviewList[currentIndex].cards.count){
             cell.Header.text = status.ReviewList[currentIndex].cards[indexPath.row].header
             cell.Info.text = status.ReviewList[currentIndex].cards[indexPath.row].info
-
+            
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.black

@@ -50,7 +50,7 @@ class Parse{
         let category:String = row[0]
         let topic:String = row[1]
         let subtopic:String = row[2]
-        var img:String = ""
+        var img:String? = nil
         status.addCategory(category: category)
         status.addTopic(category: category, topic: topic)
         
@@ -58,9 +58,9 @@ class Parse{
         if(ifImg.contains(where: row[3].contains)){
             img = row[3]
         }
-        else{
-            img = "no image"
-        }
+//        else{
+//            img = "no image"
+//        }
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img)
         // loop through remaining header/info pairs and store
    
