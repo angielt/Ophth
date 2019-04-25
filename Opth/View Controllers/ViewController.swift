@@ -16,11 +16,15 @@ class ViewController: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
+    var subtopic: Subtopic!
+    var topic: Topic!
+    var curIndex = 0 //Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/nomunabatmandakh/Desktop/Opth2/Opth/Information/biggerdata.txt")
         //status.printContents()
 
 
@@ -29,7 +33,8 @@ class ViewController: UIViewController{
     }
     
     func loadData(){
-        cardFront.text = status.ReviewList[status.curReviewIndex].subtopicName
+        cardFront.text = topic.subtopics[curIndex].subtopicName
+        //subtopic?.subtopicName//status.ReviewList[status.curReviewIndex].subtopicName
         
         card.layer.cornerRadius = 4.0
         card.layer.borderWidth = 1.0
@@ -55,14 +60,17 @@ class ViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
-            destinationViewController.transitioningDelegate = self
+                destinationViewController.cards = topic.subtopics[curIndex].cards// subtopic?.cards
+                destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
         print("when segue")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if(status.curReviewIndex < status.ReviewList.count-1){
+            if(self.curIndex < self.topic.subtopics.count - 1) {
+                //status.curReviewIndex < status.ReviewList.count-1){
 //                print("hello")
-                status.curReviewIndex = status.curReviewIndex + 1
+                self.curIndex = self.curIndex + 1
+                //status.curReviewIndex = status.curReviewIndex + 1
                 self.loadData()
             }
         }

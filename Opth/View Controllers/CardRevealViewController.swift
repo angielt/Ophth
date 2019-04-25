@@ -16,6 +16,7 @@ import UIKit
 class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
+    @IBOutlet weak var addNotes: UIButton!
     //count how many taps
     var counter = 0
     var index = 0
@@ -23,6 +24,8 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     var showInfo = false
     let tap = UITapGestureRecognizer()
     let currentIndex = status.curReviewIndex
+    
+    var cards: [Card]?
 //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
@@ -89,7 +92,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return status.ReviewList[currentIndex].cards.count
+        return cards?.count ?? 1 //status.ReviewList[currentIndex].cards.count
     }
     
     // Provide a cell object for each row.
@@ -106,9 +109,9 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
 
         
         // fill cell contents
-        if(indexPath.row < status.ReviewList[currentIndex].cards.count){
-            cell.Header.text = status.ReviewList[currentIndex].cards[indexPath.row].header
-            cell.Info.text = status.ReviewList[currentIndex].cards[indexPath.row].info
+        if(indexPath.row < cards?.count ?? 1){ //status.ReviewList[currentIndex].cards.count
+            cell.Header.text = cards?[indexPath.row].header //status.ReviewList[currentIndex].cards[indexPath.row].header
+            cell.Info.text = cards?[indexPath.row].info //status.ReviewList[currentIndex].cards[indexPath.row].info
 
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.blue
@@ -125,6 +128,13 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         return cell
+    }
+    
+    //MARK: Actions
+    @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
+        if sender.source is NotesViewController { //meal = sourceViewController.meal {
+        }
+        
     }
     
 }
