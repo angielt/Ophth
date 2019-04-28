@@ -14,6 +14,7 @@ class SubtopicTableViewCell: UITableViewCell {
     @IBOutlet weak var Info: UILabel!
 
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

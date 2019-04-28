@@ -19,6 +19,8 @@
 		FD056E722238818C003CBB68 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E712238818C003CBB68 /* Card.swift */; };
 		FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */; };
 		FD2B771E221E27E800A41328 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B771D221E27E800A41328 /* Parse.swift */; };
+		FD44DC1D2271869400E54A45 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44DC1C2271869400E54A45 /* SpacedRepetition.swift */; };
+		FD4936EF227174AF007FB2D4 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4936EE227174AF007FB2D4 /* TabBarControllerViewController.swift */; };
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
@@ -69,6 +71,8 @@
 		FD056E712238818C003CBB68 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRevealViewController.swift; sourceTree = "<group>"; };
 		FD2B771D221E27E800A41328 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		FD44DC1C2271869400E54A45 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
+		FD4936EE227174AF007FB2D4 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
 				BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */,
 				62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */,
+				FD4936EE227174AF007FB2D4 /* TabBarControllerViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -188,6 +193,7 @@
 				FD056E6D22387E1D003CBB68 /* Topic.swift */,
 				FD056E6F2238811E003CBB68 /* Subtopic.swift */,
 				FD056E712238818C003CBB68 /* Card.swift */,
+				FD44DC1C2271869400E54A45 /* SpacedRepetition.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -487,6 +493,7 @@
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
+				FD44DC1D2271869400E54A45 /* SpacedRepetition.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
 				FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */,
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
@@ -498,6 +505,7 @@
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
 				FD056E6C22387DF8003CBB68 /* Category.swift in Sources */,
+				FD4936EF227174AF007FB2D4 /* TabBarControllerViewController.swift in Sources */,
 				FD056E722238818C003CBB68 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,8 +16,16 @@ class SubTableViewController: UITableViewController {
     var subtopicCount = 0
     var subtopicAr = [String]()
     
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func reviewButton(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
 

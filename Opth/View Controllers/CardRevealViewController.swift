@@ -18,39 +18,37 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     //count how many taps
     var counter = 0
-    var index = 0
+    var index = 0 // indexPath.row
     var indexMax = 0
     var showInfo = false
     let tap = UITapGestureRecognizer()
-    let currentIndex = status.curReviewIndex
+    let curReviewIndex = spacedRep.curReviewIndex // current subtopic
 //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
     @IBAction func easyOnClick(_ sender: Any) {
         print("easy")
-       // status.curReviewIndex = status.curReviewIndex + 1
-        dismiss(animated: true, completion: nil)
+        spacedRep.easyPressed()
+       // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+        dismiss(animated: true) {
+        }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
         print("unsure")
-        //status.curReviewIndex = status.curReviewIndex + 1
+        spacedRep.unsurePressed()
         dismiss(animated: true, completion: nil)
     }
     @IBAction func hardOnClick(_ sender: Any) {
         print("hard")
-        //status.curReviewIndex = status.curReviewIndex + 1
+        spacedRep.hardPressed()
         dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func tableViewonClick(_ sender: UITableView){
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // programmically add uiview
-//        let currentReviewIndex = status.curReviewIndex
-//        if(status.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
+//        let currentReviewIndex = spacedRep.curReviewIndex
+//        if(spacedRep.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
 //            
 //        }
         subtopicTableView.rowHeight = UITableView.automaticDimension
@@ -59,16 +57,12 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        
-//        // occlusion
+        indexMax = spacedRep.reviewList.count
         
     }
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index <= indexMax){
-            print("handletap")
-            print(indexMax)
-            
+        if(index <= indexMax-1){
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
@@ -89,26 +83,23 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return status.ReviewList[currentIndex].cards.count
+        //print("num headers " + String(spacedRep.subtopics[curReviewIndex].cards.count))
+        //print("num headers " + String(spacedRep.subtopics[curReviewIndex].cards[]))
+        print("curReviewIndex " + String(curReviewIndex))
+        print("curReviewIndex.count " + String(spacedRep.reviewList.count))
+        return spacedRep.reviewList[curReviewIndex].cards.count
     }
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("index: " + String(index))
-        print("indexPath: "+String(indexPath.row))
-        print("review index: "+String(currentIndex))
         // fetch cell
-        if(indexMax < indexPath.row){
-            indexMax = indexPath.row
-        }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
 
         
         // fill cell contents
-        if(indexPath.row < status.ReviewList[currentIndex].cards.count){
-            cell.Header.text = status.ReviewList[currentIndex].cards[indexPath.row].header
-            cell.Info.text = status.ReviewList[currentIndex].cards[indexPath.row].info
+        if(indexPath.row < spacedRep.reviewList[spacedRep.curReviewIndex].cards.count){
+            cell.Header.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].header
+            cell.Info.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
 
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.blue
@@ -123,7 +114,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.Info.textColor = UIColor.white
             }
         }
-        
         return cell
     }
     
