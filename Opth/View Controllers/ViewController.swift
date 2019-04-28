@@ -41,20 +41,35 @@ class ViewController: UIViewController{
             card.layer.masksToBounds = false
             card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
         }
-        
+    }
+    
+    func exitCardChange(){
+        card.layer.backgroundColor = UIColor.black.cgColor
+        cardFront.text = "Review Finished \n tap to exit"
+        cardFront.textColor = UIColor.gray
+    }
+    
+    func exitReview(){
+        self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
     }
     
     @IBAction func handleTap(_ sender: Any) {
+        if(spacedRep.curReviewIndex == spacedRep.reviewList.count){
+            self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
+        }
+        
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
         self.loadData()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
          self.present(viewController, animated: true, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                
                 if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
-                    spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-                    self.loadData()
+                    if(spacedRep.curReviewIndex+1 == spacedRep.reviewList.count){
+                        self.exitCardChange()
+                    }
+                        spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+                        self.loadData()
                 }
                 
             }

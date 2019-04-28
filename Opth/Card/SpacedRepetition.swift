@@ -230,8 +230,5 @@ class SpacedRepetition {
             print(self.reviewList)
         }
     }
-        
-        
-    
 }
 var spacedRep = SpacedRepetition()
