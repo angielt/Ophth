@@ -6,17 +6,24 @@
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
-
+/*  For UI image
+ *** THINGS NEED TO FIX:
+ * for some reason, when click on the spaced rep buttons, it goes to the FullScreenImage.swift
+ *** THINGS WANT TO FIX
+ * when coming back from full screen image, want the page controller/image stays where it left off rather back to the first image
+ */
 
 
 import Foundation
 
 import UIKit
 
-class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     @IBOutlet weak var addNotes: UIButton!
+    
     //count how many taps
     var counter = 0
     var index = 0
@@ -51,20 +58,14 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // programmically add uiview
-//        let currentReviewIndex = status.curReviewIndex
-//        if(status.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
-//            
-//        }
+        
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        
-//        // occlusion
-        
+
     }
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
@@ -136,6 +137,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
     }
-    
 }
+
 

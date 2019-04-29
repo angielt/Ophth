@@ -1,18 +1,10 @@
 //
-//  ImageCardRevelViewController.swift
+//  ImageCardRevealViewController.swift
 //  Opth
 //
 //  Created by Cathy Hsieh on 4/28/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
-
-/*  For UI image
- *** THINGS NEED TO FIX:
- * for some reason, when click on the spaced rep buttons, it goes to the FullScreenImage.swift
- *** THINGS WANT TO FIX
- * when coming back from full screen image, want the page controller/image stays where it left off rather back to the first image
- */
-
 
 import Foundation
 
@@ -22,14 +14,13 @@ class imageTapGesture: UITapGestureRecognizer{
     var imageIndex = 0
 }
 
-class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
+class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
     
     
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
     
     var imageIndex = 0
-    var pageControllerIndex = 0
     var isBackFromFullScreen = false
     
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
@@ -87,22 +78,16 @@ class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITab
         
         imageScrollView.delegate = self
         
-        //DON'T NEED IMAGEARRAY WHEN PARSE
+        /***DON'T NEED image caption WHEN PARSE ***/
         imageCaption = ["caption 0","caption 1", "caption 2", "caption 3", "caption 4"]
-        imageArray = [#imageLiteral(resourceName: "188_Retina"), #imageLiteral(resourceName: "191_Imaging_FA_4"), #imageLiteral(resourceName: "191_Imaging_ICG_1"),#imageLiteral(resourceName: "191_Imaging_FA_3"),#imageLiteral(resourceName: "191_Imaging_OCT_1")]
+        
         imagePageController.numberOfPages = imageArray.count
-        imagePageController.currentPage = pageControllerIndex
         
         //UI Image
-        for i in 0..<imageArray.count{
-            //let imageToDisplay = UIImage(named: "188_Retina")
+        for i in 0..<status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list.count{
             let imageView = UIImageView()
-            
-            //enable tap on image
-            imageView.isUserInteractionEnabled = true
-            
-            //NEED TO FIX
-            imageView.image = imageArray[i] //UIImageView(image: imageToDisplay)
+            imageView.isUserInteractionEnabled = true  //enable tap on image
+            imageView.image = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[i])
             
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
@@ -110,7 +95,7 @@ class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITab
             imageView.frame = CGRect(x: xCordinate + 20, y: 0, width: self.imageScrollView.frame.width, height: self.imageScrollView.frame.height - 30)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
-            //add tap recognizer
+            //add tap recognizer for image
             let imageTap = imageTapGesture(target: self,action:#selector(imageTapped))
             imageTap.imageIndex = i
             imageView.isUserInteractionEnabled = true
@@ -135,6 +120,7 @@ class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITab
             self.imageScrollView.addSubview(caption)
         }
     }
+    
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
         if(index <= indexMax){
@@ -176,11 +162,10 @@ class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITab
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
-        
         // fill cell contents
-        if(indexPath.row < cards?.count ?? 1){ //status.ReviewList[currentIndex].cards.count
-            cell.Header.text = cards?[indexPath.row].header //status.ReviewList[currentIndex].cards[indexPath.row].header
-            cell.Info.text = cards?[indexPath.row].info //status.ReviewList[currentIndex].cards[indexPath.row].info
+        if(indexPath.row < cards?.count ?? 1){
+            cell.Header.text = cards?[indexPath.row].header
+            cell.Info.text = cards?[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.blue
@@ -201,7 +186,7 @@ class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITab
     
     //MARK: Actions
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
-        if sender.source is NotesViewController { //meal = sourceViewController.meal {
+        if sender.source is NotesViewController {
         }
         
     }
@@ -222,11 +207,7 @@ class ImageCardRevelViewController: UIViewController, UITableViewDelegate, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
-            image.fullImage = imageArray[imageIndex]
-            image.pageControllerIndex = imagePageController.currentPage
+            image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[imageIndex])
         }
     }
 }
-
-
-

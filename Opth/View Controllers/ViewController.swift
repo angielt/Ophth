@@ -24,7 +24,7 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        parse.csv(data:"/Users/nomunabatmandakh/Desktop/Opth2/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
         //status.printContents()
 
 
@@ -51,11 +51,17 @@ class ViewController: UIViewController{
     
     @IBAction func handleTap(_ sender: Any) {
         print("tap")
-        performSegue(withIdentifier: "reveal", sender: nil)
+        print("here:::: ",topic.subtopics[curIndex].img_list.count)
+        print("image: ", topic.subtopics[curIndex].img_list[0])
+        if (topic.subtopics[curIndex].img_list[0] == "no image") {
+            print("revel")
+            performSegue(withIdentifier: "reveal", sender: nil)
+        }
+        else {
+            print("revealImage")
+            performSegue(withIdentifier: "revealImage", sender: nil)
+        }
     }
-    
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
@@ -64,6 +70,13 @@ class ViewController: UIViewController{
                 destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
+        else if segue.identifier == "revealImage",
+            let destinationViewController = segue.destination as? ImageCardRevealViewController {
+            destinationViewController.cards = topic.subtopics[curIndex].cards// subtopic?.cards
+            destinationViewController.transitioningDelegate = self
+            // delay changes to current VC until after  flip animation
+        }
+        
         print("when segue")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if(self.curIndex < self.topic.subtopics.count - 1) {

@@ -16,7 +16,7 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/nomunabatmandakh/Desktop/Opth2/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -90,11 +90,5 @@ class ContentsOfTableViewController: UITableViewController {
             let subTableView = segue.destination as! SubTableViewController
             subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
         }
-       // subTableView.topicLabel = status.CategoryList[sectionIndex].topics[rowIndex].topicName
-       // subTableView.categoryCount = status.CategoryList.count
-       // subTableView.subtopicCount = status.CategoryList[sectionIndex].topics[rowIndex].subtopics.count
-       // for s in status.CategoryList[sectionIndex].topics[rowIndex].subtopics {
-         //   subTableView.subtopicAr.append(s.subtopicName)
-        //}
     }
 }
