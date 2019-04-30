@@ -19,7 +19,7 @@ class Subtopic{ // aka Slide
         self.subtopicName = subtopic
         self.cards = []
         self.img_list = []
-        self.score = 0
+        self.score = 20
         self.repeat_factor = 5
     }
     
@@ -27,5 +27,8 @@ class Subtopic{ // aka Slide
         self.img_list.append(img)
     }
     
+    func updateRepeatFactor(rf:Int){
+        repeat_factor = rf
+    }
     // add functions for spaced rep
 }

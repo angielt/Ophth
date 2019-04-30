@@ -45,59 +45,95 @@ class ViewController: UIViewController{
     
     func exitCardChange(){
         card.layer.backgroundColor = UIColor.black.cgColor
-        cardFront.text = "Review Finished \n tap to exit"
+        cardFront.text = "Review Finished - tap to exit"
         cardFront.textColor = UIColor.gray
     }
     
-    func exitReview(){
-        self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
-    }
+
     
     @IBAction func handleTap(_ sender: Any) {
-        if(spacedRep.curReviewIndex == spacedRep.reviewList.count){
+        if(spacedRep.finished == true){
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
         
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
         self.loadData()
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-         self.present(viewController, animated: true, completion: nil)
+            self.present(viewController, animated: true, completion: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
-                    if(spacedRep.curReviewIndex+1 == spacedRep.reviewList.count){
+                if(spacedRep.curReviewIndex < spacedRep.reviewList.count-1){
+                    spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+                    print("spaced rep index" + String(spacedRep.curReviewIndex) + String(spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName))
+                    self.loadData()
+                }
+                else if(spacedRep.curReviewIndex == spacedRep.reviewList.count-1){
+                    if(spacedRep.isReviewFinished()==true){
+                        print("exit card change")
                         self.exitCardChange()
+                        spacedRep.finished = true
                     }
-                        spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-                        self.loadData()
+                    else{
+                        spacedRep.generateReviewList(subtopics: spacedRep.reviewList)
+                    }
                 }
                 
             }
             
         }
         //self.present(viewController, animated: true, completion: nil)
-       // performSegue(withIdentifier: "reveal", sender: nil)
+        // performSegue(withIdentifier: "reveal", sender: nil)
     }
     
-    
+//    @IBAction func handleTap(_ sender: Any) {
+//        if(spacedRep.curReviewIndex == spacedRep.reviewList.count){
+//            if(spacedRep.finished == true){
+//                self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
+//            }
+//            else{
+//                 spacedRep.generateReviewList(subtopics: spacedRep.subtopics)
+//            }
+//        }
+//
+//        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
+//        self.loadData()
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//         self.present(viewController, animated: true, completion: nil)
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                print("current index" + String(spacedRep.curReviewIndex))
+//                if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+//                    if(spacedRep.curReviewIndex+1 == spacedRep.reviewList.count && spacedRep.isReviewFinished() == true){ // last card
+//                        print("exit")
+//                        self.exitCardChange()
+//                    }
+//                    else{
+//                        print("load")
+//                        spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+//                        self.loadData()
+//                    }
+//                       // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+//                }
+//            }
+//        }
+//        //self.present(viewController, animated: true, completion: nil)
+//       // performSegue(withIdentifier: "reveal", sender: nil)
+//    }
     
     // segue to card reveal VC
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "reveal",
-            let destinationViewController = segue.destination as? CardRevealViewController {
-            destinationViewController.transitioningDelegate = self
-            // delay changes to current VC until after  flip animation
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
-                spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-                self.loadData()
-            }
-
-        }
-        
-    }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "reveal",
+//            let destinationViewController = segue.destination as? CardRevealViewController {
+//            destinationViewController.transitioningDelegate = self
+//            // delay changes to current VC until after  flip animation
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//            if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+//                spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+//                self.loadData()
+//            }
+//        }
+//    }
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {

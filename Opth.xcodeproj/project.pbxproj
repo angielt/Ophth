@@ -21,6 +21,7 @@
 		FD2B771E221E27E800A41328 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B771D221E27E800A41328 /* Parse.swift */; };
 		FD44DC1D2271869400E54A45 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD44DC1C2271869400E54A45 /* SpacedRepetition.swift */; };
 		FD4936EF227174AF007FB2D4 /* TabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4936EE227174AF007FB2D4 /* TabBarControllerViewController.swift */; };
+		FD6F627D2276BB7D004EBB24 /* SRSubtopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F627C2276BB7D004EBB24 /* SRSubtopic.swift */; };
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
@@ -73,6 +74,7 @@
 		FD2B771D221E27E800A41328 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 		FD44DC1C2271869400E54A45 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
 		FD4936EE227174AF007FB2D4 /* TabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerViewController.swift; sourceTree = "<group>"; };
+		FD6F627C2276BB7D004EBB24 /* SRSubtopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRSubtopic.swift; sourceTree = "<group>"; };
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				FD056E6F2238811E003CBB68 /* Subtopic.swift */,
 				FD056E712238818C003CBB68 /* Card.swift */,
 				FD44DC1C2271869400E54A45 /* SpacedRepetition.swift */,
+				FD6F627C2276BB7D004EBB24 /* SRSubtopic.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				62CE6E6922695A0E00ECD0C0 /* SubTableViewController.swift in Sources */,
 				FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */,
 				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
+				FD6F627D2276BB7D004EBB24 /* SRSubtopic.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,

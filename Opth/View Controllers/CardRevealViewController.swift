@@ -83,11 +83,9 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print("num headers " + String(spacedRep.subtopics[curReviewIndex].cards.count))
-        //print("num headers " + String(spacedRep.subtopics[curReviewIndex].cards[]))
-        print("curReviewIndex " + String(curReviewIndex))
-        print("curReviewIndex.count " + String(spacedRep.reviewList.count))
-        return spacedRep.reviewList[curReviewIndex].cards.count
+        print("current index ")
+        print(spacedRep.reviewList)
+        return spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
     }
     
     // Provide a cell object for each row.

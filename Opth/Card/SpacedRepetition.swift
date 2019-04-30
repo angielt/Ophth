@@ -77,9 +77,9 @@ class SpacedRepetition {
         print("MAX LIST SIZE" + String(self.max_list_size))
         generateReviewList(subtopics: self.subtopics)
         
-//        print(curReviewIndex)
-//        print(self.reviewList.count)
-//        print(self.reviewList[curReviewIndex].subtopicName)
+        //        print(curReviewIndex)
+        //        print(self.reviewList.count)
+        //        print(self.reviewList[curReviewIndex].subtopicName)
     }
     
     // updates subtopic score based on user input
@@ -90,7 +90,15 @@ class SpacedRepetition {
     
     // checks if all the cards eventually are mastered (RF = 1)
     func isReviewFinished() -> Bool{
-        self.max_list_size = RFList.five.count+RFList.four.count+RFList.three.count+RFList.two.count
+        
+        var size = self.reviewList.filter{$0.repeat_factor != 1}
+        self.max_list_size = size.count
+        print(max_list_size)
+        for item in reviewList{
+            print(item.subtopicName)
+            print(item.repeat_factor)
+        }
+        
         if(self.max_list_size > 0)
         {
             generateReviewList(subtopics: self.subtopics)
@@ -103,18 +111,18 @@ class SpacedRepetition {
     }
     
     func easyPressed(){
-        if(curReviewIndex == self.reviewList.count){ // all cards in current list are seen, check if some cards are not mastered
+        if(curReviewIndex-1 == self.reviewList.count){ // all cards in current list are seen, check if some cards are not mastered
             if(isReviewFinished() == true){
                 finished = true
             }
         }
-        else{
-            if(reviewList[curReviewIndex].score+5 <= max_score){
-                reviewList[curReviewIndex].score = reviewList[curReviewIndex].score+5
-                reviewList[curReviewIndex].repeat_factor = calculateRepeatFactor(score: reviewList[curReviewIndex].score)
+        
+            if(reviewList[curReviewIndex-1].score+5 <= max_score){
+                reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
                 //print(reviewList[curReviewIndex].repeat_factor)
             }
-        }
+             reviewList[curReviewIndex-1].repeat_factor = 1
+    
     }
     
     func unsurePressed(){
@@ -156,6 +164,12 @@ class SpacedRepetition {
         let two = st.filter{$0.repeat_factor==2}
         let one = st.filter{$0.repeat_factor==1}
         
+//        print(RFList.five.count)
+//        print(RFList.four.count)
+//        print(RFList.three.count)
+//        print(RFList.two.count)
+//        print(RFList.one.count)
+        
         // store
         RFList.five = five
         RFList.four = four
@@ -179,6 +193,7 @@ class SpacedRepetition {
             print(self.reviewList)
         }
         else{
+            
             for _ in 1...Int(round(Double(max_list_size)*(0.50))){ // RF 5
                 let pop = RFList.five.popLast()
                 if (pop != nil){
