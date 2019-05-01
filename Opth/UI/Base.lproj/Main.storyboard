@@ -44,6 +44,9 @@
                                     <rect key="frame" x="0.0" y="2" width="375" height="56"/>
                                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="uay-KK-Vsu" id="caT-lK-g4f"/>
+                                    </connections>
                                 </searchBar>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -72,6 +75,7 @@
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="CGv-yi-cUV"/>
                     <navigationItem key="navigationItem" id="ToX-kY-B6R"/>
                     <connections>
+                        <outlet property="searchBar" destination="xR0-QM-cHD" id="OV7-my-qnx"/>
                         <segue destination="f8K-zN-X4m" kind="presentation" identifier="subCell" modalTransitionStyle="crossDissolve" id="YOY-1I-l6F"/>
                     </connections>
                 </tableViewController>
