@@ -67,7 +67,8 @@ class SpacedRepetition {
         RFList.five = []
     }
     
-    // user clicks topic
+    // called ContentsOfTableVC when user clicks topic
+    // stores topic object in SpacedRepetition class
     func setReviewTopic(topic:inout Topic){
         self.topic = topic
         self.subtopics = topic.subtopics
@@ -78,18 +79,18 @@ class SpacedRepetition {
         print("MAX LIST SIZE" + String(self.max_list_size))
         generateReviewList(subtopics: self.subtopics)
         
-        //        print(curReviewIndex)
-        //        print(self.reviewList.count)
-        //        print(self.reviewList[curReviewIndex].subtopicName)
     }
     
-    // updates subtopic score based on user input
+    // calculates repeat factor based on score
+    // needs more work
     func calculateRepeatFactor(score:Int) -> Int{
         let repeatFactor = Double(score/4)
         return Int(round(repeatFactor))
     }
     
     // checks if all the cards eventually are mastered (RF = 1)
+    // if mastered, clear the contents of SpacedRepetition class
+    // if not mastered (some slides RF is not = 1), generate a new ReviewList
     func isReviewFinished() -> Bool{
         
         var size = self.reviewList.filter{$0.repeat_factor != 1}
@@ -111,6 +112,8 @@ class SpacedRepetition {
         }
     }
     
+    // updates the slide's score and repeat factor if user pressed EASY
+    // when review is finished, chnage the exit card.
     func easyPressed(){
         print("curReview index in easy button " + String(curReviewIndex-1))
         if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
@@ -126,14 +129,12 @@ class SpacedRepetition {
             }
             reviewList[curReviewIndex-1].repeat_factor = 1
         }
-        else{
+        else if (finished == true){
             // change card
             if(VCreference != nil){
                VCreference?.exitCardChange()
             }
         }
-
-    
     }
     
     func unsurePressed(){
