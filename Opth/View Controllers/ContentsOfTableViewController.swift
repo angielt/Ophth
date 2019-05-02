@@ -9,14 +9,62 @@
 import UIKit
 import Foundation
 
-class ContentsOfTableViewController: UITableViewController {
+class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate {
     var sectionIndex = 0
     var rowIndex = 0
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var searchActive = false
+    var subtopicAr = [Subtopic]()
+    var filteredSubtopics: [Subtopic] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       parse.csv(data: "/Users/Angie/Desktop/test/biggerdata.txt")
+        parse.csv(data: "/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        
+        //set up delegate
+        searchBar.delegate = self
+        
+        //get all subtopics into subtopicAr
+        for item in status.CategoryList{
+            for item2 in item.topics{
+                subtopicAr += item2.subtopics.map{$0}
+            }
+        }
+    }
+    
+    // MARK: search functions
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchActive = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchActive = false
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return
+            subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())
+        })
+        
+        //checks
+        if searchBar.text == ""{
+            searchActive = false
+        }
+        else{
+            searchActive = true
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,7 +75,10 @@ class ContentsOfTableViewController: UITableViewController {
         let categoryCount = status.CategoryList.count
         let topicCount = status.CategoryList[section].topics.count
         
-        if status.CategoryList[section].opened == true {
+        if searchActive{
+            return filteredSubtopics.count
+        }
+        else if status.CategoryList[section].opened == true {
             return topicCount + categoryCount
         }
         else {
@@ -40,22 +91,31 @@ class ContentsOfTableViewController: UITableViewController {
         
         let categoryCount = status.CategoryList.count
         
-        //need to fix "indexPath.row == 0"
-        if indexPath.row == 0 {
+        if searchActive{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
-            cell.textLabel?.text = trimmedCategory
+            cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
             cell.textLabel?.textColor = UIColor.white
             return cell
         }
-        else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell()}
-            
-            cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - categoryCount].topicName
-            cell.textLabel?.textColor = UIColor.white
-            return cell
+        else{
+            //need to fix "indexPath.row == 0"
+            if indexPath.row == 0 {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
+                cell.textLabel?.text = trimmedCategory
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
+            else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                    return UITableViewCell()}
+                
+                cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - categoryCount].topicName
+                cell.textLabel?.textColor = UIColor.white
+                return cell
+            }
         }
     }
     
@@ -63,6 +123,8 @@ class ContentsOfTableViewController: UITableViewController {
 
         
         let categoryCount = status.CategoryList.count
+        
+       
         
         //need to fix "indexPath.row == 0"
         if indexPath.row == 0 {
