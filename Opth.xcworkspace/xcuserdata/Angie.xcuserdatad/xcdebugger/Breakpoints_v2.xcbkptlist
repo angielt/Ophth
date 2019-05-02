@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Opth/View Controllers/CardRevealViewController.swift"
-            timestampString = "578294668.581923"
+            timestampString = "578463787.535342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Opth/View Controllers/ViewController.swift"
-            timestampString = "578299261.986114"
+            timestampString = "578465004.9568779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Opth/View Controllers/ViewController.swift"
-            timestampString = "578299261.9865741"
+            timestampString = "578465004.956978"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Opth/Card/SpacedRepetition.swift"
-            timestampString = "578299261.986901"
+            timestampString = "578465004.957063"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "isReviewFinished()"
             landmarkType = "7">
          </BreakpointContent>
@@ -166,16 +166,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Opth/View Controllers/ViewController.swift"
-            timestampString = "578299261.987282"
+            filePath = "Opth/Card/SpacedRepetition.swift"
+            timestampString = "578465004.9571871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "handleTap(_:)"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "easyPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Opth/Card/SpacedRepetition.swift"
+            timestampString = "578465004.957256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "easyPressed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

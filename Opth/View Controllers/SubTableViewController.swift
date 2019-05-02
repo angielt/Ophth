@@ -20,6 +20,13 @@ class SubTableViewController: UITableViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func reviewButton(_ sender: Any) {
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardVC") as! ViewController
+        spacedRep.VCreference = (viewController as! ViewController)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.present(viewController, animated: true, completion: nil)
+            
+        }
         
     }
     

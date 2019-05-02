@@ -33,6 +33,7 @@ class RepeatFactorList{
 }
 
 class SpacedRepetition {
+    var VCreference: ViewController?
     let max_score = 20;
     let min_score = 0;
     var max_list_size = 0;
@@ -111,17 +112,27 @@ class SpacedRepetition {
     }
     
     func easyPressed(){
-        if(curReviewIndex-1 == self.reviewList.count){ // all cards in current list are seen, check if some cards are not mastered
+        print("curReview index in easy button " + String(curReviewIndex-1))
+        if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
             if(isReviewFinished() == true){
                 finished = true
+                
             }
         }
-        
+        if(curReviewIndex < self.reviewList.count){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
                 //print(reviewList[curReviewIndex].repeat_factor)
             }
-             reviewList[curReviewIndex-1].repeat_factor = 1
+            reviewList[curReviewIndex-1].repeat_factor = 1
+        }
+        else{
+            // change card
+            if(VCreference != nil){
+               VCreference?.exitCardChange()
+            }
+        }
+
     
     }
     
@@ -193,17 +204,28 @@ class SpacedRepetition {
             print(self.reviewList)
         }
         else{
-            
-            for _ in 1...Int(round(Double(max_list_size)*(0.50))){ // RF 5
-                let pop = RFList.five.popLast()
-                if (pop != nil){
-                    reviewList.append(pop!)
+            if(RFList.three.count > 0){
+                var max = Int(round(Double(max_list_size)*(0.50)))
+                if(max < 1){
+                    max = 1
+                }
+                for _ in 1...max{ // RF 4
+                    let pop = RFList.five.popLast()
+                    if (pop != nil){
+                        reviewList.append(pop!)
+                    }
                 }
             }
-            for _ in 1...Int(round(Double(max_list_size)*(0.25))){ // RF 4
-                let pop = RFList.four.popLast()
-                if (pop != nil){
-                    reviewList.append(pop!)
+            if(RFList.three.count > 0){
+                var max = Int(round(Double(max_list_size)*(0.25)))
+                if(max < 1){
+                    max = 1
+                }
+                for _ in 1...max{ // RF 4
+                    let pop = RFList.four.popLast()
+                    if (pop != nil){
+                        reviewList.append(pop!)
+                    }
                 }
             }
             if(RFList.three.count > 0){
