@@ -99,6 +99,7 @@ class SpacedRepetition {
         print(max_list_size)
         
         // debugging
+        print("OLD REVIEW LIST")
         for item in reviewList{
             print(item.subtopicName)
             print(item.repeat_factor)
@@ -108,8 +109,13 @@ class SpacedRepetition {
         if(self.max_list_size > 0)
         {
             generateReviewList(subtopics: self.subtopics) // generate new list
-            print(reviewList)
-            self.max_list_size = self.reviewList.count // reset count
+            print("NEW REVIEW LIST")
+            for item in reviewList{
+                print(item.subtopicName)
+                print(item.repeat_factor)
+            }
+            
+           // self.max_list_size = self.reviewList.count // reset count
             self.curReviewIndex = 0 // reset count
             if(VCreference != nil){
                 VCreference?.newListCardChange()
@@ -149,8 +155,8 @@ class SpacedRepetition {
     }
     
     func unsurePressed(){
-        print("curReview index in easy button " + String(curReviewIndex-1))
-        print("max count in easy button " + String(self.reviewList.count-1))
+        print("curReview index in unsure button " + String(curReviewIndex-1))
+        print("max count in unsure button " + String(self.reviewList.count-1))
         if(curReviewIndex-1 <= self.reviewList.count-1){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
@@ -172,8 +178,8 @@ class SpacedRepetition {
     }
     
     func hardPressed(){
-        print("curReview index in easy button " + String(curReviewIndex-1))
-        print("max count in easy button " + String(self.reviewList.count-1))
+        print("curReview index in hard button " + String(curReviewIndex-1))
+        print("max count in hard button " + String(self.reviewList.count-1))
         if(curReviewIndex-1 <= self.reviewList.count-1){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
@@ -234,7 +240,7 @@ class SpacedRepetition {
             print(self.reviewList)
         }
         else{
-            if(RFList.three.count > 0){
+            if(RFList.five.count > 0){
                 var max = Int(round(Double(max_list_size)*(0.50)))
                 if(max < 1){
                     max = 1
@@ -246,7 +252,7 @@ class SpacedRepetition {
                     }
                 }
             }
-            if(RFList.three.count > 0){
+            if(RFList.four.count > 0){
                 var max = Int(round(Double(max_list_size)*(0.25)))
                 if(max < 1){
                     max = 1
