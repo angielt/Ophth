@@ -6,6 +6,7 @@
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
+// check if spaced repetition score and repeat factor is saved in status.
 
 
 

@@ -41,7 +41,7 @@ class SpacedRepetition {
     var subtopics:[Subtopic]
     var topic:Topic
     var RFList:RepeatFactorList
-    var reviewList:[Subtopic]
+    var reviewList:[Subtopic] // list space rep cycles through
     var finished:Bool = false // review completed
     
     
@@ -83,10 +83,11 @@ class SpacedRepetition {
     
     // calculates repeat factor based on score
     // needs more work
-    func calculateRepeatFactor(score:Int) -> Int{
-        let repeatFactor = Double(score/4)
-        return Int(round(repeatFactor))
-    }
+//    func calculateRepeatFactor(new_score:Double, difficulty: Int, old_rf:Int) -> Int{
+//        //let add = 0.7(5.0-0.5(new_score)) + 0.3(0.2(11(difficulty)^2-20(difficulty)+11)-5)
+////        let repeat_factor = add + old_rf
+////        return repeat_factor
+//    }
     
     // checks if all the cards eventually are mastered (RF = 1)
     // if mastered, clear the contents of SpacedRepetition class
@@ -96,6 +97,8 @@ class SpacedRepetition {
         var size = self.reviewList.filter{$0.repeat_factor != 1}
         self.max_list_size = size.count
         print(max_list_size)
+        
+        // debugging
         for item in reviewList{
             print(item.subtopicName)
             print(item.repeat_factor)
@@ -114,20 +117,26 @@ class SpacedRepetition {
     
     // updates the slide's score and repeat factor if user pressed EASY
     // when review is finished, chnage the exit card.
+    // plz dont cahnge anything in this function logically
     func easyPressed(){
         print("curReview index in easy button " + String(curReviewIndex-1))
-        if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
-            if(isReviewFinished() == true){
-                finished = true
-                
-            }
-        }
-        if(curReviewIndex < self.reviewList.count){
+        print("max count in easy button " + String(self.reviewList.count-1))
+        if(curReviewIndex-1 <= self.reviewList.count-1){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
                 //print(reviewList[curReviewIndex].repeat_factor)
             }
             reviewList[curReviewIndex-1].repeat_factor = 1
+//            reviewList[curReviewIndex-1].repeat_factor = calculateRepeatFactor(new_score: reviewList[curReviewIndex-1].score, difficulty: 2, old_rf: reviewList[curReviewIndex-1].repeat_factor)
+            
+        }
+        if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
+            if(isReviewFinished() == true){
+                finished = true
+                if(VCreference != nil){
+                    VCreference?.exitCardChange()
+                }
+            }
         }
         else if (finished == true){
             // change card
@@ -138,31 +147,11 @@ class SpacedRepetition {
     }
     
     func unsurePressed(){
-        if(curReviewIndex == self.reviewList.count){ // all cards in current list are seen, check if some cards are not mastered
-            if(isReviewFinished() == true){
-                finished = true
-            }
-        }
-        else{
-            if(reviewList[curReviewIndex].score-1 >= min_score){
-                reviewList[curReviewIndex].score = reviewList[curReviewIndex].score-1
-                reviewList[curReviewIndex].repeat_factor = calculateRepeatFactor(score: reviewList[curReviewIndex].score)
-            }
-        }
+
     }
     
     func hardPressed(){
-        if(curReviewIndex == self.reviewList.count){ // all cards in current list are seen, check if some cards are not mastered
-            if(isReviewFinished() == true){
-                finished = true
-            }
-        }
-        else{
-            if(reviewList[curReviewIndex].score-5 >= min_score){
-                reviewList[curReviewIndex].score = reviewList[curReviewIndex].score-5
-                reviewList[curReviewIndex].repeat_factor = calculateRepeatFactor(score: reviewList[curReviewIndex].score)
-            }
-        }
+
     }
     
     // generate Review Factor List from subtopic review factors

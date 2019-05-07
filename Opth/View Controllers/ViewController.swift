@@ -60,21 +60,15 @@ class ViewController: UIViewController{
         self.loadData()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.present(viewController, animated: true, completion: nil)
+            if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
+                self.present(viewController, animated: true, completion: nil)
+            }
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
                     spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
 //                    print("spaced rep index" + String(spacedRep.curReviewIndex) + String(spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName))
                     self.loadData() // loads data for next card
-                }
-                else if(spacedRep.curReviewIndex == spacedRep.reviewList.count-1){ // if last item is current card
-//                    if(spacedRep.finished==true){ // check if all RF == 1 maybe this block needs to be somewhere else
-//                        print("exit card change")
-//                        self.exitCardChange()
-//                    }
-//                    else{
-//                        spacedRep.generateReviewList(subtopics: spacedRep.reviewList)
-//                    }
                 }
                 
             }
