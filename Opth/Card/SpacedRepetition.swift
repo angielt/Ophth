@@ -12,6 +12,13 @@
 // by this i mean keep showing the same cards if the use responds hard or unsure
 // must all be good (?)like Anki before completed screen shows
 
+// TO DO:
+// - add maureen's equation to spaced rep
+// - check if rf values actually stored
+// - work on spaced rep for all subtopics
+// - debug occlusion
+// -make buttons show up only if occusion is finished
+
 // ReviewList consists of 50% -RF5, 25% -RF4, 12.5%- RF3.. etc
 import Foundation
 
@@ -65,6 +72,7 @@ class SpacedRepetition {
         RFList.three = []
         RFList.four = []
         RFList.five = []
+        VCreference = nil
     }
     
     // called ContentsOfTableVC when user clicks topic
@@ -124,7 +132,6 @@ class SpacedRepetition {
             return false // stay on topic
         }
         else{
-            clear()
             return true // leave topic
         }
     }
@@ -149,6 +156,7 @@ class SpacedRepetition {
                 finished = true
                 if(VCreference != nil){
                     VCreference?.exitCardChange()
+                    clear()
                 }
             }
         }

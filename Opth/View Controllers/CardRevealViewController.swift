@@ -24,8 +24,12 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     var showInfo = false
     let tap = UITapGestureRecognizer()
     let curReviewIndex = spacedRep.curReviewIndex // current subtopic
-//    subtopicTableView.addGestureRecognizer(tap)
+    var occlusionFinished = false
+    var occlusionTapCount = 0
     
+    @IBOutlet weak var easyButton: UIButton!
+    @IBOutlet weak var unsureButton: UIButton!
+    @IBOutlet weak var hardButton: UIButton!
     //Buttons
     @IBAction func easyOnClick(_ sender: Any) {
         print("easy")
@@ -47,11 +51,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // programmically add uiview
-//        let currentReviewIndex = spacedRep.curReviewIndex
-//        if(spacedRep.ReviewList[currentReviewIndex].img_list[currentReviewIndex] != "no image"){
-//            
-//        }
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
@@ -59,10 +58,15 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
         indexMax = spacedRep.reviewList.count
+        easyButton.backgroundColor = UIColor(named: "gray")
+        
         
     }
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
+        if(occlusionTapCount >= (spacedRep.reviewList[spacedRep.curReviewIndex].cards.count)*2){
+            easyButton.backgroundColor = UIColor(red: 0x78, green: 0xF8, blue: 0x7F, alpha: 0.1)
+        }
         if(index <= indexMax-1){
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){

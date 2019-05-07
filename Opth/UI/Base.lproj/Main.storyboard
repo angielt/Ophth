@@ -222,7 +222,7 @@
                                     <action selector="unsureOnClick:" destination="LNz-K0-qAO" eventType="touchUpInside" id="xfV-CQ-V8P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-Mh-PqG" userLabel="easyButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-Mh-PqG" userLabel="hardButton">
                                 <rect key="frame" x="272.5" y="617" width="90" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -241,9 +241,9 @@
                                     <action selector="hardOnClick:" destination="LNz-K0-qAO" eventType="touchUpInside" id="xan-iE-g0h"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZh-F0-2AT" userLabel="hardButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZh-F0-2AT" userLabel="easyButton">
                                 <rect key="frame" x="12.5" y="617" width="90" height="35"/>
-                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.44923108816146851" green="0.98010796308517456" blue="0.474406898021698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="e88-qJ-uX1"/>
                                     <constraint firstAttribute="width" constant="90" id="nWq-7t-5aZ"/>
@@ -279,6 +279,9 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="SubtopicTableView" destination="5bd-IH-adQ" id="lFs-yh-0pf"/>
+                        <outlet property="easyButton" destination="cZh-F0-2AT" id="vmO-GE-YhE"/>
+                        <outlet property="hardButton" destination="yoK-Mh-PqG" id="TXz-6V-lee"/>
+                        <outlet property="unsureButton" destination="BKJ-JI-RCB" id="kFh-KI-wI1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,7 +22,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         super.viewDidLoad()
         
         //parse.csv(data: "/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
-        parse.csv(data:"/Users/Angie/Desktop/test/biggerdata.txt")
+        parse.csv(data:"/Users/Angie/Desktop/test/Text_05.05.19.txt")
         
         //set up delegate
         searchBar.delegate = self
