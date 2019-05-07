@@ -104,9 +104,17 @@ class SpacedRepetition {
             print(item.repeat_factor)
         }
         
+        print("max list size isReviewFinished()" + String(self.max_list_size))
         if(self.max_list_size > 0)
         {
-            generateReviewList(subtopics: self.subtopics)
+            generateReviewList(subtopics: self.subtopics) // generate new list
+            print(reviewList)
+            self.max_list_size = self.reviewList.count // reset count
+            self.curReviewIndex = 0 // reset count
+            if(VCreference != nil){
+                VCreference?.newListCardChange()
+            }
+            
             return false // stay on topic
         }
         else{
@@ -138,19 +146,51 @@ class SpacedRepetition {
                 }
             }
         }
-        else if (finished == true){
-            // change card
-            if(VCreference != nil){
-               VCreference?.exitCardChange()
-            }
-        }
     }
     
     func unsurePressed(){
+        print("curReview index in easy button " + String(curReviewIndex-1))
+        print("max count in easy button " + String(self.reviewList.count-1))
+        if(curReviewIndex-1 <= self.reviewList.count-1){
+            if(reviewList[curReviewIndex-1].score+5 <= max_score){
+                reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
+                //print(reviewList[curReviewIndex].repeat_factor)
+            }
+            reviewList[curReviewIndex-1].repeat_factor = 3
+            //            reviewList[curReviewIndex-1].repeat_factor = calculateRepeatFactor(new_score: reviewList[curReviewIndex-1].score, difficulty: 2, old_rf: reviewList[curReviewIndex-1].repeat_factor)
+            
+        }
+        if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
+            if(isReviewFinished() == true){
+                finished = true
+                if(VCreference != nil){
+                    VCreference?.exitCardChange()
+                }
+            }
+        }
 
     }
     
     func hardPressed(){
+        print("curReview index in easy button " + String(curReviewIndex-1))
+        print("max count in easy button " + String(self.reviewList.count-1))
+        if(curReviewIndex-1 <= self.reviewList.count-1){
+            if(reviewList[curReviewIndex-1].score+5 <= max_score){
+                reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
+                //print(reviewList[curReviewIndex].repeat_factor)
+            }
+            reviewList[curReviewIndex-1].repeat_factor = 5
+            //            reviewList[curReviewIndex-1].repeat_factor = calculateRepeatFactor(new_score: reviewList[curReviewIndex-1].score, difficulty: 2, old_rf: reviewList[curReviewIndex-1].repeat_factor)
+            
+        }
+        if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
+            if(isReviewFinished() == true){
+                finished = true
+                if(VCreference != nil){
+                    VCreference?.exitCardChange()
+                }
+            }
+        }
 
     }
     

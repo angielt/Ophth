@@ -49,6 +49,10 @@ class ViewController: UIViewController{
         cardFront.textColor = UIColor.gray
     }
     
+    func newListCardChange(){
+        cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+    }
+    
 
     
     @IBAction func handleTap(_ sender: Any) {
