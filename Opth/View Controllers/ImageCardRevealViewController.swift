@@ -86,12 +86,20 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         for i in 0..<imageCount{
             let imageView = UIImageView()
             imageView.isUserInteractionEnabled = true  //enable tap on image
-            imageView.image = UIImage(named: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[i])
+            var img = status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[i]
+            if (img.contains(".gif")){
+                img = img.replacingOccurrences(of: ".gif", with: "")
+                imageView.loadGif(name: img)
+//                imageView.loadGif(name: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[i])
+            }
+            else{
+                imageView.image = UIImage(named: img)
+            }
             
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate + 20, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
+            imageView.frame = CGRect(x: xCordinate + 30, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image

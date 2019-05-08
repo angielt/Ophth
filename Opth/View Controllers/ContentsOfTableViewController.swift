@@ -15,7 +15,7 @@ class ContentsOfTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/nomunabatmandakh/Desktop/Opth/Opth/Information/temp.txt")
+        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
         //parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
     }
     
