@@ -19,12 +19,18 @@ class ViewController: UIViewController{
    // var subtopic: Subtopic!
     var topic: Topic!
     var curIndex = 0 //Int?
+    var curTopicIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+<<<<<<< HEAD
         parse.csv(data: "/Users/nomunabatmandakh/Desktop/Opth/Opth/Information/biggerdata.txt")
         //parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+=======
+
+        parse.csv(data:"/Users/cathyhsieh/Desktop/temp.txt")
+>>>>>>> 457fd9a1f567ef481f5a20df72a7259180edce90
         //status.printContents()
 
 
@@ -50,15 +56,10 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
-        print("tap")
-        print("here:::: ",topic.subtopics[curIndex].img_list.count)
-        print("image: ", topic.subtopics[curIndex].img_list[0])
-        if (topic.subtopics[curIndex].img_list[0] == "no image") {
-            print("revel")
+        if (topic.subtopics[curIndex].img_list[0] == "noimage") {
             performSegue(withIdentifier: "reveal", sender: nil)
         }
         else {
-            print("revealImage")
             performSegue(withIdentifier: "revealImage", sender: nil)
         }
     }
@@ -67,31 +68,33 @@ class ViewController: UIViewController{
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
                 destinationViewController.cards = topic.subtopics[curIndex].cards
+<<<<<<< HEAD
                 destinationViewController.subtopic = topic.subtopics[curIndex].subtopicName
+=======
+>>>>>>> 457fd9a1f567ef481f5a20df72a7259180edce90
                 destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
         else if segue.identifier == "revealImage",
             let destinationViewController = segue.destination as? ImageCardRevealViewController {
             destinationViewController.cards = topic.subtopics[curIndex].cards
+<<<<<<< HEAD
             destinationViewController.subtopic = topic.subtopics[curIndex].subtopicName
+=======
+>>>>>>> 457fd9a1f567ef481f5a20df72a7259180edce90
             destinationViewController.transitioningDelegate = self
+            destinationViewController.currentSubIndex = curIndex
+            destinationViewController.currentTopIndex = curTopicIndex
             // delay changes to current VC until after  flip animation
         }
         
-        print("when segue")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if(self.curIndex < self.topic.subtopics.count - 1) {
-                //status.curReviewIndex < status.ReviewList.count-1){
-//                print("hello")
                 self.curIndex = self.curIndex + 1
-                //status.curReviewIndex = status.curReviewIndex + 1
                 self.loadData()
             }
         }
-        
     }
-    
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {

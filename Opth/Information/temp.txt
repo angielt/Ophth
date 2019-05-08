@@ -1,0 +1,161 @@
+Category	Topic	Subtopic 	Image	Image Caption	Header 1	Info1	Header2	Info2	Header3	Info3	Header4	Info4	Header5	Info5	Header6	Info6	Header7	Info7	Header8	Info8	Header9	Info9										
+Retina	General	Layers of the Retina	188_Retina.jpg	Layers of retina	How often do photoreceptor outer segments renew?	Every 10 days																										
+Retina	General	Wavelengths	nil	nil	Rhodopsin is most sensitive to?	510nm (green)	L cone?	564-580nm	M cone?	534-545nm	S cone?	420-440nm	Excimer laser?	193nm (UV)	Argon retinal laser?	532nm (Green)	Diode laser?	810nm (IR)	Nd:YAG laser?	1064nm	Femtosecond laser?	1053nm										
+Retina	General	Bruch's Membrane	"190_BruchsMembrane_1.gif, 190_BruchsMembrane_2.gif"	Periodic-acid Schiff (PAS) stained the retinal pigment epithelium and Bruch's membrane heavily*Normal Bruch's membrane	"Fusion of RPE and choriocapillaris
+5 elements?
+Stain with?
+Choroidal neovascularization occurs within Bruch’s membrane
+Outer + Inner Retinal Barriers?
+"	nil	5 elements?	"- Basal lamina of RPE
+- Outer collagenous zone
+- Elastin fibers
+- Inner collagenous zone
+- Basal lamina of choriocapillaris 
+(a.k.a. ""Elastin sandwich"")"	Stain with?	PAS (+)	Outer + Inner Retinal Barriers?	"- Outer = Bruch’s membrane
+- Inner = Capillary basal lamina"																				
+Retina	General	Imaging	"191_Imaging_FA_1.png, 191_Imaging_FA_3.jpg, 191_Imaging_FA_4.jpg, 191_Imaging_ICG_1.jpg, 191_Imaging_OCT_1.jpg, 191_Imaging_OCT_2.jpg"	FA showing initial pigmentation in the area of the tumor (melanoma) with extensive drusen and late leak throughout the mass*FA*Small vessel vasculitis causing cystoid macular edema - late frame fluorescein angiograph*Reticular Macular Disease - Bilateral Wet Macular Degeneration and Polypoidal Choroidal Vasculopathy - ICG*Myopic Macular Degeneration - Dry OCT OS*OCT	"Fluorescein Angiography (FA)
+Indocyanine Green Angiography (ICT)
+Optical coherence tomography (OCT)
+Size of foveola? Foveal avascular zone?
+Location of fovea?
+Definitions?
+
+"	nil	FA	"1) Fluorescein sodium
+- Absorbs at 465-490nm (blue)
+- Emit at 520-530nm (green)
+- 80% bound to plasma protein
+- 90% renal excretion
+2) Phases
+- Choroidal phase (10-15s)
+- Arterial phase (15-18s)
+- Early arteriovenous phase
+- Arteriovenous phase (20-25s)
+- Recirculation phase (30+s)
+- Late phase (fluorescein leaves retinal circulation by 10min)
+3) Hyperfluorescence
+- Autofluorescence (from lipofuscin)
+- Transmission defect
+- Leaking (increasing blurred border)
+- Pooling (accumulate in anatomic space)
+- Staining (fixed margins)
+4) Hypofluorescence
+- Blocked fluorescence
+- Filling Defect"	Indocyanine Green Angiography (ICG)	"- Absorbs at 805m; Emit at 835nm
+- 98% bound to albumin (stays in choroidal vessels, so better for choroidal circulation)
+- 5% iodine – avoid if shellfish allergy"	OCT	"- Time domain: higher bandwidth = higher axial res
+- Frequency/Spectral domain: faster, better signal-to-noise ratio"	Size of: Foveola? Foveal asvascular zone?	"0.3mm and 0.5mm, respectively"	Location of fovea?	"4mm temporal, 0.8mm inferior to optic nerve"	Definition of macula?	>2 GCL layers	Definition of fovea?	only cones present	Definition for foveola?	ONL & GCL absent										
+Retina	Macular Diseases	Central Serous Chorioretinopathy (CSCR)	"192_CSCR_1.png, 192_CSCR_2.png, 192_CSCR_3.png, 192_CSCR_4.jpg, 192_CSCR_5.jpg, 192_CSCR_6.jpg, 192_CSCR_7.jpg, 192_CSCR_8.jpg, 192_CSCR_9.jpg, 192_CSCR_10.jpg, 192_CSCR_11.jpg"	"CSR (Early phase FA)*CSR (Late phase FA, expansile dot)* CSR(Later phase FA, expansile dot)*CSR (OCT)*FA arterial*FA AV*FA AV*FA late*OCT*Opto*Redfree"	"Idiopathic serous RD w/ multifocal PEDs, RPE changes & mottled atrophy
+Usually in young males
+Risks?"	nil	Risks?	"steroids, stress, type A personality"	FA & OCT?	"- FA: expansile dot (common), smokestack 
+- OCT: thickened choroid (?increased hydrostatic pressure in choroid)"	Treatment? 	"- Observation (self-limited 3-4mo)
+- Treat if >3-4mo, recurrent, permanent changes
+- Laser speeds recovery, not VA outcome
+- PDT (half-fluence), rifampin, spironolactone"	Ddx of serous RD?	"- CNV (+leakage)
+- PCV (saccular outpouchings)
+- ON pit (no leakage)
+- VKH / SO 
+- posterior scleritis
+- lymphoma
+- pre-eclampsia / severe HTN 
+- choroidal tumor
+- toxoplasmosis / syphilis"																		
+Retina	Macular Diseases	Age-Related Macular Degeneration (AMD)	"193_DryAMD_1.png, 193_DryAMD_2.jpg, 193_DryAMD_3.jpg, 193_DryAMD_5.jpg"	AMD Dry Hydrophilic Drusen and Geographic Atrophy*Hyperpigmentation of the Retinal Pigment Epithelium in Dry AMD*Basal Laminar Drusen*Reticular Pseudodrusen	"Dry AMD
+- Associated with?
+- Drusen: Quality? Deposits? Size?
+- Geographic Atrophy: AF? Ddz of GA?
+Cuticular (Basal Laminar) Drusen?
+Reticular Pseudodrusen?
+
+"	nil	Dry AMD: Associated with?	"age, smoking, positive family history, female, light iris, hyperopia, HTN, hypercholesterolemia"	Drusen: Hard vs. Soft?	"- Hard: nodular thickening of BM of RPE
+- Soft: focal PED (separation from Bruch’s)"	Drusen: Basal Laminar vs. Linear deposits?	"- Electron microscopy characterization
+- BLamD: between plasma & BM of RPE
+- BLinD: external to BM of RPE"	Drusen: Size?	"- Small <64um
+- Intermediate 64-124um
+- Large >124um"	Geographic Atrophy: AF?	- Decreased AF w/ ring of increased AF predict areas of GA expansion	Geographic Atrophy: Ddx of GA?	Cuticular (Basal Laminar) Drusen?	"- Type of early hard drusen (age 30-40s) 
+- Many small, uniform, demarcated drusen, better seen on FA with “stars-in-the-sky” appearance
+- May develop large vitelliform detachment"	Reticular Pseudodrusen?	"- Interlacing network of 125-250um drusen
+-  First appear in superotemporal macula
+-  Better seen on red-free, NOT on FA /ICG
+-  “Sawtooth” subretinal deposits on OCT"											
+Retina	Macular Diseases	Dry AMD	nil	nil	"Dry AMD
+- Treatment: AREDS, AREDS 2, Others
+- Epidemiology: Framingham Eye Study
+- Experimental Models"	nil	AREDS	"- Components? Vitamins C & E, beta carotene, copper, zinc
+- 25% reduction in progression to advanced AMD
+- 19% reduction in VA loss over 5 yrs
+- Criteria? 
+Bilateral intermediate (many int or 1 large)
+Unilateral advanced AMD (wet AMD or GA)
+- Avoid in smokers? Beta carotene"	AREDS 2	"- Components?
+ Antioxidants w/o beta carotene, omega-3 fatty acid, xanthophylls (zeaxanthine, lutein)"	Other Treatments	"- Immunomodulation: Copaxone (subQ NSAID)
+- Neuroprotection: Brimonidine (inc BDNF, dec glial activation); CNTF (e.g. secreting liposomes)"	Epidemiology: Framingham Eye Study	"6% in age >65
+20% in age>75"	Experimental Models	"Poly (I:C)
+RIP3 -/-
+RIP1 -/-
+CX3CR1 1/1
+CCL2  -/-
+RD10"																
+Retina	Macular Diseases	Choroidal Neovascularization (CNV)	"195_CNV_1.jpg, 195_CNV_3.jpg, 195_CNV_4.jpg"	OCT of occult CNV*FA of classic CNV*FA of classic CNV	"Choroidal Neovascularization (CNV)
+- Classificaton?
+- Classic Definition?"	nil	Classification?	"Type 1
+- Under RPE
+Type 2
+- Between RPE + photoreceptors
+Type 3
+- Retinal angiomatous proliferations (RAP)"	Classic Definitions?	"Classic CNV
+- Early hyper + late leakage
+Occult CNV
+- Stippled/granular early hyper + late stain
+- 2 types: fibrovascular PED vs. late leakage of undetermined source
+Types
+- Predominantly Classic (>49% classic)
+- Minimally Classic (<49% classic)
+- Occult w/o Classic (no classic)"																						
+Retina	Macular Diseases	Choroidal Neovascularization (CNV)	195_CNV_2.jpg	Retinal Angiomatous Proliferation - Type III choroidal neovascular membrane	"Retinal Angiomatous Proliferation (RAP)
+- Yannuzzi Classification?"	"Stage 1
+- Intraretinal NV / leakage
+Stage 2
+- Subretinal NV + serous PED
+Stage 3
+- Choroidal NV + fibrovascular PED
+- FA: retinochoroidal anastamoses"																										
+Retina	Macular Diseases	Wet AMD Treatments	nil	nil	"Laser: MPS
+PDT: TAP, VIP
+Anti-VEGF
+- Pegaptanib
+- Ranibizumab
+- Bevacizumab
+- Afilbercept"	nil	MPS	"- Extrafoveal & Juxtafoveal: Laser all (AMD, POHS, idiopathic)
+- Subfoveal: (only AMD studied)
+<2DD, laser
+2-3.5DD, treat if <20/200
+>3.5DD, don’t laser
+- Laser only classic, not occult
+- Argon = krypton (no difference)"	PDT  	"Regular vs. Reduced fluence?
+- Regular: 600mW/cm2
+- Reduced: 300mW/cm2"	TAP	PDT > control in classic CNV	VIP	"- PDT > control in occult CNV (w/o classic)
+- Small area (<4DA) and low vision (<20/30)
+- PDT studies also evaluated myopia"	Pegaptanib (Macugen)	"- pegylated anti-VEGF RNA aptamer 
+- binds VEGF 165
+- 0.3mg"	Ranibizumab (Lucentis)	"- 48kD Fab of Mab (<50kD to cross retina)
+- targets VEGF-A
+- 0.3mg (DME), 0.5mg (AMD), 2mg"	Bevacizumab (Avastin)	"- full-length Mab + Fc
+- targets VEGF-A
+- 1.25mg, 2.5mg"	Aflibercept (Eylea)	"- ligand-binding domain of VEGFR _ + IgG Fc
+- binds VEGF-A & placental-like GF
+- 2mg, 4mg"										
+Retina	Macular Diseases	Wet AMD Treatments: Studies	nil	nil	VISION	"- Macugen q6wks x 48wks > sham
+- Improved VA in all CNV"	MARINA	"- Lucentis q4wks x 2yrs > sham
+- Minimally-classic or occult w/o classic CNV"	ANCHOR	"- Lucentis q4wks x 2yrs > PDT q3mo PRN
+- Predominantly-classic CNV"	PIER	"- Lucentis q4wks x 3 then q12wks
+- Steady decline after 3mo c/w q4wks"	PrONTO	"- Lucentis q4wks x 3 then PRN (VA loss + fluid, CRT inc, mac hem, new cl CNV, persistent fluid s/p inj)
+- Comparable to q4wks; 5.6inj/yr, but q4wk visits
+"	SUSTAIN	"- Lucentis q4wks x 3 then PRN (VA loss, CRT inc)
+- Comparable to q4wks; 5.3inj/yr, but q4wk visits
+"	HORIZON	"- MARINA/ANCHOR/FOCUS pts  tx w/ PRN Lucentis q4wks s/p 2yrs
+- Continued less frequent dosing -> VA loss"	CATT	"- Lucentis = Avastin q4wks or PRN in VA (<5letter diff)
+- Lucentis > Avastin q4wks or PRN in OCT fluid (~10%)
+- Avastin > Lucentis in adverse events (24 vs 19%)"	FOCUS	"- Lucentis + PDT > PDT alone
+- Predominantly-classic CNV"	"SUMMIT (MONT BLANC, DENALI, EVEREST)"	"- Lucentis + PDT = Lucentis alone
+- Except IPCV (Lucentis + PDT > Lucentis)"	CABERNET	- Lucentis + epimacular brachy vs Lucentis	RADICAL	"- Lucentis + PDT + Dexamethasone vs Lucentis
+"	VIEW1 & 2	- Eylea q1mo x 3 -> q2mo = Lucentis q1mo	HARBOR	- Lucentis 0.5mg q4wks vs PRN vs 2mg q4wks vs PRN

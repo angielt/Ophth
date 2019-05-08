@@ -33,9 +33,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var showInfo = false
     let tap = UITapGestureRecognizer()
     let currentIndex = status.curReviewIndex
+    var currentTopIndex = 0
+    var currentSubIndex = 0
     
-    var imageArray = [UIImage]()
-    var imageCaption = [String]()
+    var imageCount = 0
     
     var cards: [Card]?
     var subtopic: String?
@@ -75,28 +76,22 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
         
-        
         //UI image start from here
-        
-        //print(status.CategoryList[0].topics[0].subtopics[0].img_list[0])
-        
         imageScrollView.delegate = self
         
-        /***DON'T NEED image caption WHEN PARSE ***/
-        imageCaption = ["caption 0","caption 1", "caption 2", "caption 3", "caption 4"]
+        imageCount = status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list.count
         
-        imagePageController.numberOfPages = imageArray.count
-        
-        //UI Image
-        for i in 0..<status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list.count{
+        imagePageController.numberOfPages = imageCount
+
+        for i in 0..<imageCount{
             let imageView = UIImageView()
             imageView.isUserInteractionEnabled = true  //enable tap on image
-            imageView.image = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[i])
+            imageView.image = UIImage(named: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[i])
             
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate + 20, y: 0, width: self.imageScrollView.frame.width, height: self.imageScrollView.frame.height - 30)
+            imageView.frame = CGRect(x: xCordinate + 20, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image
@@ -107,9 +102,11 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             self.imageScrollView.addSubview(imageView)
             
             //add caption for each image
-            let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 20), size: CGSize.init(width:0,height:40)))
-            caption.text = imageCaption[i]
+            let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
+            caption.text = status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_caption[i]
             caption.textColor = UIColor.white
+            caption.numberOfLines = 3
+            caption.lineBreakMode = .byWordWrapping
             caption.sizeToFit()
             let captionLocation = self.imageScrollView.center.x + 20
             
@@ -120,7 +117,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             else{
                 caption.center.x = captionLocation + self.view.frame.width * CGFloat(i)
             }
-            
             self.imageScrollView.addSubview(caption)
         }
     }
@@ -128,8 +124,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
         if(index <= indexMax){
-            print("handletap")
-            print(indexMax)
             
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
@@ -156,9 +150,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("index: " + String(index))
-        print("indexPath: "+String(indexPath.row))
-        print("review index: "+String(currentIndex))
         // fetch cell
         if(indexMax < indexPath.row){
             indexMax = indexPath.row
@@ -210,10 +201,14 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
+<<<<<<< HEAD
             image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[imageIndex])
         } else if segue.identifier == "addNotes", let navigationController = segue.destination as? UINavigationController,
             let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
             destinationViewController.subtopic = self.subtopic
+=======
+            image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[imageIndex])
+>>>>>>> 457fd9a1f567ef481f5a20df72a7259180edce90
         }
     }
 }

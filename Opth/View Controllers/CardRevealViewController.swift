@@ -72,9 +72,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
         if(index <= indexMax){
-            print("handletap")
-            print(indexMax)
-            
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
@@ -100,9 +97,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("index: " + String(index))
-        print("indexPath: "+String(indexPath.row))
-        print("review index: "+String(currentIndex))
         // fetch cell
         if(indexMax < indexPath.row){
             indexMax = indexPath.row

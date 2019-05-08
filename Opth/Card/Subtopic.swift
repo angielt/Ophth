@@ -11,20 +11,24 @@ class Subtopic{ // aka Slide
     var subtopicName:String
     var cards:[Card]
     var img_list:[String]
+    var img_caption:[String]
     var score:Int
-    var notes: String
     // add variables for spaced rep
 
     init(subtopic: String){
         self.subtopicName = subtopic
         self.cards = []
         self.img_list = []
+        self.img_caption = []
         self.score = 0
-        self.notes = ""
     }
     
     func addImg(img: String){
         self.img_list.append(img)
+    }
+    
+    func addCaption(imgCap: String){
+        self.img_caption.append(imgCap)
     }
     
     // add functions for spaced rep
