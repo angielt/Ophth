@@ -13,6 +13,7 @@ class SubTableViewController: UITableViewController {
     var topic: Topic!
     var subtopic: Subtopic!
     var index = 0
+    var topicIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ class SubTableViewController: UITableViewController {
             destinationVC.subtopic = subtopic
             destinationVC.topic = topic
             destinationVC.curIndex = index
+            destinationVC.curTopicIndex = topicIndex
         }
     }
 }

@@ -16,7 +16,7 @@ class ContentsOfTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data:"/Users/cathyhsieh/Desktop/temp.txt")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -89,6 +89,7 @@ class ContentsOfTableViewController: UITableViewController {
         if(segue.identifier == "subCell") {
             let subTableView = segue.destination as! SubTableViewController
             subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
+            subTableView.topicIndex = rowIndex
         }
     }
 }
