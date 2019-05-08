@@ -13,6 +13,8 @@ class SubTableViewController: UITableViewController {
     var topic: Topic!
     var subtopic: Subtopic!
     var index = 0
+    var topicIndex = 0
+    var categoryIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +58,7 @@ class SubTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "flashCardSegue", let destinationVC = segue.destination as? ViewController{
-            destinationVC.subtopic = subtopic
+            //destinationVC.subtopic = subtopic
             destinationVC.topic = topic
             destinationVC.curIndex = index
         }

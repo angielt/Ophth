@@ -16,15 +16,15 @@ class ViewController: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
-    var subtopic: Subtopic!
+   // var subtopic: Subtopic!
     var topic: Topic!
     var curIndex = 0 //Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
+        parse.csv(data: "/Users/nomunabatmandakh/Desktop/Opth/Opth/Information/biggerdata.txt")
+        //parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
         //status.printContents()
 
 
@@ -66,13 +66,15 @@ class ViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
-                destinationViewController.cards = topic.subtopics[curIndex].cards// subtopic?.cards
+                destinationViewController.cards = topic.subtopics[curIndex].cards
+                destinationViewController.subtopic = topic.subtopics[curIndex].subtopicName
                 destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
         else if segue.identifier == "revealImage",
             let destinationViewController = segue.destination as? ImageCardRevealViewController {
-            destinationViewController.cards = topic.subtopics[curIndex].cards// subtopic?.cards
+            destinationViewController.cards = topic.subtopics[curIndex].cards
+            destinationViewController.subtopic = topic.subtopics[curIndex].subtopicName
             destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }

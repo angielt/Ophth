@@ -12,17 +12,23 @@ import os.log
 class NotesViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet var notesText: UITextView!
+    
+    var subtopic: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        notesText.becomeFirstResponder()
+        notesText.delegate = self as? UITextViewDelegate
+        
+        let userDefaults = UserDefaults.standard
+        if let note = userDefaults.string(forKey: subtopic!) {
+            notesText.text = note
+        }
 
-        // Do any additional setup after loading the view.
+        notesText.reloadInputViews()
     }
-    
-    
-
-
-    // MARK: - Navigation
 
      @IBAction func cancel(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
@@ -36,6 +42,8 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(notesText.text, forKey: subtopic!)
     }
 
 }

@@ -33,6 +33,8 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     let currentIndex = status.curReviewIndex
     
     var cards: [Card]?
+    var subtopic: String!
+
 //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
@@ -131,12 +133,18 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    //MARK: Actions
-    @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
-        if sender.source is NotesViewController { //meal = sourceViewController.meal {
+    //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigationController = segue.destination as? UINavigationController,
+            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
+            destinationViewController.subtopic = self.subtopic
         }
-        
+    }
+            
+    // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
+    @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
+        if sender.source is NotesViewController{ //let newNote = sourceViewController.notes {
+           // status.CategoryList[categoryIndex].topics[topicIndex].subtopics[subIndex].notes = newNote
+        }
     }
 }
-
-

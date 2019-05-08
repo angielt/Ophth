@@ -38,6 +38,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var imageCaption = [String]()
     
     var cards: [Card]?
+    var subtopic: String?
+    var subIndex = 0
+    var topicIndex = 0
+    var categoryIndex = 0
     //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
@@ -184,11 +188,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
-    //MARK: Actions
+    // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
         if sender.source is NotesViewController {
         }
-        
     }
     
     // link the page controller with the image scroll view
@@ -208,6 +211,9 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
             image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[imageIndex])
+        } else if segue.identifier == "addNotes", let navigationController = segue.destination as? UINavigationController,
+            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
+            destinationViewController.subtopic = self.subtopic
         }
     }
 }
