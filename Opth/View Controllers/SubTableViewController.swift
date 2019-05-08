@@ -14,10 +14,6 @@ class SubTableViewController: UITableViewController {
     var subtopic: Subtopic!
     var index = 0
     var topicIndex = 0
-<<<<<<< HEAD
-    var categoryIndex = 0
-=======
->>>>>>> 457fd9a1f567ef481f5a20df72a7259180edce90
     
     override func viewDidLoad() {
         super.viewDidLoad()

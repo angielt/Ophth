@@ -201,14 +201,16 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
-<<<<<<< HEAD
-            image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[imageIndex])
-        } else if segue.identifier == "addNotes", let navigationController = segue.destination as? UINavigationController,
-            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
-            destinationViewController.subtopic = self.subtopic
-=======
+//            image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[imageIndex])
+//        } else if segue.identifier == "addNotes", let navigationController = segue.destination as? UINavigationController,
+//            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
+//            destinationViewController.subtopic = self.subtopic
             image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[imageIndex])
->>>>>>> 457fd9a1f567ef481f5a20df72a7259180edce90
+        } else if (segue.identifier == "addNotes"){
+            if let navigationController = segue.destination as? UINavigationController,
+                let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
+                destinationViewController.subtopic = self.subtopic
+            }
         }
     }
 }
