@@ -17,6 +17,7 @@
 		62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED789122836C2D002D59C4 /* GifImageViewController.swift */; };
 		62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */; };
 		62ED7896228373B1002D59C4 /* 190_BruchsMembrane_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */; };
+		62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78972283821A002D59C4 /* SpacedRepetition.swift */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
@@ -70,6 +71,7 @@
 		62ED789122836C2D002D59C4 /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
 		62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_2.gif; path = images/190_BruchsMembrane_2.gif; sourceTree = "<group>"; };
 		62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_1.gif; path = images/190_BruchsMembrane_1.gif; sourceTree = "<group>"; };
+		62ED78972283821A002D59C4 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
 		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				FD056E6D22387E1D003CBB68 /* Topic.swift */,
 				FD056E6F2238811E003CBB68 /* Subtopic.swift */,
 				FD056E712238818C003CBB68 /* Card.swift */,
+				62ED78972283821A002D59C4 /* SpacedRepetition.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */,
 				62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */,
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
+				62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */,
 				FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */,
 				62CE6E6922695A0E00ECD0C0 /* SubTableViewController.swift in Sources */,
 				FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */,

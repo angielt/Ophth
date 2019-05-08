@@ -50,25 +50,10 @@ class Parse{
         let category:String = row[0]
         let topic:String = row[1]
         let subtopic:String = row[2]
-        var img:String = ""
-        var imgCap:String = ""
+        let img:String = row[3]
+        let imgCap:String = row[4]
         status.addCategory(category: category)
         status.addTopic(category: category, topic: topic)
-        
-        let ifImg = [".jpg",".png",".gif"]
-        if(ifImg.contains(where: row[3].contains)){
-            img = row[3]
-        }
-        else{
-            img = "no image"
-        }
-        
-        if row[4].contains("nil"){
-            imgCap = "no caption"
-        }
-        else{
-            imgCap = row[4]
-        }
         
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img, imgCap: imgCap)
         // loop through remaining header/info pairs and store

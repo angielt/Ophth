@@ -13,6 +13,7 @@ class Subtopic{ // aka Slide
     var img_list:[String]
     var img_caption:[String]
     var score:Int
+    var repeat_factor:Int
     // add variables for spaced rep
 
     init(subtopic: String){
@@ -20,7 +21,8 @@ class Subtopic{ // aka Slide
         self.cards = []
         self.img_list = []
         self.img_caption = []
-        self.score = 0
+        self.score = 20
+        self.repeat_factor = 5
     }
     
     func addImg(img: String){
@@ -29,6 +31,10 @@ class Subtopic{ // aka Slide
     
     func addCaption(imgCap: String){
         self.img_caption.append(imgCap)
+    }
+    
+    func updateRepeatFactor(rf:Int){
+        self.repeat_factor = rf
     }
     
     // add functions for spaced rep

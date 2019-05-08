@@ -14,8 +14,6 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet var notesText: UITextView!
     
-    var subtopic: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +21,7 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
         notesText.delegate = self as? UITextViewDelegate
         
         let userDefaults = UserDefaults.standard
-        if let note = userDefaults.string(forKey: subtopic!) {
+        if let note = userDefaults.string(forKey: spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName) {
             notesText.text = note
         }
 
@@ -43,7 +41,7 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
             return
         }
         let userDefaults = UserDefaults.standard
-        userDefaults.set(notesText.text, forKey: subtopic!)
+        userDefaults.set(notesText.text, forKey:  spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName)
     }
 
 }

@@ -16,6 +16,9 @@ class imageTapGesture: UITapGestureRecognizer{
 
 class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
     
+    @IBOutlet weak var easyButton: UIButton!
+    @IBOutlet weak var unsureButton: UIButton!
+    @IBOutlet weak var hardButton: UIButton!
     
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
@@ -32,65 +35,56 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var indexMax = 0
     var showInfo = false
     let tap = UITapGestureRecognizer()
-    let currentIndex = status.curReviewIndex
-    var currentTopIndex = 0
-    var currentSubIndex = 0
+    
+    let curReviewIndex = spacedRep.curReviewIndex // current subtopic
+    var occlusionFinished = false
+    var occlusionTapCount = 0
     
     var imageCount = 0
-    
-    var cards: [Card]?
-    var subtopic: String?
-    var subIndex = 0
-    var topicIndex = 0
-    var categoryIndex = 0
-    //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
     @IBAction func easyOnClick(_ sender: Any) {
         print("easy")
-        // status.curReviewIndex = status.curReviewIndex + 1
-        dismiss(animated: true, completion: nil)
+        spacedRep.easyPressed()
+        // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+        dismiss(animated: true) {
+        }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
         print("unsure")
-        //status.curReviewIndex = status.curReviewIndex + 1
+        spacedRep.unsurePressed()
         dismiss(animated: true, completion: nil)
     }
     @IBAction func hardOnClick(_ sender: Any) {
         print("hard")
-        //status.curReviewIndex = status.curReviewIndex + 1
+        spacedRep.hardPressed()
         dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func tableViewonClick(_ sender: UITableView){
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
+        indexMax = spacedRep.reviewList.count
         
         //UI image start from here
         imageScrollView.delegate = self
         
-        imageCount = status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list.count
+        imageCount = spacedRep.reviewList[spacedRep.curReviewIndex].img_list.count
         
         imagePageController.numberOfPages = imageCount
 
         for i in 0..<imageCount{
             let imageView = UIImageView()
             imageView.isUserInteractionEnabled = true  //enable tap on image
-            var img = status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[i]
+            var img = spacedRep.reviewList[curReviewIndex].img_list[i]
             if (img.contains(".gif")){
                 img = img.replacingOccurrences(of: ".gif", with: "")
                 imageView.loadGif(name: img)
-//                imageView.loadGif(name: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[i])
             }
             else{
                 imageView.image = UIImage(named: img)
@@ -111,7 +105,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             
             //add caption for each image
             let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
-            caption.text = status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_caption[i]
+            caption.text = spacedRep.reviewList[curReviewIndex].img_caption[i]
             caption.textColor = UIColor.white
             caption.numberOfLines = 3
             caption.lineBreakMode = .byWordWrapping
@@ -131,8 +125,8 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index <= indexMax){
-            
+        if(index <= indexMax-1){
+            print(index)
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
@@ -153,22 +147,21 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cards?.count ?? 1 //status.ReviewList[currentIndex].cards.count
+        //print("current index ")
+        //print(spacedRep.reviewList)
+        return spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
     }
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // fetch cell
-        if(indexMax < indexPath.row){
-            indexMax = indexPath.row
-        }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
+        
         // fill cell contents
-        if(indexPath.row < cards?.count ?? 1){
-            cell.Header.text = cards?[indexPath.row].header
-            cell.Info.text = cards?[indexPath.row].info
+        if(indexPath.row < spacedRep.reviewList[spacedRep.curReviewIndex].cards.count){
+            cell.Header.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].header
+            cell.Info.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.blue
@@ -183,7 +176,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 cell.Info.textColor = UIColor.white
             }
         }
-        
         return cell
     }
     
@@ -209,16 +201,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
-//            image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentIndex].subtopics[currentIndex].img_list[imageIndex])
-//        } else if segue.identifier == "addNotes", let navigationController = segue.destination as? UINavigationController,
-//            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
-//            destinationViewController.subtopic = self.subtopic
-            image.fullImage = UIImage(named: status.CategoryList[currentIndex].topics[currentTopIndex].subtopics[currentSubIndex].img_list[imageIndex])
-        } else if (segue.identifier == "addNotes"){
-            if let navigationController = segue.destination as? UINavigationController,
-                let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
-                destinationViewController.subtopic = self.subtopic
-            }
+            image.fullImage = UIImage(named: spacedRep.reviewList[curReviewIndex].img_list[imageIndex])
         }
     }
 }

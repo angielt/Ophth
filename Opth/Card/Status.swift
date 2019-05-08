@@ -90,18 +90,14 @@ class Status{
         }
         if(matchExists == false){
             let newSubtopic = Subtopic(subtopic: subtopic)
-            if(img != nil){
-                for i in img!.components(separatedBy: ","){
-                    let removedQ = i.replacingOccurrences(of: "\"", with: "")
-                    let removedW = removedQ.replacingOccurrences(of: " ", with: "")
-                    newSubtopic.addImg(img: removedW)
-                }
+            for i in img!.components(separatedBy: ","){
+                let removedQ = i.replacingOccurrences(of: "\"", with: "")
+                let removedW = removedQ.replacingOccurrences(of: " ", with: "")
+                newSubtopic.addImg(img: removedW)
             }
-            if(imgCap != nil){
-                for i in imgCap!.components(separatedBy: "*"){
-                    let removedQ = i.replacingOccurrences(of: "\"", with: "")
-                    newSubtopic.addCaption(imgCap: removedQ)
-                }
+            for i in imgCap!.components(separatedBy: "*"){
+                let removedQ = i.replacingOccurrences(of: "\"", with: "")
+                newSubtopic.addCaption(imgCap: removedQ)
             }
             subtopicTopic.subtopics.append(newSubtopic)
         }

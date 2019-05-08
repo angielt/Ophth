@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +33,7 @@
             <objects>
                 <tableViewController id="uay-KK-Vsu" customClass="ContentsOfTableViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r3n-zz-1cB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="00l-Ur-Dow">
@@ -44,6 +44,9 @@
                                     <rect key="frame" x="0.0" y="2" width="375" height="56"/>
                                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="uay-KK-Vsu" id="6vP-uG-M0W"/>
+                                    </connections>
                                 </searchBar>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -72,6 +75,7 @@
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="CGv-yi-cUV"/>
                     <navigationItem key="navigationItem" id="ToX-kY-B6R"/>
                     <connections>
+                        <outlet property="searchBar" destination="xR0-QM-cHD" id="VCJ-Pj-uXs"/>
                         <segue destination="f8K-zN-X4m" kind="presentation" identifier="subCell" modalTransitionStyle="crossDissolve" id="YOY-1I-l6F"/>
                     </connections>
                 </tableViewController>
@@ -82,7 +86,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cardVC" id="BYZ-38-t0r" customClass="ViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +111,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -142,7 +146,7 @@
         <!--Card Reveal View Controller-->
         <scene sceneID="vZ7-ge-rp7">
             <objects>
-                <viewController id="LNz-K0-qAO" customClass="CardRevealViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cardRevealVC" id="LNz-K0-qAO" customClass="CardRevealViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVb-0w-STE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +291,10 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="addNotes" destination="bGe-91-dgg" id="opb-Un-OWq"/>
+                        <outlet property="easyButton" destination="cZh-F0-2AT" id="2y2-LV-RQr"/>
+                        <outlet property="hardButton" destination="yoK-Mh-PqG" id="Efs-Yc-tnx"/>
                         <outlet property="subtopicTableView" destination="5bd-IH-adQ" id="2z1-HS-h1b"/>
+                        <outlet property="unsureButton" destination="BKJ-JI-RCB" id="339-Hb-7bl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -348,7 +355,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                     <state key="normal" title="&lt; Back"/>
                                     <connections>
-                                        <segue destination="uay-KK-Vsu" kind="presentation" modalTransitionStyle="crossDissolve" id="GhD-J7-Bym"/>
+                                        <action selector="backButton:" destination="f8K-zN-X4m" eventType="touchUpInside" id="1OX-7C-tyT"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-6m-G4l">
@@ -361,15 +368,26 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brA-bn-Y4R">
+                                    <rect key="frame" x="302" y="15" width="61" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <state key="normal" title="Review"/>
+                                    <connections>
+                                        <action selector="reviewButton:" destination="f8K-zN-X4m" eventType="touchUpInside" id="SoM-pv-UKI"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="4Nv-3b-zMG" firstAttribute="top" secondItem="acC-xo-eEw" secondAttribute="top" constant="15" id="4k1-Wu-wfz"/>
+                                <constraint firstItem="brA-bn-Y4R" firstAttribute="top" secondItem="acC-xo-eEw" secondAttribute="top" constant="15" id="8JP-Fr-R4z"/>
                                 <constraint firstAttribute="bottom" secondItem="4Nv-3b-zMG" secondAttribute="bottom" constant="15" id="JH7-Ke-Olk"/>
+                                <constraint firstAttribute="trailing" secondItem="brA-bn-Y4R" secondAttribute="trailing" constant="12" id="Rep-DG-3oT"/>
                                 <constraint firstItem="EdQ-6m-G4l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Nv-3b-zMG" secondAttribute="trailing" constant="8" symbolic="YES" id="TAQ-zd-6ql"/>
                                 <constraint firstItem="EdQ-6m-G4l" firstAttribute="centerY" secondItem="acC-xo-eEw" secondAttribute="centerY" id="i8o-Yv-yz6"/>
                                 <constraint firstItem="EdQ-6m-G4l" firstAttribute="centerX" secondItem="acC-xo-eEw" secondAttribute="centerX" id="jDf-Y5-87v"/>
                                 <constraint firstItem="4Nv-3b-zMG" firstAttribute="leading" secondItem="acC-xo-eEw" secondAttribute="leading" constant="12" id="rTH-dA-ElP"/>
+                                <constraint firstItem="brA-bn-Y4R" firstAttribute="centerY" secondItem="acC-xo-eEw" secondAttribute="centerY" id="yGk-G8-f1B"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -420,7 +438,7 @@
         <!--Image Card Reveal View Controller-->
         <scene sceneID="Gd0-H2-aYL">
             <objects>
-                <viewController id="bBo-D8-DXN" customClass="ImageCardRevealViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imageCardRevealVC" id="bBo-D8-DXN" customClass="ImageCardRevealViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7cX-K6-mZU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,9 +597,12 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="addNotes" destination="lvh-IJ-Iwg" id="CHO-t4-3BA"/>
+                        <outlet property="easyButton" destination="uce-c4-tji" id="i63-3y-Qki"/>
+                        <outlet property="hardButton" destination="OWW-dK-xpX" id="gne-Rc-022"/>
                         <outlet property="imagePageController" destination="69K-CS-P4P" id="C76-Wg-P1u"/>
                         <outlet property="imageScrollView" destination="Chy-ML-7Q3" id="xpx-wp-OVI"/>
                         <outlet property="subtopicTableView" destination="oaF-ZK-bZY" id="3nS-mI-Jf5"/>
+                        <outlet property="unsureButton" destination="tcc-59-la2" id="l5X-MQ-aGz"/>
                         <segue destination="N7a-tw-eeG" kind="presentation" identifier="fullImage" modalTransitionStyle="crossDissolve" id="4wZ-Ha-UyP"/>
                     </connections>
                 </viewController>
@@ -621,9 +642,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FrC-2p-OWa"/>
+        <segue reference="swq-kv-bzv"/>
         <segue reference="IRs-yv-0fS"/>
         <segue reference="ry5-38-aaV"/>
-        <segue reference="GhD-J7-Bym"/>
     </inferredMetricsTieBreakers>
 </document>
