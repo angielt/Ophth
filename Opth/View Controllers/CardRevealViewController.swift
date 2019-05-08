@@ -8,7 +8,8 @@
 
 // check if spaced repetition score and repeat factor is saved in status.
 
-
+// TO DO:
+// - fix occulsion
 
 import Foundation
 
@@ -58,16 +59,12 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
         indexMax = spacedRep.reviewList.count
-        easyButton.backgroundColor = UIColor(named: "gray")
-        
-        
+
     }
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(occlusionTapCount >= (spacedRep.reviewList[spacedRep.curReviewIndex].cards.count)*2){
-            easyButton.backgroundColor = UIColor(red: 0x78, green: 0xF8, blue: 0x7F, alpha: 0.1)
-        }
         if(index <= indexMax-1){
+            print(index)
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true

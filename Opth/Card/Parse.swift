@@ -32,6 +32,7 @@ class Parse{
             // loop through rows of file, skip header row
             for row in parsedCSV.dropFirst(){
                 var rowSplit: [String] = row.components(separatedBy: "\t")
+                print(rowSplit)
                 rowSplit = rowSplit.filter(){$0 != "nil"}
                 rowSplit = rowSplit.filter(){$0 != ""}
                 if(rowSplit.count > 5){

@@ -109,11 +109,6 @@
                                     <constraint firstItem="tT0-3O-j1z" firstAttribute="centerY" secondItem="Mvr-JY-gRe" secondAttribute="centerY" id="aOe-CS-2AG"/>
                                     <constraint firstAttribute="height" constant="371" id="dUm-Oz-DgX"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bQC-X8-mYb" appends="YES" id="p3R-r5-ugM"/>
                                 </connections>
