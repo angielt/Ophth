@@ -125,6 +125,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         
         let categoryCount = status.CategoryList.count
         
+        if searchActive {
+            performSegue(withIdentifier: "fromSearchSegue", sender: self)
+        }
+        
         //need to fix "indexPath.row == 0"
         if indexPath.row == 0 {
             if status.CategoryList[indexPath.section].opened == true {
@@ -151,6 +155,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             let subTableView = segue.destination as! SubTableViewController
             subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
             subTableView.topicIndex = rowIndex
+        }
+        else if(segue.identifier == "fromSearchSegue"){
+            let flashCardView = segue.destination as? SearchToCardViewController
         }
         
         //bug here

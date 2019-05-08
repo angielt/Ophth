@@ -69,10 +69,6 @@ class SubTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "flashCardSegue", let destinationVC = segue.destination as? ViewController{
-            //destinationVC.subtopic = subtopic
-            destinationVC.topic = topic
-            destinationVC.curIndex = index
-            destinationVC.curTopicIndex = topicIndex
         }
     }
 }

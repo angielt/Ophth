@@ -1,16 +1,15 @@
 //
-//  ViewController.swift
+//  SearchToCardViewController.swift
 //  Opth
 //
-//  Created by Angie Ta on 2/14/19.
+//  Created by Cathy Hsieh on 5/8/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
 import UIKit
 
-// view controller of card front
-class ViewController: UIViewController{
-
+class SearchToCardViewController: UIViewController {
+    
     static let cardCornerRadius: CGFloat = 25
     
     @IBOutlet weak var cardFront: UILabel!
@@ -55,7 +54,7 @@ class ViewController: UIViewController{
         if(spacedRep.finished == true){
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
-        
+            
         else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil"){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
@@ -71,12 +70,12 @@ class ViewController: UIViewController{
             if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
                 //self.present(viewController, animated: true, completion: nil)
                 if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
-                    self.performSegue(withIdentifier: "reveal", sender: nil)
+                    self.performSegue(withIdentifier: "searchReveal", sender: nil)
                 }
                 else {
-                    self.performSegue(withIdentifier: "revealImage", sender: nil)
+                    self.performSegue(withIdentifier: "searchRevealImage", sender: nil)
                 }
-
+                
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -92,7 +91,7 @@ class ViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
-                destinationViewController.transitioningDelegate = self
+            destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
         else if segue.identifier == "revealImage",
@@ -103,7 +102,7 @@ class ViewController: UIViewController{
     }
 }
 
-extension ViewController: UIViewControllerTransitioningDelegate {
+extension SearchToCardViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController)
@@ -111,3 +110,4 @@ extension ViewController: UIViewControllerTransitioningDelegate {
             return FlipPresentAnimationController(originFrame: card.frame)
     }
 }
+
