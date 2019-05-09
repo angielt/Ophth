@@ -68,7 +68,7 @@ class Status{
     }
     
     // im sorry this is ugly, will find better way
-    func addSubtopic(category:String, topic:String, subtopic: String, img: String?){
+    func addSubtopic(category:String, topic:String, subtopic: String, img: String?, imgCap: String?){
         var matchExists:Bool = false
         var topicCategory:Category = Category(name: "null")
         var subtopicTopic:Topic = Topic(topic: "null")
@@ -90,8 +90,14 @@ class Status{
         }
         if(matchExists == false){
             let newSubtopic = Subtopic(subtopic: subtopic)
-            if(img != nil){
-                newSubtopic.addImg(img: img!)
+            for i in img!.components(separatedBy: ","){
+                let removedQ = i.replacingOccurrences(of: "\"", with: "")
+                let removedW = removedQ.replacingOccurrences(of: " ", with: "")
+                newSubtopic.addImg(img: removedW)
+            }
+            for i in imgCap!.components(separatedBy: "*"){
+                let removedQ = i.replacingOccurrences(of: "\"", with: "")
+                newSubtopic.addCaption(imgCap: removedQ)
             }
             subtopicTopic.subtopics.append(newSubtopic)
         }
@@ -135,6 +141,10 @@ class Status{
     
     func addImg(img: String, subtopic: Subtopic){
         subtopic.img_list.append(img)
+    }
+    
+    func addCaption(imgCap: String, subtopic: Subtopic){
+        subtopic.img_caption.append(imgCap)
     }
     
 //    func printContents(){

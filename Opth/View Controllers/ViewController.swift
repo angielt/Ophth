@@ -16,59 +16,95 @@ class ViewController: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
-        //status.printContents()
-
-
-        status.calculateReviewList();
+        //parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
+        
         self.loadData()
     }
     
     func loadData(){
-        cardFront.text = status.ReviewList[status.curReviewIndex].subtopicName
-        
-        card.layer.cornerRadius = 4.0
-        card.layer.borderWidth = 1.0
-        card.layer.borderColor = UIColor.clear.cgColor
-        card.layer.masksToBounds = false
-        card.layer.shadowColor = UIColor.gray.cgColor
-        card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        card.layer.shadowRadius = 4.0
-        card.layer.shadowOpacity = 1.0
-        card.layer.masksToBounds = false
-        card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
-        
+        if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+            cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+            
+            card.layer.cornerRadius = 4.0
+            card.layer.borderWidth = 1.0
+            card.layer.borderColor = UIColor.clear.cgColor
+            card.layer.masksToBounds = false
+            card.layer.shadowColor = UIColor.gray.cgColor
+            card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            card.layer.shadowRadius = 4.0
+            card.layer.shadowOpacity = 1.0
+            card.layer.masksToBounds = false
+            card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
+        }
+    }
+    
+    func exitCardChange(){
+        card.layer.backgroundColor = UIColor.black.cgColor
+        cardFront.text = "Review Finished - tap to exit"
+        cardFront.textColor = UIColor.gray
+    }
+    
+    func newListCardChange(){
+        cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
     }
     
     @IBAction func handleTap(_ sender: Any) {
-        print("tap")
-        performSegue(withIdentifier: "reveal", sender: nil)
+        if(spacedRep.finished == true){
+            self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
+        }
+        
+        else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil"){
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
+            viewController.modalTransitionStyle = .flipHorizontal
+            self.loadData()
+        }
+        else {
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "imageCardRevealVC") as UIViewController
+            viewController.modalTransitionStyle = .flipHorizontal
+            self.loadData()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
+            if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
+                //self.present(viewController, animated: true, completion: nil)
+                if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
+                    self.performSegue(withIdentifier: "reveal", sender: nil)
+                }
+                else {
+                    self.performSegue(withIdentifier: "revealImage", sender: nil)
+                }
+
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+                    spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+                    //                    print("spaced rep index" + String(spacedRep.curReviewIndex) + String(spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName))
+                    self.loadData() // loads data for next card
+                }
+            }
+        }
     }
-    
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
+                destinationViewController.transitioningDelegate = self
+            // delay changes to current VC until after  flip animation
+        }
+        else if segue.identifier == "revealImage",
+            let destinationViewController = segue.destination as? ImageCardRevealViewController {
             destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
-        print("when segue")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if(status.curReviewIndex < status.ReviewList.count-1){
-//                print("hello")
-                status.curReviewIndex = status.curReviewIndex + 1
-                self.loadData()
-            }
-        }
-        
     }
-    
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {

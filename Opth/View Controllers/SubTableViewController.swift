@@ -9,55 +9,66 @@
 import UIKit
 
 class SubTableViewController: UITableViewController {
-
     @IBOutlet weak var topicName: UILabel!
-    var topicLabel = ""
-    var categoryCount = 0
-    var subtopicCount = 0
-    var subtopicAr = [String]()
+    var topic: Topic!
+    var subtopic: Subtopic!
+    var index = 0
+    var topicIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func reviewButton(_ sender: Any) {
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardVC") as! ViewController
+        spacedRep.VCreference = (viewController as! ViewController)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = topic.topicName
+    }
 
     //number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return categoryCount
+        return 1
     }
 
     //number of rows in section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return subtopicCount
+        return topic.subtopics.count
     }
     
     //print out the subtopics
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        topicName.text = topicLabel
+        topicName.text = topic.topicName
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "subCell", for: indexPath)
 
-        cell.textLabel?.text = subtopicAr[indexPath.row]
+        cell.textLabel?.text = topic.subtopics[indexPath.row].subtopicName//subtopicAr[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        /***
-         need to fix the segue from here to the card Reveal (flashcard)
-        ***/
-        
-//        let selectedTopic = status.CategoryList[indexPath.section].topics[topicIndex].subtopics[indexPath.row].subtopicName
-//        let destinationVC = ViewController()
-//        destinationVC.cardName = selectedTopic
-//        destinationVC.performSegue(withIdentifier: "flashCardSegue", sender: self)
-        
+        subtopic = topic.subtopics[indexPath.row]
+        index = indexPath.row
         performSegue(withIdentifier: "flashCardSegue", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
+        if segue.identifier == "flashCardSegue", let destinationVC = segue.destination as? ViewController{
+        }
+    }
 }

@@ -32,7 +32,7 @@ class Parse{
             // loop through rows of file, skip header row
             for row in parsedCSV.dropFirst(){
                 var rowSplit: [String] = row.components(separatedBy: "\t")
-                rowSplit = rowSplit.filter(){$0 != "nil"}
+                //rowSplit = rowSplit.filter(){$0 != "nil"}
                 rowSplit = rowSplit.filter(){$0 != ""}
                 if(rowSplit.count > 5){
                    setData(row: rowSplit)
@@ -50,22 +50,16 @@ class Parse{
         let category:String = row[0]
         let topic:String = row[1]
         let subtopic:String = row[2]
-        var img:String = ""
+        let img:String = row[3]
+        let imgCap:String = row[4]
         status.addCategory(category: category)
         status.addTopic(category: category, topic: topic)
         
-        let ifImg = [".jpg",".png"]
-        if(ifImg.contains(where: row[3].contains)){
-            img = row[3]
-        }
-        else{
-            img = "no image"
-        }
-        status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img)
+        status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img, imgCap: imgCap)
         // loop through remaining header/info pairs and store
    
-        for i in 4...(row.count-1){
-            if((i%2==0) ){
+        for i in 5...(row.count-1){
+            if((i%2 != 0) ){
                 if((i+1) <= (row.count-1)){ // has subtext
                     status.addCard(category: category, topic: topic, subtopic: subtopic, header: row[i], info: row[i+1])
                 }
