@@ -12,6 +12,9 @@ class SearchToCardViewController: UIViewController {
     
     static let cardCornerRadius: CGFloat = 25
     
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     

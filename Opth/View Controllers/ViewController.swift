@@ -16,6 +16,10 @@ class ViewController: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

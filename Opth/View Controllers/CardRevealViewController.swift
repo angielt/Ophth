@@ -83,7 +83,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             else if(showInfo == true){
                 showInfo = false
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
             }
         }
     }
@@ -112,7 +112,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.Info.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.black
             }
             else if(index < indexPath.row){
@@ -120,7 +120,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.Info.textColor = UIColor.black
             }
             else if(index > indexPath.row){
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.white
             }
         }

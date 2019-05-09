@@ -119,11 +119,21 @@
                                     <outletCollection property="gestureRecognizers" destination="bQC-X8-mYb" appends="YES" id="p3R-r5-ugM"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-12-cKh">
+                                <rect key="frame" x="12" y="35" width="59" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caV-lR-szP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mvr-JY-gRe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BUC-P6-dAx"/>
+                            <constraint firstItem="S3e-12-cKh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Fjd-1b-vTh"/>
                             <constraint firstItem="Mvr-JY-gRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQV-dd-9jX"/>
+                            <constraint firstItem="S3e-12-cKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="hA1-il-l5E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -676,11 +686,21 @@
                                     <outletCollection property="gestureRecognizers" destination="Xgu-gV-aVP" appends="YES" id="3yc-OK-Xeh"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSs-qw-5le">
+                                <rect key="frame" x="12" y="35" width="59" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="OpK-c2-obb" eventType="touchUpInside" id="f5T-os-nVi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IEF-x5-qX3" firstAttribute="centerX" secondItem="X0M-bZ-Ylu" secondAttribute="centerX" id="JP7-5Q-nnj"/>
+                            <constraint firstItem="fSs-qw-5le" firstAttribute="top" secondItem="XoD-Oe-npz" secondAttribute="top" constant="15" id="LNw-dO-6cE"/>
                             <constraint firstItem="IEF-x5-qX3" firstAttribute="centerY" secondItem="X0M-bZ-Ylu" secondAttribute="centerY" id="bbD-6t-iye"/>
+                            <constraint firstItem="fSs-qw-5le" firstAttribute="leading" secondItem="XoD-Oe-npz" secondAttribute="leading" constant="12" id="eFW-ds-OEd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XoD-Oe-npz"/>
                     </view>
@@ -699,13 +719,13 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="820" y="-631"/>
+            <point key="canvasLocation" x="820" y="-631.0344827586207"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mhi-ep-fYw"/>
+        <segue reference="swq-kv-bzv"/>
         <segue reference="IRs-yv-0fS"/>
-        <segue reference="00b-M0-Rvg"/>
+        <segue reference="LBt-Kh-oXB"/>
         <segue reference="ry5-38-aaV"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -245,6 +245,7 @@
 			children = (
 				FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */,
 				FDD1932F221BBB80000A2F63 /* View Controllers */,
+				FDF2A5A322163F0C00B1E1D0 /* Information */,
 				FDA541652251C8D100B536E0 /* View */,
 				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
@@ -252,7 +253,6 @@
 				62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */,
 				FDD19331221BBBB3000A2F63 /* Animation */,
 				FDF2A57F22163BBE00B1E1D0 /* Info.plist */,
-				FDF2A5A322163F0C00B1E1D0 /* Information */,
 				FDD19332221BBBC7000A2F63 /* Card */,
 			);
 			path = Opth;
