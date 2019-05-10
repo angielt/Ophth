@@ -23,7 +23,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
-        //parse.csv(data:"/Users/cathyhsieh/Documents/GitHub/Opth/Opth/Information/biggerdata.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -73,25 +72,19 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let categoryCount = status.CategoryList.count
-        let topicCount = status.CategoryList[section].topics.count
-        
         if (searchActive) {
             return filteredSubtopics.count
         }
         else if status.CategoryList[section].opened == true {
-            return topicCount + categoryCount
+            return status.CategoryList[section].topics.count + 1
         }
         else {
-            return categoryCount
+            return 1
         }
     }
     
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let categoryCount = status.CategoryList.count
-        
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
@@ -100,8 +93,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             return cell
         }
         else {
-            //need to fix "indexPath.row == 0"
-            if indexPath.row == 0 {
+            if indexPath.row == 0 {  //Categories
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                     return UITableViewCell()}
                 let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
@@ -109,11 +101,11 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.textColor = UIColor.white
                 return cell
             }
-            else {
+            else {  //Topics
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                     return UITableViewCell()}
                 
-                cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - categoryCount].topicName
+                cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - 1].topicName
                 cell.textLabel?.textColor = UIColor.white
                 return cell
             }
@@ -121,29 +113,23 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        
-        let categoryCount = status.CategoryList.count
-        
         if searchActive {
             performSegue(withIdentifier: "fromSearchSegue", sender: self)
         }
-        
-        //need to fix "indexPath.row == 0"
-        if indexPath.row == 0 {
+        if indexPath.row == 0 {  //Categories
             if status.CategoryList[indexPath.section].opened == true {
                 status.CategoryList[indexPath.section].opened = false
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
-            else {
+            else {  //Open to topics
                 status.CategoryList[indexPath.section].opened = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
         }
         else {
-            rowIndex = indexPath.row - categoryCount
+            rowIndex = indexPath.row - 1
             sectionIndex = indexPath.section
             performSegue(withIdentifier: "subCell", sender: self)
         }
@@ -157,7 +143,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             subTableView.topicIndex = rowIndex
         }
         else if(segue.identifier == "fromSearchSegue"){
-            let flashCardView = segue.destination as? SearchToCardViewController
+            let _ = segue.destination as? SearchToCardViewController
         }
         
         //bug here

@@ -13,12 +13,12 @@
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
 		62CE6E6922695A0E00ECD0C0 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */; };
-		62ED789022829406002D59C4 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62ED788F22829406002D59C4 /* temp.txt */; };
 		62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED789122836C2D002D59C4 /* GifImageViewController.swift */; };
 		62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */; };
 		62ED7896228373B1002D59C4 /* 190_BruchsMembrane_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */; };
 		62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78972283821A002D59C4 /* SpacedRepetition.swift */; };
 		62ED789A2283A224002D59C4 /* SearchToCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78992283A224002D59C4 /* SearchToCardViewController.swift */; };
+		62ED789C22855B04002D59C4 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62ED789B22855B04002D59C4 /* temp.txt */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
@@ -68,12 +68,12 @@
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
 		62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
-		62ED788F22829406002D59C4 /* temp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp.txt; sourceTree = "<group>"; };
 		62ED789122836C2D002D59C4 /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
 		62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_2.gif; path = images/190_BruchsMembrane_2.gif; sourceTree = "<group>"; };
 		62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_1.gif; path = images/190_BruchsMembrane_1.gif; sourceTree = "<group>"; };
 		62ED78972283821A002D59C4 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
 		62ED78992283A224002D59C4 /* SearchToCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchToCardViewController.swift; sourceTree = "<group>"; };
+		62ED789B22855B04002D59C4 /* temp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp.txt; sourceTree = "<group>"; };
 		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,13 +245,13 @@
 			children = (
 				FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */,
 				FDD1932F221BBB80000A2F63 /* View Controllers */,
-				FDF2A5A322163F0C00B1E1D0 /* Information */,
 				FDA541652251C8D100B536E0 /* View */,
 				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
 				62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */,
 				62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */,
 				FDD19331221BBBB3000A2F63 /* Animation */,
+				FDF2A5A322163F0C00B1E1D0 /* Information */,
 				FDF2A57F22163BBE00B1E1D0 /* Info.plist */,
 				FDD19332221BBBC7000A2F63 /* Card */,
 			);
@@ -279,7 +279,7 @@
 		FDF2A5A322163F0C00B1E1D0 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				62ED788F22829406002D59C4 /* temp.txt */,
+				62ED789B22855B04002D59C4 /* temp.txt */,
 				62BF6EC1227FDFCC00B1088F /* captionTest.txt */,
 				BC95F77F2252F8C6008697EA /* SmallTes.txt */,
 			);
@@ -399,9 +399,9 @@
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
 				62ED7896228373B1002D59C4 /* 190_BruchsMembrane_1.gif in Resources */,
+				62ED789C22855B04002D59C4 /* temp.txt in Resources */,
 				BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */,
 				62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */,
-				62ED789022829406002D59C4 /* temp.txt in Resources */,
 				62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

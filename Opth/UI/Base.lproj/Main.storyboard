@@ -36,12 +36,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="00l-Ur-Dow">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="00l-Ur-Dow">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="xR0-QM-cHD">
-                                    <rect key="frame" x="0.0" y="2" width="375" height="56"/>
+                                    <rect key="frame" x="0.0" y="-22.5" width="375" height="56"/>
                                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -608,7 +608,7 @@
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="addNotes" destination="lvh-IJ-Iwg" id="CHO-t4-3BA"/>
-                        <outlet property="easyButton" destination="uce-c4-tji" id="i63-3y-Qki"/>
+                        <outlet property="easyButton" destination="uce-c4-tji" id="if1-IN-chm"/>
                         <outlet property="hardButton" destination="OWW-dK-xpX" id="gne-Rc-022"/>
                         <outlet property="imagePageController" destination="69K-CS-P4P" id="C76-Wg-P1u"/>
                         <outlet property="imageScrollView" destination="Chy-ML-7Q3" id="xpx-wp-OVI"/>
