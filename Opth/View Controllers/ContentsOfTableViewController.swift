@@ -22,7 +22,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
+        parse.csv(data: "/Users/nomunabatmandakh/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -68,7 +68,11 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     // MARK: table of contents
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return status.CategoryList.count
+        if (searchActive){
+            return 1
+        } else {
+            return status.CategoryList.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
