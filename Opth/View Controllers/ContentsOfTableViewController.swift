@@ -22,7 +22,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
+        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -49,6 +49,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        //filteredSubtopics = subtopicAr.filter({
+          //  (subtopics: Subtopic) -> Bool in return
+            //subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
+        //})
         
         // checks
         if (searchBar.text == "") {
@@ -68,11 +72,17 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     // MARK: table of contents
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return status.CategoryList.count
+        if (searchActive) {
+            return 1
+        }
+        else {
+            return status.CategoryList.count
+        }
     }
     
+    // in here is where it goes wrong, everything before in filteredSubtopics array it is correct
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (searchActive) {
+        if searchActive {
             return filteredSubtopics.count
         }
         else if status.CategoryList[section].opened == true {
@@ -88,6 +98,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
+            print("filtered: ", filteredSubtopics[indexPath.row].subtopicName)
             cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
             cell.textLabel?.textColor = UIColor.white
             return cell
