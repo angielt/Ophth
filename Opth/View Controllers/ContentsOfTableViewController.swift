@@ -48,11 +48,11 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
-        //filteredSubtopics = subtopicAr.filter({
-          //  (subtopics: Subtopic) -> Bool in return
-            //subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
-        //})
+        //filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        filteredSubtopics = subtopicAr.filter({
+            (subtopics: Subtopic) -> Bool in return
+            subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
+        })
         
         // checks
         if (searchBar.text == "") {
