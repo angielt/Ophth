@@ -22,7 +22,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/nomunabatmandakh/Desktop/temp.txt")
+        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -48,7 +48,12 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        //filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        
+        filteredSubtopics = subtopicAr.filter({
+            (subtopics: Subtopic) -> Bool in return
+            subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
+        })
         
         // checks
         if (searchBar.text == "") {
