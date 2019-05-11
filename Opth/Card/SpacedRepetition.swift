@@ -70,6 +70,7 @@ class SpacedRepetition {
         RFList.four = []
         RFList.five = []
         VCreference = nil
+        
     }
     
     // called ContentsOfTableVC when user clicks topic
@@ -176,6 +177,7 @@ class SpacedRepetition {
                 finished = true
                 if(VCreference != nil){
                     VCreference?.exitCardChange()
+                    clear()
                 }
             }
         }
@@ -199,6 +201,7 @@ class SpacedRepetition {
                 finished = true
                 if(VCreference != nil){
                     VCreference?.exitCardChange()
+                    clear()
                 }
             }
         }

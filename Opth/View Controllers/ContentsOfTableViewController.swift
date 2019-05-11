@@ -146,6 +146,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("segue")
         if(segue.identifier == "subCell") {
             let subTableView = segue.destination as! SubTableViewController
             subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
@@ -157,5 +158,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         
         //bug here
         spacedRep.setReviewTopic(topic: &(status.CategoryList[sectionIndex].topics[rowIndex]))
+        print(status.CategoryList[sectionIndex].topics[rowIndex].topicName)
     }
 }

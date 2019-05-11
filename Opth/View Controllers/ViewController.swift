@@ -55,6 +55,7 @@ class ViewController: UIViewController{
     
     @IBAction func handleTap(_ sender: Any) {
         if(spacedRep.finished == true){
+            spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
         
