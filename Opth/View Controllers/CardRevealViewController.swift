@@ -69,6 +69,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
         indexMax = spacedRep.reviewList.count
+        subtopicTableView.rowHeight = UITableView.automaticDimension
 
     }
     

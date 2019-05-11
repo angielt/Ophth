@@ -135,7 +135,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             }
             else if(showInfo == true){
                 showInfo = false
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
             }
         }
     }
@@ -144,7 +144,12 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     func fadeIn(name: UILabel){
         UIView.animate(withDuration: 0.5, animations: {name.alpha = 0})
     }
-    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 100
+//    }
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print("current index ")
@@ -164,7 +169,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             cell.Info.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.black
             }
             else if(index < indexPath.row){
@@ -172,7 +177,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 cell.Info.textColor = UIColor.black
             }
             else if(index > indexPath.row){
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.white
             }
         }
