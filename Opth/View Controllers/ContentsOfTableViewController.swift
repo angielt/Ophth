@@ -19,9 +19,13 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var searchActive = false
     var subtopicAr = [Subtopic]()
     var headerInfoAr = [Card]()
+    var topicAr = [Topic]()
+    var categoryAr = [Category]() //having problems with category
     var filteredInfo: [Card] = []
     var filteredHeaders: [Card] = []
     var filteredSubtopics: [Subtopic] = []
+    var filteredTopics: [Topic] = []
+    var filteredCategories: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +33,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         
         //setup delegate
         searchBar.delegate = self
-        //gets all subtopics into subtopicAr
+        
+        // NOTE: having trouble getting the categories into categoryAr
         for item in status.CategoryList {
+            topicAr += item.topics.map{$0} // puts all topics in topicAr
             for item2 in item.topics {
                 subtopicAr += item2.subtopics.map{$0} //puts all subtopics in subtopicAr
                 for item3 in item2.subtopics {
@@ -53,6 +59,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //NOTE: for debugging purposes they are all set to search starting from the first word only
+        
+        filteredTopics = topicAr.filter({(topics: Topic) -> Bool in return topics.topicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
         filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         //filteredSubtopics = subtopicAr.filter({
@@ -60,10 +69,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             //subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
         //})
         
-        // filters through the headers and saves in filteredHeaders
         filteredHeaders = headerInfoAr.filter({(cards: Card) -> Bool in return cards.header.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
-        // i think it is being filtered correctly
+        // NOTE: i think it is being filtered correctly
         filteredInfo = headerInfoAr.filter({(cards: Card) -> Bool in return cards.info.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
         //set header index to 0
@@ -98,7 +106,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchActive {
-            return filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
+            let counter = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
+            return counter
         }
         else if status.CategoryList[section].opened == true {
             return status.CategoryList[section].topics.count + 1
@@ -108,7 +117,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    // make it so the info is not index out of range anymore also
+    // TODO: add info and topics to show up on cell without index out of range error
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
