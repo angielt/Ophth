@@ -18,13 +18,14 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     @IBOutlet weak var searchBar: UISearchBar!
     var searchActive = false
     var subtopicAr = [Subtopic]()
-    var headerAr = [Card]()
+    var headerInfoAr = [Card]()
+    var filteredInfo: [Card] = []
     var filteredHeaders: [Card] = []
     var filteredSubtopics: [Subtopic] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
+        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -33,7 +34,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             for item2 in item.topics {
                 subtopicAr += item2.subtopics.map{$0} //puts all subtopics in subtopicAr
                 for item3 in item2.subtopics {
-                    headerAr += item3.cards.map{$0} // parse for headers
+                    headerInfoAr += item3.cards.map{$0} // gets all headers and info into array
                 }
             }
         }
@@ -60,7 +61,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         //})
         
         // filters through the headers and saves in filteredHeaders
-        filteredHeaders = headerAr.filter({(cards: Card) -> Bool in return cards.header.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        filteredHeaders = headerInfoAr.filter({(cards: Card) -> Bool in return cards.header.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        
+        // i think it is being filtered correctly
+        filteredInfo = headerInfoAr.filter({(cards: Card) -> Bool in return cards.info.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
         //set header index to 0
         headerIndex = 0
@@ -91,10 +95,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    // in here is where it goes wrong, everything before in filteredSubtopics array it is correct
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchActive {
-            return filteredSubtopics.count + filteredHeaders.count
+            return filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
         }
         else if status.CategoryList[section].opened == true {
             return status.CategoryList[section].topics.count + 1
@@ -104,15 +108,17 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-
+    // make it so the info is not index out of range anymore also
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
+            // gets the subtopics
             if indexPath.row < filteredSubtopics.count{
                 cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
             }
             else{
+                // gets the headers
                 if headerIndex < filteredHeaders.count{
                     cell.textLabel?.text = filteredHeaders[headerIndex].header
                     headerIndex += 1
