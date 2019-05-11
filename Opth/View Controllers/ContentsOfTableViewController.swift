@@ -12,6 +12,7 @@ import Foundation
 class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate {
     var sectionIndex = 0
     var rowIndex = 0
+    var headerIndex = 0
     
     // search
     @IBOutlet weak var searchBar: UISearchBar!
@@ -21,10 +22,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var filteredHeaders: [Card] = []
     var filteredSubtopics: [Subtopic] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
+        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -62,6 +62,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         // filters through the headers and saves in filteredHeaders
         filteredHeaders = headerAr.filter({(cards: Card) -> Bool in return cards.header.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
+        //set header index to 0
+        headerIndex = 0
+
         // checks
         if (searchBar.text == "") {
             searchActive = false;
@@ -91,7 +94,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     // in here is where it goes wrong, everything before in filteredSubtopics array it is correct
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchActive {
-            return filteredSubtopics.count + filteredHeaders.count //idk if this is right
+            return filteredSubtopics.count + filteredHeaders.count
         }
         else if status.CategoryList[section].opened == true {
             return status.CategoryList[section].topics.count + 1
@@ -106,9 +109,15 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            print("filteredHeaders in cell: ", filteredHeaders[indexPath.row].header) //correct
-            cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
-            cell.textLabel?.text = filteredHeaders[indexPath.row].header // get index out of range error here
+            if indexPath.row < filteredSubtopics.count{
+                cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
+            }
+            else{
+                if headerIndex < filteredHeaders.count{
+                    cell.textLabel?.text = filteredHeaders[headerIndex].header
+                    headerIndex += 1
+                }
+            }
             cell.textLabel?.textColor = UIColor.white
             return cell
         }
