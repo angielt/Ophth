@@ -1,6 +1,6 @@
-Category	Topic	Subtopic 	Image	Image Caption	Header 1	Info1	Header2	Info2	Header3	Info3	Header4	Info4	Header5	Info5	Header6	Info6	Header7	Info7	Header8	Info8	Header9	Info9										
-Retina	General	Layers of the Retina	188_Retina.jpg	Layers of retina	How often do photoreceptor outer segments renew?	Every 10 days																										
-Retina	General	Wavelengths	nil	nil	Rhodopsin is most sensitive to?	510nm (green)	L cone?	564-580nm	M cone?	534-545nm	S cone?	420-440nm	Excimer laser?	193nm (UV)	Argon retinal laser?	532nm (Green)	Diode laser?	810nm (IR)	Nd:YAG laser?	1064nm	Femtosecond laser?	1053nm										
+Category	Topic	Subtopic 	Image	Image Caption	Header 1	Info1	Header2	Info2	Header3	Info3	Header4	Info4	Header5	Info5	Header6	Info6	Header7	Info7	Header8	Info8	Header9	Info9												
+Retina	General	Layers of the Retina	188_Retina.jpg	Layers of retina	How often do photoreceptor outer segments renew?	Every 10 days																												
+Retina	General	Wavelengths	nil	nil	Rhodopsin is most sensitive to?	510nm (green)	L cone?	564-580nm	M cone?	534-545nm	S cone?	420-440nm	Excimer laser?	193nm (UV)	Argon retinal laser?	532nm (Green)	Diode laser?	810nm (IR)	Nd:YAG laser?	1064nm	Femtosecond laser?	1053nm												
 Retina	General	Bruch's Membrane	"190_BruchsMembrane_1.gif, 190_BruchsMembrane_2.gif"	Periodic-acid Schiff (PAS) stained the retinal pigment epithelium and Bruch's membrane heavily*Normal Bruch's membrane	"Fusion of RPE and choriocapillaris
 5 elements?
 Stain with?
@@ -12,8 +12,8 @@ Outer + Inner Retinal Barriers?
 - Inner collagenous zone
 - Basal lamina of choriocapillaris 
 (a.k.a. ""Elastin sandwich"")"	Stain with?	PAS (+)	Outer + Inner Retinal Barriers?	"- Outer = BruchÕs membrane
-- Inner = Capillary basal lamina"																				
-Retina	General	Imaging	"191_Imaging_FA_1.png, 191_Imaging_FA_3.jpg, 191_Imaging_FA_4.jpg, 191_Imaging_ICG_1.jpg, 191_Imaging_OCT_1.jpg, 191_Imaging_OCT_2.jpg"	FA showing initial pigmentation in the area of the tumor (melanoma) with extensive drusen and late leak throughout the mass*FA*Small vessel vasculitis causing cystoid macular edema - late frame fluorescein angiograph*Reticular Macular Disease - Bilateral Wet Macular Degeneration and Polypoidal Choroidal Vasculopathy - ICG*Myopic Macular Degeneration - Dry OCT OS*OCT	"Fluorescein Angiography (FA)
+- Inner = Capillary basal lamina"																						
+Retina	General	Imaging	"191_Imaging_FA_1.png, 191_Imaging_FA_3.jpg, 191_Imaging_FA_4.jpg, 191_Imaging_ICG_1.jpg, 191_Imaging_OCT_1.jpg, 191_Imaging_OCT_2.jpg"	FA showing initial pigmentation in the area of the tumor (melanoma) with extensive drusen and late leak throughout the mass*FA*Small vessel vasculitis causing cystoid macular edema - late frame fluorescein angiograph*Reticular Macular Disease - Bilateral Wet Macular Degeneration and Polypoidal Choroidal Vasculopathy Ð ICG*Myopic Macular Degeneration - Dry OCT OS*OCT	"Fluorescein Angiography (FA)
 Indocyanine Green Angiography (ICT)
 Optical coherence tomography (OCT)
 Size of foveola? Foveal avascular zone?
@@ -43,7 +43,7 @@ Definitions?
 - Filling Defect"	Indocyanine Green Angiography (ICG)	"- Absorbs at 805m; Emit at 835nm
 - 98% bound to albumin (stays in choroidal vessels, so better for choroidal circulation)
 - 5% iodine Ð avoid if shellfish allergy"	OCT	"- Time domain: higher bandwidth = higher axial res
-- Frequency/Spectral domain: faster, better signal-to-noise ratio"	Size of: Foveola? Foveal asvascular zone?	"0.3mm and 0.5mm, respectively"	Location of fovea?	"4mm temporal, 0.8mm inferior to optic nerve"	Definition of macula?	>2 GCL layers	Definition of fovea?	only cones present	Definition for foveola?	ONL & GCL absent										
+- Frequency/Spectral domain: faster, better signal-to-noise ratio"	Size of: Foveola? Foveal asvascular zone?	"0.3mm and 0.5mm, respectively"	Location of fovea?	"4mm temporal, 0.8mm inferior to optic nerve"	Definition of macula?	>2 GCL layers	Definition of fovea?	only cones present	Definition for foveola?	ONL & GCL absent												
 Retina	Macular Diseases	Central Serous Chorioretinopathy (CSCR)	"192_CSCR_1.png, 192_CSCR_2.png, 192_CSCR_3.png, 192_CSCR_4.jpg, 192_CSCR_5.jpg, 192_CSCR_6.jpg, 192_CSCR_7.jpg, 192_CSCR_8.jpg, 192_CSCR_9.jpg, 192_CSCR_10.jpg, 192_CSCR_11.jpg"	"CSR (Early phase FA)*CSR (Late phase FA, expansile dot)* CSR(Later phase FA, expansile dot)*CSR (OCT)*FA arterial*FA AV*FA AV*FA late*OCT*Opto*Redfree"	"Idiopathic serous RD w/ multifocal PEDs, RPE changes & mottled atrophy
 Usually in young males
 Risks?"	nil	Risks?	"steroids, stress, type A personality"	FA & OCT?	"- FA: expansile dot (common), smokestack 
@@ -58,7 +58,7 @@ Risks?"	nil	Risks?	"steroids, stress, type A personality"	FA & OCT?	"- FA: expan
 - lymphoma
 - pre-eclampsia / severe HTN 
 - choroidal tumor
-- toxoplasmosis / syphilis"																		
+- toxoplasmosis / syphilis"																				
 Retina	Macular Diseases	Age-Related Macular Degeneration (AMD)	"193_DryAMD_1.png, 193_DryAMD_2.jpg, 193_DryAMD_3.jpg, 193_DryAMD_5.jpg"	AMD Dry Hydrophilic Drusen and Geographic Atrophy*Hyperpigmentation of the Retinal Pigment Epithelium in Dry AMD*Basal Laminar Drusen*ReticularÊPseudodrusen	"Dry AMD
 - Associated with?
 - Drusen: Quality? Deposits? Size?
@@ -76,7 +76,7 @@ Reticular Pseudodrusen?
 - May develop large vitelliform detachment"	Reticular Pseudodrusen?	"- Interlacing network of 125-250um drusen
 -  First appear in superotemporal macula
 -  Better seen on red-free, NOT on FA /ICG
--  ÒSawtoothÓ subretinal deposits on OCT"											
+-  ÒSawtoothÓ subretinal deposits on OCT"													
 Retina	Macular Diseases	Dry AMD	nil	nil	"Dry AMD
 - Treatment: AREDS, AREDS 2, Others
 - Epidemiology: Framingham Eye Study
@@ -94,7 +94,7 @@ RIP3 -/-
 RIP1 -/-
 CX3CR1 1/1
 CCL2  -/-
-RD10"																
+RD10"																		
 Retina	Macular Diseases	Choroidal Neovascularization (CNV)	"195_CNV_1.jpg, 195_CNV_3.jpg, 195_CNV_4.jpg"	OCT of occult CNV*FA of classic CNV*FA of classic CNV	"Choroidal Neovascularization (CNV)
 - Classificaton?
 - Classic Definition?"	nil	Classification?	"Type 1
@@ -110,7 +110,7 @@ Occult CNV
 Types
 - Predominantly Classic (>49% classic)
 - Minimally Classic (<49% classic)
-- Occult w/o Classic (no classic)"																						
+- Occult w/o Classic (no classic)"																								
 Retina	Macular Diseases	Choroidal Neovascularization (CNV)	195_CNV_2.jpg	Retinal Angiomatous Proliferation - Type III choroidal neovascular membrane	"Retinal Angiomatous Proliferation (RAP)
 - Yannuzzi Classification?"	"Stage 1
 - Intraretinal NV / leakage
@@ -118,7 +118,7 @@ Stage 2
 - Subretinal NV + serous PED
 Stage 3
 - Choroidal NV + fibrovascular PED
-- FA: retinochoroidal anastamoses"																										
+- FA: retinochoroidal anastamoses"																												
 Retina	Macular Diseases	Wet AMD Treatments	nil	nil	"Laser: MPS
 PDT: TAP, VIP
 Anti-VEGF
@@ -143,7 +143,7 @@ Anti-VEGF
 - targets VEGF-A
 - 1.25mg, 2.5mg"	Aflibercept (Eylea)	"- ligand-binding domain of VEGFR _ + IgG Fc
 - binds VEGF-A & placental-like GF
-- 2mg, 4mg"										
+- 2mg, 4mg"												
 Retina	Macular Diseases	Wet AMD Treatments: Studies	nil	nil	VISION	"- Macugen q6wks x 48wks > sham
 - Improved VA in all CNV"	MARINA	"- Lucentis q4wks x 2yrs > sham
 - Minimally-classic or occult w/o classic CNV"	ANCHOR	"- Lucentis q4wks x 2yrs > PDT q3mo PRN
@@ -158,4 +158,169 @@ Retina	Macular Diseases	Wet AMD Treatments: Studies	nil	nil	VISION	"- Macugen q6
 - Avastin > Lucentis in adverse events (24 vs 19%)"	FOCUS	"- Lucentis + PDT > PDT alone
 - Predominantly-classic CNV"	"SUMMIT (MONT BLANC, DENALI, EVEREST)"	"- Lucentis + PDT = Lucentis alone
 - Except IPCV (Lucentis + PDT > Lucentis)"	CABERNET	- Lucentis + epimacular brachy vs Lucentis	RADICAL	"- Lucentis + PDT + Dexamethasone vs Lucentis
-"	VIEW1 & 2	- Eylea q1mo x 3 -> q2mo = Lucentis q1mo	HARBOR	- Lucentis 0.5mg q4wks vs PRN vs 2mg q4wks vs PRN
+"	VIEW1 & 2	- Eylea q1mo x 3 -> q2mo = Lucentis q1mo	HARBOR	- Lucentis 0.5mg q4wks vs PRN vs 2mg q4wks vs PRN		
+Retina	Retina Tumors	Choroidal Metastases	263_ChoroidalMelanoma_1.JPG	Most common intraocular tumor in adult?	Choroidal Metastases	"Most commonly from?
+Breast (in women)
+Lung (in men)
+Usually flat growth pattern (not collar-button / mushroom-shaped)"	Choroidal Melanoma	"Risk factors?
+Melanosis oculi, nevus of Ota
+Mushroom-shaped when tumor breaks through BruchÕs membrane
+Glaucoma develops from liberation of melanin clogging TM
+Sentinel vessel?
+Sign of ciliary body melanoma
+Metastasis to?
+Hematogenous to liver"																										
+Retina	Retina Tumors	Choroidal Melanoma	263_ChoroidalMelanoma_2.JPG	Most common primary intraocular tumor in adult?	Risk factors	"Thickness >2mm
+Fluid (SRF)
+Symptom
+Orange (pigment)
+Margin (near optic nerve)
+Hollowness (on B-scan)
+Halo (absence)
+Drusen (absence)"	To Find Small Ocular Melanomas Using Helpful Hints Daily	nil	Risk of nevus conversion to melanoma	"0 factor: 3% at 5 yrs
+1 factor: 38% at 5 yrs
+2+ factors: >50% at 5 yrs "	Factors predicting survival?	"Size of scleral contact and cell type
+Mean of 10 largest melanoma cell nuclei (MLN)
+Monosomy 3 (correlates with mets)"	Ultrasound?	Low reflectivity	Callender classification?	"Spindle cell nevus
+Spindle A cells
+Spindle cell melanoma
+Best prognosis
+Mix of spindle A & B cells
+25% 15-year mortality
+Mixed
+50% 15-year mortality
+Epithelioid melanoma
+Worst prognosis
+Epithelioid cells
+75% 15-year mortalit"	Collaborative Ocular Melanoma Study (COMS)	"Large  (>10mm height, >16mm dia)
+Enucleation = pre-XRT + enucleation
+Medium (2.5-10mm height, <16mm dia)
+PBT = enucleation in 5 yr mortality
+Small (1.5-2.4mm height, 5-16mm dia)"																
+Retina	Retina Tumors	Choiroidal Osteoma	265_CalcificChoroidalLesions_ChoroidalOsteoma.jpg	Choroidal Osteoma	Benign	nil	May mimic melanoma	nil	Peripapillary or macula	nil	Test?	B-scan shows high-amplitude echo with posterior shadowing	May develop CNV	nil	Very slowly progressive																			
+Retina	Retina Tumors	Schlerochoroidal Calcification	265_CalcificChoroidalLesions_SclerochoroidalCalcification.png	Sclerochoroidal Calcification	Yellow placoid appearance	nil	Test?	"auto-fluorescent
+FA: early blockage with late staining
+B-scan shows high-reflectivity"	Maybe associated with?	"Hyperparathyroidism
+Vitamin D intoxication
+Gitelman/Bartter dx
+Renal disease"																								
+Retina	Retina Tumors	CHRPE	"264_OtherPigmentedLesions_CHRPE_1.png, 264_OtherPigmentedLesions_CHRPE_2.jpg, 264_OtherPigmentedLesions_TorpedoMaculopathy.png"	nil	CHRPE	"Congenital hypertrophy of the RPE 
+Benign"	Gardner Syndrome	"Intestinal polyposis & fish-shaped CHRPE 
+CHRPEs are usually small, ovoid, variegated, multiple, bilateral
+Inheritance: AD"	Torpedo Maculopathy	"Temporal RPE defect pointing toward fovea
+Similar to CHRPE
+Congenital defect in RPE
+OCT: retinal thinning & inc RPE hyperreflectivity"																								
+Uveitis	Hypersensitivity reactions	Type I	nil	nil	Anaphylactic or atopic	"mast cells and histamine
+"	Example?	"Allergic conjunctivitis 
+seasonal component
+Atopic conjunctivitis 
+environmental triggers
+less seasonal
+ezcema, asthma
+Anaphylaxis"																										
+Uveitis	Hypersensitivity reactions	Type II	nil	nil	Cytotoxic	Foreign or autoantigens	Example?	"OCP (IgA deposits in BM)
+Mooren Ulcer "																										
+Uveitis	Hypersensitivity reactions	Type III	nil	nil	Immune-complex reaction	Example?	"Scleritis
+Vasculitis
+Phacoanaphylaxis
+Stevens-Johnson syndrome"																											
+Uveitis	Hypersensitivity reactions	Type IV	nil	nil	Delayed hypersensitivity	"T Cell mediated
+Example?
+Contact dermatitis
+Phlyctenulosis
+Corneal graft rejection
+Sarcoid, TB"																												
+Uveitis	Hypersensitivity reactions	Type V	nil	nil	Stimulating antibody	"Example?
+GravesÕ disease"																												
+Fundamentals	Topic1	Pharmacologic Side Effects	nil	nil	Alpha agonists (ÒALGANÓ)	"Allergy / anaphylaxis
+Lid retraction
+Groggy (bradycardia)
+Apnea
+Nutty (CNS depression in kids)"	Amiodarone	"Corneal verticillata
+Anterior subcapsular opacities"	Beta Blockers	"Heart block, asthma, sexual dysfunction
+Betaxolol? (b1 selective)
+Carteolol? "	Carbonic Anhydrase Inhibitors	"Acute myopia
+Tingling digits, anorexia, depression
+Bitter taste (dorzolamide/brinzolamide)
+Acidosis, hypokalemia
+Aplastic anemia
+Methazolamide (hepatic, not renal)
+Avoid in? Sickle "	Carmustine (alkylating agent)	"Retinal arterial occlusion, infarction
+CME
+Glaucoma
+Optic neuritis or INO"	Chloroquine / Hydroxychloroquine	"Corneal verticillata
+Pigment / BullÕs eye maculopathy
+Halo around lights, but no vision chg"	Cidofovir (CMV therapy)	Uveitis	Digoxin	Xanthopsia (yellow vision)	Diuretics (HCTZ):	"Xanthopsia
+Transient myopia"	Echothiophate	"Iris cysts, cataracts
+Avoid succinylcholine"	Epinephrine	"Adrenochrome deposits
+Less with propine
+CME if pseudophakic/aphakic"								
+Fundamentals	Topic1	Pharmacologic Side Effects	nil	nil	Fluoroquinolones	"Topical: corneal epithelial plaques
+Oral: transient iritis + TIDs, RD"	Gold (chrysiasis)	Deposits in inferior corneal stroma & anterior lens capsule	Isotretinoin	Impaired dark adaptation	Interferon	"Reversible vaso-occlusive dx
+ON edema, AION, CN3 paralysis"	Oral Contraceptives	"Dry eyes
+Optic neuritis
+Pseudotumor cerebri"	Pilocarpine	"Brow ache
+Increased salivation
+Retinal tear, induced myopia"	Phenothiazines	"Pigmentary retinopathy
+Corneal deposits"	Prostaglandin analogs	"Increases melanoSOMES; green>>blue
+CME; conjunctival hyperemia
+Fewest side effects? Latanoprost
+Most side effects?    Bimatoprost "	Rifabutin (HIV therapy)	Iritis + sterile hypopyon	Topiramate	Angle-closure glaucoma / myopia	Viagra	Blue vision	What drugs cause vascular occlusion?	"Quinine, Ergot, OCPs, gentamicin, interferon"	What drugs cause myopia?	"Chlorthalidone, HCTZ, topiramate, sulfa"	What drugs cause punctal stenosis?	"Paclitaxel, echothiophate, epi, idoxuridine"	What drugs reverse mydriasis?	"Dapripazole, thymoxamine (alpha-blockers)"
+Fundamentals	Topic2	Antibiotics & Chemotherapy	nil	nil	Sulfonamides	"Inhibit folic acid synthesis, static"	B-lactams	"Inhibit cell wall synthesis, cidal
+Cephalosporins more resistant to B-lactamases; 10-20% rxn w/ PCN allergy"	Polymyxins	"Distort cytoplasmic membranes, cidal"	Aminoglycosides	"Inhibit 30S ribosome, cidal"	Tetracyclines	"Inhibit 30S ribosome, static
+Interferes with oral contraception"	Macrolides/Chloramphenicol/Clindamycin	"Inhibit 50S ribosome, static"	Fluoroquinolone	"Inhibits DNA gyrase / topoisomerase, cidal"	Bacteriostatic Drugs? 	"STatiC (Sulfa, Tetra, Clinda/Chloram)"	DHFR antagonist (folate pathway)?	Methotrexate	Purine analog?	Azathioprine	Purine synthesis inhibitor?	Mycophenolate mofetil	Alkylating Agents?	"Chlorambucil
+Cyclophosphamide
+Side effect? 
+Hemorrhagic cystitis"	IL-2 & receptor inhibitors in T cells	"Cyclosporine
+Side effects?
+renal / hepatotoxicity, gingival hyperplasia, ON edema
+TNFa inhibitors
+Inflixamab (Remicaid)
+Adalimunab (Humira)
+Etanarcept (Embrel) Ð not for uveitis
+Exacerbates what?
+MS (optic neuritis) & TB"				
+Fundamentals	Eye Drops	Steroids	nil	nil	Blocks phospholipase A	nil	Ocular penetration	acetate > alcohol > phosphate	Relative strength of topical steroids:	"Dexamethasone (strongest)
+Prednisolone
+Loteprednol
+FML
+Hydrocortisone
+Tetrahydrotriamcinolone (weakest)"	Steroid IOP response usu. after 6 weeks																							
+Fundamentals	Eye Drops	Mydriatics	nil	nil	Duration of action:	"Phenylephrine (3-5 hrs)
+Tropicamide (4-6 hrs)
+Cyclopentolate (2 days)
+Homatropine (3 days)
+Scopolamine (4-7 days)
+Atropine (7-14 days)"																												
+Fundamentals	Eye Drops	Anesthetics 	nil	nil	Amides 	"longer duration, metabolized in liver
+Lidocaine, mepivacaine, bupivacaine"	Esters 	"shorter duration, hydrolyzed by plasma cholinesterase
+Proparacaine, benzocaine, cocaine"	Duration of action of topicals	"Proparacaine (20 mintues)
+Lidocaine (1-2 hours)
+Mepivacaine (2-3 hours)
+Bupivacaine (8 hours)"																								
+Optics 	Optics Topic 1	Properties of Light	nil	nil	Luminous intensity	"Brightness
+measured in candela"	Luminous flux	"Light flow
+measured in lumens"	Illuminance	"Light on surface
+measured in lux"	Luminance	"Light emitted or reflected
+measured in apostlibs (1 lumen / m2)"	Airy disc	Diffraction pattern produced by pinhole; as when pupil <2.5mm	HaidingerÕs brushes	Entoptic phenomenon that demonstrates light polarization	Purkinje shift	"At night, decreased wavelength leads to myopic shift"																
+Optics 	Optics Topic 1	Lenses & Magnification	nil	nil	"Focal length of lens
+	f = 1/D"	"F, focal length in meters = 1/D, lens power in diopters"																												
+Optics 	Optics Topic 2	Lenses & Magnification	nil	nil	"Transverse magnification
+	Mtrans = image height / object height = image distance / object distance"	Use nodal point (17mm) when calculating retinal image height	Axial magnification	Maxial = (Mtransverse)2	"Magnification of a telescope
+M = - (Deyepiece / Dobjective)"	nil	Magnification of a telescope: Astronomical/Keplerian telescope?	"Low (+) objective 
+High (+) eyepiece
+Image: real, inverted
+Distance: 1/Pobj + 1/Peye"	Galilean telescope?	"Low (+) objective
+High (-) eyepiece
+Image: real, upright
+Distance: 1/Pobj - 1/Peye"	What kind of telescope?	"Slitlamp:     Astronomical + Galilean
+Lensmeter: "	Correction factor of lenses?	"Volk 60D: 		0.88
+Volk 78D: 		1.11
+Volk 90D:	"	Diameter of field?	"Volk 20D: 		12mm
+Volk 28D: "	Angular magnification	"For simple magnifier
+	M = D/4
+	(25cm working distance)"	Magnification/minification from spectacle lens	"2% per diopter (@ 12mm vertex)
+Most can tolerate to 8% difference
+KnappÕs Law?
+Spectacles in anterior focal plane (~15.7mm) induce no aniseikonia"										
