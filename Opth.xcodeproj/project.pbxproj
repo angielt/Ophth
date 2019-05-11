@@ -160,6 +160,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FD804CBD2286BE50009A8EDA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		FDA541652251C8D100B536E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +228,7 @@
 		FDF2A56722163BBE00B1E1D0 = {
 			isa = PBXGroup;
 			children = (
+				FD804CBD2286BE50009A8EDA /* Icons */,
 				FDF2A57222163BBE00B1E1D0 /* Opth */,
 				FDF2A58722163BBF00B1E1D0 /* OpthTests */,
 				FDF2A59222163BBF00B1E1D0 /* OpthUITests */,

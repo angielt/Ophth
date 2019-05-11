@@ -22,7 +22,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
+        parse.csv(data: "/Users/Angie/Desktop/test/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
