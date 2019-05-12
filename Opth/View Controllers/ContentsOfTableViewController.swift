@@ -139,24 +139,24 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             // gets the topics
             if indexPath.row < filteredTopics.count{
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
-                cell.detailTextLabel?.text = "Category I am in"
+                cell.detailTextLabel?.text = "Category: "
             }
                 // gets the subtopics
             else if subtopicIndex < filteredSubtopics.count{
                 cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
-                cell.detailTextLabel?.text = "topics I am in"
+                cell.detailTextLabel?.text = "Category: , Topic: "
                 subtopicIndex += 1
             }
                 // gets the headers
             else if headerIndex < filteredHeaders.count{
                 cell.textLabel?.text = filteredHeaders[headerIndex].header
-                cell.detailTextLabel?.text = "subtitle i am in"
+                cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: "
                 headerIndex += 1
             }
                 // gets the info
             else if infoIndex < filteredInfo.count{
                 cell.textLabel?.text = filteredInfo[infoIndex].info
-                cell.detailTextLabel?.text = "header i am in"
+                cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: , Header: "
                 infoIndex += 1
             }
             
