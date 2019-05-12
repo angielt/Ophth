@@ -25,14 +25,6 @@ class Subtopic{ // aka Slide
         self.repeat_factor = 5
     }
     
-    func addImg(img: String){
-        self.img_list.append(img)
-    }
-    
-    func addCaption(imgCap: String){
-        self.img_caption.append(imgCap)
-    }
-    
     func updateRepeatFactor(rf:Int){
         self.repeat_factor = rf
     }

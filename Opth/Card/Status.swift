@@ -82,6 +82,10 @@ class Status{
                         for sub in top.subtopics{
                             if(sub.subtopicName == subtopic){
                                 matchExists = true
+                                if img != "nil"{
+                                    sub.img_list.append(img!)
+                                    sub.img_caption.append(imgCap!)
+                                }
                             }
                         }
                     }
@@ -95,7 +99,7 @@ class Status{
                 let removedQ = i.replacingOccurrences(of: "\"", with: "")
                 let removedW = removedQ.replacingOccurrences(of: " ", with: "")
                 newSubtopic.img_list.append(removedW)
-                //print("******* ",newSubtopic.img_list)
+                
             }
             for i in imgCap!.components(separatedBy: "*"){
                 let removedQ = i.replacingOccurrences(of: "\"", with: "")

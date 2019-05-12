@@ -61,8 +61,6 @@ class Parse{
         
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img, imgCap: imgCap)
         
-        print(img)
-        
         // loop through remaining header/info pairs and store
         for i in 5...(row.count-1){
             if((i%2 != 0) ){
