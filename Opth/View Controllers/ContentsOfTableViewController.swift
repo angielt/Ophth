@@ -129,33 +129,39 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell()}
+                return UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
+                                       reuseIdentifier: "cell")}
             
             // gets the topics
             if indexPath.row < filteredTopics.count{
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
+                cell.detailTextLabel?.text = "Category I am in"
             }
                 // gets the subtopics
             else if subtopicIndex < filteredSubtopics.count{
                 cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
+                cell.detailTextLabel?.text = "topics I am in"
                 subtopicIndex += 1
             }
                 // gets the headers
             else if headerIndex < filteredHeaders.count{
                 cell.textLabel?.text = filteredHeaders[headerIndex].header
+                cell.detailTextLabel?.text = "subtitle i am in"
                 headerIndex += 1
             }
                 // gets the info
             else if infoIndex < filteredInfo.count{
                 cell.textLabel?.text = filteredInfo[infoIndex].info
+                cell.detailTextLabel?.text = "header i am in"
                 infoIndex += 1
             }
             
             cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.cyan
             return cell
         }
         else {
@@ -164,6 +170,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                     return UITableViewCell()}
                 let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
                 cell.textLabel?.text = trimmedCategory
+                cell.detailTextLabel?.text = ""
                 cell.textLabel?.textColor = UIColor.white
                 return cell
             }
@@ -173,6 +180,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 
                 cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - 1].topicName
                 cell.textLabel?.textColor = UIColor.white
+                cell.detailTextLabel?.text = ""
                 return cell
             }
         }
