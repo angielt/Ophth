@@ -12,7 +12,10 @@ import Foundation
 class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate {
     var sectionIndex = 0
     var rowIndex = 0
+
+    var subtopicIndex = 0
     var headerIndex = 0
+    var infoIndex = 0
     
     // search
     @IBOutlet weak var searchBar: UISearchBar!
@@ -29,7 +32,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
+        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
@@ -74,8 +77,34 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         // NOTE: i think it is being filtered correctly
         filteredInfo = headerInfoAr.filter({(cards: Card) -> Bool in return cards.info.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
-        //set header index to 0
+        subtopicIndex = 0
         headerIndex = 0
+        infoIndex = 0
+        
+        
+        //DEBUG HERE
+//        for i in filteredTopics.indices{
+//            print(filteredTopics[i].topicName)
+//        }
+//
+//        print("")
+//
+//        for i in filteredSubtopics.indices{
+//            print(filteredSubtopics[i].subtopicName)
+//        }
+//
+//        print("")
+//
+//        for i in filteredHeaders.indices{
+//            print(filteredHeaders[i].header)
+//        }
+//        print("")
+//
+//        for i in filteredInfo.indices{
+//            print(filteredInfo[i].info)
+//        }
+//
+//        print("******************************")
 
         // checks
         if (searchBar.text == "") {
@@ -117,22 +146,31 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    // TODO: add info and topics to show up on cell without index out of range error
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
+            
+            // gets the topics
+            if indexPath.row < filteredTopics.count{
+                cell.textLabel?.text = filteredTopics[indexPath.row].topicName
+            }
             // gets the subtopics
-            if indexPath.row < filteredSubtopics.count{
-                cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
+            else if subtopicIndex < filteredSubtopics.count{
+                cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
+                subtopicIndex += 1
             }
-            else{
-                // gets the headers
-                if headerIndex < filteredHeaders.count{
-                    cell.textLabel?.text = filteredHeaders[headerIndex].header
-                    headerIndex += 1
-                }
+            // gets the headers
+            else if headerIndex < filteredHeaders.count{
+                cell.textLabel?.text = filteredHeaders[headerIndex].header
+                headerIndex += 1
             }
+            // gets the info
+            else if infoIndex < filteredInfo.count{
+                cell.textLabel?.text = filteredInfo[infoIndex].info
+                infoIndex += 1
+            }
+            
             cell.textLabel?.textColor = UIColor.white
             return cell
         }
