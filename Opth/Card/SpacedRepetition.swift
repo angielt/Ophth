@@ -78,11 +78,11 @@ class SpacedRepetition {
     func setReviewTopic(topic:inout Topic){
         self.topic = topic
         self.subtopics = topic.subtopics
-        print(topic.topicName)
+        //print(topic.topicName)
         
         // first ReviewList
         self.max_list_size = self.subtopics.count
-        print("MAX LIST SIZE" + String(self.max_list_size))
+        //print("MAX LIST SIZE" + String(self.max_list_size))
         generateReviewList(subtopics: self.subtopics)
         
     }
@@ -107,24 +107,24 @@ class SpacedRepetition {
         
         var size = self.reviewList.filter{$0.repeat_factor != 1}
         self.max_list_size = size.count
-        print(max_list_size)
+        //print(max_list_size)
         
         // debugging
-        print("OLD REVIEW LIST")
-        for item in reviewList{
-            print(item.subtopicName)
-            print(item.repeat_factor)
-        }
+//        print("OLD REVIEW LIST")
+//        for item in reviewList{
+//            print(item.subtopicName)
+//            print(item.repeat_factor)
+//        }
         
-        print("max list size isReviewFinished()" + String(self.max_list_size))
+        //print("max list size isReviewFinished()" + String(self.max_list_size))
         if(self.max_list_size > 0)
         {
             generateReviewList(subtopics: self.subtopics) // generate new list
-            print("NEW REVIEW LIST")
-            for item in reviewList{
-                print(item.subtopicName)
-                print(item.repeat_factor)
-            }
+//            print("NEW REVIEW LIST")
+//            for item in reviewList{
+//                print(item.subtopicName)
+//                print(item.repeat_factor)
+//            }
             
             // self.max_list_size = self.reviewList.count // reset count
             self.curReviewIndex = 0 // reset count
@@ -143,8 +143,8 @@ class SpacedRepetition {
     // when review is finished, chnage the exit card.
     // plz dont cahnge anything in this function logically
     func easyPressed(){
-        print("curReview index in easy button " + String(curReviewIndex-1))
-        print("max count in easy button " + String(self.reviewList.count-1))
+        //print("curReview index in easy button " + String(curReviewIndex-1))
+        //print("max count in easy button " + String(self.reviewList.count-1))
         if(curReviewIndex-1 <= self.reviewList.count-1){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
@@ -166,8 +166,8 @@ class SpacedRepetition {
     }
     
     func unsurePressed(){
-        print("curReview index in unsure button " + String(curReviewIndex-1))
-        print("max count in unsure button " + String(self.reviewList.count-1))
+//        print("curReview index in unsure button " + String(curReviewIndex-1))
+//        print("max count in unsure button " + String(self.reviewList.count-1))
         if(curReviewIndex-1 <= self.reviewList.count-1){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
@@ -190,8 +190,8 @@ class SpacedRepetition {
     }
     
     func hardPressed(){
-        print("curReview index in hard button " + String(curReviewIndex-1))
-        print("max count in hard button " + String(self.reviewList.count-1))
+//        print("curReview index in hard button " + String(curReviewIndex-1))
+//        print("max count in hard button " + String(self.reviewList.count-1))
         if(curReviewIndex-1 <= self.reviewList.count-1){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
@@ -307,7 +307,7 @@ class SpacedRepetition {
                     }
                 }
             }
-            print(self.reviewList)
+            //print(self.reviewList)
         }
     }
 }

@@ -35,9 +35,8 @@ class Parse{
                 newRow = newRow.replacingOccurrences(of: "\"\"", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
                
-                print(newRow)
+                //print(newRow)
                 var rowSplit: [String] = newRow.components(separatedBy: "\t")
-                //rowSplit = rowSplit.filter(){$0 != "nil"}
                 rowSplit = rowSplit.filter(){$0 != ""}
                 if(rowSplit.count > 5){
                    setData(row: rowSplit)
@@ -56,12 +55,15 @@ class Parse{
         let subtopic:String = row[2]
         let img:String = row[3]
         let imgCap:String = row[4]
+        
         status.addCategory(category: category)
         status.addTopic(category: category, topic: topic)
         
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img, imgCap: imgCap)
+        
+        print(img)
+        
         // loop through remaining header/info pairs and store
-   
         for i in 5...(row.count-1){
             if((i%2 != 0) ){
                 if((i+1) <= (row.count-1)){ // has subtext

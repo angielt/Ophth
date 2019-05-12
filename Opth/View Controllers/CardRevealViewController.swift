@@ -21,6 +21,7 @@ import UIKit
 class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
+    @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     @IBOutlet weak var addNotes: UIButton!
     
@@ -69,6 +70,8 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
         indexMax = spacedRep.reviewList.count
+        
+        cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
 
     }
     

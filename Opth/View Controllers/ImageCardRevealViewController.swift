@@ -16,6 +16,8 @@ class imageTapGesture: UITapGestureRecognizer{
 
 class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
     
+    
+    @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
@@ -71,6 +73,8 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         subtopicTableView.isUserInteractionEnabled = true
         indexMax = spacedRep.reviewList.count
         
+        cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+        
         //UI image start from here
         imageScrollView.delegate = self
         
@@ -107,6 +111,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
             caption.text = spacedRep.reviewList[curReviewIndex].img_caption[i]
             caption.textColor = UIColor.white
+            caption.font = UIFont.systemFont(ofSize: 14.0)
             caption.numberOfLines = 3
             caption.lineBreakMode = .byWordWrapping
             caption.sizeToFit()
@@ -135,7 +140,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             }
             else if(showInfo == true){
                 showInfo = false
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
             }
         }
     }
@@ -164,7 +169,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             cell.Info.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.black
             }
             else if(index < indexPath.row){
@@ -172,7 +177,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 cell.Info.textColor = UIColor.black
             }
             else if(index > indexPath.row){
-                cell.Header.textColor = UIColor.blue
+                cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.white
             }
         }

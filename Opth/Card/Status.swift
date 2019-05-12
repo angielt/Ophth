@@ -82,23 +82,24 @@ class Status{
                         for sub in top.subtopics{
                             if(sub.subtopicName == subtopic){
                                 matchExists = true
-                               // print("subtopic already exists")
                             }
                         }
                     }
                 }
             }
         }
+        
         if(matchExists == false){
             let newSubtopic = Subtopic(subtopic: subtopic)
             for i in img!.components(separatedBy: ","){
                 let removedQ = i.replacingOccurrences(of: "\"", with: "")
                 let removedW = removedQ.replacingOccurrences(of: " ", with: "")
-                newSubtopic.addImg(img: removedW)
+                newSubtopic.img_list.append(removedW)
+                //print("******* ",newSubtopic.img_list)
             }
             for i in imgCap!.components(separatedBy: "*"){
                 let removedQ = i.replacingOccurrences(of: "\"", with: "")
-                newSubtopic.addCaption(imgCap: removedQ)
+                newSubtopic.img_caption.append(removedQ)
             }
             subtopicTopic.subtopics.append(newSubtopic)
         }
@@ -138,14 +139,6 @@ class Status{
             cardSubtopic.cards.append(newCard)
         }
         
-    }
-    
-    func addImg(img: String, subtopic: Subtopic){
-        subtopic.img_list.append(img)
-    }
-    
-    func addCaption(imgCap: String, subtopic: Subtopic){
-        subtopic.img_caption.append(imgCap)
     }
     
 //    func printContents(){
