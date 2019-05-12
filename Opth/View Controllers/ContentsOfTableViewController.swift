@@ -13,23 +13,36 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var sectionIndex = 0
     var rowIndex = 0
     
+    var subtopicIndex = 0
+    var headerIndex = 0
+    var infoIndex = 0
+    
     // search
     @IBOutlet weak var searchBar: UISearchBar!
     var searchActive = false
     var subtopicAr = [Subtopic]()
+    var headerInfoAr = [Card]()
+    var topicAr = [Topic]()
+    var filteredInfo: [Card] = []
+    var filteredHeaders: [Card] = []
     var filteredSubtopics: [Subtopic] = []
+    var filteredTopics: [Topic] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/Angie/Desktop/test/temp.txt")
+        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
-        //gets all subtopics into subtopicAr
+        
         for item in status.CategoryList {
+            topicAr += item.topics.map{$0} // puts all topics in topicAr
             for item2 in item.topics {
-                subtopicAr += item2.subtopics.map{$0}
+                subtopicAr += item2.subtopics.map{$0} //puts all subtopics in subtopicAr
+                for item3 in item2.subtopics {
+                    headerInfoAr += item3.cards.map{$0} // gets all headers and info into array
+                }
             }
         }
     }
@@ -50,10 +63,29 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         
         //filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
+        filteredTopics = topicAr.filter({
+            (topics: Topic) -> Bool in return
+            topics.topicName.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
         filteredSubtopics = subtopicAr.filter({
             (subtopics: Subtopic) -> Bool in return
             subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
         })
+        
+        filteredHeaders = headerInfoAr.filter({
+            (cards: Card) -> Bool in return
+            cards.header.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
+        filteredInfo = headerInfoAr.filter({
+            (cards: Card) -> Bool in return
+            cards.info.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
+        subtopicIndex = 0
+        headerIndex = 0
+        infoIndex = 0
         
         // checks
         if (searchBar.text == "") {
@@ -82,7 +114,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (searchActive) {
-            return filteredSubtopics.count
+            let counter = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
+            return counter
         }
         else if status.CategoryList[section].opened == true {
             return status.CategoryList[section].topics.count + 1
@@ -97,7 +130,27 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
-            cell.textLabel?.text = filteredSubtopics[indexPath.row].subtopicName
+            
+            // gets the topics
+            if indexPath.row < filteredTopics.count{
+                cell.textLabel?.text = filteredTopics[indexPath.row].topicName
+            }
+                // gets the subtopics
+            else if subtopicIndex < filteredSubtopics.count{
+                cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
+                subtopicIndex += 1
+            }
+                // gets the headers
+            else if headerIndex < filteredHeaders.count{
+                cell.textLabel?.text = filteredHeaders[headerIndex].header
+                headerIndex += 1
+            }
+                // gets the info
+            else if infoIndex < filteredInfo.count{
+                cell.textLabel?.text = filteredInfo[infoIndex].info
+                infoIndex += 1
+            }
+            
             cell.textLabel?.textColor = UIColor.white
             return cell
         }
@@ -158,6 +211,5 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         
         //bug here
         spacedRep.setReviewTopic(topic: &(status.CategoryList[sectionIndex].topics[rowIndex]))
-        print(status.CategoryList[sectionIndex].topics[rowIndex].topicName)
     }
 }
