@@ -19,6 +19,7 @@ class Status{
         self.ReviewList = []
         self.CategoryList = []
     }
+
     
     func setCurReviewIndex(index: Int){
         self.curReviewIndex = index

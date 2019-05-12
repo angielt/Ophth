@@ -29,6 +29,7 @@
 		FD056E722238818C003CBB68 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E712238818C003CBB68 /* Card.swift */; };
 		FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */; };
 		FD2B771E221E27E800A41328 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B771D221E27E800A41328 /* Parse.swift */; };
+		FD5A9CA622880E95008B3ADB /* ViewControllerReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */; };
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
@@ -89,6 +90,7 @@
 		FD056E712238818C003CBB68 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRevealViewController.swift; sourceTree = "<group>"; };
 		FD2B771D221E27E800A41328 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReview.swift; sourceTree = "<group>"; };
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				62C882B422756BA200FA248A /* FullScreenImageViewController.swift */,
 				62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */,
 				62ED78992283A224002D59C4 /* SearchToCardViewController.swift */,
+				FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -545,6 +548,7 @@
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
 				F86AEED2227031DD00F4FC9C /* NotesViewController.swift in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
+				FD5A9CA622880E95008B3ADB /* ViewControllerReview.swift in Sources */,
 				FD056E6C22387DF8003CBB68 /* Category.swift in Sources */,
 				FD056E722238818C003CBB68 /* Card.swift in Sources */,
 			);

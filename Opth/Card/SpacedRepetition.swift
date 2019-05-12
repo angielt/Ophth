@@ -70,9 +70,9 @@ class SpacedRepetition {
         RFList.four = []
         RFList.five = []
         VCreference = nil
-        
     }
     
+    // For spaced repetition with specific topic clicked from table of contents
     // called ContentsOfTableVC when user clicks topic
     // stores topic object in SpacedRepetition class
     func setReviewTopic(topic:inout Topic){
@@ -87,8 +87,13 @@ class SpacedRepetition {
         
     }
     
-    // calculates repeat factor based on score
-    // needs more work
+    
+    // For mass subtopics spaced repetition (all subtopics)
+    func setReviewItems(){
+        
+    }
+    
+    // calculates repeat factor based on score, implemented last for ease of debugging for now
     //    func calculateRepeatFactor(new_score:Double, difficulty: Int, old_rf:Int) -> Int{
     //        //let add = 0.7(5.0-0.5(new_score)) + 0.3(0.2(11(difficulty)^2-20(difficulty)+11)-5)
     ////        let repeat_factor = add + old_rf
@@ -219,12 +224,6 @@ class SpacedRepetition {
         let two = st.filter{$0.repeat_factor==2}
         let one = st.filter{$0.repeat_factor==1}
         
-        //        print(RFList.five.count)
-        //        print(RFList.four.count)
-        //        print(RFList.three.count)
-        //        print(RFList.two.count)
-        //        print(RFList.one.count)
-        
         // store
         RFList.five = five
         RFList.four = four
@@ -277,7 +276,7 @@ class SpacedRepetition {
                 if(max < 1){
                     max = 1
                 }
-                for _ in 1...max{ // RF 4
+                for _ in 1...max{ // RF 3
                     let pop = RFList.three.popLast()
                     if (pop != nil){
                         reviewList.append(pop!)
@@ -289,7 +288,7 @@ class SpacedRepetition {
                 if(max < 1){
                     max = 1
                 }
-                for _ in 1...max{ // RF 4
+                for _ in 1...max{ // RF 2
                     let pop = RFList.two.popLast()
                     if (pop != nil){
                         reviewList.append(pop!)
@@ -301,7 +300,7 @@ class SpacedRepetition {
                 if(max < 1){
                     max = 1
                 }
-                for _ in 1...max{ // RF 4
+                for _ in 1...max{ // RF 1
                     let pop = RFList.one.popLast()
                     if (pop != nil){
                         reviewList.append(pop!)

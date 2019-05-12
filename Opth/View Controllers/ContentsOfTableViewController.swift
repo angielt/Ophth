@@ -33,14 +33,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         super.viewDidLoad()
         
         if let filepath = Bundle.main.path(forResource: "temp", ofType: "txt") {
-            do {
-//                let contents = try String(contentsOfFile: filepath)
-//                print(contents)
                 parse.csv(data: filepath)
-            } catch {
-                // contents could not be loaded
-                print("data file could not be loaded")
-            }
         } else {
             print("data file could not be found")
         }

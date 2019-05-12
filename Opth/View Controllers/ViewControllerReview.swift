@@ -1,16 +1,17 @@
 //
-//  ViewController.swift
+//  ViewControllerReview.swift
 //  Opth
 //
-//  Created by Angie Ta on 2/14/19.
+//  Created by Angie Ta on 5/12/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
+
 
 import UIKit
 
 // view controller of card front
-class ViewController: UIViewController{
-
+class ViewControllerReview: UIViewController{
+    
     static let cardCornerRadius: CGFloat = 25
     
     @IBOutlet weak var cardFront: UILabel!
@@ -58,7 +59,7 @@ class ViewController: UIViewController{
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
-        
+            
         else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil"){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
@@ -79,7 +80,7 @@ class ViewController: UIViewController{
                 else {
                     self.performSegue(withIdentifier: "revealImage", sender: nil)
                 }
-
+                
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -94,7 +95,7 @@ class ViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
-                destinationViewController.transitioningDelegate = self
+            destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
         else if segue.identifier == "revealImage",
@@ -105,7 +106,7 @@ class ViewController: UIViewController{
     }
 }
 
-extension ViewController: UIViewControllerTransitioningDelegate {
+extension ViewControllerReview: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController)
