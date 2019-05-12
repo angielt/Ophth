@@ -31,13 +31,17 @@ class Parse{
             
             // loop through rows of file, skip header row
             for row in parsedCSV.dropFirst(){
-                var rowSplit: [String] = row.components(separatedBy: "\t")
+                var newRow = row.replacingOccurrences(of: "Õ", with: "'", options: .literal, range: nil)
+                newRow = newRow.replacingOccurrences(of: "\"\"", with: "", options: .literal, range: nil)
+                newRow = newRow.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
+               
+                print(newRow)
+                var rowSplit: [String] = newRow.components(separatedBy: "\t")
                 //rowSplit = rowSplit.filter(){$0 != "nil"}
                 rowSplit = rowSplit.filter(){$0 != ""}
                 if(rowSplit.count > 5){
                    setData(row: rowSplit)
                 }
-                //print(rowSplit)
             }
             parsedData = parsedCSV // if successful return this
         } catch {

@@ -156,8 +156,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             let _ = segue.destination as? SearchToCardViewController
         }
         
-        //bug here
         spacedRep.setReviewTopic(topic: &(status.CategoryList[sectionIndex].topics[rowIndex]))
-        print(status.CategoryList[sectionIndex].topics[rowIndex].topicName)
     }
 }
