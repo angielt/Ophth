@@ -23,21 +23,18 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var subtopicAr = [Subtopic]()
     var headerInfoAr = [Card]()
     var topicAr = [Topic]()
-    var categoryAr = [Category]() //having problems with category
     var filteredInfo: [Card] = []
     var filteredHeaders: [Card] = []
     var filteredSubtopics: [Subtopic] = []
     var filteredTopics: [Topic] = []
-    var filteredCategories: [Category] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
+        parse.csv(data: "/Users/Itzel/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
         
-        // NOTE: having trouble getting the categories into categoryAr
         for item in status.CategoryList {
             topicAr += item.topics.map{$0} // puts all topics in topicAr
             for item2 in item.topics {
@@ -62,49 +59,31 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //NOTE: for debugging purposes they are all set to search starting from the first word only
         
-        filteredTopics = topicAr.filter({(topics: Topic) -> Bool in return topics.topicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        filteredTopics = topicAr.filter({
+            (topics: Topic) -> Bool in return
+            topics.topicName.range(of: searchText, options: .caseInsensitive) != nil
+        })
         
-        filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
-        //filteredSubtopics = subtopicAr.filter({
-          //  (subtopics: Subtopic) -> Bool in return
-            //subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
-        //})
+        //filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        filteredSubtopics = subtopicAr.filter({
+            (subtopics: Subtopic) -> Bool in return
+            subtopics.subtopicName.range(of: searchText, options: .caseInsensitive) != nil
+        })
         
-        filteredHeaders = headerInfoAr.filter({(cards: Card) -> Bool in return cards.header.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        filteredHeaders = headerInfoAr.filter({
+            (cards: Card) -> Bool in return
+            cards.header.range(of: searchText, options: .caseInsensitive) != nil
+        })
         
-        // NOTE: i think it is being filtered correctly
-        filteredInfo = headerInfoAr.filter({(cards: Card) -> Bool in return cards.info.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
+        filteredInfo = headerInfoAr.filter({
+            (cards: Card) -> Bool in return
+            cards.info.range(of: searchText, options: .caseInsensitive) != nil
+        })
         
         subtopicIndex = 0
         headerIndex = 0
         infoIndex = 0
-        
-        
-        //DEBUG HERE
-//        for i in filteredTopics.indices{
-//            print(filteredTopics[i].topicName)
-//        }
-//
-//        print("")
-//
-//        for i in filteredSubtopics.indices{
-//            print(filteredSubtopics[i].subtopicName)
-//        }
-//
-//        print("")
-//
-//        for i in filteredHeaders.indices{
-//            print(filteredHeaders[i].header)
-//        }
-//        print("")
-//
-//        for i in filteredInfo.indices{
-//            print(filteredInfo[i].info)
-//        }
-//
-//        print("******************************")
 
         // checks
         if (searchBar.text == "") {
