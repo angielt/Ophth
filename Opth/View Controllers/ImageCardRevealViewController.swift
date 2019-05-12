@@ -108,23 +108,25 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             self.imageScrollView.addSubview(imageView)
             
             //add caption for each image
-            let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
-            caption.text = spacedRep.reviewList[curReviewIndex].img_caption[i]
-            caption.textColor = UIColor.white
-            caption.font = UIFont.systemFont(ofSize: 14.0)
-            caption.numberOfLines = 3
-            caption.lineBreakMode = .byWordWrapping
-            caption.sizeToFit()
-            let captionLocation = self.imageScrollView.center.x + 20
-            
-            //set the position of the caption
-            if i == 0{
-                caption.center.x = captionLocation
+            if spacedRep.reviewList[curReviewIndex].img_caption[0] != "nil"{
+                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
+                caption.text = spacedRep.reviewList[curReviewIndex].img_caption[i]
+                caption.textColor = UIColor.white
+                caption.font = UIFont.systemFont(ofSize: 14.0)
+                caption.numberOfLines = 3
+                caption.lineBreakMode = .byWordWrapping
+                caption.sizeToFit()
+                let captionLocation = self.imageScrollView.center.x + 20
+                
+                //set the position of the caption
+                if i == 0{
+                    caption.center.x = captionLocation
+                }
+                else{
+                    caption.center.x = captionLocation + self.view.frame.width * CGFloat(i)
+                }
+                self.imageScrollView.addSubview(caption)
             }
-            else{
-                caption.center.x = captionLocation + self.view.frame.width * CGFloat(i)
-            }
-            self.imageScrollView.addSubview(caption)
         }
     }
     
