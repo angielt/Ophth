@@ -9,7 +9,7 @@
 import UIKit
 
 class FullScreenImageViewController: UIViewController, UIScrollViewDelegate {
-    
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     
@@ -22,7 +22,7 @@ class FullScreenImageViewController: UIViewController, UIScrollViewDelegate {
         
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 6.0
-        
+
         imageView.image = fullImage
         
         let imageTap = UITapGestureRecognizer(target: self,action:#selector(FullScreenImageViewController.imageTapped(_:)))
