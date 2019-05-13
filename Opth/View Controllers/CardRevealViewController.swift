@@ -98,8 +98,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //print("current index ")
-        //print(spacedRep.reviewList)
         return spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
     }
     
@@ -131,12 +129,13 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 //
 //    //
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let navigationController = segue.destination as? UINavigationController,
-//            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
-//        }
-//    }
-//
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navigationController = segue.destination as? UINavigationController,
+            let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
+            destinationViewController.subtopic = spacedRep.reviewList[curReviewIndex].subtopicName
+        }
+    }
+
     // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
         if sender.source is NotesViewController{ //let newNote = sourceViewController.notes {

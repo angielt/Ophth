@@ -13,6 +13,7 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet var notesText: UITextView!
+    var subtopic: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,12 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
         notesText.delegate = self as? UITextViewDelegate
         
         let userDefaults = UserDefaults.standard
-        if let note = userDefaults.string(forKey: spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName) {
+        
+        if ((userDefaults.string(forKey: subtopic) == nil) || (userDefaults.string(forKey: subtopic) == "") || (userDefaults.string(forKey: subtopic) == " ")) {
+            userDefaults.removeObject(forKey: subtopic)
+        }
+        
+        if let note = userDefaults.string(forKey: subtopic) {
             notesText.text = note
         }
 
@@ -40,8 +46,13 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
             os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
             return
         }
+        
         let userDefaults = UserDefaults.standard
-        userDefaults.set(notesText.text, forKey:  spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName)
+        if ((notesText.text == nil) || (notesText.text == "") || (notesText.text == " ")) {
+            userDefaults.removeObject(forKey: subtopic)
+        } else {
+            userDefaults.set(notesText.text, forKey: subtopic)
+        }
     }
 
 }

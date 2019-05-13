@@ -210,5 +210,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             let image = segue.destination as! FullScreenImageViewController
             image.fullImage = UIImage(named: spacedRep.reviewList[curReviewIndex].img_list[imageIndex])
         }
+        if (segue.identifier == "addNotes") {
+            let navigationController = segue.destination as? UINavigationController
+            let destinationViewController = navigationController?.viewControllers.first as? NotesViewController
+            destinationViewController?.subtopic = spacedRep.reviewList[curReviewIndex].subtopicName
+        }
     }
 }
