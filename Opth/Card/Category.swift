@@ -11,10 +11,12 @@ internal class Category{
     var categoryName:String
     var topics:[Topic]
     var opened:Bool
+    var repeat_factor: Int
 
     init(name:String){
         self.categoryName = name
         self.topics = []
         self.opened = false
+        self.repeat_factor = 5
     }
 }

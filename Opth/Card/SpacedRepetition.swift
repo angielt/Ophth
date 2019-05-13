@@ -89,7 +89,8 @@ class SpacedRepetition {
     
     
     // For mass subtopics spaced repetition (all subtopics)
-    func setReviewItems(){
+    func setReviewTopics(status:inout [Category]){
+        
     }
     
     // calculates repeat factor based on score, implemented last for ease of debugging for now

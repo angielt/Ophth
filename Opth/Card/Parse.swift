@@ -34,6 +34,7 @@ class Parse{
                 var newRow = row.replacingOccurrences(of: "Õ", with: "'", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "\"\"", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
+                newRow = newRow.replacingOccurrences(of: "+", with: "•", options: .literal, range: nil)
                
                 //print(newRow)
                 var rowSplit: [String] = newRow.components(separatedBy: "\t")

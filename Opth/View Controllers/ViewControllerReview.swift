@@ -24,7 +24,13 @@ class ViewControllerReview: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for item in status.CategoryList[0].topics[0].subtopics{
+            print(item.repeat_factor)
+        }
         self.loadData()
+        
+      
+        
     }
     
     func loadData(){
