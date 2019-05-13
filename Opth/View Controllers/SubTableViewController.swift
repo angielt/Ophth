@@ -14,6 +14,7 @@ class SubTableViewController: UITableViewController {
     var subtopic: Subtopic!
     var index = 0
     var topicIndex = 0
+    var image = UIImage(named: "notes.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,12 @@ class SubTableViewController: UITableViewController {
 
         cell.textLabel?.text = topic.subtopics[indexPath.row].subtopicName//subtopicAr[indexPath.row]
         cell.textLabel?.textColor = UIColor.white
+        
+        if UserDefaults.standard.string(forKey: topic.subtopics[indexPath.row].subtopicName) != nil {
+            let imageview = UIImageView(image: image)
+            imageview.frame = CGRect(x: 304, y: 45, width: 25, height: 25)
+            cell.accessoryView = imageview
+        }
         
         return cell
     }
