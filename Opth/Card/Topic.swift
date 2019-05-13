@@ -8,11 +8,13 @@
 
 import Foundation
 internal class Topic{
+    var topicCategory:String
     var topicName:String
     var subtopics:[Subtopic]
     var opened:Bool
     
-    init(topic:String){
+    init(topic:String, category: String){
+        self.topicCategory = category
         self.topicName = topic
         self.subtopics = []
         self.opened = false

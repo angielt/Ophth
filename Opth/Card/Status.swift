@@ -62,7 +62,7 @@ class Status{
             }
         }
         if(matchExists == false){
-            let newTopic = Topic(topic: topic)
+            let newTopic = Topic(topic: topic, category: category)
             topicCategory.topics.append(newTopic)
         }
         
@@ -72,7 +72,7 @@ class Status{
     func addSubtopic(category:String, topic:String, subtopic: String, img: String?, imgCap: String?){
         var matchExists:Bool = false
         var topicCategory:Category = Category(name: "null")
-        var subtopicTopic:Topic = Topic(topic: "null")
+        var subtopicTopic:Topic = Topic(topic: "null", category: "null")
         for item in CategoryList{
             if(item.categoryName == category){
                 topicCategory = item
@@ -94,7 +94,7 @@ class Status{
         }
         
         if(matchExists == false){
-            let newSubtopic = Subtopic(subtopic: subtopic)
+            let newSubtopic = Subtopic(subtopic: subtopic, topic: topic, category: category)
             for i in img!.components(separatedBy: ","){
                 let removedQ = i.replacingOccurrences(of: "\"", with: "")
                 let removedW = removedQ.replacingOccurrences(of: " ", with: "")
@@ -114,8 +114,8 @@ class Status{
     func addCard(category:String, topic:String, subtopic: String, header:String, info:String){
         var matchExists:Bool = false
         var topicCategory:Category = Category(name: "null")
-        var subtopicTopic:Topic = Topic(topic: "null")
-        var cardSubtopic:Subtopic = Subtopic(subtopic: "null")
+        var subtopicTopic:Topic = Topic(topic: "null", category: "null")
+        var cardSubtopic:Subtopic = Subtopic(subtopic: "null", topic: "null", category: "nill")
         
         for item in CategoryList{
             if(item.categoryName == category){

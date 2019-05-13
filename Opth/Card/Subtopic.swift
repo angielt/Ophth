@@ -8,6 +8,8 @@
 
 import Foundation
 class Subtopic{ // aka Slide
+    var subtopicCategory:String
+    var subtopicTopic:String
     var subtopicName:String
     var cards:[Card]
     var img_list:[String]
@@ -16,7 +18,9 @@ class Subtopic{ // aka Slide
     var repeat_factor:Int
     // add variables for spaced rep
 
-    init(subtopic: String){
+    init(subtopic: String, topic: String, category: String){
+        self.subtopicCategory = category
+        self.subtopicTopic = topic
         self.subtopicName = subtopic
         self.cards = []
         self.img_list = []
