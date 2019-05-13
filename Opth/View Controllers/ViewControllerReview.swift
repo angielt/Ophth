@@ -17,9 +17,6 @@ class ViewControllerReview: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +24,12 @@ class ViewControllerReview: UIViewController{
         for item in status.CategoryList[0].topics[0].subtopics{
             print(item.repeat_factor)
         }
-        spacedRep.setReviewTopics(category_list: &status.CategoryList)
+        if(spacedRep.all_subtopics.count == 0){
+            spacedRep.setReviewTopics(category_list: &status.CategoryList)
+        }
         spacedRep.all_active = true
-        
-      
+        spacedRep.all_subtopics.shuffle()
+        self.loadData()
         
     }
     
@@ -82,10 +81,10 @@ class ViewControllerReview: UIViewController{
             if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
                 //self.present(viewController, animated: true, completion: nil)
                 if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
-                    self.performSegue(withIdentifier: "reveal", sender: nil)
+                    self.performSegue(withIdentifier: "SRCardReveal", sender: nil)
                 }
                 else {
-                    self.performSegue(withIdentifier: "revealImage", sender: nil)
+                    self.performSegue(withIdentifier: "SRCardRevealImage", sender: nil)
                 }
                 
             }

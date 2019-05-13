@@ -31,6 +31,7 @@
 		FD2B771E221E27E800A41328 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B771D221E27E800A41328 /* Parse.swift */; };
 		FD5A9CA622880E95008B3ADB /* ViewControllerReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */; };
 		FD5A9CA8228935EC008B3ADB /* SpacedRepetitionAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA7228935EC008B3ADB /* SpacedRepetitionAll.swift */; };
+		FD5A9CAA228951BA008B3ADB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA9228951BA008B3ADB /* TabBarController.swift */; };
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
@@ -93,6 +94,7 @@
 		FD2B771D221E27E800A41328 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 		FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReview.swift; sourceTree = "<group>"; };
 		FD5A9CA7228935EC008B3ADB /* SpacedRepetitionAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetitionAll.swift; sourceTree = "<group>"; };
+		FD5A9CA9228951BA008B3ADB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */,
 				62ED78992283A224002D59C4 /* SearchToCardViewController.swift */,
 				FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */,
+				FD5A9CA9228951BA008B3ADB /* TabBarController.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -541,6 +544,7 @@
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
 				FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */,
 				62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */,
+				FD5A9CAA228951BA008B3ADB /* TabBarController.swift in Sources */,
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
 				62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */,
 				FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */,

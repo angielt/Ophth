@@ -136,21 +136,11 @@
                                     <outletCollection property="gestureRecognizers" destination="bQC-X8-mYb" appends="YES" id="p3R-r5-ugM"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3e-12-cKh">
-                                <rect key="frame" x="12" y="35" width="42" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caV-lR-szP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mvr-JY-gRe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BUC-P6-dAx"/>
-                            <constraint firstItem="S3e-12-cKh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Fjd-1b-vTh"/>
                             <constraint firstItem="Mvr-JY-gRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQV-dd-9jX"/>
-                            <constraint firstItem="S3e-12-cKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="hA1-il-l5E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -837,8 +827,8 @@
                     <connections>
                         <outlet property="card" destination="HJD-Aw-W6E" id="mJM-ut-MgO"/>
                         <outlet property="cardFront" destination="XbU-fS-xhY" id="IY7-kh-TGB"/>
-                        <segue destination="LNz-K0-qAO" kind="presentation" id="ihp-7O-gdK"/>
-                        <segue destination="bBo-D8-DXN" kind="presentation" id="BpS-xS-shc"/>
+                        <segue destination="LNz-K0-qAO" kind="presentation" identifier="SRCardReveal" id="ihp-7O-gdK"/>
+                        <segue destination="bBo-D8-DXN" kind="presentation" identifier="SRCardRevealImage" id="BpS-xS-shc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2de-7A-Fef" sceneMemberID="firstResponder"/>
