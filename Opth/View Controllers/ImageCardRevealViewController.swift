@@ -71,7 +71,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        indexMax = spacedRep.reviewList.count
+        indexMax = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
         
         cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
         
@@ -130,22 +130,22 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     
-    // tap occlusion
-    @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index <= indexMax-1){
-            print(index)
-            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
-            if(showInfo == false){
-                showInfo = true
-                cell.Info.textColor = UIColor.white
-                index = index+1
-            }
-            else if(showInfo == true){
-                showInfo = false
-                cell.Header.textColor = UIColor.cyan
-            }
-        }
-    }
+//    // tap occlusion
+//    @objc func handleTap(_ sender:UITapGestureRecognizer){
+//        if(index < indexMax){
+//            print(index)
+//            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
+//            if(showInfo == false){
+//                showInfo = true
+//                cell.Info.textColor = UIColor.white
+//                index = index+1
+//            }
+//            else if(showInfo == true){
+//                showInfo = false
+//                cell.Header.textColor = UIColor.cyan
+//            }
+//        }
+//    }
     
     //Fade in effect
     func fadeIn(name: UILabel){
@@ -195,6 +195,23 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     // link the page controller with the image scroll view
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         imagePageController.currentPage = Int(round(imageScrollView.contentOffset.x / imageScrollView.frame.width))
+    }
+    
+    // tap occlusion
+    @objc func handleTap(_ sender:UITapGestureRecognizer){
+        if(index < indexMax){
+            print(index)
+            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
+            if(showInfo == false){
+                showInfo = true
+                cell.Info.textColor = UIColor.white
+                index = index+1
+            }
+            else if(showInfo == true){
+                showInfo = false
+                cell.Header.textColor = UIColor.cyan
+            }
+        }
     }
     
     // tap recognizer for image
