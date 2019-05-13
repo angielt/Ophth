@@ -27,7 +27,8 @@ class ViewControllerReview: UIViewController{
         for item in status.CategoryList[0].topics[0].subtopics{
             print(item.repeat_factor)
         }
-        self.loadData()
+        spacedRep.setReviewTopics(category_list: &status.CategoryList)
+        spacedRep.all_active = true
         
       
         
