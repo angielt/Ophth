@@ -52,7 +52,7 @@ class SpacedRepetition {
     init(){
         self.curReviewIndex = 0
         self.subtopics = []
-        self.topic = Topic(topic:"")
+        self.topic = Topic(topic:"",category: "")
         self.RFList = RepeatFactorList()
         self.reviewList = []
         
@@ -61,7 +61,7 @@ class SpacedRepetition {
     func clear(){
         self.curReviewIndex = 0
         self.subtopics = []
-        self.topic = Topic(topic:"")
+        self.topic = Topic(topic:"", category: "")
         self.RFList = RepeatFactorList()
         self.reviewList = []
         RFList.one = []
@@ -90,7 +90,6 @@ class SpacedRepetition {
     
     // For mass subtopics spaced repetition (all subtopics)
     func setReviewItems(){
-        
     }
     
     // calculates repeat factor based on score, implemented last for ease of debugging for now
