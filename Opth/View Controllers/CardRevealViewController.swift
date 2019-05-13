@@ -69,27 +69,27 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        indexMax = spacedRep.reviewList.count
+        indexMax = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count //spacedRep.reviewList.count
         
         cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
 
     }
     
-    // tap occlusion
-    @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index <= indexMax){  // -1?
-            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
-            if(showInfo == false){
-                showInfo = true
-                cell.Info.textColor = UIColor.white
-                index = index+1
-            }
-            else if(showInfo == true){
-                showInfo = false
-                cell.Header.textColor = UIColor.cyan
-            }
-        }
-    }
+//    // tap occlusion
+//    @objc func handleTap(_ sender:UITapGestureRecognizer){
+//        if(index <= indexMax){  // -1?
+//            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
+//            if(showInfo == false){
+//                showInfo = true
+//                cell.Info.textColor = UIColor.white
+//                index = index+1
+//            }
+//            else if(showInfo == true){
+//                showInfo = false
+//                cell.Header.textColor = UIColor.cyan
+//            }
+//        }
+//    }
     
     //Fade in effect
     func fadeIn(name: UILabel){
@@ -127,8 +127,23 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         return cell
     }
-//
-//    //
+    
+    // tap occlusion
+    @objc func handleTap(_ sender:UITapGestureRecognizer){
+        if(index < indexMax){  // -1?
+            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
+            if(showInfo == false){
+                showInfo = true
+                cell.Info.textColor = UIColor.white
+                index = index+1
+            }
+            else if(showInfo == true){
+                showInfo = false
+                cell.Header.textColor = UIColor.cyan
+            }
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let navigationController = segue.destination as? UINavigationController,
             let destinationViewController = navigationController.viewControllers.first as? NotesViewController {
@@ -138,8 +153,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
 
     // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
-        if sender.source is NotesViewController{ //let newNote = sourceViewController.notes {
-           // status.CategoryList[categoryIndex].topics[topicIndex].subtopics[subIndex].notes = newNote
+        if sender.source is NotesViewController{
         }
     }
 }
