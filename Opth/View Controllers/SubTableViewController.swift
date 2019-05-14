@@ -18,7 +18,7 @@ class SubTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        topic.subtopics.sort(by: {$0.subtopicName < $1.subtopicName})
     }
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -35,6 +35,7 @@ class SubTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = topic.topicName
+        self.tableView.reloadData()
     }
 
     //number of sections
@@ -45,7 +46,6 @@ class SubTableViewController: UITableViewController {
 
     //number of rows in section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return topic.subtopics.count
     }
     

@@ -136,11 +136,23 @@
                                     <outletCollection property="gestureRecognizers" destination="bQC-X8-mYb" appends="YES" id="p3R-r5-ugM"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aa-Mv-4KK">
+                                <rect key="frame" x="12" y="35" width="42" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BYC-0r-HJd"/>
+                                    <action selector="backButton:" destination="OpK-c2-obb" eventType="touchUpInside" id="FhW-W0-DI9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mvr-JY-gRe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BUC-P6-dAx"/>
+                            <constraint firstItem="Mvr-JY-gRe" firstAttribute="top" secondItem="9aa-Mv-4KK" secondAttribute="bottom" constant="78" id="NZu-pF-KV2"/>
+                            <constraint firstItem="9aa-Mv-4KK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Vev-O8-Lia"/>
                             <constraint firstItem="Mvr-JY-gRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YQV-dd-9jX"/>
+                            <constraint firstItem="9aa-Mv-4KK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="y2K-xP-83R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -804,21 +816,11 @@
                                     <outletCollection property="gestureRecognizers" destination="IVx-Xf-cG8" appends="YES" id="VzG-is-PmW"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6o-bV-AMu">
-                                <rect key="frame" x="12" y="35" width="42" height="35"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButton:" destination="Wta-HZ-K4Y" eventType="touchUpInside" id="SiY-VI-1PF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HJD-Aw-W6E" firstAttribute="centerY" secondItem="l6V-lm-8R1" secondAttribute="centerY" id="3dV-yJ-vQX"/>
-                            <constraint firstItem="c6o-bV-AMu" firstAttribute="top" secondItem="cwW-3z-BhM" secondAttribute="top" constant="15" id="BEL-6s-Kmh"/>
                             <constraint firstItem="HJD-Aw-W6E" firstAttribute="centerX" secondItem="l6V-lm-8R1" secondAttribute="centerX" id="XD3-Xa-RiG"/>
-                            <constraint firstItem="c6o-bV-AMu" firstAttribute="leading" secondItem="cwW-3z-BhM" secondAttribute="leading" constant="12" id="bYR-mJ-uX7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cwW-3z-BhM"/>
                     </view>

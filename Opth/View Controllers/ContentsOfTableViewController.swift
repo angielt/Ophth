@@ -39,6 +39,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
         //setup delegate
         searchBar.delegate = self
+        status.CategoryList.sort(by: {$0.categoryName < $1.categoryName })
         
         for item in status.CategoryList {
             topicAr += item.topics.map{$0} // puts all topics in topicAr
@@ -117,6 +118,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        status.CategoryList[section].topics.sort(by: { $0.topicName < $1.topicName })
+        
         if (searchActive) {
             let counter = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
             return counter
@@ -131,6 +134,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
