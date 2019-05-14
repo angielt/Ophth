@@ -8,14 +8,30 @@
 
 import UIKit
 
-class TabBarController: UITabBarController{
+class TabBarController: UITabBarController, UITabBarControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.delegate = self
         // Do any additional setup after loading the view.
     }
     
+    // indexes mess up the topic SR
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
+        if viewController is ContentsOfTableViewController{
+            print("hi")
+            if(spacedRep.all_active == true){
+                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex
+                spacedRep.all_active = false
+            }
+        }
+        else if viewController is ViewControllerReview{
+            print("helloo")
+            spacedRep.all_active = true
+            spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
+        }
+    }
+
 
     /*
     // MARK: - Navigation

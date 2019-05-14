@@ -66,7 +66,7 @@ class ViewControllerReview: UIViewController{
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
             
-        else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil"){
+        else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list.isEmpty){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()
