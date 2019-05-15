@@ -72,11 +72,12 @@ class SubTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         subtopic = topic.subtopics[indexPath.row]
         index = indexPath.row
-        performSegue(withIdentifier: "fromSubTableSegue", sender: self)
+        performSegue(withIdentifier: "flashCardSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
-        if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
+        if segue.identifier == "flashCardSegue", let destinationVC = segue.destination as? ViewController{
+            destinationVC.isFromSubtopic = true
             destinationVC.subtopic = subtopic
         }
     }

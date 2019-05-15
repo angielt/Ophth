@@ -12,10 +12,17 @@ import Foundation
 class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate {
     var sectionIndex = 0
     var rowIndex = 0
+    var filteredSubIndex = 0
     
     var subtopicIndex = 0
     var headerIndex = 0
     var infoIndex = 0
+    
+    //TODO: not sure if need this. I want to see if the cell that is selected is a topic, subtopic, header, or info
+    var tapTopic = false
+    var tapSubtopic = false
+//    var tapHeader = false
+//    var tapInfo = false
     
     // search
     @IBOutlet weak var searchBar: UISearchBar!
@@ -66,8 +73,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        //filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
         filteredTopics = topicAr.filter({
             (topics: Topic) -> Bool in return
@@ -146,6 +151,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
                 let category = filteredTopics[indexPath.row].topicCategory
                 cell.detailTextLabel?.text = "Category: \(category)"
+                
+                tapTopic = true
+                tapSubtopic = false
             }
                 // gets the subtopics
             else if subtopicIndex < filteredSubtopics.count{
@@ -154,12 +162,16 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
                 cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic)"
                 subtopicIndex += 1
+                
+                tapTopic = false
+                tapSubtopic = true
             }
                 // gets the headers
             else if headerIndex < filteredHeaders.count{
                 cell.textLabel?.text = filteredHeaders[headerIndex].header
                 cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: "
                 headerIndex += 1
+                
             }
                 // gets the info
             else if infoIndex < filteredInfo.count{
@@ -196,7 +208,15 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchActive {
-            performSegue(withIdentifier: "fromSearchSegue", sender: self)
+            
+            //TODO: doesn't work yet. Can't tell if a cell is a topic, suptopic, header, or info
+            if tapTopic {
+                performSegue(withIdentifier: "subCell", sender: self)
+            }
+            else if tapSubtopic {
+                filteredSubIndex = indexPath.row
+                performSegue(withIdentifier: "fromSearchSegue", sender: self)
+            }
         }
         if indexPath.row == 0 {  //Categories
             if status.CategoryList[indexPath.section].opened == true {
@@ -219,14 +239,16 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("segue")
         if(segue.identifier == "subCell") {
             let subTableView = segue.destination as! SubTableViewController
             subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
             subTableView.topicIndex = rowIndex
         }
         else if(segue.identifier == "fromSearchSegue"){
-            let _ = segue.destination as? SearchToCardViewController
+            let destinationVC = segue.destination as? SingleViewController
+            
+            //TODO: need to determine what is been selected
+            destinationVC?.subtopic = filteredSubtopics[filteredSubIndex]
         }
     }
 }

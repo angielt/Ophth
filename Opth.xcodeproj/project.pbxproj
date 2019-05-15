@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1757A7163567623799DF48E7 /* Pods_Opth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6AF61D6A3022057A87904E /* Pods_Opth.framework */; };
 		559C2A5B83A0BAD892A8260B /* Pods_OpthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */; };
+		628BAF3F228C07A90086C911 /* SingleViewImageCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */; };
+		628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */; };
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
@@ -17,7 +19,7 @@
 		62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */; };
 		62ED7896228373B1002D59C4 /* 190_BruchsMembrane_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */; };
 		62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78972283821A002D59C4 /* SpacedRepetition.swift */; };
-		62ED789A2283A224002D59C4 /* SearchToCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78992283A224002D59C4 /* SearchToCardViewController.swift */; };
+		62ED789A2283A224002D59C4 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78992283A224002D59C4 /* SingleViewController.swift */; };
 		62ED789C22855B04002D59C4 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62ED789B22855B04002D59C4 /* temp.txt */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
@@ -66,6 +68,8 @@
 		04E1F4FB0135C9CABB446776 /* Pods-Opth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.release.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.release.xcconfig"; sourceTree = "<group>"; };
 		0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.debug.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewImageCardReveal.swift; sourceTree = "<group>"; };
+		628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewCardReveal.swift; sourceTree = "<group>"; };
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_2.gif; path = images/190_BruchsMembrane_2.gif; sourceTree = "<group>"; };
 		62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_1.gif; path = images/190_BruchsMembrane_1.gif; sourceTree = "<group>"; };
 		62ED78972283821A002D59C4 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
-		62ED78992283A224002D59C4 /* SearchToCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchToCardViewController.swift; sourceTree = "<group>"; };
+		62ED78992283A224002D59C4 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 		62ED789B22855B04002D59C4 /* temp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp.txt; sourceTree = "<group>"; };
 		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,9 +194,11 @@
 				62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */,
 				62C882B422756BA200FA248A /* FullScreenImageViewController.swift */,
 				62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */,
-				62ED78992283A224002D59C4 /* SearchToCardViewController.swift */,
 				FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */,
 				FD5A9CA9228951BA008B3ADB /* TabBarController.swift */,
+				62ED78992283A224002D59C4 /* SingleViewController.swift */,
+				628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */,
+				628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -532,7 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62ED789A2283A224002D59C4 /* SearchToCardViewController.swift in Sources */,
+				62ED789A2283A224002D59C4 /* SingleViewController.swift in Sources */,
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
 				62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */,
@@ -549,9 +555,11 @@
 				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
 				62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
+				628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
 				F86AEED2227031DD00F4FC9C /* NotesViewController.swift in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
+				628BAF3F228C07A90086C911 /* SingleViewImageCardReveal.swift in Sources */,
 				FD5A9CA622880E95008B3ADB /* ViewControllerReview.swift in Sources */,
 				FD056E6C22387DF8003CBB68 /* Category.swift in Sources */,
 				FD056E722238818C003CBB68 /* Card.swift in Sources */,
