@@ -30,7 +30,6 @@
 		FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */; };
 		FD2B771E221E27E800A41328 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2B771D221E27E800A41328 /* Parse.swift */; };
 		FD5A9CA622880E95008B3ADB /* ViewControllerReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */; };
-		FD5A9CA8228935EC008B3ADB /* SpacedRepetitionAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA7228935EC008B3ADB /* SpacedRepetitionAll.swift */; };
 		FD5A9CAA228951BA008B3ADB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5A9CA9228951BA008B3ADB /* TabBarController.swift */; };
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
@@ -93,7 +92,6 @@
 		FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRevealViewController.swift; sourceTree = "<group>"; };
 		FD2B771D221E27E800A41328 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 		FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReview.swift; sourceTree = "<group>"; };
-		FD5A9CA7228935EC008B3ADB /* SpacedRepetitionAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetitionAll.swift; sourceTree = "<group>"; };
 		FD5A9CA9228951BA008B3ADB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
@@ -229,7 +227,6 @@
 				FD056E6F2238811E003CBB68 /* Subtopic.swift */,
 				FD056E712238818C003CBB68 /* Card.swift */,
 				62ED78972283821A002D59C4 /* SpacedRepetition.swift */,
-				FD5A9CA7228935EC008B3ADB /* SpacedRepetitionAll.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -538,7 +535,6 @@
 				62ED789A2283A224002D59C4 /* SearchToCardViewController.swift in Sources */,
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
-				FD5A9CA8228935EC008B3ADB /* SpacedRepetitionAll.swift in Sources */,
 				62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */,
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,

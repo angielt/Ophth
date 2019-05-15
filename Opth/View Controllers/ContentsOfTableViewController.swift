@@ -38,12 +38,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             print("data file could not be found")
         }
         
-        for category in status.CategoryList{
-            for topic in category.topics{
-                print(topic.topicCategory)
-            }
-        }
-        
         //setup delegate
         searchBar.delegate = self
         status.CategoryList.sort(by: {$0.categoryName < $1.categoryName })
@@ -149,7 +143,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             
             // gets the topics
             if indexPath.row < filteredTopics.count{
-                print(filteredTopics[indexPath.row].topicCategory)
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
                 let category = filteredTopics[indexPath.row].topicCategory
                 cell.detailTextLabel?.text = "Category: \(category)"

@@ -16,13 +16,11 @@ class Status{
         self.CategoryList = []
     }
 
-    // these functions are really inefficent but its 3am, will fix later
     func addCategory(category:String){
         var matchExists:Bool = false
         for item in CategoryList{
             if(item.categoryName == category){
                 matchExists = true
-                //print("category already exists")
             }
         }
         if(matchExists == false){
@@ -40,7 +38,6 @@ class Status{
                 for top in item.topics{
                     if(top.topicName == topic){
                         matchExists = true
-                       // print("topic already exists")
                     }
                 }
             }
@@ -96,7 +93,6 @@ class Status{
         
     }
     
-    // IM SORRY THIS IS SO DISGUSTINGLY UGLY
     func addCard(category:String, topic:String, subtopic: String, header:String, info:String){
         var matchExists:Bool = false
         var topicCategory:Category = Category(name: "null")
@@ -130,22 +126,6 @@ class Status{
         }
         
     }
-    
-//    func printContents(){
-//        for category in CategoryList{
-//            print(category.categoryName)
-//            for topic in category.topics{
-//              //  print("\t" + topic.topicName)
-//                for subtopic in topic.subtopics{
-//                  //  print("\t\t" + subtopic.subtopicName)
-//                    for card in subtopic.cards{
-//                       // print("\t\t\t Header: " + card.header)
-//                       // print("\t\t\t Info: " + card.info)
-//                    }
-//                }
-//            }
-//        }
-//    }
     
     
 }

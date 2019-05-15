@@ -16,7 +16,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         // Do any additional setup after loading the view.
     }
     
-    // indexes mess up the topic SR
+    // indexes mess up the topic SR need to double check this
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
         if viewController is ContentsOfTableViewController{
             print("hi")

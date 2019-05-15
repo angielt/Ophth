@@ -10,17 +10,6 @@ import Foundation
 
 class Parse{
     
-    // NOTES / CONCERNS
-    // excel file:
-    // if you remove information from excel, then convert it to txt the cells still have information in them
-    // that parsing does not handle. however many rows you delete will be "\n\t\t\t\t\t\t\t\t" entries in the parsed string list of rows
-    // instead of no entry. If you have 10 rows in excel and you delete 3. The size of the parsed row array will still be 10 instead of 7.
-    
-    // INFO
-    // parse file and store into app data structure
-    // to do: make it less hard coded and use header line to index instead
-    //        store in database later
-    //         IDEALLY: run code to pre store everything into the database, then have app query needed cards from database
     func csv(data: String) -> [String]{
         var parsedData:[String] = []
         do {
