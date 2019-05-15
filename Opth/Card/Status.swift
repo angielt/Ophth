@@ -121,7 +121,11 @@ class Status{
             }
         }
         if(matchExists == false && header != "nil"){
-            let newCard = Card(header: header, info: info)
+            var information = info
+            if(info == "nil"){
+                information = ""
+            }
+            let newCard = Card(header: header, info: information)
             cardSubtopic.cards.append(newCard)
         }
         
