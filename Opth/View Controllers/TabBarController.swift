@@ -21,8 +21,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         if viewController is ContentsOfTableViewController{
             print("hi")
             if(spacedRep.all_active == true){
-                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex
+                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // switch from mass SR store mass SR curReview
                 spacedRep.all_active = false
+                spacedRep.clear()
             }
         }
         else if viewController is ViewControllerReview{

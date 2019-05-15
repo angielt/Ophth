@@ -44,7 +44,7 @@ class SpacedRepetition {
     var max_list_size = 0;
     var curReviewIndex:Int
     var subtopics:[Subtopic]
-    var topic:Topic
+    var topic:Topic?
     var RFList:RepeatFactorList
     var reviewList:[Subtopic] // list space rep cycles through
     var finished:Bool = false // review completed
@@ -57,10 +57,9 @@ class SpacedRepetition {
     init(){
         self.curReviewIndex = 0
         self.subtopics = []
-        self.topic = Topic(topic:"",category: "")
         self.RFList = RepeatFactorList()
         self.reviewList = []
-        
+        self.topic = nil
         self.all_subtopics = []
         
     }
@@ -68,7 +67,6 @@ class SpacedRepetition {
     func clear(){
         self.curReviewIndex = 0
         self.subtopics = []
-        self.topic = Topic(topic:"", category: "")
         self.RFList = RepeatFactorList()
         self.reviewList = []
         RFList.one = []
@@ -76,7 +74,7 @@ class SpacedRepetition {
         RFList.three = []
         RFList.four = []
         RFList.five = []
-        VCreference = nil
+        self.topic = nil
     }
     
     // For spaced repetition with specific topic clicked from table of contents
@@ -234,15 +232,15 @@ class SpacedRepetition {
         if(reviewList.count != 0){
             reviewList = []
         }
-        // generate list
-        if(topic.opened == false){
+        // generate initial list
+        if(topic?.opened == false){
             for _ in 1...Int(round(Double(max_list_size))){ // RF 5
                 let pop = RFList.five.popLast()
                 if (pop != nil){
                     reviewList.append(pop!)
                 }
             }
-            topic.opened = true
+            topic?.opened = true
             print(self.reviewList)
         }
         else{

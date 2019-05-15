@@ -224,7 +224,5 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         else if(segue.identifier == "fromSearchSegue"){
             let _ = segue.destination as? SearchToCardViewController
         }
-        
-        spacedRep.setReviewTopic(topic: &(status.CategoryList[sectionIndex].topics[rowIndex]))
     }
 }
