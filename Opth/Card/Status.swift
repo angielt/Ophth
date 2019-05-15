@@ -46,13 +46,13 @@ class Status{
             }
         }
         if(matchExists == false){
-            let newTopic = Topic(topic: topic, category: category)
+            let test = String(category.filter { !" \n\t\r".contains($0) })
+            let newTopic = Topic(topic: topic, category: test)
             topicCategory.topics.append(newTopic)
         }
         
     }
     
-    // im sorry this is ugly, will find better way
     func addSubtopic(category:String, topic:String, subtopic: String, img: String?, imgCap: String?){
         var matchExists:Bool = false
         var topicCategory:Category = Category(name: "null")
@@ -78,6 +78,8 @@ class Status{
         }
         
         if(matchExists == false){
+            let topic = String(topic.filter { !" \n\t\r".contains($0) })
+            let category = String(category.filter { !" \n\t\r".contains($0) })
             let newSubtopic = Subtopic(subtopic: subtopic, topic: topic, category: category)
             for i in img!.components(separatedBy: ","){
                 let removedQ = i.replacingOccurrences(of: "\"", with: "")

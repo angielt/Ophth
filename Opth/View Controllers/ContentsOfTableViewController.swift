@@ -37,6 +37,13 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         } else {
             print("data file could not be found")
         }
+        
+        for category in status.CategoryList{
+            for topic in category.topics{
+                print(topic.topicCategory)
+            }
+        }
+        
         //setup delegate
         searchBar.delegate = self
         status.CategoryList.sort(by: {$0.categoryName < $1.categoryName })
@@ -142,13 +149,17 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             
             // gets the topics
             if indexPath.row < filteredTopics.count{
+                print(filteredTopics[indexPath.row].topicCategory)
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
-                cell.detailTextLabel?.text = "Category: "
+                let category = filteredTopics[indexPath.row].topicCategory
+                cell.detailTextLabel?.text = "Category: \(category)"
             }
                 // gets the subtopics
             else if subtopicIndex < filteredSubtopics.count{
+                let category=filteredSubtopics[subtopicIndex].subtopicCategory
+                let topic=filteredSubtopics[subtopicIndex].subtopicTopic
                 cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
-                cell.detailTextLabel?.text = "Category: , Topic: "
+                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic)"
                 subtopicIndex += 1
             }
                 // gets the headers
