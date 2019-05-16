@@ -17,15 +17,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var headerIndex = 0
     var infoIndex = 0
     
-    //TODO: not sure if need this. I want to see if the cell that is selected is a topic, subtopic, header, or info
-    var tapTopic = false
-    var tapSubtopic = false
-//    var tapHeader = false
-//    var tapInfo = false
-    
-    var fTopic: Topic!
-    var fSubtopic: Subtopic!
-    
     // search
     @IBOutlet weak var searchBar: UISearchBar!
     var searchActive = false
@@ -40,16 +31,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let filepath = Bundle.main.path(forResource: "temp", ofType: "txt") {
-                parse.csv(data: filepath)
-        } else {
-            print("data file could not be found")
-        }
+        parse.csv(data: "/Users/cathyhsieh/Desktop/temp.txt")
         
         //setup delegate
         searchBar.delegate = self
-        status.CategoryList.sort(by: {$0.categoryName < $1.categoryName })
         
         for item in status.CategoryList {
             topicAr += item.topics.map{$0} // puts all topics in topicAr
@@ -75,6 +60,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        //filteredSubtopics = subtopicAr.filter({(subtopics: Subtopic) -> Bool in return subtopics.subtopicName.lowercased().prefix(searchText.count).contains(searchText.lowercased())})
         
         filteredTopics = topicAr.filter({
             (topics: Topic) -> Bool in return
@@ -118,19 +105,17 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     // MARK: table of contents
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if searchActive{
+        if (searchActive){
             return 1
-        }
-        else {
+        } else {
             return status.CategoryList.count
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        status.CategoryList[section].topics.sort(by: { $0.topicName < $1.topicName })
-        
-        if searchActive{
-            return filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
+        if (searchActive) {
+            let counter = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
+            return counter
         }
         else if status.CategoryList[section].opened == true {
             return status.CategoryList[section].topics.count + 1
@@ -140,44 +125,33 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell(style: UITableViewCell.CellStyle.subtitle,
-                                       reuseIdentifier: "cell")}
+                return UITableViewCell()}
             
             // gets the topics
             if indexPath.row < filteredTopics.count{
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
-                let category = filteredTopics[indexPath.row].topicCategory
-                cell.detailTextLabel?.text = "Category: \(category)"
             }
                 // gets the subtopics
             else if subtopicIndex < filteredSubtopics.count{
-                let category = filteredSubtopics[subtopicIndex].subtopicCategory
-                let topic = filteredSubtopics[subtopicIndex].subtopicTopic
                 cell.textLabel?.text = filteredSubtopics[subtopicIndex].subtopicName
-                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic)"
                 subtopicIndex += 1
             }
                 // gets the headers
             else if headerIndex < filteredHeaders.count{
                 cell.textLabel?.text = filteredHeaders[headerIndex].header
-                cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: "
                 headerIndex += 1
-                
             }
                 // gets the info
             else if infoIndex < filteredInfo.count{
                 cell.textLabel?.text = filteredInfo[infoIndex].info
-                cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: , Header: "
                 infoIndex += 1
             }
             
             cell.textLabel?.textColor = UIColor.white
-            cell.detailTextLabel?.textColor = UIColor.cyan
             return cell
         }
         else {
@@ -186,7 +160,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                     return UITableViewCell()}
                 let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
                 cell.textLabel?.text = trimmedCategory
-                cell.detailTextLabel?.text = ""
                 cell.textLabel?.textColor = UIColor.white
                 return cell
             }
@@ -196,7 +169,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 
                 cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - 1].topicName
                 cell.textLabel?.textColor = UIColor.white
-                cell.detailTextLabel?.text = ""
                 return cell
             }
         }
@@ -204,54 +176,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchActive {
-            
-            let totalCount = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
-            var t = filteredTopics.count
-            var s = filteredSubtopics.count
-            var h = filteredHeaders.count
-            var i = filteredInfo.count
-            
-            for k in 0..<totalCount{
-                if k == indexPath.row{
-                    //print(k)
-                    break
-                }
-                else{t -= 1}
-                if t < 0 {s -= 1}
-                if s < 0 {h -= 1}
-                if h < 0 {i -= 1}
-            }
-            
-            if t > 0{
-                //print("t ",filteredTopics[indexPath.row].topicName)
-                tapTopic = true
-                fTopic = filteredTopics[indexPath.row]
-                performSegue(withIdentifier: "subCell", sender: self)
-            }
-            else if s > 0{
-                for k in 0..<filteredSubtopics.count + 1{
-                    if k == indexPath.row - filteredTopics.count{
-                        //print("s ",filteredSubtopics[k].subtopicName)
-                        tapSubtopic = true
-                        fSubtopic = filteredSubtopics[k]
-                        performSegue(withIdentifier: "fromSearchSegue", sender: self)
-                    }
-                }
-            }
-            else if h > 0{
-                for k in 0..<filteredHeaders.count + 1{
-                    if k == indexPath.row - filteredTopics.count - filteredSubtopics.count{
-                        //print("h ",filteredHeaders[k].header)
-                    }
-                }
-            }
-            else if i > 0{
-                for k in 0..<filteredInfo.count + 1{
-                    if k == indexPath.row - filteredTopics.count - filteredSubtopics.count - filteredHeaders.count{
-                        //print("i ",filteredInfo[k].info)
-                    }
-                }
-            }
+            performSegue(withIdentifier: "fromSearchSegue", sender: self)
         }
         if indexPath.row == 0 {  //Categories
             if status.CategoryList[indexPath.section].opened == true {
@@ -274,19 +199,16 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("segue")
         if(segue.identifier == "subCell") {
             let subTableView = segue.destination as! SubTableViewController
-            if tapTopic {
-                subTableView.topic = fTopic
-            }
-            else{
-                subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
-            }
+            subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
             subTableView.topicIndex = rowIndex
         }
         else if(segue.identifier == "fromSearchSegue"){
-            let destinationVC = segue.destination as? SingleViewController
-            destinationVC?.subtopic = fSubtopic
+            let _ = segue.destination as? SearchToCardViewController
         }
+        
+        spacedRep.setReviewTopic(topic: &(status.CategoryList[sectionIndex].topics[rowIndex]))
     }
 }

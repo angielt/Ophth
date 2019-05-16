@@ -1,30 +1,36 @@
 //
-//  ViewController.swift
+//  ViewControllerReview.swift
 //  Opth
 //
-//  Created by Angie Ta on 2/14/19.
+//  Created by Angie Ta on 5/12/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
+
 
 import UIKit
 
 // view controller of card front
-class ViewController: UIViewController{
-
+class ViewControllerReview: UIViewController{
+    
     static let cardCornerRadius: CGFloat = 25
-
+    
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        self.loadData()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        spacedRep.all_active = false
+        
+        for item in status.CategoryList[0].topics[0].subtopics{
+            print(item.repeat_factor)
+        }
+        if(spacedRep.all_subtopics.count == 0){
+            spacedRep.setReviewTopics(category_list: &status.CategoryList)
+        }
+        spacedRep.all_active = true
+        spacedRep.all_subtopics.shuffle()
         self.loadData()
+        
     }
     
     func loadData(){
@@ -55,12 +61,11 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
-        print(spacedRep.curReviewIndex)
         if(spacedRep.finished == true){
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
-        
+            
         else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list.isEmpty){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
@@ -76,12 +81,12 @@ class ViewController: UIViewController{
             if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
                 //self.present(viewController, animated: true, completion: nil)
                 if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
-                    self.performSegue(withIdentifier: "reveal", sender: nil)
+                    self.performSegue(withIdentifier: "SRCardReveal", sender: nil)
                 }
                 else {
-                    self.performSegue(withIdentifier: "revealImage", sender: nil)
+                    self.performSegue(withIdentifier: "SRCardRevealImage", sender: nil)
                 }
-
+                
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -96,7 +101,7 @@ class ViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
-                destinationViewController.transitioningDelegate = self
+            destinationViewController.transitioningDelegate = self
             // delay changes to current VC until after  flip animation
         }
         else if segue.identifier == "revealImage",
@@ -107,7 +112,7 @@ class ViewController: UIViewController{
     }
 }
 
-extension ViewController: UIViewControllerTransitioningDelegate {
+extension ViewControllerReview: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,
                              source: UIViewController)

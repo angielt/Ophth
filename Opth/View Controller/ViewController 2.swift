@@ -16,9 +16,11 @@ class ViewController: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
+    var isFromSubtopic = false
+    var subtopic: Subtopic!
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        self.loadData()
     }
     
     override func viewDidLoad() {
@@ -30,18 +32,19 @@ class ViewController: UIViewController{
     func loadData(){
         if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
             cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
-            
-            card.layer.cornerRadius = 4.0
-            card.layer.borderWidth = 1.0
-            card.layer.borderColor = UIColor.clear.cgColor
-            card.layer.masksToBounds = false
-            card.layer.shadowColor = UIColor.gray.cgColor
-            card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            card.layer.shadowRadius = 4.0
-            card.layer.shadowOpacity = 1.0
-            card.layer.masksToBounds = false
-            card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
         }
+        
+        card.layer.cornerRadius = 4.0
+        card.layer.borderWidth = 1.0
+        card.layer.borderColor = UIColor.clear.cgColor
+        card.layer.masksToBounds = false
+        card.layer.shadowColor = UIColor.gray.cgColor
+        card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        card.layer.shadowRadius = 4.0
+        card.layer.shadowOpacity = 1.0
+        card.layer.masksToBounds = false
+        card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
+
     }
     
     func exitCardChange(){
@@ -55,7 +58,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
-        print(spacedRep.curReviewIndex)
+        //print(spacedRep.curReviewIndex)
         if(spacedRep.finished == true){
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
