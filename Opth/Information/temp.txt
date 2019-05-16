@@ -1,5 +1,5 @@
 Category	Topic	Subtopic 	Image	Image Caption	Header 1	Info1	Header2	Info2	Header3	Info3	Header4	Info4	Header5	Info5	Header6	Info6	Header7	Info7	Header8	Info8	Header9	Info9												
-Retina	General	Layers of the Retina	188_Retina.jpg	Layers of retina	How often do photoreceptor outer segments renew?	Every 10 days																												
+Retina	General	Layers of the Retina	188_Retina.jpg	Layers of retina	How often do photoreceptor outer segments renew?	      Every 10 days																												
 Retina	General	Wavelengths	nil	nil	Rhodopsin is most sensitive to?	510nm (green)	L cone?	564-580nm	M cone?	534-545nm	S cone?	420-440nm	Excimer laser?	193nm (UV)	Argon retinal laser?	532nm (Green)	Diode laser?	810nm (IR)	Nd:YAG laser?	1064nm	Femtosecond laser?	1053nm												
 Retina	General	Bruch's Membrane	"190_BruchsMembrane_1.gif, 190_BruchsMembrane_2.gif"	Periodic-acid Schiff (PAS) stained the retinal pigment epithelium and Bruch's membrane heavily*Normal Bruch's membrane	"Fusion of RPE and choriocapillaris
 5 elements?
