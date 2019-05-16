@@ -268,7 +268,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         else {
             rowIndex = indexPath.row - 1
             sectionIndex = indexPath.section
-            //performSegue(withIdentifier: "subCell", sender: self)
+            performSegue(withIdentifier: "subCell", sender: self)
         }
     }
     
