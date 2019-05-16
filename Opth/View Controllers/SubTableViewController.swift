@@ -24,6 +24,7 @@ class SubTableViewController: UITableViewController {
     
     func loadData(){
         view.reloadInputViews()
+        self.tableView.reloadData()
     }
     
     @IBAction func backButton(_ sender: Any) {

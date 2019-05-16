@@ -25,6 +25,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     var fTopic: Topic!
     var fSubtopic: Subtopic!
+   // var navigationBarAppearace = UINavigationBar.appearance()
+    
     
     // search
     @IBOutlet weak var searchBar: UISearchBar!
@@ -40,7 +42,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        //navigationBarAppearace.barTintColor = UIColor.black
         if let filepath = Bundle.main.path(forResource: "temp", ofType: "txt") {
                 parse.csv(data: filepath)
         } else {

@@ -31,6 +31,9 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     //Buttons
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func easyOnClick(_ sender: Any) {
         //spacedRep.easyPressed()
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)

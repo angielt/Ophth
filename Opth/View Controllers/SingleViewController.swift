@@ -14,7 +14,7 @@ class SingleViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        self.loadData()
+        self.reloadInputViews()
     }
     
     @IBOutlet weak var cardFront: UILabel!

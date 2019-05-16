@@ -39,6 +39,10 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     var imageCount = 0
     
     //Buttons
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func easyOnClick(_ sender: Any) {
         //spacedRep.easyPressed()
         // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
