@@ -102,6 +102,8 @@
                         <outlet property="searchBar" destination="xR0-QM-cHD" id="VCJ-Pj-uXs"/>
                         <segue destination="f8K-zN-X4m" kind="presentation" identifier="subCell" modalTransitionStyle="crossDissolve" id="YOY-1I-l6F"/>
                         <segue destination="OpK-c2-obb" kind="presentation" identifier="fromSearchSegue" id="PUi-mI-Naq"/>
+                        <segue destination="Kh0-YB-B7g" kind="presentation" identifier="headerImageSegue" id="Sm6-FY-O2q"/>
+                        <segue destination="9e1-g4-qxj" kind="presentation" identifier="headerSegue" id="gx3-AS-CXo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyT-vQ-Us1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1277,7 +1279,9 @@
         <image name="icon" width="3" height="3"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w7G-6z-jxb"/>
+        <segue reference="gx3-AS-CXo"/>
+        <segue reference="GXd-lX-OvY"/>
+        <segue reference="PUi-mI-Naq"/>
         <segue reference="hBY-14-0wZ"/>
         <segue reference="BpS-xS-shc"/>
         <segue reference="T0X-qS-oqu"/>

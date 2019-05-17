@@ -23,6 +23,8 @@ class Parse{
                 var newRow = row.replacingOccurrences(of: "Õ", with: "'", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "\"\"", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "##", with: "    ◦", options: .literal, range: nil)
+                newRow = newRow.replacingOccurrences(of: "Ó", with: "\"", options: .literal, range: nil)
+                newRow = newRow.replacingOccurrences(of: "Ò", with: "\"", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "Ô", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "#", with: "•", options: .literal, range: nil)

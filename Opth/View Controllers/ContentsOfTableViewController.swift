@@ -202,8 +202,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = trimmedCategory
                 cell.detailTextLabel?.text = ""
                 cell.textLabel?.textColor = UIColor.white
-                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-                cell.textLabel?.font = UIFont.systemFont(ofSize: 22.0)
+//                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+//                cell.textLabel?.font = UIFont.systemFont(ofSize: 22.0)
                 return cell
             }
             else {  //Topics
@@ -257,14 +257,44 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             else if h > 0{
                 for k in 0..<filteredHeaders.count + 1{
                     if k == indexPath.row - filteredTopics.count - filteredSubtopics.count{
-                        //print("h ",filteredHeaders[k].header)
+                        print("h ",filteredHeaders[k].header)
+                        for i in subtopicAr{
+                            for j in i.cards{
+                                if filteredHeaders[k].header == j.header {
+                                    print("header Sub ",i.subtopicName)
+                                    if i.img_list[0] != "nil"{
+                                        fSubtopic = i
+                                        performSegue(withIdentifier: "headerImageSegue", sender: self)
+                                    }
+                                    else{
+                                        fSubtopic = i
+                                        performSegue(withIdentifier: "headerSegue", sender: self)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
             else if i > 0{
                 for k in 0..<filteredInfo.count + 1{
                     if k == indexPath.row - filteredTopics.count - filteredSubtopics.count - filteredHeaders.count{
-                        //print("i ",filteredInfo[k].info)
+                        print("i ",filteredInfo[k].info)
+                        for i in subtopicAr{
+                            for j in i.cards{
+                                if filteredInfo[k].info == j.info {
+                                    print("info sub",i.subtopicName)
+                                    if i.img_list[0] != "nil"{
+                                        fSubtopic = i
+                                        performSegue(withIdentifier: "headerImageSegue", sender: self)
+                                    }
+                                    else{
+                                        fSubtopic = i
+                                        performSegue(withIdentifier: "headerSegue", sender: self)
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -290,7 +320,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "subCell") {
+        if segue.identifier == "subCell"{
             let subTableView = segue.destination as! SubTableViewController
             if tapTopic {
                 subTableView.topic = fTopic
@@ -300,8 +330,16 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             }
             subTableView.topicIndex = rowIndex
         }
-        else if(segue.identifier == "fromSearchSegue"){
+        else if segue.identifier == "fromSearchSegue"{
             let destinationVC = segue.destination as? SingleViewController
+            destinationVC?.subtopic = fSubtopic
+        }
+        else if segue.identifier == "headerSegue"{
+            let destinationVC = segue.destination as? SingleViewCardReveal
+            destinationVC?.subtopic = fSubtopic
+        }
+        else if segue.identifier == "headerImageSegue"{
+            let destinationVC = segue.destination as? SingleViewImageCardReveal
             destinationVC?.subtopic = fSubtopic
         }
     }
