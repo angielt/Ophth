@@ -19,7 +19,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     //TODO: not sure if need this. I want to see if the cell that is selected is a topic, subtopic, header, or info
     var tapTopic = false
-    var tapSubtopic = false
+//    var tapSubtopic = false
 //    var tapHeader = false
 //    var tapInfo = false
     
@@ -168,7 +168,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 let category = filteredTopics[indexPath.row].topicCategory
                 cell.detailTextLabel?.text = "Category: \(category)"
             }
-                // gets the subtopics
+            // gets the subtopics
             else if subtopicIndex < filteredSubtopics.count{
                 let category = filteredSubtopics[subtopicIndex].subtopicCategory
                 let topic = filteredSubtopics[subtopicIndex].subtopicTopic
@@ -176,17 +176,23 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic)"
                 subtopicIndex += 1
             }
-                // gets the headers
+            // gets the headers
             else if headerIndex < filteredHeaders.count{
+                let category = filteredHeaders[headerIndex].cardCategory
+                let topic = filteredHeaders[headerIndex].cardTopic
+                let subtopic = filteredHeaders[headerIndex].cardSubtopic
                 cell.textLabel?.text = filteredHeaders[headerIndex].header
-                cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: "
+                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic), Subtopic: \(subtopic)"
                 headerIndex += 1
                 
             }
-                // gets the info
+            // gets the info
             else if infoIndex < filteredInfo.count{
+                let category = filteredInfo[infoIndex].cardCategory
+                let topic = filteredInfo[infoIndex].cardTopic
+                let subtopic = filteredInfo[infoIndex].cardSubtopic
                 cell.textLabel?.text = filteredInfo[infoIndex].info
-                cell.detailTextLabel?.text = "Category: , Topic: , Subtopic: , Header: "
+                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic), Subtopic: \(subtopic)"
                 infoIndex += 1
             }
             
@@ -248,7 +254,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 for k in 0..<filteredSubtopics.count + 1{
                     if k == indexPath.row - filteredTopics.count{
                         //print("s ",filteredSubtopics[k].subtopicName)
-                        tapSubtopic = true
                         fSubtopic = filteredSubtopics[k]
                         performSegue(withIdentifier: "fromSearchSegue", sender: self)
                     }
@@ -257,11 +262,11 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             else if h > 0{
                 for k in 0..<filteredHeaders.count + 1{
                     if k == indexPath.row - filteredTopics.count - filteredSubtopics.count{
-                        print("h ",filteredHeaders[k].header)
+                        //print("h: ",filteredHeaders[k].header)
                         for i in subtopicAr{
                             for j in i.cards{
                                 if filteredHeaders[k].header == j.header {
-                                    print("header Sub ",i.subtopicName)
+                                    //print("header Sub ",i.subtopicName)
                                     if i.img_list[0] != "nil"{
                                         fSubtopic = i
                                         performSegue(withIdentifier: "headerImageSegue", sender: self)
@@ -279,11 +284,11 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             else if i > 0{
                 for k in 0..<filteredInfo.count + 1{
                     if k == indexPath.row - filteredTopics.count - filteredSubtopics.count - filteredHeaders.count{
-                        print("i ",filteredInfo[k].info)
+                        //print("i: ",filteredInfo[k].info)
                         for i in subtopicAr{
                             for j in i.cards{
                                 if filteredInfo[k].info == j.info {
-                                    print("info sub",i.subtopicName)
+                                    //print("info sub",i.subtopicName)
                                     if i.img_list[0] != "nil"{
                                         fSubtopic = i
                                         performSegue(withIdentifier: "headerImageSegue", sender: self)

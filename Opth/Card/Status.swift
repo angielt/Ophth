@@ -125,7 +125,10 @@ class Status{
             if(info == "nil"){
                 information = ""
             }
-            let newCard = Card(header: header, info: information)
+            let category = String(category.filter { !"\n\t\r".contains($0) })
+            let topic = String(topic.filter { !"\n\t\r".contains($0) })
+            let subtopic = String(subtopic.filter { !"\n\t\r".contains($0) })
+            let newCard = Card(header: header, info: information, category: category, topic: topic, subtopic: subtopic)
             cardSubtopic.cards.append(newCard)
         }
         
