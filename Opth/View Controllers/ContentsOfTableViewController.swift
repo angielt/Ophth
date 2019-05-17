@@ -25,6 +25,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     var fTopic: Topic!
     var fSubtopic: Subtopic!
+   // var navigationBarAppearace = UINavigationBar.appearance()
+    
     
     // search
     @IBOutlet weak var searchBar: UISearchBar!
@@ -40,7 +42,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        //navigationBarAppearace.barTintColor = UIColor.black
         if let filepath = Bundle.main.path(forResource: "temp", ofType: "txt") {
                 parse.csv(data: filepath)
         } else {
@@ -220,15 +225,15 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             var h = filteredHeaders.count
             var i = filteredInfo.count
             
+            // loop through the search contents to see rather the cell is a topic, subtopic, header, or info
             for k in 0..<totalCount{
                 if k == indexPath.row{
-                    //print(k)
                     break
                 }
-                else{t -= 1}
-                if t < 0 {s -= 1}
-                if s < 0 {h -= 1}
-                if h < 0 {i -= 1}
+                else{t -= 1}        // decrement the topic index
+                if t < 0 {s -= 1}   // if topic is < 0, the decrement the subtopic index
+                if s < 0 {h -= 1}   // if subtpic is < 0, the decrement the header index
+                if h < 0 {i -= 1}   // if header is < 0, the decrement the info index
             }
             
             if t > 0{

@@ -42,6 +42,10 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
 //    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
+
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func easyOnClick(_ sender: Any) {
         print("easy")
         spacedRep.easyPressed()

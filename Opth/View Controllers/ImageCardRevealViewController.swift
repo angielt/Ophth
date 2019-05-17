@@ -42,7 +42,11 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var occlusionTapCount = 0
     var imageCount = 0
     
-    //Buttons
+    //Buttonss
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func easyOnClick(_ sender: Any) {
         print("easy")
         spacedRep.easyPressed()

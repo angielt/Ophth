@@ -19,7 +19,14 @@ class SubTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         topic.subtopics.sort(by: {$0.subtopicName < $1.subtopicName})
+        self.loadData()
     }
+    
+    func loadData(){
+        view.reloadInputViews()
+        self.tableView.reloadData()
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         self.tableView.reloadData()
