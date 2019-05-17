@@ -49,6 +49,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         
         //setup delegate
         searchBar.delegate = self
+        
         status.CategoryList.sort(by: {$0.categoryName < $1.categoryName })
         
         for item in status.CategoryList {
@@ -72,6 +73,13 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     func searchBarSearchButtonClicked(_searchBar: UISearchBar) {
         searchActive = false
+    }
+    
+    // get rid of keyboard if not searching
+    func dismissKeyboard() {
+        if searchActive == false {
+            searchBar.resignFirstResponder()
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -103,6 +111,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         // checks
         if (searchBar.text == "") {
             searchActive = false;
+            dismissKeyboard();
         }
         else {
             searchActive = true;
