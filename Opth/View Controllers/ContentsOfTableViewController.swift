@@ -202,6 +202,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = trimmedCategory
                 cell.detailTextLabel?.text = ""
                 cell.textLabel?.textColor = UIColor.white
+                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+                cell.textLabel?.font = UIFont.systemFont(ofSize: 22.0)
                 return cell
             }
             else {  //Topics

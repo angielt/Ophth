@@ -19,7 +19,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
     // indexes mess up the topic SR need to double check this
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
         if viewController is ContentsOfTableViewController{
-            print("hi")
+            //print("hi")
             if(spacedRep.all_active == true){
                 spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // switch from mass SR store mass SR curReview
                 spacedRep.all_active = false
@@ -27,7 +27,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
             }
         }
         else if viewController is ViewControllerReview{
-            print("helloo")
+            //print("helloo")
             spacedRep.all_active = true
             spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
         }

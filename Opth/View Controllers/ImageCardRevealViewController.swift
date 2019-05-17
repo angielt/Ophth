@@ -48,19 +48,19 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     @IBAction func easyOnClick(_ sender: Any) {
-        print("easy")
+        //print("easy")
         spacedRep.easyPressed()
         // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
         dismiss(animated: true) {
         }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
-        print("unsure")
+        //print("unsure")
         spacedRep.unsurePressed()
         dismiss(animated: true, completion: nil)
     }
     @IBAction func hardOnClick(_ sender: Any) {
-        print("hard")
+        //print("hard")
         spacedRep.hardPressed()
         dismiss(animated: true, completion: nil)
     }
@@ -99,7 +99,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate + 30, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
+            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image
@@ -118,7 +118,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 caption.numberOfLines = 3
                 caption.lineBreakMode = .byWordWrapping
                 caption.sizeToFit()
-                let captionLocation = self.imageScrollView.center.x + 20
+                let captionLocation = self.imageScrollView.center.x
                 
                 //set the position of the caption
                 if i == 0{
