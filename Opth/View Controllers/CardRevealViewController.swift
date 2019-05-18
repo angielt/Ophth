@@ -38,8 +38,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
-
-//    subtopicTableView.addGestureRecognizer(tap)
     
     //Buttons
 
@@ -78,22 +76,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
 
     }
-    
-//    // tap occlusion
-//    @objc func handleTap(_ sender:UITapGestureRecognizer){
-//        if(index <= indexMax){  // -1?
-//            let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
-//            if(showInfo == false){
-//                showInfo = true
-//                cell.Info.textColor = UIColor.white
-//                index = index+1
-//            }
-//            else if(showInfo == true){
-//                showInfo = false
-//                cell.Header.textColor = UIColor.cyan
-//            }
-//        }
-//    }
     
     //Fade in effect
     func fadeIn(name: UILabel){
@@ -134,7 +116,17 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index < indexMax){  // -1?
+        
+        let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
+
+        var visibleRowIndexArray: [Int] = []
+        
+        for currentIndextPath in visibleIndexPaths! {
+            //  You now have visible cells in visibleCellsArray
+            visibleRowIndexArray.append(currentIndextPath.row)
+        }
+        if(visibleRowIndexArray.contains(index)){
+       // if(index < indexMax){  // -1?
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true

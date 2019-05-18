@@ -22,8 +22,8 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     var indexMax = 0
     var showInfo = false
     let tap = UITapGestureRecognizer()
-    
     var subtopic: Subtopic!
+    var buttonsVisible:Bool = false
     
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
@@ -45,6 +45,9 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func hardOnClick(_ sender: Any) {
         //spacedRep.hardPressed()
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    func showButtons(){
+        
     }
     
     override func viewDidLoad() {
@@ -100,7 +103,17 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index < indexMax){  // -1?
+        
+        let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
+        
+        var visibleRowIndexArray: [Int] = []
+        
+        for currentIndextPath in visibleIndexPaths! {
+            //  You now have visible cells in visibleCellsArray
+            visibleRowIndexArray.append(currentIndextPath.row)
+        }
+        if(visibleRowIndexArray.contains(index)){
+            // if(index < indexMax){  // -1?
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
