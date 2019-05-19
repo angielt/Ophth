@@ -222,19 +222,23 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             visibleRowIndexArray.append(currentIndextPath.row)
         }
         if(visibleRowIndexArray.contains(index)){
-            if(index == spacedRep.reviewList[spacedRep.curReviewIndex].cards.count-1){
-                buttonsVisible = true
-                self.showButtons()
-            }
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
                 cell.Info.textColor = UIColor.white
+                print("-----")
+                print(index)
+                print((spacedRep.reviewList[spacedRep.curReviewIndex].cards.count)-1)
                 index = index+1
             }
             else if(showInfo == true){
+                print(":::")
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
+            }
+            if(index == (spacedRep.reviewList[spacedRep.curReviewIndex].cards.count)-1){
+                self.buttonsVisible = true
+                self.showButtons()
             }
         }
     }

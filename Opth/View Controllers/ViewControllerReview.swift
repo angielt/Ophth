@@ -26,9 +26,12 @@ class ViewControllerReview: UIViewController{
         }
         if(spacedRep.all_subtopics.count == 0){
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
+            spacedRep.curReviewIndex = 0
         }
         spacedRep.all_active = true
-        spacedRep.all_subtopics.shuffle()
+//        spacedRep.all_subtopics.shuffle()
+        
+        // handle if all subtopics reviewed already
         self.loadData()
         
     }

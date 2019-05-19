@@ -37,7 +37,7 @@ class RepeatFactorList{
 }
 
 class SpacedRepetition {
-    // topics spaced repetition
+    // main/topics spaced repetition
     var VCreference: ViewController?
     let max_score = 20;
     let min_score = 0;
@@ -106,7 +106,7 @@ class SpacedRepetition {
         }
         
         self.all_subtopics = flattenedArray.flatMap({$0})
-        self.reviewList = self.all_subtopics
+        self.reviewList = self.all_subtopics.shuffled()
     
     }
     

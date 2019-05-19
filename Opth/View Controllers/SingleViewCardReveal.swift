@@ -128,15 +128,15 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
             if(showInfo == false){
                 showInfo = true
                 cell.Info.textColor = UIColor.white
-                if(index == subtopic.cards.count-1){
-                    buttonsVisible = true
-                    self.showButtons()
-                }
                 index = index+1
             }
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
+            }
+            if(index == subtopic.cards.count-1){
+                buttonsVisible = true
+                self.showButtons()
             }
         }
     }

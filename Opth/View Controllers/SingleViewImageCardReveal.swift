@@ -187,8 +187,11 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
+        print("tap")
         
         let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
+        print(visibleIndexPaths)
+        print(index)
         
         var visibleRowIndexArray: [Int] = []
         
@@ -201,15 +204,23 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             if(showInfo == false){
                 showInfo = true
                 cell.Info.textColor = UIColor.white
-                if(index == subtopic.cards.count-1){
-                    buttonsVisible = true
-                    self.showButtons()
-                }
-                index = index+1
+                print("-----")
+                print(index)
+                print((subtopic.cards.count)-1)
+//                if(index != subtopic.cards.count-1){
+//                    index = index+1
+//                }
             }
             else if(showInfo == true){
+                print(":::::")
+                print(index)
+                print((subtopic.cards.count)-1)
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
+            }
+            if(index == subtopic.cards.count-1){
+                buttonsVisible = true
+                self.showButtons()
             }
         }
     }
