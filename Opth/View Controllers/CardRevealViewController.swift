@@ -34,6 +34,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     let curReviewIndex = spacedRep.curReviewIndex // current subtopic
     var occlusionFinished = false
     var occlusionTapCount = 0
+    var buttonsVisible:Bool = false
     
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
@@ -45,26 +46,38 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         dismiss(animated: true, completion: nil)
     }
     @IBAction func easyOnClick(_ sender: Any) {
-        print("easy")
-        spacedRep.easyPressed()
-       // status.curReviewIndex = status.curReviewIndex + 1
-        dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            spacedRep.easyPressed()
+            // status.curReviewIndex = status.curReviewIndex + 1
+            dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
-        print("unsure")
-        spacedRep.unsurePressed()
-        //status.curReviewIndex = status.curReviewIndex + 1
-        dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            spacedRep.unsurePressed()
+            // status.curReviewIndex = status.curReviewIndex + 1
+            dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func hardOnClick(_ sender: Any) {
-        print("hard")
-        spacedRep.hardPressed()
-        //status.curReviewIndex = status.curReviewIndex + 1
-        dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            spacedRep.hardPressed()
+            // status.curReviewIndex = status.curReviewIndex + 1
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    func showButtons(){
+        easyButton.isHidden = false
+        unsureButton.isHidden = false
+        hardButton.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        easyButton.isHidden = true
+        unsureButton.isHidden = true
+        hardButton.isHidden = true
+        
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
@@ -74,7 +87,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         indexMax = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count //spacedRep.reviewList.count
         
         cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
-
     }
     
     //Fade in effect
@@ -89,14 +101,18 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Provide a cell object for each row.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
         
         // fill cell contents
         if(indexPath.row < spacedRep.reviewList[spacedRep.curReviewIndex].cards.count){
+            let info = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
             cell.Header.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].header
-            cell.Info.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
+            cell.Info.text = info
+            
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan
@@ -126,7 +142,10 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
             visibleRowIndexArray.append(currentIndextPath.row)
         }
         if(visibleRowIndexArray.contains(index)){
-       // if(index < indexMax){  // -1?
+            if(index == spacedRep.reviewList[spacedRep.curReviewIndex].cards.count-1){
+                buttonsVisible = true
+                self.showButtons()
+            }
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true

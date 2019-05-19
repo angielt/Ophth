@@ -41,6 +41,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var occlusionFinished = false
     var occlusionTapCount = 0
     var imageCount = 0
+    var buttonsVisible:Bool = false
     
     //Buttonss
     @IBAction func backButton(_ sender: Any) {
@@ -64,9 +65,19 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         spacedRep.hardPressed()
         dismiss(animated: true, completion: nil)
     }
+    func showButtons(){
+        easyButton.isHidden = false
+        unsureButton.isHidden = false
+        hardButton.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        easyButton.isHidden = true
+        unsureButton.isHidden = true
+        hardButton.isHidden = true
+        
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
@@ -211,7 +222,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             visibleRowIndexArray.append(currentIndextPath.row)
         }
         if(visibleRowIndexArray.contains(index)){
-            // if(index < indexMax){  // -1?
+            if(index == spacedRep.reviewList[spacedRep.curReviewIndex].cards.count-1){
+                buttonsVisible = true
+                self.showButtons()
+            }
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true

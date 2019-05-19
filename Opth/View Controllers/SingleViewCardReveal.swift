@@ -35,19 +35,25 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         dismiss(animated: true, completion: nil)
     }
     @IBAction func easyOnClick(_ sender: Any) {
-        //spacedRep.easyPressed()
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
-        //spacedRep.unsurePressed()
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func hardOnClick(_ sender: Any) {
-        //spacedRep.hardPressed()
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     func showButtons(){
-        
+        buttonsVisible = true
+        easyButton.isHidden = false
+        unsureButton.isHidden = false
+        hardButton.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -61,6 +67,11 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         indexMax = subtopic.cards.count //spacedRep.reviewList.count
         
         cardTitle.text = subtopic.subtopicName
+        
+        easyButton.isHidden = true
+        unsureButton.isHidden = true
+        hardButton.isHidden = true
+    
         
     }
     
@@ -113,11 +124,14 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
             visibleRowIndexArray.append(currentIndextPath.row)
         }
         if(visibleRowIndexArray.contains(index)){
-            // if(index < indexMax){  // -1?
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
                 cell.Info.textColor = UIColor.white
+                if(index == subtopic.cards.count-1){
+                    buttonsVisible = true
+                    self.showButtons()
+                }
                 index = index+1
             }
             else if(showInfo == true){
