@@ -174,8 +174,17 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        if(index < indexMax){
-            print(index)
+        
+        let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
+        
+        var visibleRowIndexArray: [Int] = []
+        
+        for currentIndextPath in visibleIndexPaths! {
+            //  You now have visible cells in visibleCellsArray
+            visibleRowIndexArray.append(currentIndextPath.row)
+        }
+        if(visibleRowIndexArray.contains(index)){
+            // if(index < indexMax){  // -1?
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
