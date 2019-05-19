@@ -37,7 +37,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         //navigationBarAppearace.barTintColor = UIColor.black
-        if let filepath = Bundle.main.path(forResource: "underlinetest", ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: "temp", ofType: "txt") {
                 parse.csv(data: filepath)
         } else {
             print("data file could not be found")
@@ -189,8 +189,6 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = trimmedCategory
                 cell.detailTextLabel?.text = ""
                 cell.textLabel?.textColor = UIColor.white
-//                cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
-//                cell.textLabel?.font = UIFont.systemFont(ofSize: 22.0)
                 return cell
             }
             else {  //Topics
@@ -318,10 +316,12 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         else if segue.identifier == "headerSegue"{
             let destinationVC = segue.destination as? SingleViewCardReveal
             destinationVC?.subtopic = fSubtopic
+            destinationVC?.isFromSearch = true
         }
         else if segue.identifier == "headerImageSegue"{
             let destinationVC = segue.destination as? SingleViewImageCardReveal
             destinationVC?.subtopic = fSubtopic
+            destinationVC?.isFromSearch = true
         }
     }
 }

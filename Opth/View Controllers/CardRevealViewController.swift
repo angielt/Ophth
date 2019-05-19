@@ -35,7 +35,12 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     //Buttons
 
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        if spacedRep.all_active{
+            dismiss(animated: true, completion: nil)
+        }
+        else{
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func easyOnClick(_ sender: Any) {
         if(buttonsVisible == true){

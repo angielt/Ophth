@@ -27,7 +27,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
             }
         }
         else if viewController is ViewControllerReview{
-            //print("helloo")
             spacedRep.all_active = true
             spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
         }

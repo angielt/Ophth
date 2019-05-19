@@ -25,6 +25,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         spacedRep.all_active = false
         self.loadData()
     }

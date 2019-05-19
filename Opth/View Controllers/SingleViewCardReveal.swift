@@ -12,8 +12,6 @@ import UIKit
 
 class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var addNotes: UIButton!
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
@@ -24,36 +22,15 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     let tap = UITapGestureRecognizer()
     var subtopic: Subtopic!
     var buttonsVisible:Bool = false
-    
-    @IBOutlet weak var easyButton: UIButton!
-    @IBOutlet weak var unsureButton: UIButton!
-    @IBOutlet weak var hardButton: UIButton!
-    
-    
-    //Buttons
+    var isFromSearch = false
+
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func easyOnClick(_ sender: Any) {
-        if(buttonsVisible == true){
+        if isFromSearch{
+            dismiss(animated: true, completion: nil)
+        }
+        else{
             self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         }
-    }
-    @IBAction func unsureOnClick(_ sender: Any) {
-        if(buttonsVisible == true){
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    }
-    @IBAction func hardOnClick(_ sender: Any) {
-        if(buttonsVisible == true){
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    }
-    func showButtons(){
-        buttonsVisible = true
-        easyButton.isHidden = false
-        unsureButton.isHidden = false
-        hardButton.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -67,12 +44,6 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         indexMax = subtopic.cards.count //spacedRep.reviewList.count
         
         cardTitle.text = subtopic.subtopicName
-        
-        easyButton.isHidden = true
-        unsureButton.isHidden = true
-        hardButton.isHidden = true
-    
-        
     }
     
     //Fade in effect
@@ -133,10 +104,6 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
-            }
-            if(index == subtopic.cards.count){
-                buttonsVisible = true
-                self.showButtons()
             }
         }
     }

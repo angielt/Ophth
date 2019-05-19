@@ -18,9 +18,6 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     
     @IBOutlet weak var cardTitle: UILabel!
-    @IBOutlet weak var easyButton: UIButton!
-    @IBOutlet weak var unsureButton: UIButton!
-    @IBOutlet weak var hardButton: UIButton!
  
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
@@ -28,9 +25,19 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     var imageIndex = 0
     var isBackFromFullScreen = false
     var buttonsVisible:Bool = false
+    var isFromSearch = false
     
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     @IBOutlet weak var addNotes: UIButton!
+    
+    @IBAction func backButton(_ sender: Any) {
+        if isFromSearch{
+            dismiss(animated: true, completion: nil)
+        }
+        else{
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
+    }
     
     var index = 0
     var indexMax = 0
@@ -39,38 +46,8 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     var subtopic: Subtopic!
     var imageCount = 0
     
-    //Buttons
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func easyOnClick(_ sender: Any) {
-        if(buttonsVisible == true){
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    }
-    @IBAction func unsureOnClick(_ sender: Any) {
-        if(buttonsVisible == true){
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    }
-    @IBAction func hardOnClick(_ sender: Any) {
-        if(buttonsVisible == true){
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-        }
-    }
-    func showButtons(){
-        easyButton.isHidden = false
-        unsureButton.isHidden = false
-        hardButton.isHidden = false
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        easyButton.isHidden = true
-        unsureButton.isHidden = true
-        hardButton.isHidden = true
         
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
@@ -209,10 +186,6 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
-            }
-            if(index == subtopic.cards.count){
-                buttonsVisible = true
-                self.showButtons()
             }
         }
     }
