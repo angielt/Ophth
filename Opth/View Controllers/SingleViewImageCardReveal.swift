@@ -27,6 +27,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     var imageIndex = 0
     var isBackFromFullScreen = false
+    var buttonsVisible:Bool = false
     
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     @IBOutlet weak var addNotes: UIButton!
@@ -44,21 +45,33 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func easyOnClick(_ sender: Any) {
-        //spacedRep.easyPressed()
-        // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
-        //spacedRep.unsurePressed()
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func hardOnClick(_ sender: Any) {
-        //spacedRep.hardPressed()
-        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    func showButtons(){
+        easyButton.isHidden = false
+        unsureButton.isHidden = false
+        hardButton.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        easyButton.isHidden = true
+        unsureButton.isHidden = true
+        hardButton.isHidden = true
+        
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
@@ -184,11 +197,14 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             visibleRowIndexArray.append(currentIndextPath.row)
         }
         if(visibleRowIndexArray.contains(index)){
-            // if(index < indexMax){  // -1?
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             if(showInfo == false){
                 showInfo = true
                 cell.Info.textColor = UIColor.white
+                if(index == subtopic.cards.count-1){
+                    buttonsVisible = true
+                    self.showButtons()
+                }
                 index = index+1
             }
             else if(showInfo == true){

@@ -1,0 +1,583 @@
+Category	Topic	Subtopic 	Image	Image Caption	Header 1	Info1	Header2	Info2	Header3	Info3	Header4	Info4	Header5	Info5	Header6	Info6	Header7	Info7	Header8	Info8	Header9	Info9	Header10	Info10	Header11	Info11	Header12	Info12	Header13	Info13	Header14	Info14	Header15	Info15
+Retina	General	Layers of the Retina	188_Retina.jpg	Layers of retina	How often do photoreceptor outer segments renew?	Every 10 days																												
+Retina	General	Wavelengths	nil	nil	"[…] is most sensitive to light at what wavelength?
+# Rhodopsin ^
+# L cone ^
+# M cone ^
+# S cone ^
+# Excimer laser ^
+# Argon retinal laser ^
+# Diode laser? ^
+# Nd:YAG laser ^
+# Femtosecond laser ^
+---"	nil	# Rhodopsin ^	510nm (green)	# L cone ^	564-580nm	# M cone ^	534-545nm	# S cone ^	420-440nm	# Excimer laser ^	193nm (UV)	# Argon retinal laser ^	532nm (Green)	# Diode laser ^	810nm (IR)	# Nd:YAG laser ^	1064nm	# Femtosecond laser ^	1053nm										
+Retina	General	Bruch's Membrane	"190_BruchsMembrane_1.gif, 190_BruchsMembrane_2.gif"	Periodic-acid Schiff (PAS) stained the retinal pigment epithelium and Bruch's membrane heavily*Normal Bruch's membrane	"# Fusion of RPE and choriocapillaris
+# 5 elements? ^
+# Stain with? ^
+# Choroidal neovascularization occurs within Bruch’s membrane
+# Outer + Inner Retinal Barriers? ^
+---"	nil	# 5 elements? ^	"- Basal lamina of RPE
+- Outer collagenous zone
+- Elastin fibers
+- Inner collagenous zone
+- Basal lamina of choriocapillaris 
+(a.k.a. ""Elastin sandwich"")"	# Stain with? ^	- PAS (+)	# Outer + Inner Retinal Barriers? ^	"- Outer = Bruch’s membrane
+- Inner = Capillary basal lamina"																						
+Retina	General	Imaging	"191_Imaging_FA_1.png, 191_Imaging_FA_3.jpg, 191_Imaging_FA_4.jpg, 191_Imaging_ICG_1.jpg, 191_Imaging_OCT_1.jpg, 191_Imaging_OCT_2.jpg"	FA showing initial pigmentation in the area of the tumor (melanoma) with extensive drusen and late leak throughout the mass*FA*Small vessel vasculitis causing cystoid macular edema - late frame fluorescein angiograph*Reticular Macular Disease - Bilateral Wet Macular Degeneration and Polypoidal Choroidal Vasculopathy – ICG*Myopic Macular Degeneration - Dry OCT OS*OCT	"# Fluorescein Angiography (FA) ^
+# Indocyanine Green Angiography (ICT) ^
+# Optical coherence tomography (OCT) ^
+# Size of foveola? Foveal avascular zone? ^
+# Location of fovea? ^
+# Definitions? ^
+---
+
+"	nil	# FA ^	"1) Fluorescein sodium
+- Absorbs at 465-490nm (blue)
+- Emit at 520-530nm (green)
+- 80% bound to plasma protein
+- 90% renal excretion
+2) Phases
+- Choroidal phase (10-15s)
+- Arterial phase (15-18s)
+- Early arteriovenous phase
+- Arteriovenous phase (20-25s)
+- Recirculation phase (30+s)
+- Late phase (fluorescein leaves retinal circulation by 10min)
+3) Hyperfluorescence
+- Autofluorescence (from lipofuscin)
+- Transmission defect
+- Leaking (increasing blurred border)
+- Pooling (accumulate in anatomic space)
+- Staining (fixed margins)
+4) Hypofluorescence
+- Blocked fluorescence
+- Filling Defect"	# Indocyanine Green Angiography (ICG) ^	"- Absorbs at 805m; Emit at 835nm
+- 98% bound to albumin (stays in choroidal vessels, so better for choroidal circulation)
+- 5% iodine – avoid if shellfish allergy"	# OCT ^	"- Time domain: higher bandwidth = higher axial res
+- Frequency/Spectral domain: faster, better signal-to-noise ratio"	# Size of: Foveola? Foveal asvascular zone? ^	"0.3mm and 0.5mm, respectively"	# Location of fovea? ^	"4mm temporal, 0.8mm inferior to optic nerve"	# Definition of macula? ^	>2 GCL layers	# Definition of fovea? ^	only cones present	# Definition for foveola? ^	ONL & GCL absent												
+Retina	Choroidal Diseases	Central Serous Chorioretinopathy (CSCR)	"192_CSCR_1.png, 192_CSCR_2.png, 192_CSCR_3.png, 192_CSCR_4.jpg, 192_CSCR_5.jpg, 192_CSCR_6.jpg, 192_CSCR_7.jpg, 192_CSCR_8.jpg, 192_CSCR_9.jpg, 192_CSCR_10.jpg, 192_CSCR_11.jpg"	"CSR (Early phase FA)*CSR (Late phase FA, expansile dot)* CSR(Later phase FA, expansile dot)*CSR (OCT)*FA arterial*FA AV*FA AV*FA late*OCT*Opto*Redfree"	"# Idiopathic serous RD w/ multifocal PEDs, RPE changes & mottled atrophy
+# Usually in young males
+# Risks? ^
+# FA & OCT? ^
+# Treatment? ^
+# Ddx of serous RD? ^
+---"	nil	# Risks? ^	"steroids, stress, type A personality"	# FA & OCT? ^	"- FA: expansile dot (common), smokestack 
+- OCT: thickened choroid (?increased hydrostatic pressure in choroid)"	# Treatment? ^	"- Observation (self-limited 3-4mo)
+- Treat if >3-4mo, recurrent, permanent changes
+- Laser speeds recovery, not VA outcome
+- PDT (half-fluence), rifampin, spironolactone"	# Ddx of serous RD? ^	"- CNV (+leakage)
+- PCV (saccular outpouchings)
+- ON pit (no leakage)
+- VKH / SO 
+- posterior scleritis
+- lymphoma
+- pre-eclampsia / severe HTN 
+- choroidal tumor
+- toxoplasmosis / syphilis"																				
+Retina	Macular Diseases	Age-Related Macular Degeneration (AMD)	"193_DryAMD_1.png, 193_DryAMD_2.jpg, 193_DryAMD_3.jpg, 193_DryAMD_5.jpg"	AMD Dry Hydrophilic Drusen and Geographic Atrophy*Hyperpigmentation of the Retinal Pigment Epithelium in Dry AMD*Basal Laminar Drusen*Reticular Pseudodrusen	"# Dry AMD
+- Associated with? ^
+- Drusen: Quality? Deposits? Size? ^
+- Geographic Atrophy: AF? Ddx of GA? ^
+# Cuticular (Basal Laminar) Drusen? ^
+# Reticular Pseudodrusen? ^
+---
+
+"	nil	# Dry AMD: Associated with? ^	"age, smoking, positive family history, female, light iris, hyperopia, HTN, hypercholesterolemia"	# Drusen: Hard vs. Soft? ^	"- Hard: nodular thickening of BM of RPE
+- Soft: focal PED (separation from Bruch’s)"	# Drusen: Basal Laminar vs. Linear deposits? ^	"- Electron microscopy characterization
+- BLamD: between plasma & BM of RPE
+- BLinD: external to BM of RPE"	# Drusen: Size? ^	"- Small <64um
+- Intermediate 64-124um
+- Large >124um"	# GA: AF? ^	- Decreased AF w/ ring of increased AF predict areas of GA expansion	# GA: Ddx of GA? ^	"Mitochondrial myopathies, central areolar choroidal dystrophy"	# Cuticular (Basal Laminar) Drusen? ^	"- Type of early hard drusen (age 30-40s) 
+- Many small, uniform, demarcated drusen, better seen on FA with “stars-in-the-sky” appearance
+- May develop large vitelliform detachment"	# Reticular Pseudodrusen? ^	"- Interlacing network of 125-250um drusen
+-  First appear in superotemporal macula
+-  Better seen on red-free, NOT on FA /ICG
+-  “Sawtooth” subretinal deposits on OCT"												
+Retina	Macular Diseases	Age-Related Macular Degeneration (AMD)	nil	nil	"Dry AMD
+# Treatment: AREDS, AREDS 2, Others ^
+# Epidemiology: Framingham Eye Study ^
+# Experimental Models ^
+---"	nil	# Treatment: AREDS ^	"- Components? 
+## Vitamins C & E, beta carotene, copper, zinc
+- 25% reduction in progression to advanced AMD
+- 19% reduction in VA loss over 5 yrs
+- Criteria? 
+## Bilateral intermediate (many int or 1 large)
+## Unilateral advanced AMD (wet AMD or GA)
+- Avoid in smokers? 
+## Beta carotene"	# Treatment: AREDS 2 ^	"- Components?
+## Antioxidants w/o beta carotene, omega-3 fatty acid, xanthophylls (zeaxanthine, lutein)"	# Other Treatments ^	"- Immunomodulation: Copaxone (subQ NSAID)
+- Neuroprotection: Brimonidine (inc BDNF, dec glial activation); CNTF (e.g. secreting liposomes)"	# Epidemiology: Framingham Eye Study ^	"- 6% in age >65
+- 20% in age>75"	# Experimental Models ^	"- Poly (I:C)
+- RIP3 -/-
+- RIP1 -/-
+- CX3CR1 1/1
+- CCL2  -/-
+- RD10"																		
+Retina	Macular Diseases	Choroidal Neovascularization (CNV)	"195_CNV_1.jpg, 195_CNV_3.jpg, 195_CNV_4.jpg"	OCT of occult CNV*FA of classic CNV*FA of classic CNV	"Choroidal Neovascularization (CNV)
+# Classificaton? ^
+# Classic Definition? ^
+---"	nil	# Classification? ^	"- Type 1
+## Under RPE
+- Type 2
+## Between RPE + photoreceptors
+- Type 3
+## Retinal angiomatous proliferations (RAP)"	# Classic Definitions? ^	"- Classic CNV
+## Early hyper + late leakage
+- Occult CNV
+## Stippled/granular early hyper + late stain
+## 2 types: fibrovascular PED vs. late leakage of undetermined source
+- Types
+## Predominantly Classic (>49% classic)
+## Minimally Classic (<49% classic)
+## Occult w/o Classic (no classic)"																								
+Retina	Macular Diseases	Choroidal Neovascularization (CNV)	195_CNV_2.jpg	Retinal Angiomatous Proliferation - Type III choroidal neovascular membrane	"Retinal Angiomatous Proliferation (RAP)
+# Yannuzzi Classification? ^"	"- Stage 1
+## Intraretinal NV / leakage
+- Stage 2
+## Subretinal NV + serous PED
+- Stage 3
+## Choroidal NV + fibrovascular PED
+## FA: retinochoroidal anastamoses"																												
+Retina	Macular Diseases	Wet AMD Treatments	nil	nil	"# Laser: MPS ^ 
+# PDT: TAP, VIP ^
+# Anti-VEGF ^
+- Pegaptanib
+- Ranibizumab
+- Bevacizumab
+- Afilbercept"	nil	# Laser: MPS ^	"- Extrafoveal & Juxtafoveal
+## Laser all (AMD, POHS, idiopathic)
+- Subfoveal: (only AMD studied)
+## <2DD, laser
+## 2-3.5DD, treat if <20/200
+## >3.5DD, don’t laser
+- Laser only classic, not occult
+- Argon = krypton (no difference)"	# PDT: Regular vs. Reduced fluence? ^ 	"- Regular: 600mW/cm2
+- Reduced: 300mW/cm2"	# PDT: TAP ^	PDT > control in classic CNV	# PDT: VIP ^	"- PDT > control in occult CNV (w/o classic)
+- Small area (<4DA) and low vision (<20/30)
+- PDT studies also evaluated myopia"	# Anti-VEGF: Pegaptanib (Macugen) ^	"- pegylated anti-VEGF RNA aptamer 
+- binds VEGF 165
+- 0.3mg"	# Anti-VEGF: Ranibizumab (Lucentis) ^	"- 48kD Fab of Mab (<50kD to cross retina)
+- targets VEGF-A
+- 0.3mg (DME), 0.5mg (AMD), 2mg"	# Anti-VEGF: Bevacizumab (Avastin) ^	"- full-length Mab + Fc
+- targets VEGF-A
+- 1.25mg, 2.5mg"	# Anti-VEGF: Aflibercept (Eylea) ^	"- ligand-binding domain of VEGFR _ + IgG Fc
+- binds VEGF-A & placental-like GF
+- 2mg, 4mg"												
+Retina	Macular Diseases	Wet AMD Treatments: Studies	nil	nil	"# VISION ^
+# MARINA ^
+# ANCHOR ^
+# PIER ^
+# PrONTO ^
+# SUSTAIN ^
+# HORIZON ^
+# CATT ^
+# FOCUS ^
+# SUMMIT (MONT BLAN, DENALI, EVEREST) ^
+# CABERNET ^
+# RADICAL ^
+# VIEW 1 & 2 ^
+# HARBOR ^"	nil	# VISION ^	"- Macugen q6wks x 48wks > sham
+- Improved VA in all CNV"	# MARINA ^	"- Lucentis q4wks x 2yrs > sham
+- Minimally-classic or occult w/o classic CNV"	# ANCHOR ^	"- Lucentis q4wks x 2yrs > PDT q3mo PRN
+- Predominantly-classic CNV"	# PIER ^	"- Lucentis q4wks x 3 then q12wks
+- Steady decline after 3mo c/w q4wks"	# PrONTO ^	"- Lucentis q4wks x 3 then PRN (VA loss + fluid, CRT inc, mac hem, new cl CNV, persistent fluid s/p inj)
+- Comparable to q4wks; 5.6inj/yr, but q4wk visits
+"	# SUSTAIN ^	"- Lucentis q4wks x 3 then PRN (VA loss, CRT inc)
+- Comparable to q4wks; 5.3inj/yr, but q4wk visits
+"	# HORIZON ^	"- MARINA/ANCHOR/FOCUS pts  tx w/ PRN Lucentis q4wks s/p 2yrs
+- Continued less frequent dosing -> VA loss"	# CATT ^	"- Lucentis = Avastin q4wks or PRN in VA (<5letter diff)
+- Lucentis > Avastin q4wks or PRN in OCT fluid (~10%)
+- Avastin > Lucentis in adverse events (24 vs 19%)"	# FOCUS ^	"- Lucentis + PDT > PDT alone
+- Predominantly-classic CNV"	"# SUMMIT (MONT BLANC, DENALI, EVEREST) ^"	"- Lucentis + PDT = Lucentis alone
+- Except IPCV (Lucentis + PDT > Lucentis)"	# CABERNET ^	- Lucentis + epimacular brachy vs Lucentis	# RADICAL ^	"- Lucentis + PDT + Dexamethasone vs Lucentis
+"	# VIEW 1 & 2 ^	- Eylea q1mo x 3 -> q2mo = Lucentis q1mo	# HARBOR ^	- Lucentis 0.5mg q4wks vs PRN vs 2mg q4wks vs PRN
+Retina	Macular Diseases	Other Causes of CNV: Myopic Degeneration	"198_CNV_MyopicDegeneration_1.jpg, 198_CNV_MyopicDegeneration_2.png"	Myopic Contour on OCT*Posterior Staphyloma and Geographic Atrophy Myopic Degeneration	"# High vs Pathologic myopia? ^
+# Findings? ^
+# Treatment? ^
+---"	nil	# High vs Pathologic myopia? ^	"- High: >-6.00D, >26.5mm
+- Pathologic: >-8.00, >32.5mm"	# Findings? ^	"‘- Lacquer cracks
+## can cause round, deep SRH that clears spontaneously (not CNV)
+- Forster-Fuchs spots
+## dark spots from subretinal or intraretinal RPE hyperplasia
+- Posterior staphyloma
+- Cobblestone, lattice, cystoid degeneration"	# Treatment? ^	"‘- Subfoveal: PDT (VIP), anti-VEGF
+- Extra/juxtafoveal: anti-VEGF, no data for laser"																						
+Retina	Macular Diseases	Other Causes of CNV: Presumed Ocular Histoplasmosis Syndrome (POHS)	199_CNV_POHS.png	Presumed Ocular Histoplasmosis Syndrome	"# Findings? ^
+# Geography? ^
+# Treatment? ^
+# Prognosis? ^
+---"	nil	# Findings? ^	"‘- Punched-out “histo spots”
+- Peripapillary atrophy
+- CNV (peripapillary)
+- No vitritis"	# Geography? ^	Ohio-Mississippi River Valley	# Treatment? ^	"‘- Extra/juxtafoveal: laser (MPS), anti-VEGF
+- Subfoveal: PDT, steroids, anti-VEGF"	# Prognosis? ^	44% severe VA loss (>6 lines) in 5 yrs																				
+Retina	Macular Diseases	Other Causes of CNV: Angioid Streaks	"200_CNV_AngioidStreaks_1.jpg, 200_CNV_AngioidStreaks_2.jpg"	Angioid Streaks*PXE with Angioid Streaks	"# Breaks in Bruchs membrane
+# Minor trauma may cause bleeding
+# Causes? (PEPSI) ^
+# Treatment? ^
+---"	nil	# Causes? (PEPSI) ^	"‘- PXE
+## Peau d’orange fundus
+## Depigmented subretinal “crystalline spots” or “comet tail”
+## Peripheral atrophic spots
+## Optic nerve drusen
+## Plucked chicken skin
+## GI hemorrhages (life threatening)
+- Ehlers-Danlos syndrome  
+## Hyperextensible joints, scoliosis
+## Blue sclera, brittle cornea
+- Paget’s disease
+## Long bone fractures
+- Sickle cell disease
+- Idiopathic (50%)"	# Treatment? ^	- Anti-VEGF; laser (extrapolated from MPS)																								
+Retina	Choroidal Diseases	Polypoidal Choroidal Vasculopathy (PCV)	"201_PCV_IPCV_1.jpg, 201_PCV_IPCV_2.jpg"	"Idiopathic PCV - FA*Idiopathic PCV - ICG, Polyp Visible"	"# Multifocal, recurrent serous PEDs
+# Saccular choroidal outpouchings
+# More common in? ^
+# FA? ^
+# Treatment? ^
+---"	nil	# More common in? ^	"‘- African-Caribbeans & Asians (M>F, mostly unilateral)
+- Also occurs in Caucasians & Blacks (F>M, mostly bilateral, peripapillary)"	# FA? ^	"‘- Early hyperfluorescent polyps and hypofluorescent halos
+- Polyps better seen on ICG"	# Treatment? ^	"‘- Anti-VEGF, PDT, or combined
+- Only disease in SUMMIT trial to have improved response to combined anti-VEGF + PDT"																						
+Retina	Vitreomacular Interface	Vitreoretinal Interface: Epiretinal Membrane (ERM)	"202_VitreoretinalInterface_ERM_1.jpg, 202_VitreoretinalInterface_ERM_2.jpg"	Epiretinal Membrane*Epiretinal Membrane with Pseudohole	"# Can be idiopathic or secondary to vascular occlusions, inflammation, surgery, trauma, or retinal breaks (allows RPE migration onto retina)
+# Stable (>75% maintain >20/50)
+# Treatment? ^"	"- PPV/MP if VA <20/50 or severe metamorphopsia
+- 66-75% has VA improvement
+- 80% get cataracts
+- 2-7% recurs"																												
+Retina	Vitreomacular Interface	Vitreoretinal Interface: VMT	202_VitreoretinalInterface_ERM_2.jpg	VMT	"# VMA with traction
+# Treatment? ^"	"‘- PPV/MP (risks unknown)
+- Ocriplasmin (microplasmin)
+## Truncated form of plasmin
+- MIVI-TRUST Study:
+## OCP > placebo in VMA resolutn (26 vs 12%)
+## OCP > placebo in MH closure (40% vs 25%)
+## OCP > placebo in VA gain    (12% vs 9%)
+## Better if phakic, no ERM"																												
+Retina	Vitreomacular Interface	Macular Holes	203_MacularHoles_OCT.jpg	Macular Hole - OCT	"Idiopathic Macular Hole
+# Clinical test? ^
+# Stages (antiquated)? ^
+# New grading system? ^
+# Treatments? ^
+# PPV Treatment success? ^
+# Treatment for traumatic MH? ^
+# What is a Pseudohole? ^
+# What is a Lamellar Hole? ^
+---"	nil	# Clinical test? ^	Watzke-allen test	# Stages (antiquated)? ^	"‘- Stage 1
+## 1A (pseudocyst); 1B (outer layer loss) 
+## 50% spontaneously resolve (no surgery)
+- Stage 2
+## Full-thickness hole <400um
+- Stage 3
+## Full-thickness >400um + elevated rim
+- Stage 4
+## Hole with PVD"	# New grading system? ^	"‘- Small <250um
+- Medium 250-400um
+- Large >400um"	# Treatments? ^	"‘- Jetrea (if <250um & VMA present)
+- PPV (if >250um) + ILMP (if >400um)"	# PPV Treatment success? ^	"‘- 92% closure ; 50% if re-op
+- short-acting gas (SF6 or 10% C3F8)
+- ILMP (_ closure) if >400um
+- Face down (3 days; _ closure if >400um)"	# Treatment for traumatic MH? ^	Observation (no traction; spontaneous closure ~2 mo)	# What is a Pseudohole? ^	"‘- Appearance of hole w/ steep walls
+- Caused by vascular tortuosity around macula"	# What is a Lamellar Hole? ^	"‘- Thin layer of retina lifted w/ walls “bulging out”
+- Maybe precursor or resolved macular hole"												
+Retina	Vascular Diseases	Purtscher's Retinopathy	"204_Heme_PurtschersRetinopathy_1.jpg, 204_Heme_PurtschersRetinopathy_2.jpg"	Purtscher's Retinopathy - Motor Vehicle Accident*Purtscher's Retinopathy - 19yo Female After Pregnancy	# Terson Syndrome ^	nil	# Terson Syndrome ^	"‘- Vitreous + subhyaloid heme caused by acute rise in ICP
+- 30% subarachnoid or subdural hemorrhage have intraocular heme
+- Treatment?
+## PPV (works well)"																										
+Retina	Vitreous	Vitrous Hemorrhage	"204_TersonSyndrome_1.jpg, 204_TersonSyndrome_2.png"	Preretinal Heme*Subarachnoid Hemorrhage	"# Ochre Membrane ^
+# Synchysis scintillans ^
+# Purtscher Retinopathy ^"	nil	# Ochre Membrane ^	Heme on posterior surface of detached vitreous	# Synchysis scintillans ^	"Refractile, yellow cholesterol crystals in vitreous after resolution of VH"	# Purtscher Retinopathy ^	"‘- Usually peripapillary hemorrhages, cotton-wool spots, & edema after acute compression injuries to head or thorax
+- FA: arteriolar leakage
+- Etiology?
+## injury-induced complement activation & granulocyte aggregation
+- Causes of Purtscher-like Retinopathy?
+## Acute pancreatitis
+## SLE (Lupus)
+## Amniotic fluid embolism
+## Fat embolism
+## Renal failure
+## Retrobulbar anesthesia"																						
+Retina	Macular Diseases	Other Maculopathies	"205_Maculopathies_AMN.png, 205_Maculopathies_SolarRetinopathy.jpg, 205_Maculopathies_UAIM.png"	Acute Macular Neuroretinopathy - Spot in Vision OS*Solar Retinopathy*Unilateral Acute Idiopathic Maculopathy (UAIM)	"# Solar Maculopathy ^
+# UAIM / Unilateral Acute Idiopathic Maculopathy ^
+# AMN / Acute Macular Neuroretinopathy ^
+---"	nil	# Solar Maculopathy ^	"‘- Small yellow foveolar spot that evolves to a small MH
+- OCT: loss of IS/OS \\\ band + small  \\\discrete defect
+- Caused by sun-gazing or arc welding, usu. occurring ~2wks after exposure
+- Increased risk from psoralen or tetracycline
+- VA usu. returns to normal"	# UAIM / Unilateral Acute Idiopathic Maculopathy ^	"‘- Acute vision loss usu. in young adult
+- Grayish RPE thickening +/- serous RD +/- vitritis
+- FA: early hyper/hypo + late pooling
+- OCT: outer retinal defects
+- Spontaneously improve in weeks, OCT resolves"	# AMN / Acute Macular Neuroretinopathy ^	"‘- Subacute vision loss + paracentral scotomas
+- Usu. unilateral
+- Permanent or transient
+- Dark triangular macula patches at outer retina
+- OCT: IS/OS defects
+- Dx: multifocal ERG"																						
+Retina	Vascular Diseases	"Hypertension: Hypertensive Retinopathy, Macroaneurysms"	"206_Hypertension_HypertensiveRetinopathy.jpg, 206_Hypertension_Macroaneurysm_1.png, 206_Hypertension_Macroaneurysm_2.png"	Hypertensive Retinopathy*Ruptured Retinal Arterial Macroaneurysm - Submacular Hemorrhage*Retinal Arterial Macroaneurysm	"# Scheie classification? ^
+# Can cause BRAO, BRVO, CRVO
+# Treatment? ^
+# Macroaneurysms ^
+---"	nil	# Scheie classification? ^	"‘- Grade 0: no change
+- Grade 1: trace arterial narrowing
+- Grade 2: frank arterial narrowing + focal irregularities
+- Grade 3: grade 2 + retinal hemorrhages/exudates
+- Grade 4: grade 3 + disc swelling"	# Treatment? ^	Laser if macula involved	# Macroaneurysms ^	"‘- 2/3 from HTN retinopathy; also CRVO
+- Tx: laser"																						
+Retina	Vascular Diseases	Hypertension: Hypertensive Choroidopathy	206_Hypertension_HypertensiveChoroidopathy.png	Hypertensive Choroidopathy - Pheochromocytoma	"# Usually occurs w/ acute HTN ^
+# Findings? ^
+# FA? ^
+# DDx? ^
+---"	nil	# Usually occurs w/ acute HTN ^	"‘- Preeclampsia or eclampsia
+- Renal disease
+- Pheochromocytoma
+- Malignant HTN"	# Findings? ^	"‘- Elschnig spots
+- Siegrist streaks
+- Serous RD"	# FA? ^	"‘- early focal choroidal hypoperfusion
+- late subretinal leakage"	# DDx? ^	"‘- Vaso-occlusive dx (TTP, ITP, DIC) 
+- Inflammatory dx (GCA, Wegener’s"																				
+Retina	Vascular Diseases	Diabetic Retinopathy	"207_DiabeticRetinopathy_CSME.jpg, 207_DiabeticRetinopathy_NPDR.jpg, 207_DiabeticRetinopathy_PDR_1.png, 207_DiabeticRetinopathy_PDR_2.png"	Clinically Significant Diabetic Macular Edema with Exudates*Nonproliferative Diabetic Retinopathy*Proliferative Diabetic Retinopathy Type I Diabetic*Proliferative Diabetic Retinopathy	"# NPDR 
+- Mild
+- Moderate
+- Severe ^
+- Very severe ^
+# CSME ^
+# PDR
+- Early
+- High risk ^
+# Macular Ischemia ^
+---"	nil	"# NPDR 
+- Mild
+- Moderate
+- Severe ^"	"## 4:2:1 rule, any one of:
+- 4 quads: IRH + Mas
+- 2 quads: venous beading
+- 1 quad: IRMA
+## 15% chance of progression to high-risk PDR within 1 year
+## CWS are NOT predictive"	- Very severe ^	"## Any 2 of the 4:2:1 rule
+## 45% chance of progression to high-risk PDR within 1 year"	# CSME ^	"- Any edema within 500_m of fovea
+- Hard exudates within 500_m of fovea + adjacent edema
+- Edema >1 disc area in size within 1 disc diameter of fovea"	"# PDR:
+- Early
+- High risk ^"	"## Any NVD with VH
+## 1/4-1/3 disc area NVD (≥standard photo 10A)
+## 1/2 disc area NVE with VH (standard photo 7)"	# Macular Ischemia ^	"‘- FA: microaneurysms at margins of zone of capillary nonperfusion
+- FAZ enlargement >1000um usu. associated with visual loss"																		
+Retina	Vascular Diseases	Retinal Lasers	208_RetinalLasers_PRP.png	Panretinal (Scatter) Photocoagulation (Fresh)	"# Panretinal Photocoagulation (PRP)
+- >1200 spots, 500um, 0.1s, 1/5 apart
+- Side effects? ^
+- Avoid 3:00 & 9:00? ^
+- PRP before CE/IOL if view clear
+# Focal / Grid Laser ^
+# ETDRS ^
+# DRS
+- Argon/Xenon laser for? ^
+- Defined high-risk PDR
+- PRP for high-risk PDR: 50% reduction in severe VA loss x 5 yrs
+---"	nil	"# Panretinal Photocoagulation (PRP)
+- Side effects? ^"	"## Lost of peripheral vision
+## Decrease in night or color vision
+## Glare, photopsias
+## Worsens macular edema"	- Avoid 3:00 & 9:00? ^	## Pain from long ciliary nerves	# Focal / Grid Laser ^	"- 50-100um, 0.1s
+- Whiten MA for focal or >1 spot size for grid
+- Treat CSME before PRP for hrPDR
+- Treat CSME before CE/IOL"	# ETDRS ^	"- Early PRP (for severe NPDR)
+## Small improvement in risk of severe VA loss (<5/200) x 4 mo
+## Most effective in DM2 patients
+- Focal laser (for CSME)
+## 50% reduction of mod VA loss in CSME over 3 yrs (15% vs 30%)
+## Increased chance for visual GAIN
+## Reduced retinal thickening
+- ASA
+## 650mg/day did not affect rate of retinopathy or vision loss"	"# DRS
+- Argon/Xenon laser for? ^"	"## severe NPDR OU 
+## high-risk PDR in one eye"																		
+Retina	Vascular Diseases	Diabetic Macular Edema	"209_DiabeticMacularEdema_1.jpg, 209_DiabeticMacularEdema_2.jpg, 209_DiabeticMacularEdema_3.jpg"	Diabetic macular edema*Diabetic Patient with Macular Edema and Blood Pressure*OCT	"# Posterior subtenon triamcinolone ^
+# Intravitreal steroids ^
+# Focal laser ^
+# READ-2 ^
+# RISE & RIDE ^
+---"	nil	# Posterior subtenon triamcinolone ^	Improves VA up to 1 year	# Intravitreal steroids ^	"‘- Improves VA/CSME up to 2 yrs
+- Not as effective as focal per DRCR.net
+- Pseudophakic: triamcinolone+laser = Lucentis+laser, but more glaucoma
+- Vision gain not dependent on amt of initial edema
+- Increased risk of glaucoma/cataract"	# Focal laser ^	‘- Improves CSME long term	# READ-2 ^	"‘- Lucentis vs focal/grid vs both
+- At 6mo: Lucentis = both > focal/grid
+- At 24mo, all had Lucentis PRN; all improved"	# RISE & RIDE ^	"‘- Lucentis 0.3 vs 0.5 vs sham, qmonth
+- At 24mo: Lucentis 0.3 = 0.5 > sham
+- At 36mo: Lucentis 0.3 = 0.5 > sham
+- Slightly greater thromboembolic events with 0.5mg dosing"																		
+Retina	Vascular Diseases	"Diabetic Retinopathy: Management (DCCT, UKPDS, DRVS)"	nil	nil	"# DCCT ^
+# UKPDS ^
+# DRVS ^
+---"	nil	# DCCT ^	"‘- Intensive > conventional glycemic control in DM1 pts, reduces onset & progression of DR & macular edema"	# UKPDS ^	"‘- Intensive > conventional glycemic control in DM2 pts, reduces onset & progression of DR
+- Intensive BP control slowed progression of DR 
+- No difference bet. ACEi & BB"	# DRVS ^	"‘- Early (<6 mo) vs. late (>1 yr) PPV for non-clearing VH 
+- Early PPV improved VA outcome in DM1, not DM2 patients
+- Indications for PPV
+## Dense non-clearing VH
+## TRD threatening macula
+## Combined TRD/RRD
+## Diffuse DME w/ traction
+## Recurrent VH despite max PRP"																						
+Retina	Vascular Diseases	Diabetic Retinopathy: Management (DRCR network)	nil	nil	DRCR network	211_Table.png																												
+Retina	Vascular Diseases	Diabetic Retinopathy: Screening and Monitoring	nil	nil	"# Pregnant ^
+# Onset 0-30 years old ^
+# Onset >31 years old ^
+# If mild NPDR
+# Moderate NPDR
+# Severe NPDR ^
+# Severe NPDR + CSME ^
+# PDR ^
+---"	nil	# Pregnant ^	"‘- Before conception or in 1st trimester,  q3mo"	# Onset 0-30 years old ^	"‘- Within 5 yrs, then yearly"	# Onset >31 years old ^	"‘- At diagnosis, then yearly"	# If mild NPDR	‘- Every 9 months	# Moderate NPDR	‘- Every 6 months	# Severe NPDR ^	‘- Every 4 months	# Severe NPDR + CSME ^	‘- Every 2-4 months	# PDR ^	‘- Every 2-3 months												
+Retina	Vascular Diseases	Diabetic Retinopathy: Epidemiology and Other Risk Factors	nil	nil	"# Epidemiology ^
+# Other Risk Factors ^
+# Associations with Diabetes ^
+---"	nil	# Epidemiology ^	"‘- Based on WESDR, after 20 years:
+## DM1 – 99% w/ DR
+## DM2 – 60% w/ DR
+      (Wisconsin white population)"	# Other Risk Factors ^	"‘- In patients with HTN, intensive BP control may worsen retinal perfusion
+- In patients with carotid dx, mild-mod carotid dx may worsen ischemia"	# Associations with Diabetes ^	"‘- Type II juxtafoveal telengiectasis
+## Acquired; bilateral
+## Abnormal GTT test
+- PSC cataracts
+- Lacy vacuolization of the iris
+- Thickened basement membranes"																						
+Retina	Vascular Diseases	Radiation Retinopathy	"213_RadiationRetinopathy_1.jpg, 213_RadiationRetinopathy_2.jpg"	Radiation Retinopathy*Choroidal Melanoma with Radiation Retinopathy	"# May result from external beam radiation or plaque brachytherapy
+# Usual onset? ^
+# Usual amount of radiation? ^
+# Clinical appearance similar to diabetic retinopathy
+# Treatment? ^
+---"	nil	# Usual onset? ^	"‘- ~18mo s/p external XRT
+- Earlier for brachytherapy"	# Usual amount of radiation? ^	‘- 30-35Gy (min 15Gy)	# Treatment ^	"‘- Similar to diabetic retinopathy
+- Consider Avastin q3month for prophylaxis"																						
+Retina	Vascular Diseases	Sickle Cell Retinopathy	214_SickleCellRetinopathy_1.jpg	Sickle Cell Retinopathy	"“African-American with vitreous hemorrhage?”
+# Nonproliferative
+- Salmon patch
+## Intraretinal hemorrhage after arteriolar occlusion
+- Iridescent spots
+## Old resorbed heme
+- Black sunburst
+## RPE hypertrophy, hyperplasia
+# Proliferative
+- Stage 1: peripheral arteriolar occlusion
+- Stage 2: peripheral AV anastomoses
+- Stage 3: preretinal sea fan NV (posterior border of nonperfusion; may autoinfarct and turn white)
+- Stage 4: Vitreous hemorrhage
+- Stage 5: Tractional RD
+# Hemoglobinopathy? ^
+# Gene defect? ^
+# Avoid carbonic anhydrase inhibitors
+# Other Eye findings? ^
+# Treatment? ^
+---"	nil	# Hemoglobinopathy? ^	"‘- SC worst ocular Sx (SC>Sthal>SS>SA)
+- SS worst systemic Sx"	# Gene defect? ^	‘- Val sub for glu acid at 6th position on B-polypeptide chain	# Other Eye findings? ^	"‘- Angioid streaks
+- Comma sign (segmented conj vessels)"	# Treatment? ^	"‘- Scatter laser to ischemic retina
+- PPV precautions (avoid encircling SB or taking down EOMs, avoid epi in local anesthetic, ensure O2 & hydration)"																				
+Retina	Vascular Diseases	Eales disease	"215_EalesDisease_1.jpg, 215_EalesDisease_2.jpg"	Eales Disease*Eales Disease - FA	"“Young man with idiopathic bilateral peripheral NV?”
+# Idiopathic obliterative perivasculitis of peripheral retina
+# Bilateral peripheral NV + VH
+# Young males
+# Associated with? ^
+# Endemic in? ^
+---"	nil	# Associated with? ^	‘- TB hypersensitivity	# Endemic in? ^	‘- India																								
+Retina	Pediatric Disorders	DDx Pediatric Leukocoria 	216_PediatricLeukocoria_Retinoblastoma_2.png	Retinoblastoma	"# Retinoblastoma
+# PFV
+# ROP
+# Cataract
+# Coloboma of choroid or optic disc
+# Uveitis
+# Toxocariasis
+# Congenital retinal folds
+# Coats disease
+# Organized vitreous hemorrhage
+# FEVR
+# Norrie disease
+# Retinal detachment
+# Myelinated nerve fibers"																													
+Retina	Pediatric Disorders	Retinoblastoma	"217_Retinoblastoma_1.jpg, 217_Retinoblastoma_2.jpg, 217_Retinoblastoma_3.gif"	Retinoblastoma*Retinoblastoma rosette*Retinoblastoma Histopathology	"“Most common primary intraocular malignancy in children”
+# Rb Inheritance? ^
+# Signs? ^
+# Path? ^
+# Prognosis: ^
+# Reese-Ellsworth classification: ^
+# Trilateral retinoblastoma? ^
+# Common secondary malignancies? ^
+---"	nil	# Rb Inheritance? ^	"‘- 1/3 bilateral, 2/3 unilateral
+- 1/3 hereditary, 2/3 sporadic"	# Signs? ^	"‘- Leukocoria or strabismus usu. before age 3
+- Early tumor in macula, later in periphery
+- LDH aqueous:plasma ratio >1.0
+- Calcium on U/S or CT"	# Path? ^	"‘- Tumor grows around blood vessels
+- Flexner-Wintersteiner rosette (RB specific)
+- Homer Wright (also other neuroblastomas)
+- Fleurette (Photoreceptor differentiation)"	# Prognosis: ^	"‘- Good with early tx; spontaneous regression rare
+- Enucleation, radiation, chemo, cryo, laser"	# Reese-Ellsworth classification: ^	"- Predicts visual prognosis, NOT survival"	# Trilateral retinoblastoma? ^	‘- Bilateral tumor plus pineal gland	# Common secondary malignancies? ^	"‘- Osteosarcoma, malignant melanoma"														
+Retina	Pediatric Disorders	Retinoblastoma	nil	nil	International Classification of Intraocular Retinoblastoma	218_Table.png																												
+Retina	Pediatric Disorders	Retinoblastoma	219_Retinoblastoma_Retinocytoma.png	Retinocytoma - Retinoma - Regressed Retinoblastoma	219_Table.png	nil	# Retinocytoma	"‘- Also arises from Rb mutation, but benign
+- Occurs in siblings with retinoblastoma
+- May undergo malignant transformation (rare)"																										
+Retina	Pediatric Retina	Persistent Fetal Vasculature (PFV or PHPV)	"220_PFV_1.png, 220_PFV_2.jpg"	PHPV*Persistent hyperplastic primary vitreous	"“Newborn with unilateral leukocoria and microphthalmos”
+# Failure of hyaloid vasculature to regress
+# Inheritance? ^
+# Signs? ^
+# Prognosis? ^
+# Location of Mittendorf dot? ^
+---"	nil	# Inheritance? ^	‘- Non-hereditary	# Signs? ^	"‘- Unilateral
+- Microphthalmos (disorganized)
+- Fibrovascular sheath behind lens contracts to elongate ciliary processes
+- Fibrovascular stalk from disc to posterior lens capsule
+- Cataract
+- Glaucoma (shallow AC + angle closure)
+- RD and intraocular hemorrhage
+- Retina may extend to pars plicata
+- No systemic defects"	# Prognosis? ^	‘- Depends on degree of retinal involvement	# Location of Mittendorf dot? ^	- Inferonasal																				
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
+																																		
