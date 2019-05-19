@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="uay-KK-Vsu" kind="relationship" relationship="viewControllers" id="Rhl-Lm-Z2a"/>
                         <segue destination="Wta-HZ-K4Y" kind="relationship" relationship="viewControllers" id="8of-UO-h7M"/>
+                        <segue destination="KnV-4Z-O5S" kind="relationship" relationship="viewControllers" id="bTp-Ri-3en"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OiY-tb-DV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -825,6 +826,22 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="820" y="-631.0344827586207"/>
+        </scene>
+        <!--Progress-->
+        <scene sceneID="agl-nm-knY">
+            <objects>
+                <viewController id="KnV-4Z-O5S" customClass="ProgressViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rrC-hd-rhC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mJ0-fN-Wq9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Progress" id="D21-S8-7Oo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMI-Wq-dfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1928.985507246377" y="957.58928571428567"/>
         </scene>
         <!--Title-->
         <scene sceneID="4ZP-9o-2xE">
