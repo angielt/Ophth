@@ -6,14 +6,6 @@
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
-/*  For UI image
- *** THINGS NEED TO FIX:
- * for some reason, when click on the spaced rep buttons, it goes to the FullScreenImage.swift
- *** THINGS WANT TO FIX
- * when coming back from full screen image, want the page controller/image stays where it left off rather back to the first image
- */
-
-
 import Foundation
 
 import UIKit
