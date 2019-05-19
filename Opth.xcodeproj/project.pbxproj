@@ -11,6 +11,10 @@
 		559C2A5B83A0BAD892A8260B /* Pods_OpthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F60C3A5A88D732E8CCED1CC /* Pods_OpthUITests.framework */; };
 		628BAF3F228C07A90086C911 /* SingleViewImageCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */; };
 		628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */; };
+		629720F42290E3F000F10CBE /* 217_Retinoblastoma_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */; };
+		629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */; };
+		629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */; };
+		629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */; };
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
@@ -72,6 +76,10 @@
 		5C5D1A9C0390EB23CF35392C /* Pods-OpthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.debug.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.debug.xcconfig"; sourceTree = "<group>"; };
 		628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewImageCardReveal.swift; sourceTree = "<group>"; };
 		628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewCardReveal.swift; sourceTree = "<group>"; };
+		629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 217_Retinoblastoma_3.gif; path = images/217_Retinoblastoma_3.gif; sourceTree = "<group>"; };
+		629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 257_PeripheralRetina_CystoidDegeneration.gif; path = images/257_PeripheralRetina_CystoidDegeneration.gif; sourceTree = "<group>"; };
+		629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; sourceTree = "<group>"; };
+		629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; sourceTree = "<group>"; };
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
@@ -273,8 +281,12 @@
 				FDA541652251C8D100B536E0 /* View */,
 				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
+				629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */,
+				629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */,
+				629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */,
 				62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */,
 				62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */,
+				629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */,
 				FDD19331221BBBB3000A2F63 /* Animation */,
 				FDF2A5A322163F0C00B1E1D0 /* Information */,
 				FDF2A57F22163BBE00B1E1D0 /* Info.plist */,
@@ -422,6 +434,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1FF2C02290B663007A7DA2 /* underlinetest.txt in Resources */,
+				629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */,
+				629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */,
+				629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */,
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
@@ -430,6 +445,7 @@
 				BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */,
 				62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */,
 				62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */,
+				629720F42290E3F000F10CBE /* 217_Retinoblastoma_3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
