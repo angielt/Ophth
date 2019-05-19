@@ -10,6 +10,8 @@ import UIKit
 
 // view controller of card front
 class ViewController: UIViewController{
+    
+    var curReviewIndex = spacedRep.curReviewIndex
 
     static let cardCornerRadius: CGFloat = 25
 
@@ -55,13 +57,12 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
-        print(spacedRep.curReviewIndex)
         if(spacedRep.finished == true){
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
         
-        else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list.isEmpty){
+        else if (spacedRep.reviewList[curReviewIndex].img_list[0] == "nil"){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()

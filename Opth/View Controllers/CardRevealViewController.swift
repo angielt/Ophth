@@ -76,9 +76,9 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        indexMax = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count //spacedRep.reviewList.count
+        indexMax = spacedRep.reviewList[curReviewIndex].cards.count //spacedRep.reviewList.count
         
-        cardTitle.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+        cardTitle.text = spacedRep.reviewList[curReviewIndex].subtopicName
     }
     
     //Fade in effect
@@ -88,7 +88,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     // Return the number of rows for the table.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
+        return spacedRep.reviewList[curReviewIndex].cards.count
     }
     
     // Provide a cell object for each row.
@@ -100,9 +100,9 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         // fill cell contents
-        if(indexPath.row < spacedRep.reviewList[spacedRep.curReviewIndex].cards.count){
-            let info = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].info
-            cell.Header.text = spacedRep.reviewList[spacedRep.curReviewIndex].cards[indexPath.row].header
+        if(indexPath.row < spacedRep.reviewList[curReviewIndex].cards.count){
+            let info = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
+            cell.Header.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
             cell.Info.text = info
             
             
@@ -144,7 +144,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
             }
-            if(index == spacedRep.reviewList[spacedRep.curReviewIndex].cards.count-1){
+            if(index == spacedRep.reviewList[curReviewIndex].cards.count){
                 buttonsVisible = true
                 self.showButtons()
             }

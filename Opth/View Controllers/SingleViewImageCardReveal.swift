@@ -104,7 +104,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate + 30, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
+            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image
@@ -116,7 +116,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             
             //add caption for each image
             if subtopic.img_caption[0] != "nil"{
-                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
+                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width,height:50)))
                 caption.text = subtopic.img_caption[i]
                 caption.textColor = UIColor.white
                 caption.font = UIFont.systemFont(ofSize: 14.0)
@@ -187,11 +187,11 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        print("tap")
+        //print("tap")
         
         let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
-        print(visibleIndexPaths)
-        print(index)
+//        print(visibleIndexPaths)
+//        print(index)
         
         var visibleRowIndexArray: [Int] = []
         
@@ -204,21 +204,13 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             if(showInfo == false){
                 showInfo = true
                 cell.Info.textColor = UIColor.white
-                print("-----")
-                print(index)
-                print((subtopic.cards.count)-1)
-//                if(index != subtopic.cards.count-1){
-//                    index = index+1
-//                }
+                index = index+1
             }
             else if(showInfo == true){
-                print(":::::")
-                print(index)
-                print((subtopic.cards.count)-1)
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
             }
-            if(index == subtopic.cards.count-1){
+            if(index == subtopic.cards.count){
                 buttonsVisible = true
                 self.showButtons()
             }

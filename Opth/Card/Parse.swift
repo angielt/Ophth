@@ -29,7 +29,9 @@ class Parse{
                 newRow = newRow.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "#", with: "•", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "^", with: "‣", options: .literal, range: nil)
-               
+                newRow = newRow.replacingOccurrences(of: "Ð", with: "-", options: .literal, range: nil)
+                
+                
                 //print(newRow)
                 var rowSplit: [String] = newRow.components(separatedBy: "\t")
                 rowSplit = rowSplit.filter(){$0 != ""}
