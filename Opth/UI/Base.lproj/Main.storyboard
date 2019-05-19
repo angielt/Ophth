@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,6 +23,7 @@
                         <segue destination="uay-KK-Vsu" kind="relationship" relationship="viewControllers" id="Rhl-Lm-Z2a"/>
                         <segue destination="Wta-HZ-K4Y" kind="relationship" relationship="viewControllers" id="8of-UO-h7M"/>
                         <segue destination="KnV-4Z-O5S" kind="relationship" relationship="viewControllers" id="bTp-Ri-3en"/>
+                        <segue destination="LCV-S5-DfS" kind="relationship" relationship="viewControllers" id="VWu-zQ-XbF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OiY-tb-DV8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -841,7 +842,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMI-Wq-dfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1928.985507246377" y="957.58928571428567"/>
+            <point key="canvasLocation" x="-1000" y="1030"/>
+        </scene>
+        <!--About Page-->
+        <scene sceneID="CNT-DG-7Eb">
+            <objects>
+                <viewController title="About Page" id="LCV-S5-DfS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zgx-Kv-Cu0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTY-vB-wyg">
+                                <rect key="frame" x="167.5" y="44" width="79" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nP-st-4Sv">
+                                <rect key="frame" x="32" y="66" width="351" height="204"/>
+                                <string key="text">ReSight is an interactive educational app for Clinical Ophthamology. With the use of spaced repetition, a learning technique that takes advantage of the psychological spacing effect, ReSight hopes to enhance the study efficiency of clinical ophthamology medical students</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Glenn Yiu, MD, PhD " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-xv-R6X">
+                                <rect key="frame" x="132" y="314" width="163" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Colin Bacorn, MD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-mp-cRs">
+                                <rect key="frame" x="132" y="370" width="163" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sangeeta Kalsi, MD, MPH" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-Be-AUF">
+                                <rect key="frame" x="132" y="430" width="163" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nancy Fong, BS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-Ed-nAn">
+                                <rect key="frame" x="132" y="488" width="163" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6nP-st-4Sv" firstAttribute="width" secondItem="zgx-Kv-Cu0" secondAttribute="width" id="4da-dS-QoX"/>
+                            <constraint firstItem="6nP-st-4Sv" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="9IA-ky-nIG"/>
+                            <constraint firstItem="KKL-Ed-nAn" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="FEf-Lm-x98"/>
+                            <constraint firstItem="MZC-Be-AUF" firstAttribute="top" secondItem="h7U-mp-cRs" secondAttribute="bottom" id="J2p-e4-k5S"/>
+                            <constraint firstItem="XTY-vB-wyg" firstAttribute="top" secondItem="aPU-gm-J6T" secondAttribute="top" id="J8R-Ye-FXa"/>
+                            <constraint firstItem="6nP-st-4Sv" firstAttribute="top" secondItem="XTY-vB-wyg" secondAttribute="bottom" constant="-14" id="QST-1Q-KjH"/>
+                            <constraint firstItem="XTY-vB-wyg" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="WDe-Kk-Sbv"/>
+                            <constraint firstItem="KKL-Ed-nAn" firstAttribute="top" secondItem="MZC-Be-AUF" secondAttribute="bottom" constant="-2" id="XuI-2D-pGr"/>
+                            <constraint firstItem="Kai-xv-R6X" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="ZmX-Pk-VBe"/>
+                            <constraint firstItem="Kai-xv-R6X" firstAttribute="top" secondItem="6nP-st-4Sv" secondAttribute="bottom" constant="44" id="aWv-gU-Bhn"/>
+                            <constraint firstItem="aPU-gm-J6T" firstAttribute="bottom" secondItem="KKL-Ed-nAn" secondAttribute="bottom" constant="265" id="b11-81-850"/>
+                            <constraint firstItem="h7U-mp-cRs" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="sMd-8a-hW7"/>
+                            <constraint firstItem="MZC-Be-AUF" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="ulW-PB-Hm5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aPU-gm-J6T"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fhd-vU-fvs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3wA-G9-M7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2550.7246376811595" y="1029.9107142857142"/>
         </scene>
         <!--Title-->
         <scene sceneID="4ZP-9o-2xE">
@@ -1293,7 +1364,7 @@
     </scenes>
     <resources>
         <image name="TOC_icon" width="9" height="9"/>
-        <image name="icon" width="3" height="3"/>
+        <image name="icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gx3-AS-CXo"/>
