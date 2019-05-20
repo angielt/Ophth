@@ -20,15 +20,18 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
         if viewController is ContentsOfTableViewController{
             //print("hi")
-            if(spacedRep.all_active == true){
-                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // switch from mass SR store mass SR curReview
+            if(spacedRep.all_active == true){// switch from mass SR store mass SR curReview
                 spacedRep.all_active = false
+                if(spacedRep.all_subtopics.count != 0){
+                    spacedRep.all_curReviewIndex = spacedRep.curReviewIndex
+                }
                 spacedRep.clear()
             }
         }
         else if viewController is ViewControllerReview{
             spacedRep.all_active = true
             spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
+            spacedRep.reviewList = spacedRep.all_subtopics
         }
     }
 

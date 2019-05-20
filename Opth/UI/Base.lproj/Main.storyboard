@@ -38,7 +38,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="00l-Ur-Dow">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="00l-Ur-Dow">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -49,7 +49,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="xR0-QM-cHD">
-                                    <rect key="frame" x="0.0" y="-39" width="414" height="56"/>
+                                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
                                     <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -1012,7 +1012,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cei-N2-BKj">
-                                                    <rect key="frame" x="10" y="111.5" width="335" height="20.5"/>
+                                                    <rect key="frame" x="8" y="111.5" width="339" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1028,6 +1028,7 @@
                                                 <constraint firstItem="Cei-N2-BKj" firstAttribute="top" secondItem="oFN-ez-SX9" secondAttribute="bottom" id="IUF-tz-39F"/>
                                                 <constraint firstItem="Cei-N2-BKj" firstAttribute="top" secondItem="oFN-ez-SX9" secondAttribute="bottom" id="Mpa-BX-lNh"/>
                                                 <constraint firstItem="oFN-ez-SX9" firstAttribute="top" secondItem="HBN-yf-4Kj" secondAttribute="top" id="T06-21-BAB"/>
+                                                <constraint firstItem="Cei-N2-BKj" firstAttribute="leading" secondItem="HBN-yf-4Kj" secondAttribute="leading" constant="8" id="Wsw-P9-dB2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1144,10 +1145,17 @@
                                                     <color key="textColor" red="0.0" green="0.54901960780000003" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Vz-WrO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Vz-WrO">
                                                     <rect key="frame" x="10" y="111.5" width="335" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1467,12 +1475,12 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Q2K-co-WF4"/>
-        <segue reference="VtJ-2y-YTV"/>
-        <segue reference="GXd-lX-OvY"/>
-        <segue reference="w7G-6z-jxb"/>
+        <segue reference="gx3-AS-CXo"/>
+        <segue reference="Sm6-FY-O2q"/>
+        <segue reference="PUi-mI-Naq"/>
         <segue reference="hBY-14-0wZ"/>
         <segue reference="BpS-xS-shc"/>
-        <segue reference="ueQ-aR-ApD"/>
+        <segue reference="6cU-YF-USO"/>
         <segue reference="ihp-7O-gdK"/>
     </inferredMetricsTieBreakers>
 </document>

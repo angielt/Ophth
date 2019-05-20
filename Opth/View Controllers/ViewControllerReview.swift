@@ -25,6 +25,7 @@ class ViewControllerReview: UIViewController{
             print(item.repeat_factor)
         }
         if(spacedRep.all_subtopics.count == 0){
+            print("subtopics 0-1")
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
             spacedRep.curReviewIndex = 0
         }
@@ -64,11 +65,17 @@ class ViewControllerReview: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
+        print("subtopics count")
+        print(spacedRep.all_subtopics.count)
+        if(spacedRep.all_subtopics.count == 0){
+            print("subtopics 0-2")
+            spacedRep.setReviewTopics(category_list: &status.CategoryList)
+            spacedRep.curReviewIndex = 0
+        }
         if(spacedRep.finished == true){
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
-            
         else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list.isEmpty){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
