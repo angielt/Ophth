@@ -44,6 +44,9 @@
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
+		FDC7A75922926E4900742BDD /* shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75822926E4900742BDD /* shuffle.png */; };
+		FDC7A75B22926F7900742BDD /* check-form.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75A22926F7900742BDD /* check-form.png */; };
+		FDC7A75D2292708200742BDD /* information (1).png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75C2292708200742BDD /* information (1).png */; };
 		FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */; };
 		FDD1932E221B921D000A2F63 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1932D221B921D000A2F63 /* Status.swift */; };
 		FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */; };
@@ -116,6 +119,9 @@
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
+		FDC7A75822926E4900742BDD /* shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuffle.png; sourceTree = "<group>"; };
+		FDC7A75A22926F7900742BDD /* check-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-form.png"; sourceTree = "<group>"; };
+		FDC7A75C2292708200742BDD /* information (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information (1).png"; sourceTree = "<group>"; };
 		FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableViewCell.swift; sourceTree = "<group>"; };
 		FDD1932D221B921D000A2F63 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FDF2A57022163BBE00B1E1D0 /* Opth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +293,9 @@
 				FDA541652251C8D100B536E0 /* View */,
 				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
+				FDC7A75C2292708200742BDD /* information (1).png */,
+				FDC7A75A22926F7900742BDD /* check-form.png */,
+				FDC7A75822926E4900742BDD /* shuffle.png */,
 				629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */,
 				629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */,
 				629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */,
@@ -440,6 +449,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1FF2C02290B663007A7DA2 /* underlinetest.txt in Resources */,
+				FDC7A75B22926F7900742BDD /* check-form.png in Resources */,
+				FDC7A75922926E4900742BDD /* shuffle.png in Resources */,
 				629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */,
 				629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */,
 				629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */,
@@ -451,6 +462,7 @@
 				BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */,
 				62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */,
 				62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */,
+				FDC7A75D2292708200742BDD /* information (1).png in Resources */,
 				629720F42290E3F000F10CBE /* 217_Retinoblastoma_3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
