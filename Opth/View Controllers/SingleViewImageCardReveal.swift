@@ -81,7 +81,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
+            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width, height: self.imageScrollView.frame.height - 70)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image
@@ -100,7 +100,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
                 caption.numberOfLines = 3
                 caption.lineBreakMode = .byWordWrapping
                 caption.sizeToFit()
-                let captionLocation = self.imageScrollView.center.x + 20
+                let captionLocation = self.imageScrollView.center.x
                 
                 //set the position of the caption
                 if i == 0{

@@ -17,6 +17,7 @@ class ViewController: UIViewController{
 
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
+    @IBOutlet weak var backButton: UIButton!
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -31,6 +32,7 @@ class ViewController: UIViewController{
     }
     
     func loadData(){
+        backButton.isHidden = false
         if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
             cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
             
@@ -51,6 +53,7 @@ class ViewController: UIViewController{
         card.layer.backgroundColor = UIColor.black.cgColor
         cardFront.text = "Review Finished - tap to exit"
         cardFront.textColor = UIColor.gray
+        backButton.isHidden = true
     }
     
     func newListCardChange(){
@@ -58,41 +61,48 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
+        print("tap")
+        var loadData = false
+        
         if(spacedRep.finished == true){
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
-        
         else if (spacedRep.reviewList[curReviewIndex].img_list[0] == "nil"){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()
+            loadData = true
         }
         else {
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "imageCardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()
+            loadData = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            
-            if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
-                //self.present(viewController, animated: true, completion: nil)
-                if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
-                    self.performSegue(withIdentifier: "reveal", sender: nil)
-                }
-                else {
-                    self.performSegue(withIdentifier: "revealImage", sender: nil)
-                }
-
-            }
-            
+        if (loadData == true){
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
-                    spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-                    self.loadData() // loads data for next card
+                
+                if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
+                    //self.present(viewController, animated: true, completion: nil)
+                    if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
+                        self.performSegue(withIdentifier: "reveal", sender: nil)
+                    }
+                    else {
+                        self.performSegue(withIdentifier: "revealImage", sender: nil)
+                    }
+                    
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+                        spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+                        self.loadData() // loads data for next card
+                    }
                 }
             }
         }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

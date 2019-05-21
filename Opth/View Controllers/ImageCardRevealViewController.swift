@@ -38,7 +38,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var showInfo = false
     let tap = UITapGestureRecognizer()
     let curReviewIndex = spacedRep.curReviewIndex // current subtopic
-    let cardCount = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
     var occlusionFinished = false
     var occlusionTapCount = 0
     var imageCount = 0
@@ -116,7 +115,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width - 20, height: self.imageScrollView.frame.height - 70)
+            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width, height: self.imageScrollView.frame.height - 70)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image
@@ -128,7 +127,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
             
             //add caption for each image
             if spacedRep.reviewList[curReviewIndex].img_caption[0] != "nil"{
-                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width - 20,height:50)))
+                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width,height:50)))
                 caption.text = spacedRep.reviewList[curReviewIndex].img_caption[i]
                 caption.textColor = UIColor.white
                 caption.font = UIFont.systemFont(ofSize: 14.0)
@@ -182,7 +181,11 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
+        if(spacedRep.reviewList.count == 0){
+            print(" imagecardreveal spacedRep.reviewList.count == 0")
+        }
         
+        let cardCount = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
         
         // fill cell contents
         if(indexPath.row < cardCount){

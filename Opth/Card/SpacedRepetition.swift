@@ -81,6 +81,9 @@ class SpacedRepetition {
     // called ContentsOfTableVC when user clicks topic
     // stores topic object in SpacedRepetition class
     func setReviewTopic(topic:inout Topic){
+        print("Review Topic")
+        print(topic.topicName)
+        print(topic.subtopics.count)
         self.topic = topic
         self.subtopics = topic.subtopics
         //print(topic.topicName)

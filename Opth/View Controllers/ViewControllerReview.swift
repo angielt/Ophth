@@ -74,7 +74,7 @@ class ViewControllerReview: UIViewController{
         }
         if(spacedRep.finished == true){
             spacedRep.finished = false
-            self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
+            self.dismiss(animated: true, completion: {spacedRep.VCreference?.dismiss(animated: true, completion: nil)}) // possible callback to clear spaced rep stuff
         }
         else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list.isEmpty){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
