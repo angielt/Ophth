@@ -54,21 +54,28 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     @IBAction func easyOnClick(_ sender: Any) {
-        //print("easy")
-        spacedRep.easyPressed()
-        // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-        dismiss(animated: true) {
+        if(buttonsVisible == true){
+            spacedRep.easyPressed()
+            // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+            dismiss(animated: true) {
+            }
         }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
-        //print("unsure")
-        spacedRep.unsurePressed()
-        dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            spacedRep.unsurePressed()
+            // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+            dismiss(animated: true) {
+            }
+        }
     }
     @IBAction func hardOnClick(_ sender: Any) {
-        //print("hard")
-        spacedRep.hardPressed()
-        dismiss(animated: true, completion: nil)
+        if(buttonsVisible == true){
+            spacedRep.hardPressed()
+            // spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
+            dismiss(animated: true) {
+            }
+        }
     }
     func showButtons(){
         easyButton.isHidden = false
@@ -184,8 +191,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         if(spacedRep.reviewList.count == 0){
             print(" imagecardreveal spacedRep.reviewList.count == 0")
         }
-        
+        print(spacedRep.curReviewIndex)
+        print(spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName)
         let cardCount = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
+
         
         // fill cell contents
         if(indexPath.row < cardCount){

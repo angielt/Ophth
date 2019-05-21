@@ -90,6 +90,7 @@ class SpacedRepetition {
         
         // first ReviewList
         self.max_list_size = self.subtopics.count
+        self.curReviewIndex = 0
         //print("MAX LIST SIZE" + String(self.max_list_size))
         generateReviewList(subtopics: self.subtopics)
         
@@ -149,7 +150,7 @@ class SpacedRepetition {
     // when review is finished, chnage the exit card.
     // plz dont cahnge anything in this function logically
     func easyPressed(){
-        if(curReviewIndex-1 <= self.reviewList.count-1){
+        if(curReviewIndex-1 <= self.reviewList.count-1 && curReviewIndex != 0){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
                 //print(reviewList[curReviewIndex].repeat_factor)
@@ -170,7 +171,7 @@ class SpacedRepetition {
     }
     
     func unsurePressed(){
-        if(curReviewIndex-1 <= self.reviewList.count-1){
+        if(curReviewIndex-1 <= self.reviewList.count-1 && curReviewIndex != 0){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
                 //print(reviewList[curReviewIndex].repeat_factor)
@@ -192,7 +193,7 @@ class SpacedRepetition {
     }
     
     func hardPressed(){
-        if(curReviewIndex-1 <= self.reviewList.count-1){
+        if(curReviewIndex-1 <= self.reviewList.count-1 && curReviewIndex != 0){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5
                 //print(reviewList[curReviewIndex].repeat_factor)
@@ -225,11 +226,11 @@ class SpacedRepetition {
         let one = st.filter{$0.repeat_factor==1}
         
         // store
-        RFList.five = five
-        RFList.four = four
-        RFList.three = three
-        RFList.two = two
-        RFList.one = one
+        RFList.five = five.shuffled()
+        RFList.four = four.shuffled()
+        RFList.three = three.shuffled()
+        RFList.two = two.shuffled()
+        RFList.one = one.shuffled()
         
         // reset ReviewList
         if(reviewList.count != 0){

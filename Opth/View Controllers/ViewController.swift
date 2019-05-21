@@ -11,7 +11,7 @@ import UIKit
 // view controller of card front
 class ViewController: UIViewController{
     
-    var curReviewIndex = spacedRep.curReviewIndex
+   // var curReviewIndex = spacedRep.curReviewIndex
 
     static let cardCornerRadius: CGFloat = 25
 
@@ -62,13 +62,15 @@ class ViewController: UIViewController{
     
     @IBAction func handleTap(_ sender: Any) {
         print("tap")
+        print(spacedRep.reviewList.count)
+        print(spacedRep.curReviewIndex)
         var loadData = false
         
         if(spacedRep.finished == true){
             spacedRep.finished = false
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff
         }
-        else if (spacedRep.reviewList[curReviewIndex].img_list[0] == "nil"){
+        else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil"){
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()
@@ -97,7 +99,13 @@ class ViewController: UIViewController{
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
                         spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
-                        self.loadData() // loads data for next card
+                        self.loadData()
+                        if(spacedRep.curReviewIndex == spacedRep.reviewList.count){
+                            spacedRep.curReviewIndex = spacedRep.curReviewIndex - 1
+                            spacedRep.finished = true
+                            self.exitCardChange()
+                        }
+                        //self.loadData() // loads data for next card
                     }
                 }
             }
