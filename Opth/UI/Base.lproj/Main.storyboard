@@ -800,7 +800,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTY-vB-wyg">
                                 <rect key="frame" x="167.5" y="74" width="79" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nP-st-4Sv">
@@ -811,38 +811,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glenn Yiu, MD, PhD " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-xv-R6X">
-                                <rect key="frame" x="130.5" y="428" width="153.5" height="20.5"/>
+                                <rect key="frame" x="130.5" y="423.5" width="153.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colin Bacorn, MD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-mp-cRs">
-                                <rect key="frame" x="140.5" y="478.5" width="133" height="20.5"/>
+                                <rect key="frame" x="140.5" y="474" width="133" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sangeeta Kalsi, MD, MPH" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-Be-AUF">
-                                <rect key="frame" x="110.5" y="529" width="193.5" height="20.5"/>
+                                <rect key="frame" x="110.5" y="524.5" width="193.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nancy Fong, BS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-Ed-nAn">
-                                <rect key="frame" x="146" y="579.5" width="122" height="20.5"/>
+                                <rect key="frame" x="146" y="575" width="122" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special thanks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGW-3Z-8a4">
-                                <rect key="frame" x="113" y="362" width="188" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="125.5" y="362" width="163" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnr-ES-9Q2">
+                                <rect key="frame" x="0.0" y="724" width="414" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="kNx-B0-EhV"/>
+                                    <constraint firstAttribute="width" constant="414" id="uZh-dl-Gcn"/>
+                                </constraints>
+                                <string key="text">Icons by: 
+Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="nnr-ES-9Q2" firstAttribute="bottom" secondItem="aPU-gm-J6T" secondAttribute="bottom" constant="-20" id="2rW-fs-ARv"/>
                             <constraint firstItem="qGW-3Z-8a4" firstAttribute="top" secondItem="6nP-st-4Sv" secondAttribute="bottom" constant="100" id="2ue-bh-ZcA"/>
                             <constraint firstItem="MZC-Be-AUF" firstAttribute="top" secondItem="h7U-mp-cRs" secondAttribute="bottom" constant="30" id="9oc-jm-a7m"/>
                             <constraint firstItem="KKL-Ed-nAn" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="FEf-Lm-x98"/>
@@ -856,7 +869,10 @@
                             <constraint firstItem="XTY-vB-wyg" firstAttribute="top" secondItem="aPU-gm-J6T" secondAttribute="top" constant="30" id="Xhd-9F-Xh2"/>
                             <constraint firstItem="KKL-Ed-nAn" firstAttribute="top" secondItem="MZC-Be-AUF" secondAttribute="bottom" constant="30" id="YKg-Cm-8iY"/>
                             <constraint firstItem="qGW-3Z-8a4" firstAttribute="centerX" secondItem="zgx-Kv-Cu0" secondAttribute="centerX" id="bF3-Sd-oOY"/>
+                            <constraint firstItem="nnr-ES-9Q2" firstAttribute="trailing" secondItem="aPU-gm-J6T" secondAttribute="trailing" id="bfQ-mo-97h"/>
+                            <constraint firstItem="nnr-ES-9Q2" firstAttribute="centerX" secondItem="zgx-Kv-Cu0" secondAttribute="centerX" id="gqV-Hc-g1S"/>
                             <constraint firstItem="h7U-mp-cRs" firstAttribute="top" secondItem="Kai-xv-R6X" secondAttribute="bottom" constant="30" id="ixB-Pp-4yd"/>
+                            <constraint firstItem="nnr-ES-9Q2" firstAttribute="leading" secondItem="aPU-gm-J6T" secondAttribute="leading" id="nMm-oz-raK"/>
                             <constraint firstItem="MZC-Be-AUF" firstAttribute="centerX" secondItem="aPU-gm-J6T" secondAttribute="centerX" id="ulW-PB-Hm5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aPU-gm-J6T"/>
