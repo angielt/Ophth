@@ -109,8 +109,8 @@ class SpacedRepetition {
             }
         }
         
-        self.all_subtopics = flattenedArray.flatMap({$0})
-        self.reviewList = self.all_subtopics.shuffled()
+        self.all_subtopics = flattenedArray.flatMap({$0}).shuffled()
+        self.reviewList = self.all_subtopics
         print("review list set")
     }
     

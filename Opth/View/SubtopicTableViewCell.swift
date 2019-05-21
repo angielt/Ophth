@@ -13,7 +13,10 @@ class SubtopicTableViewCell: UITableViewCell {
     @IBOutlet weak var Header: UILabel!
     @IBOutlet weak var Info: UILabel!
 
-
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

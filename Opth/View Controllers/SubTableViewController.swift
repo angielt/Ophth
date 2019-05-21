@@ -45,9 +45,6 @@ class SubTableViewController: UITableViewController {
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardVC") as! ViewController
         spacedRep.VCreference = (viewController as! ViewController)
         spacedRep.setReviewTopic(topic: &topic)
-        print(spacedRep.topic?.topicName)
-        print(spacedRep.reviewList.count)
-        print(spacedRep.curReviewIndex)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.present(viewController, animated: true, completion: nil)
         }

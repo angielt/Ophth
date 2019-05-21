@@ -106,9 +106,9 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         
         // fill cell contents
         if(indexPath.row < spacedRep.reviewList[curReviewIndex].cards.count){
-            let info = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
             cell.Header.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
-            cell.Info.text = info
+            cell.Info.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
+
             
             
             if(indexPath.row == 0 && index <= indexPath.row){
@@ -144,12 +144,13 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
                 showInfo = true
                 cell.Info.textColor = UIColor.white
                 index = index+1
+                print(index)
             }
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
             }
-            if(index == spacedRep.reviewList[curReviewIndex].cards.count){
+            if(index == spacedRep.reviewList[spacedRep.curReviewIndex].cards.count-1){
                 buttonsVisible = true
                 self.showButtons()
             }

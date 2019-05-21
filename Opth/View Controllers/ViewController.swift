@@ -61,9 +61,6 @@ class ViewController: UIViewController{
     }
     
     @IBAction func handleTap(_ sender: Any) {
-        print("tap")
-        print(spacedRep.reviewList.count)
-        print(spacedRep.curReviewIndex)
         var loadData = false
         
         if(spacedRep.finished == true){
