@@ -896,7 +896,7 @@
                                 </constraints>
                                 <string key="text">Icons by: 
 Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
