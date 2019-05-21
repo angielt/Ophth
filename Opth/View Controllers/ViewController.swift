@@ -21,7 +21,7 @@ class ViewController: UIViewController{
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        self.loadView()
+        self.reloadInputViews()
     }
     
     override func viewDidLoad() {

@@ -26,6 +26,7 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
         if ((userDefaults.string(forKey: subtopic) == nil) || (userDefaults.string(forKey: subtopic) == "") || (userDefaults.string(forKey: subtopic) == " ")) {
             userDefaults.removeObject(forKey: subtopic)
         }
+        userDefaults.synchronize()
         
         if let note = userDefaults.string(forKey: subtopic) {
             notesText.text = note
@@ -53,6 +54,7 @@ class NotesViewController: UIViewController, UINavigationControllerDelegate {
         } else {
             userDefaults.set(notesText.text, forKey: subtopic)
         }
+        userDefaults.synchronize()
     }
 
 }

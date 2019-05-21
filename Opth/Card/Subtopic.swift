@@ -16,6 +16,7 @@ class Subtopic{ // aka Slide
     var img_caption:[String]
     var score:Int
     var repeat_factor:Int
+    var hasNotes: Bool
     // add variables for spaced rep
 
     init(subtopic: String, topic: String, category: String){
@@ -27,6 +28,7 @@ class Subtopic{ // aka Slide
         self.img_caption = []
         self.score = 20
         self.repeat_factor = 5
+        self.hasNotes = false
     }
     
     func updateRepeatFactor(rf:Int){

@@ -476,9 +476,10 @@
                     <tabBarItem key="tabBarItem" systemItem="bookmarks" id="UZ3-fH-R7S"/>
                     <navigationItem key="navigationItem" id="R8N-2p-h2A"/>
                     <connections>
+                        <outlet property="subTable" destination="Yu1-uA-uPy" id="5XS-nu-x6x"/>
                         <outlet property="topicName" destination="EdQ-6m-G4l" id="PJg-5r-kaS"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="flashCardSegue" modalTransitionStyle="flipHorizontal" id="ry5-38-aaV"/>
-                        <segue destination="OpK-c2-obb" kind="presentation" identifier="fromSubTableSegue" id="w7G-6z-jxb"/>
+                        <segue destination="OpK-c2-obb" kind="presentation" identifier="fromSubTableSegue" modalTransitionStyle="flipHorizontal" id="w7G-6z-jxb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D71-CO-mdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1263,7 +1264,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
     <inferredMetricsTieBreakers>
         <segue reference="VtJ-2y-YTV"/>
         <segue reference="GXd-lX-OvY"/>
-        <segue reference="PUi-mI-Naq"/>
+        <segue reference="w7G-6z-jxb"/>
         <segue reference="4wZ-Ha-UyP"/>
         <segue reference="swq-kv-bzv"/>
         <segue reference="IRs-yv-0fS"/>

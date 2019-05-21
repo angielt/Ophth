@@ -9,27 +9,35 @@
 import UIKit
 
 class SubTableViewController: UITableViewController {
+    @IBOutlet var subTable: UITableView!
     @IBOutlet weak var topicName: UILabel!
     var topic: Topic!
     var subtopic: Subtopic!
     var index = 0
     var topicIndex = 0
-    var image = UIImage(named: "notes.png")
+   // var image: UIImage!
+    
+    func loadData(){
+        self.subTable.reloadData()
+        self.view.reloadInputViews()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //topic.subtopics.sort(by: {$0.subtopicName < $1.subtopicName})
+        subTable.delegate = self
         self.loadData()
     }
     
-    func loadData(){
-        view.reloadInputViews()
-        self.tableView.reloadData()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       // navigationItem.title = topic.topicName
+        UserDefaults.standard.synchronize()
+        self.subTable.reloadData()
     }
-    
+
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        self.tableView.reloadData()
+        //self.loadData()
     }
     
     @IBAction func reviewButton(_ sender: Any) {
@@ -45,14 +53,8 @@ class SubTableViewController: UITableViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationItem.title = topic.topicName
-        self.tableView.reloadData()
-    }
-
     //number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 
@@ -63,20 +65,20 @@ class SubTableViewController: UITableViewController {
     
     //print out the subtopics
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         topicName.text = topic.topicName
+        let userDefaults = UserDefaults.standard
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "subCell", for: indexPath)
-
-        cell.textLabel?.text = topic.subtopics[indexPath.row].subtopicName//subtopicAr[indexPath.row]
+        cell.textLabel?.text = topic.subtopics[indexPath.row].subtopicName
         cell.textLabel?.textColor = UIColor.white
         
-        if UserDefaults.standard.string(forKey: topic.subtopics[indexPath.row].subtopicName) != nil {
-            let imageview = UIImageView(image: image)
-            imageview.frame = CGRect(x: 304, y: 45, width: 25, height: 25)
-            cell.accessoryView = imageview
+        if (userDefaults.string(forKey: topic.subtopics[indexPath.row].subtopicName)) != nil {
+            cell.accessoryView = UIImageView(image: UIImage(named: "notes.png"))
+            cell.accessoryView?.frame = CGRect(x: 304, y: 45, width: 25, height: 25)
+        } else {
+            cell.accessoryView?.isHidden = true
         }
-        
+ 
         return cell
     }
     

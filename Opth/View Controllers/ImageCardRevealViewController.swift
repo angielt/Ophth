@@ -219,10 +219,10 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     
     // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
-        if sender.source is NotesViewController {
+        if let senderVC = sender.source as? NotesViewController {
         }
     }
-    
+
     // link the page controller with the image scroll view
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         imagePageController.currentPage = Int(round(imageScrollView.contentOffset.x / imageScrollView.frame.width))
