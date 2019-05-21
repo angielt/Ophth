@@ -11,7 +11,7 @@ import UIKit
 // delete urlsessiondownloaddelegate
 class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
     
-    let shapeLayer = CAShapeLayer()
+    var shapeLayer: CAShapeLayer!
     // create pulsating layer
     var pulsatingLayer: CAShapeLayer!
     
@@ -39,64 +39,59 @@ class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
         animatePulsatingLayer()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupNotificationObservers()
-        
-        // set color in extensions file
-        view.backgroundColor = UIColor.backgroundColor
-        
+    // create a template for layer formats
+    private func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor) -> CAShapeLayer {
+        let layer = CAShapeLayer()
         // creates the circle
         let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-
-        // make pulsating layer behind the track layer
-        pulsatingLayer = CAShapeLayer()
-        pulsatingLayer.path = circularPath.cgPath
-        pulsatingLayer.strokeColor = UIColor.clear.cgColor
+        layer.path = circularPath.cgPath
+        layer.strokeColor = strokeColor.cgColor
+        layer.lineWidth = 20
         // inside of the circle color
-        pulsatingLayer.fillColor = UIColor.pulsatingFillColor.cgColor
-        pulsatingLayer.lineWidth = 10
-        pulsatingLayer.lineCap = CAShapeLayerLineCap.round
+        layer.fillColor = fillColor.cgColor
+        layer.lineCap = CAShapeLayerLineCap.round
         // puts circle in the center of view instead of .zero origin on top left corner of screen
-        pulsatingLayer.position = view.center
+        layer.position = view.center
+        return layer
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNotificationObservers()
+        // used the set color in extensions file
+        view.backgroundColor = UIColor.backgroundColor
+        setupCircleLayers()
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        setupPercentageLabel()
+    }
+    
+    // add percentage to the view inside the circle (format)
+    private func setupPercentageLabel() {
+        // add percentage to the view inside the circle (format)
+        view.addSubview(percentageLabel)
+        percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        percentageLabel.center = view.center // can use auto layout
+    }
+    
+    // makes the layers and circle inside the view
+    private func setupCircleLayers() {
+        // make pulsating layer behind the track layer
+        pulsatingLayer = createCircleShapeLayer(strokeColor: .clear, fillColor: UIColor.pulsatingFillColor)
         view.layer.addSublayer(pulsatingLayer)
-        
         animatePulsatingLayer()
         
         // create track layer (the rim that the shapeLayer fills)
-        let trackLayer = CAShapeLayer()
-        trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.trackStrokeColor.cgColor
-        // inside of the circle color
-        trackLayer.fillColor = UIColor.backgroundColor.cgColor
-        trackLayer.lineWidth = 20
-        trackLayer.lineCap = CAShapeLayerLineCap.round
-        trackLayer.position = view.center // puts circle in the center of view instead of .zero origin on top left corner of screen
+        let trackLayer = createCircleShapeLayer(strokeColor: .trackStrokeColor, fillColor: .backgroundColor)
         view.layer.addSublayer(trackLayer)
         
-        
         // the line running outside the circle when you click it
-        shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = UIColor.outlineStrokeColor.cgColor
-        // inside of the circle color
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.lineWidth = 20
-        shapeLayer.lineCap = CAShapeLayerLineCap.round
-        // puts circle in the center of view instead of .zero origin on top left corner of screen
-        shapeLayer.position = view.center
+        shapeLayer = createCircleShapeLayer(strokeColor: .outlineStrokeColor, fillColor: .clear)
         // rotates the circle 90 degrees above the z-axis so we start at 12:00 position and not 3:00 position
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         // this gets rid of the shapeLayer so it doesn't show up initially and only during animation
         shapeLayer.strokeEnd = 0
         view.layer.addSublayer(shapeLayer)
-        
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-        
-        // add percentage to the view inside the circle (format)
-        view.addSubview(percentageLabel)
-        percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        percentageLabel.center = view.center // can use auto layout
+
     }
     
     // animate pulsating layer
@@ -113,8 +108,10 @@ class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
         animation.repeatCount = Float.infinity
         
         pulsatingLayer.add(animation, forKey: "pulsing")
-        
     }
+    
+    // delete after the tutorial
+    let urlString = "https://firebasestorage.googleapis.com/v0/b/direstorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e28261d0-7219-49d2-b32d-367e1686500c"
     
     private func accumulatesProgress() {
         print("Attempting to get progress from student data")
@@ -123,7 +120,6 @@ class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
         shapeLayer.strokeEnd = 0
         
         // delete after the tutorial
-        let urlString = "https://firebasestorage.googleapis.com/v0/b/direstorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e28261d0-7219-49d2-b32d-367e1686500c"
         let configuration = URLSessionConfiguration.default
         let operationQueue = OperationQueue()
         let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
@@ -144,8 +140,7 @@ class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
             self.percentageLabel.text = "\(Int(percentage * 100))%"
             self.shapeLayer.strokeEnd = percentage
         }
-        shapeLayer.strokeEnd = percentage
-        
+        print(percentage)
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
