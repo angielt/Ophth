@@ -15,8 +15,6 @@
 		629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */; };
 		629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */; };
 		629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */; };
-		629720FC2291228000F10CBE /* TableImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629720FB2291228000F10CBE /* TableImageViewController.swift */; };
-		629720FE22912C6200F10CBE /* SingleViewTableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629720FD22912C6200F10CBE /* SingleViewTableImage.swift */; };
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
@@ -85,8 +83,6 @@
 		629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 257_PeripheralRetina_CystoidDegeneration.gif; path = images/257_PeripheralRetina_CystoidDegeneration.gif; sourceTree = "<group>"; };
 		629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; sourceTree = "<group>"; };
 		629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; sourceTree = "<group>"; };
-		629720FB2291228000F10CBE /* TableImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableImageViewController.swift; sourceTree = "<group>"; };
-		629720FD22912C6200F10CBE /* SingleViewTableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewTableImage.swift; sourceTree = "<group>"; };
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
@@ -222,8 +218,6 @@
 				628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */,
 				628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */,
 				BC949D142290C868000E15B4 /* ProgressViewController.swift */,
-				629720FB2291228000F10CBE /* TableImageViewController.swift */,
-				629720FD22912C6200F10CBE /* SingleViewTableImage.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -597,10 +591,8 @@
 				62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
 				BC949D152290C868000E15B4 /* ProgressViewController.swift in Sources */,
-				629720FC2291228000F10CBE /* TableImageViewController.swift in Sources */,
 				628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
-				629720FE22912C6200F10CBE /* SingleViewTableImage.swift in Sources */,
 				F86AEED2227031DD00F4FC9C /* NotesViewController.swift in Sources */,
 				FD27ADF7221B8D2F001E41CB /* CardRevealViewController.swift in Sources */,
 				628BAF3F228C07A90086C911 /* SingleViewImageCardReveal.swift in Sources */,
