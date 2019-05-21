@@ -8,23 +8,24 @@
 
 import UIKit
 
-class SubTableViewController: UITableViewController {
-    @IBOutlet var subTable: UITableView!
+class SubTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topicName: UILabel!
     var topic: Topic!
     var subtopic: Subtopic!
     var index = 0
     var topicIndex = 0
-   // var image: UIImage!
     
     func loadData(){
-        self.subTable.reloadData()
+        self.tableView.reloadData()
         self.view.reloadInputViews()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        subTable.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
         self.loadData()
     }
     
@@ -32,7 +33,7 @@ class SubTableViewController: UITableViewController {
         super.viewWillAppear(animated)
        // navigationItem.title = topic.topicName
         UserDefaults.standard.synchronize()
-        self.subTable.reloadData()
+        self.tableView.reloadData()
     }
 
     @IBAction func backButton(_ sender: Any) {
@@ -50,41 +51,36 @@ class SubTableViewController: UITableViewController {
         }
     }
     
-    //number of sections
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-    //number of rows in section
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topic.subtopics.count
     }
-    
-    //print out the subtopics
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         topicName.text = topic.topicName
         let userDefaults = UserDefaults.standard
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "subCell", for: indexPath)
         cell.textLabel?.text = topic.subtopics[indexPath.row].subtopicName
         cell.textLabel?.textColor = UIColor.white
-        
+    
         if (userDefaults.string(forKey: topic.subtopics[indexPath.row].subtopicName)) != nil {
             cell.accessoryView = UIImageView(image: UIImage(named: "notes.png"))
             cell.accessoryView?.frame = CGRect(x: 304, y: 45, width: 25, height: 25)
         } else {
             cell.accessoryView?.isHidden = true
         }
- 
         return cell
+        
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         subtopic = topic.subtopics[indexPath.row]
         index = indexPath.row
         performSegue(withIdentifier: "fromSubTableSegue", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
             destinationVC.subtopic = subtopic

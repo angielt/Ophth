@@ -300,14 +300,14 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "subCell"{
-            let subTableView = segue.destination as! SubTableViewController
+            let subTableView = segue.destination as? SubTableViewController
             if tapTopic {
-                subTableView.topic = fTopic
+                subTableView?.topic = fTopic
             }
             else{
-                 subTableView.topic = status.CategoryList[sectionIndex].topics[rowIndex]
+                subTableView?.topic = status.CategoryList[sectionIndex].topics[rowIndex]
             }
-            subTableView.topicIndex = rowIndex
+            subTableView?.topicIndex = rowIndex
         }
         else if segue.identifier == "fromSearchSegue"{
             let destinationVC = segue.destination as? SingleViewController
