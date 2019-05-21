@@ -21,6 +21,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
  
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
+    @IBOutlet weak var downIndicator: UIImageView!
     
     var imageIndex = 0
     var isBackFromFullScreen = false
@@ -48,6 +49,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        downIndicator.isHidden = false
         
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
@@ -186,6 +188,9 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
+            }
+            if(index == subtopic.cards.count){
+                downIndicator.isHidden = true
             }
         }
     }

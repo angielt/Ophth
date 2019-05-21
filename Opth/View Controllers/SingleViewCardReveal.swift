@@ -15,6 +15,7 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var addNotes: UIButton!
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
+    @IBOutlet weak var downIndicator: UIImageView!
     
     var index = 0
     var indexMax = 0
@@ -104,6 +105,9 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
+            }
+            if(index == subtopic.cards.count){
+                downIndicator.isHidden = true
             }
         }
     }

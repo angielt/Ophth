@@ -66,6 +66,7 @@ class ViewControllerReview: UIViewController{
     
     @IBAction func handleTap(_ sender: Any) {
         if(spacedRep.all_subtopics.count == 0){
+
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
             spacedRep.curReviewIndex = 0
         }

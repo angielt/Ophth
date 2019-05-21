@@ -16,6 +16,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     @IBOutlet weak var addNotes: UIButton!
+    @IBOutlet weak var downIndicator: UIImageView!
     
     //count how many taps
     var counter = 0
@@ -64,6 +65,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     func showButtons(){
+        downIndicator.isHidden = true
         easyButton.isHidden = false
         unsureButton.isHidden = false
         hardButton.isHidden = false
