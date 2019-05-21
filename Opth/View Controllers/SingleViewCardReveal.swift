@@ -36,6 +36,7 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        downIndicator.isHidden = false
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
