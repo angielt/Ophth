@@ -29,6 +29,7 @@
 		BC949D152290C868000E15B4 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC949D142290C868000E15B4 /* ProgressViewController.swift */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
+		BC981F82229474C100E09BF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC981F81229474C100E09BF2 /* Extensions.swift */; };
 		F86AEED2227031DD00F4FC9C /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86AEED1227031DD00F4FC9C /* NotesViewController.swift */; };
 		FD056E6C22387DF8003CBB68 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6B22387DF8003CBB68 /* Category.swift */; };
 		FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD056E6D22387E1D003CBB68 /* Topic.swift */; };
@@ -100,6 +101,7 @@
 		BC949D142290C868000E15B4 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsOfTableViewController.swift; sourceTree = "<group>"; };
 		BC95F77F2252F8C6008697EA /* SmallTes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SmallTes.txt; sourceTree = "<group>"; };
+		BC981F81229474C100E09BF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D4294AB1A1663C9CE4584AF2 /* Pods-OpthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.release.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.release.xcconfig"; sourceTree = "<group>"; };
 		F86AEED1227031DD00F4FC9C /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = "Opth/View Controllers/NotesViewController.swift"; sourceTree = SOURCE_ROOT; };
 		FA1DF0D4173FD1C0487E7CCB /* Pods-OpthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.debug.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */,
 				628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */,
 				BC949D142290C868000E15B4 /* ProgressViewController.swift */,
+				BC981F81229474C100E09BF2 /* Extensions.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -578,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62ED789A2283A224002D59C4 /* SingleViewController.swift in Sources */,
+				BC981F82229474C100E09BF2 /* Extensions.swift in Sources */,
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
 				62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */,
