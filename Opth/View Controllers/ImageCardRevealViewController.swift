@@ -191,8 +191,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         if(spacedRep.reviewList.count == 0){
             print(" imagecardreveal spacedRep.reviewList.count == 0")
         }
-        print(spacedRep.curReviewIndex)
-        print(spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName)
         let cardCount = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
 
         
@@ -230,7 +228,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        
         let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
         
         var visibleRowIndexArray: [Int] = []
@@ -245,6 +242,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 showInfo = true
                 cell.Info.textColor = UIColor.white
                 index = index+1
+                print(index)
             }
             else if(showInfo == true){
                 showInfo = false
