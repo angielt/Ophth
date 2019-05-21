@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -330,6 +330,9 @@
                                     <action selector="backButton:" destination="LNz-K0-qAO" eventType="touchUpInside" id="L8Z-Rw-GQK"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="down-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="FCV-RL-l1k">
+                                <rect key="frame" x="167" y="625" width="41" height="42"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -342,12 +345,14 @@
                             <constraint firstItem="BKJ-JI-RCB" firstAttribute="top" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="20" id="LEU-OX-BCW"/>
                             <constraint firstItem="cZh-F0-2AT" firstAttribute="top" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="20" id="PoM-vu-izV"/>
                             <constraint firstItem="ZfQ-Ml-C7b" firstAttribute="baseline" secondItem="bGe-91-dgg" secondAttribute="baseline" constant="1" id="ScC-7R-BiT"/>
+                            <constraint firstItem="FCV-RL-l1k" firstAttribute="top" secondItem="BKJ-JI-RCB" secondAttribute="bottom" constant="7" id="Stt-Dd-Kkr"/>
                             <constraint firstItem="yoK-Mh-PqG" firstAttribute="top" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="20" id="WAm-0P-Snx"/>
                             <constraint firstItem="cZh-F0-2AT" firstAttribute="leading" secondItem="Leq-Eb-dbv" secondAttribute="leading" constant="20" id="g1X-rF-xit"/>
                             <constraint firstItem="5bd-IH-adQ" firstAttribute="leading" secondItem="Leq-Eb-dbv" secondAttribute="leading" constant="10" id="guM-vn-6Ce"/>
                             <constraint firstItem="VTy-0K-eLs" firstAttribute="width" secondItem="dVb-0w-STE" secondAttribute="width" id="iCh-Hd-K3q"/>
                             <constraint firstItem="bGe-91-dgg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZfQ-Ml-C7b" secondAttribute="trailing" constant="8" symbolic="YES" id="kxr-Hg-4YT"/>
                             <constraint firstItem="ZfQ-Ml-C7b" firstAttribute="leading" secondItem="dVb-0w-STE" secondAttribute="leadingMargin" id="qeL-G9-UOt"/>
+                            <constraint firstItem="FCV-RL-l1k" firstAttribute="centerX" secondItem="Leq-Eb-dbv" secondAttribute="centerX" id="uN8-EW-RGu"/>
                             <constraint firstItem="Leq-Eb-dbv" firstAttribute="bottom" secondItem="5bd-IH-adQ" secondAttribute="bottom" constant="70" id="wMJ-ji-9Ve"/>
                             <constraint firstItem="5bd-IH-adQ" firstAttribute="top" secondItem="Leq-Eb-dbv" secondAttribute="top" constant="65" id="yFN-Da-b8r"/>
                             <constraint firstItem="bGe-91-dgg" firstAttribute="top" secondItem="Leq-Eb-dbv" secondAttribute="top" constant="-3" id="zuO-Ak-duB"/>
@@ -358,6 +363,7 @@
                     <connections>
                         <outlet property="addNotes" destination="bGe-91-dgg" id="opb-Un-OWq"/>
                         <outlet property="cardTitle" destination="VTy-0K-eLs" id="xZd-4m-kuj"/>
+                        <outlet property="downIndicator" destination="FCV-RL-l1k" id="CGI-vT-zDh"/>
                         <outlet property="easyButton" destination="cZh-F0-2AT" id="2y2-LV-RQr"/>
                         <outlet property="hardButton" destination="yoK-Mh-PqG" id="Efs-Yc-tnx"/>
                         <outlet property="subtopicTableView" destination="5bd-IH-adQ" id="2z1-HS-h1b"/>
@@ -366,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji1-Yq-IxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2302" y="933"/>
+            <point key="canvasLocation" x="2300.7246376811595" y="932.47767857142856"/>
         </scene>
         <!--Notes-->
         <scene sceneID="6Mv-5R-984">
@@ -654,6 +660,9 @@
                                     <segue destination="lBs-Ez-dmI" kind="presentation" identifier="addNotes" id="IRs-yv-0fS"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="down-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-p9-Ijk">
+                                <rect key="frame" x="175" y="627" width="41" height="42"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -669,6 +678,7 @@
                             <constraint firstItem="oaF-ZK-bZY" firstAttribute="top" secondItem="CQo-ZT-QH4" secondAttribute="top" constant="285" id="JIG-Cl-2qN"/>
                             <constraint firstItem="Chy-ML-7Q3" firstAttribute="top" secondItem="CQo-ZT-QH4" secondAttribute="top" constant="60" id="LuK-kO-tqF"/>
                             <constraint firstItem="Qwr-iB-vWs" firstAttribute="width" secondItem="7cX-K6-mZU" secondAttribute="width" id="OPG-JX-cz4"/>
+                            <constraint firstItem="Ock-p9-Ijk" firstAttribute="top" secondItem="tcc-59-la2" secondAttribute="bottom" constant="9" id="OpQ-GK-Gij"/>
                             <constraint firstItem="tcc-59-la2" firstAttribute="top" secondItem="oaF-ZK-bZY" secondAttribute="bottom" constant="20" id="QrB-SV-i2K"/>
                             <constraint firstItem="tcc-59-la2" firstAttribute="centerX" secondItem="7cX-K6-mZU" secondAttribute="centerX" id="R9z-5a-iyP"/>
                             <constraint firstItem="Chy-ML-7Q3" firstAttribute="centerX" secondItem="7cX-K6-mZU" secondAttribute="centerX" id="RBo-TS-qYa"/>
@@ -680,6 +690,7 @@
                             <constraint firstItem="uce-c4-tji" firstAttribute="leading" secondItem="CQo-ZT-QH4" secondAttribute="leading" constant="20" id="kA7-2Z-M4k"/>
                             <constraint firstItem="69K-CS-P4P" firstAttribute="centerX" secondItem="7cX-K6-mZU" secondAttribute="centerX" id="nWH-vs-KQf"/>
                             <constraint firstItem="oaF-ZK-bZY" firstAttribute="top" secondItem="Chy-ML-7Q3" secondAttribute="bottom" constant="20" id="o94-KF-gly"/>
+                            <constraint firstItem="Ock-p9-Ijk" firstAttribute="centerX" secondItem="CQo-ZT-QH4" secondAttribute="centerX" id="omQ-UX-tkR"/>
                             <constraint firstItem="69K-CS-P4P" firstAttribute="bottom" secondItem="Chy-ML-7Q3" secondAttribute="bottom" constant="20" id="ro6-GC-voc"/>
                             <constraint firstItem="lvh-IJ-Iwg" firstAttribute="top" secondItem="CQo-ZT-QH4" secondAttribute="top" id="siY-y7-4xJ"/>
                         </constraints>
@@ -690,6 +701,7 @@
                     <connections>
                         <outlet property="addNotes" destination="lvh-IJ-Iwg" id="CHO-t4-3BA"/>
                         <outlet property="cardTitle" destination="Qwr-iB-vWs" id="mca-Eh-uxa"/>
+                        <outlet property="downIndicator" destination="Ock-p9-Ijk" id="XHs-Hw-DLV"/>
                         <outlet property="easyButton" destination="uce-c4-tji" id="if1-IN-chm"/>
                         <outlet property="hardButton" destination="OWW-dK-xpX" id="gne-Rc-022"/>
                         <outlet property="imagePageController" destination="69K-CS-P4P" id="C76-Wg-P1u"/>
@@ -1104,6 +1116,9 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                                 <rect key="frame" x="355" y="657" width="39" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="down-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="DEl-C0-q6v">
+                                <rect key="frame" x="151" y="618" width="41" height="42"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1119,12 +1134,14 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                             <constraint firstItem="cnL-Uq-Gak" firstAttribute="centerX" secondItem="uKR-Qb-Tye" secondAttribute="centerX" id="U60-vi-Qge"/>
                             <constraint firstItem="gK4-fX-iVC" firstAttribute="trailing" secondItem="RB3-N9-r5z" secondAttribute="trailing" constant="10" id="UI7-iX-Nyz"/>
                             <constraint firstItem="gK4-fX-iVC" firstAttribute="trailing" secondItem="7js-x4-4AT" secondAttribute="trailing" id="Ycp-ZM-tKx"/>
+                            <constraint firstItem="DEl-C0-q6v" firstAttribute="top" secondItem="RB3-N9-r5z" secondAttribute="bottom" constant="5" id="Z2c-O7-Ax6"/>
                             <constraint firstItem="xs3-L6-kPP" firstAttribute="trailing" secondItem="RB3-N9-r5z" secondAttribute="trailing" constant="-6" id="evN-lr-865"/>
                             <constraint firstItem="RB3-N9-r5z" firstAttribute="top" secondItem="gK4-fX-iVC" secondAttribute="top" constant="285" id="f0S-kg-aaq"/>
                             <constraint firstItem="4kL-7c-zMF" firstAttribute="centerX" secondItem="uKR-Qb-Tye" secondAttribute="centerX" id="oaH-BB-qkk"/>
                             <constraint firstItem="gK4-fX-iVC" firstAttribute="bottom" secondItem="RB3-N9-r5z" secondAttribute="bottom" constant="20" id="tCR-d1-SgC"/>
                             <constraint firstItem="7js-x4-4AT" firstAttribute="centerX" secondItem="uKR-Qb-Tye" secondAttribute="centerX" id="usx-Cv-XnJ"/>
                             <constraint firstItem="cnL-Uq-Gak" firstAttribute="bottom" secondItem="7js-x4-4AT" secondAttribute="bottom" constant="20" id="w0D-vF-AtX"/>
+                            <constraint firstItem="DEl-C0-q6v" firstAttribute="centerX" secondItem="gK4-fX-iVC" secondAttribute="centerX" id="yuP-CR-so6"/>
                             <constraint firstItem="7js-x4-4AT" firstAttribute="top" secondItem="xs3-L6-kPP" secondAttribute="bottom" constant="27" id="zbw-FB-o8c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gK4-fX-iVC"/>
@@ -1134,6 +1151,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                     <connections>
                         <outlet property="addNotes" destination="xs3-L6-kPP" id="hNb-rD-3Oc"/>
                         <outlet property="cardTitle" destination="4kL-7c-zMF" id="q5P-KI-Bwe"/>
+                        <outlet property="downIndicator" destination="DEl-C0-q6v" id="xY4-pY-iLN"/>
                         <outlet property="imagePageController" destination="cnL-Uq-Gak" id="osW-q0-whB"/>
                         <outlet property="imageScrollView" destination="7js-x4-4AT" id="qXA-Ja-CpV"/>
                         <outlet property="subtopicTableView" destination="RB3-N9-r5z" id="7W7-TA-fZu"/>
@@ -1237,6 +1255,9 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                                     <action selector="backButton:" destination="9e1-g4-qxj" eventType="touchUpInside" id="xVv-hf-hab"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="down-arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="oSz-4z-laV">
+                                <rect key="frame" x="167" y="614" width="41" height="42"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1251,6 +1272,8 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                             <constraint firstItem="tYC-GA-eJG" firstAttribute="width" secondItem="Ooc-OL-PI1" secondAttribute="width" id="f0u-jR-VRD"/>
                             <constraint firstItem="IGg-gE-vtr" firstAttribute="trailing" secondItem="Uvx-bT-rBc" secondAttribute="trailing" constant="10" id="fgK-ZV-Vsx"/>
                             <constraint firstItem="Uvx-bT-rBc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Bk9-t9-Gcu" secondAttribute="trailing" constant="8" symbolic="YES" id="j8y-vo-Cei"/>
+                            <constraint firstItem="oSz-4z-laV" firstAttribute="top" secondItem="zMU-bh-lLW" secondAttribute="bottom" constant="1" id="uPs-qj-R4n"/>
+                            <constraint firstItem="oSz-4z-laV" firstAttribute="centerX" secondItem="IGg-gE-vtr" secondAttribute="centerX" id="vpF-TW-2Cw"/>
                             <constraint firstItem="zMU-bh-lLW" firstAttribute="top" secondItem="Bk9-t9-Gcu" secondAttribute="bottom" constant="32" id="wsW-Ht-DJx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IGg-gE-vtr"/>
@@ -1269,10 +1292,11 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
     </scenes>
     <resources>
         <image name="TOC_icon" width="9" height="9"/>
-        <image name="check-form.png" width="24" height="24"/>
-        <image name="icon" width="3" height="3"/>
-        <image name="information (1).png" width="24" height="24"/>
-        <image name="shuffle.png" width="24" height="24"/>
+        <image name="check-form.png" width="18" height="18"/>
+        <image name="down-arrow.png" width="48" height="48"/>
+        <image name="icon" width="25" height="25"/>
+        <image name="information (1).png" width="18" height="18"/>
+        <image name="shuffle.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VtJ-2y-YTV"/>
@@ -1280,7 +1304,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
         <segue reference="w7G-6z-jxb"/>
         <segue reference="4wZ-Ha-UyP"/>
         <segue reference="swq-kv-bzv"/>
-        <segue reference="IRs-yv-0fS"/>
+        <segue reference="T0X-qS-oqu"/>
         <segue reference="LBt-Kh-oXB"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -47,6 +47,7 @@
 		FDC7A75B22926F7900742BDD /* check-form.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75A22926F7900742BDD /* check-form.png */; };
 		FDC7A75D2292708200742BDD /* information (1).png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75C2292708200742BDD /* information (1).png */; };
 		FDC7A7632293DC6200742BDD /* Text_05.20.19.txt in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A7622293DC6200742BDD /* Text_05.20.19.txt */; };
+		FDC7A76922949D6700742BDD /* down-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A76822949D6700742BDD /* down-arrow.png */; };
 		FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */; };
 		FDD1932E221B921D000A2F63 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1932D221B921D000A2F63 /* Status.swift */; };
 		FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */; };
@@ -122,6 +123,7 @@
 		FDC7A75A22926F7900742BDD /* check-form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check-form.png"; sourceTree = "<group>"; };
 		FDC7A75C2292708200742BDD /* information (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information (1).png"; sourceTree = "<group>"; };
 		FDC7A7622293DC6200742BDD /* Text_05.20.19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text_05.20.19.txt; sourceTree = "<group>"; };
+		FDC7A76822949D6700742BDD /* down-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-arrow.png"; sourceTree = "<group>"; };
 		FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableViewCell.swift; sourceTree = "<group>"; };
 		FDD1932D221B921D000A2F63 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FDF2A57022163BBE00B1E1D0 /* Opth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -295,6 +297,7 @@
 				FDC7A75C2292708200742BDD /* information (1).png */,
 				FDC7A75A22926F7900742BDD /* check-form.png */,
 				FDC7A75822926E4900742BDD /* shuffle.png */,
+				FDC7A76822949D6700742BDD /* down-arrow.png */,
 				629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */,
 				629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */,
 				629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */,
@@ -455,6 +458,7 @@
 				FDC7A7632293DC6200742BDD /* Text_05.20.19.txt in Resources */,
 				629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */,
 				629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */,
+				FDC7A76922949D6700742BDD /* down-arrow.png in Resources */,
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,

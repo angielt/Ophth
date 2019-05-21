@@ -76,6 +76,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         easyButton.isHidden = true
         unsureButton.isHidden = true
         hardButton.isHidden = true
+        downIndicator.isHidden = false
         
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))

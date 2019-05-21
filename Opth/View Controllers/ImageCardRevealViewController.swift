@@ -25,6 +25,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
     
+    @IBOutlet weak var downIndicator: UIImageView!
     var imageIndex = 0
     var isBackFromFullScreen = false
     
@@ -78,6 +79,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     func showButtons(){
+        downIndicator.isHidden = true
         easyButton.isHidden = false
         unsureButton.isHidden = false
         hardButton.isHidden = false
@@ -89,6 +91,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         easyButton.isHidden = true
         unsureButton.isHidden = true
         hardButton.isHidden = true
+        downIndicator.isHidden = false
         
         subtopicTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
