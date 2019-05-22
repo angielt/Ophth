@@ -15,6 +15,8 @@ class SubtopicTableViewCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.Header.text = ""
+        self.Info.text = ""
     }
     
     override func awakeFromNib() {
