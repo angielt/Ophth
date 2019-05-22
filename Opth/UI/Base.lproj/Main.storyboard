@@ -243,10 +243,10 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2T7-VT-Yns">
-                                <rect key="frame" x="20" y="44" width="24" height="21"/>
+                                <rect key="frame" x="20" y="44" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="qhH-w2-Dku"/>
-                                    <constraint firstAttribute="width" constant="24" id="vo2-sE-sup"/>
+                                    <constraint firstAttribute="height" constant="20" id="qhH-w2-Dku"/>
+                                    <constraint firstAttribute="width" constant="20" id="vo2-sE-sup"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" backgroundImage="left-arrow.png"/>
@@ -427,6 +427,7 @@
                                 <state key="normal" backgroundImage="left-arrow.png"/>
                                 <connections>
                                     <action selector="backButton:" destination="LNz-K0-qAO" eventType="touchUpInside" id="L8Z-Rw-GQK"/>
+                                    <segue destination="Wta-HZ-K4Y" kind="presentation" identifier="imageBackSegue" id="xBR-bm-geq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -672,6 +673,7 @@
                                 <state key="normal" backgroundImage="left-arrow.png"/>
                                 <connections>
                                     <action selector="backButton:" destination="bBo-D8-DXN" eventType="touchUpInside" id="bqF-w0-ZSa"/>
+                                    <segue destination="Wta-HZ-K4Y" kind="presentation" identifier="imageBackSegue" id="Fc5-eH-POT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -808,10 +810,10 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSs-qw-5le">
-                                <rect key="frame" x="20" y="44" width="24" height="21"/>
+                                <rect key="frame" x="20" y="44" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="SV0-8U-ROg"/>
-                                    <constraint firstAttribute="width" constant="24" id="hz0-h4-obb"/>
+                                    <constraint firstAttribute="height" constant="20" id="SV0-8U-ROg"/>
+                                    <constraint firstAttribute="width" constant="20" id="hz0-h4-obb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" backgroundImage="left-arrow.png"/>
@@ -967,11 +969,11 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
             <objects>
                 <viewController storyboardIdentifier="cardVCSR" id="Wta-HZ-K4Y" customClass="ViewControllerReview" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6V-lm-8R1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJD-Aw-W6E">
-                                <rect key="frame" x="47" y="206.5" width="320" height="400"/>
+                                <rect key="frame" x="47" y="248" width="320" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-fS-xhY">
                                         <rect key="frame" x="0.0" y="190" width="320" height="20.5"/>
@@ -998,11 +1000,24 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                                     <outletCollection property="gestureRecognizers" destination="IVx-Xf-cG8" appends="YES" id="VzG-is-PmW"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX6-v7-DyW">
+                                <rect key="frame" x="20" y="44" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="bSa-xa-YPr"/>
+                                    <constraint firstAttribute="height" constant="20" id="ecO-Lc-38t"/>
+                                </constraints>
+                                <state key="normal" image="left-arrow"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Wta-HZ-K4Y" eventType="touchUpInside" id="VEq-hk-cdC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HJD-Aw-W6E" firstAttribute="centerY" secondItem="l6V-lm-8R1" secondAttribute="centerY" id="3dV-yJ-vQX"/>
+                            <constraint firstItem="UX6-v7-DyW" firstAttribute="top" secondItem="cwW-3z-BhM" secondAttribute="top" id="WC5-nJ-FFk"/>
                             <constraint firstItem="HJD-Aw-W6E" firstAttribute="centerX" secondItem="l6V-lm-8R1" secondAttribute="centerX" id="XD3-Xa-RiG"/>
+                            <constraint firstItem="UX6-v7-DyW" firstAttribute="leading" secondItem="cwW-3z-BhM" secondAttribute="leading" constant="20" id="qnq-yk-mSA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cwW-3z-BhM"/>
                     </view>
@@ -1303,6 +1318,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
         <image name="down-arrow.png" width="24" height="24"/>
         <image name="icon" width="3" height="3"/>
         <image name="information (1).png" width="24" height="24"/>
+        <image name="left-arrow" width="47.505153656005859" height="47.505153656005859"/>
         <image name="left-arrow.png" width="512" height="512"/>
         <image name="progressIcon.png" width="24" height="24"/>
         <image name="shuffle.png" width="24" height="24"/>
@@ -1310,10 +1326,11 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
     <inferredMetricsTieBreakers>
         <segue reference="VtJ-2y-YTV"/>
         <segue reference="GXd-lX-OvY"/>
+        <segue reference="xBR-bm-geq"/>
         <segue reference="dc3-Xb-nDd"/>
-        <segue reference="hBY-14-0wZ"/>
-        <segue reference="swq-kv-bzv"/>
-        <segue reference="ueQ-aR-ApD"/>
-        <segue reference="LBt-Kh-oXB"/>
+        <segue reference="4wZ-Ha-UyP"/>
+        <segue reference="BpS-xS-shc"/>
+        <segue reference="T0X-qS-oqu"/>
+        <segue reference="ihp-7O-gdK"/>
     </inferredMetricsTieBreakers>
 </document>

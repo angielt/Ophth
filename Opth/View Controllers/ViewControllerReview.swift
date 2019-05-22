@@ -17,6 +17,8 @@ class ViewControllerReview: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
+    @IBAction func backButton(_ sender: Any) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

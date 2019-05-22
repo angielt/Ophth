@@ -47,7 +47,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     //Buttonss
     @IBAction func backButton(_ sender: Any) {
         if spacedRep.all_active{
-            dismiss(animated: true, completion: nil)
+            self.present(ViewControllerReview(), animated: true, completion: nil)
         }
         else{
             self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
