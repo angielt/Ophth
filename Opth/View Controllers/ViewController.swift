@@ -10,8 +10,6 @@ import UIKit
 
 // view controller of card front
 class ViewController: UIViewController{
-    
-   // var curReviewIndex = spacedRep.curReviewIndex
 
     static let cardCornerRadius: CGFloat = 25
 
@@ -83,7 +81,6 @@ class ViewController: UIViewController{
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 
                 if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
-                    //self.present(viewController, animated: true, completion: nil)
                     if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
                         self.performSegue(withIdentifier: "reveal", sender: nil)
                     }
@@ -102,7 +99,6 @@ class ViewController: UIViewController{
                             spacedRep.finished = true
                             self.exitCardChange()
                         }
-                        //self.loadData() // loads data for next card
                     }
                 }
             }

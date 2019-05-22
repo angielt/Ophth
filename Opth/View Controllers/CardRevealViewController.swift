@@ -32,12 +32,10 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
-    
-    //Buttons
 
     @IBAction func backButton(_ sender: Any) {
         if spacedRep.all_active{
-            self.present(ViewControllerReview(), animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
         else{
             self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
@@ -46,21 +44,18 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func easyOnClick(_ sender: Any) {
         if(buttonsVisible == true){
             spacedRep.easyPressed()
-            // status.curReviewIndex = status.curReviewIndex + 1
             dismiss(animated: true, completion: nil)
         }
     }
     @IBAction func unsureOnClick(_ sender: Any) {
         if(buttonsVisible == true){
             spacedRep.unsurePressed()
-            // status.curReviewIndex = status.curReviewIndex + 1
             dismiss(animated: true, completion: nil)
         }
     }
     @IBAction func hardOnClick(_ sender: Any) {
         if(buttonsVisible == true){
             spacedRep.hardPressed()
-            // status.curReviewIndex = status.curReviewIndex + 1
             dismiss(animated: true, completion: nil)
         }
     }
@@ -84,7 +79,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        indexMax = spacedRep.reviewList[curReviewIndex].cards.count //spacedRep.reviewList.count
+        indexMax = spacedRep.reviewList[curReviewIndex].cards.count
         
         cardTitle.text = spacedRep.reviewList[curReviewIndex].subtopicName
     }

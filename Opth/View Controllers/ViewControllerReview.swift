@@ -18,6 +18,8 @@ class ViewControllerReview: UIViewController{
     @IBOutlet weak var card: UIView!
     
     @IBAction func backButton(_ sender: Any) {
+        self.tabBarController?.selectedIndex = 0
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -32,7 +34,6 @@ class ViewControllerReview: UIViewController{
             spacedRep.curReviewIndex = 0
         }
         spacedRep.all_active = true
-//        spacedRep.all_subtopics.shuffle()
         
         // handle if all subtopics reviewed already
         self.loadData()
@@ -89,7 +90,6 @@ class ViewControllerReview: UIViewController{
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             
             if(spacedRep.curReviewIndex < spacedRep.reviewList.count ){
-                //self.present(viewController, animated: true, completion: nil)
                 if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list[0] == "nil") {
                     self.performSegue(withIdentifier: "SRCardReveal", sender: nil)
                 }
@@ -109,6 +109,7 @@ class ViewControllerReview: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.tabBarController?.tabBar.isHidden = true
         if segue.identifier == "reveal",
             let destinationViewController = segue.destination as? CardRevealViewController {
             destinationViewController.transitioningDelegate = self

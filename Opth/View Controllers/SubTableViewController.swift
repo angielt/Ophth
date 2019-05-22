@@ -66,7 +66,7 @@ class SubTableViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.textColor = UIColor.white
     
         if (userDefaults.string(forKey: topic.subtopics[indexPath.row].subtopicName)) != nil {
-            cell.accessoryView = UIImageView(image: UIImage(named: "notes.png"))
+            cell.accessoryView = UIImageView(image: UIImage(named: "edit.png"))
             cell.accessoryView?.frame = CGRect(x: 304, y: 45, width: 25, height: 25)
         } else {
             cell.accessoryView?.isHidden = true

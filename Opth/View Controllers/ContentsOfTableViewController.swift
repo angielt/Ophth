@@ -33,6 +33,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBar.isHidden = false
+        
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
