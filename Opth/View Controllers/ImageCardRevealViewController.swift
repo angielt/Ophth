@@ -246,6 +246,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 cell.Info.textColor = UIColor.white
                 index = index+1
                 print(index)
+                print(spacedRep.reviewList[curReviewIndex].cards.count)
             }
             else if(showInfo == true){
                 showInfo = false

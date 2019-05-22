@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -543,7 +543,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD7-Br-uAZ">
-                                                    <rect key="frame" x="5" y="0.0" width="355" height="111.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="355" height="111"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21.5" id="iS7-Uz-Pdx"/>
                                                     </constraints>
@@ -553,7 +553,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-I4-tQ0">
-                                                    <rect key="frame" x="30" y="111.5" width="295" height="20.5"/>
+                                                    <rect key="frame" x="30" y="111" width="295" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -894,7 +894,7 @@
                                 <rect key="frame" x="25" y="140" width="364" height="122"/>
                                 <string key="text">ReSight is an interactive educational app for Clinical Ophthalmology. With the use of spaced repetition, a learning technique that takes advantage of the psychological spacing effect, ReSight hopes to enhance the study efficiency of clinical ophthalmology medical students.</string>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glenn Yiu, MD, PhD " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-xv-R6X">
@@ -1300,12 +1300,12 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
     </scenes>
     <resources>
         <image name="TOC_icon" width="9" height="9"/>
-        <image name="down-arrow.png" width="24" height="24"/>
-        <image name="icon" width="3" height="3"/>
-        <image name="information (1).png" width="24" height="24"/>
-        <image name="left-arrow" width="47.505153656005859" height="47.505153656005859"/>
+        <image name="down-arrow.png" width="48" height="48"/>
+        <image name="icon" width="25" height="25"/>
+        <image name="information (1).png" width="18" height="18"/>
+        <image name="left-arrow" width="512" height="512"/>
         <image name="progressIcon.png" width="24" height="24"/>
-        <image name="shuffle.png" width="24" height="24"/>
+        <image name="shuffle.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VtJ-2y-YTV"/>
