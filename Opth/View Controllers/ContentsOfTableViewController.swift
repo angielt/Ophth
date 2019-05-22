@@ -146,7 +146,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             if indexPath.row < filteredTopics.count{
                 let category = filteredTopics[indexPath.row].topicCategory
                 cell.textLabel?.text = filteredTopics[indexPath.row].topicName
-                cell.detailTextLabel?.text = "Category: \(category)"
+                cell.detailTextLabel?.text = "\(category)"
             }
             // gets the subtopics
             else if indexPath.row - filteredTopics.count < filteredSubtopics.count{
@@ -154,7 +154,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 let category = filteredSubtopics[index].subtopicCategory
                 let topic = filteredSubtopics[index].subtopicTopic
                 cell.textLabel?.text = filteredSubtopics[index].subtopicName
-                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic)"
+                cell.detailTextLabel?.text = "\(category) > \(topic)"
                 
             }
             // gets the headers
@@ -164,7 +164,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 let topic = filteredHeaders[index].cardTopic
                 let subtopic = filteredHeaders[index].cardSubtopic
                 cell.textLabel?.text = filteredHeaders[index].header
-                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic), Subtopic: \(subtopic)"
+                cell.detailTextLabel?.text = "\(category) > \(topic) > \(subtopic)"
                 
             }
             // gets the info
@@ -174,7 +174,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 let topic = filteredInfo[index].cardTopic
                 let subtopic = filteredInfo[index].cardSubtopic
                 cell.textLabel?.text = filteredInfo[index].info
-                cell.detailTextLabel?.text = "Category: \(category), Topic: \(topic), Subtopic: \(subtopic)"
+                cell.detailTextLabel?.text = "\(category) > \(topic) > \(subtopic)"
             }
             
             cell.textLabel?.textColor = UIColor.white

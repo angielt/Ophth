@@ -428,7 +428,7 @@ Retina	Pediatric Disorders	DDx Pediatric Leukocoria 	216_PediatricLeukocoria_Ret
 # Norrie disease
 # Retinal detachment
 # Myelinated nerve fibers"																													
-Retina	Pediatric Disorders	Retinoblastoma	"217_Retinoblastoma_1.jpg, 217_Retinoblastoma_2.jpg, 217_Retinoblastoma_3.gif, 218_Table.png"	*Rosette*Histopathology*International Classification of Intraocular Retinoblastoma	# Why is it important to diagnose Retinoblastoma in children?	- Because retinoblastoma is the most common primary intraocular malignancy in children	# Rb Inheritance?	- Autosomal dominant	# How often does retinoblastoma occur bilaterally verus unilaterally?	"Ô- 1/3 bilateral, 2/3 unilateral"	# How often does retinoblastoma occur hereditarily versus sporadically?	"Ô- 1/3 hereditary, 2/3 sporadic"	# Signs?	"Ô- Leukocoria or strabismus usu. before age 3
+Retina	Pediatric Disorders	Retinoblastoma	"217_Retinoblastoma_1.jpg, 217_Retinoblastoma_2.jpg, 217_Retinoblastoma_3.gif, 218_Table.png"	 *Rosette*Histopathology*International Classification of Intraocular Retinoblastoma	# Why is it important to diagnose Retinoblastoma in children?	- Because retinoblastoma is the most common primary intraocular malignancy in children	# Rb Inheritance?	- Autosomal dominant	# How often does retinoblastoma occur bilaterally verus unilaterally?	"Ô- 1/3 bilateral, 2/3 unilateral"	# How often does retinoblastoma occur hereditarily versus sporadically?	"Ô- 1/3 hereditary, 2/3 sporadic"	# Signs?	"Ô- Leukocoria or strabismus usu. before age 3
 - Early tumor in macula, later in periphery
 - LDH aqueous:plasma ratio >1.0
 - Calcium on U/S or CT"	# Path?	"Ô- Tumor grows around blood vessels
