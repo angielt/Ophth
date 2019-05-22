@@ -80,13 +80,13 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLS
     // create slides here (put progress circle here)
     func createSlides() -> [slide] {
         let slide1:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide1.label.text = "Slide 1"
+        slide1.label.text = ""
         
         let slide2:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide2.label.text = "Slide 2"
+        slide2.label.text = ""
         
         let slide3:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide3.label.text = "Slide 3"
+        slide3.label.text = ""
         
         return [slide1, slide2, slide3]
     }
@@ -188,8 +188,8 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLS
     
     @objc private func handleTap() {
         print("attempting to animate stroke")
-        accumulatesProgress()
-        //animateCircle()
+        //accumulatesProgress()
+        animateCircle()
     }
 
     

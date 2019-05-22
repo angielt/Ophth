@@ -162,7 +162,7 @@ class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
     
     @objc private func handleTap() {
         print("attempting to animate stroke")
-        accumulatesProgress()
-        //animateCircle()
+        //accumulatesProgress()
+        animateCircle()
     }
 }
