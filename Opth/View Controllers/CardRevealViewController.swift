@@ -148,12 +148,13 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
                 cell.Info.textColor = UIColor.white
                 index = index+1
                 print(index)
+                print(spacedRep.reviewList[curReviewIndex].cards.count)
             }
             else if(showInfo == true){
                 showInfo = false
                 cell.Header.textColor = UIColor.cyan
             }
-            if(index == spacedRep.reviewList[curReviewIndex].cards.count-1){
+            if(index == spacedRep.reviewList[curReviewIndex].cards.count){
                 buttonsVisible = true
                 self.showButtons()
             }
