@@ -8,7 +8,7 @@
 
 import UIKit
 
-class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLSessionDownloadDelegate {
+class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var slideScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -22,7 +22,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLS
         let label = UILabel()
         label.text = "Start"
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .white
         return label
     }()
@@ -74,7 +74,6 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLS
         setupCircleLayers()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         setupPercentageLabel()
-        
     }
     
     // create slides here (put progress circle here)
@@ -145,33 +144,32 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLS
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
         
-        // delete after the tutorial
-        let configuration = URLSessionConfiguration.default
-        let operationQueue = OperationQueue()
-        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
-        guard let url = URL(string: urlString) else {return}
-        let downloadTask = urlSession.downloadTask(with: url)
-        downloadTask.resume()
-    }
-    
-    // delete these 2 functions, pertains to downloading example
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        print(totalBytesWritten, totalBytesExpectedToWrite)
+        // get data
+        var flattenedArray = status.CategoryList.flatMap { category in
+            return category.topics.map { topics in
+                return topics.subtopics.map {
+                    subtopics in
+                    return subtopics
+                }
+            }
+        }
         
-        let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
+        var totalSubtopics = flattenedArray.flatMap({$0})
+        var doneReviewingSubtopics = totalSubtopics.filter{$0.repeat_factor == 1}
+        
+       
+        //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
+        let percentage = doneReviewingSubtopics.count / totalSubtopics.count
         
         // tie the animation to the percentage, so we don't need to run animateCircle() anymore
         DispatchQueue.main.async {
             // changes the percentage of download to show up
-            self.percentageLabel.text = "\(Int(percentage * 100))%"
-            self.shapeLayer.strokeEnd = percentage
+            self.percentageLabel.text = "\(Int(doneReviewingSubtopics.count)) / \(Int(totalSubtopics.count))"
+            self.shapeLayer.strokeEnd = CGFloat(percentage)
         }
-        print(percentage)
+        print (percentage)
     }
     
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        print("finished downloading file")
-    }
     
     fileprivate func animateCircle() {
         // allows the animation of the shapeLayer appearing around the circle
@@ -188,8 +186,8 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate, URLS
     
     @objc private func handleTap() {
         print("attempting to animate stroke")
-        //accumulatesProgress()
-        animateCircle()
+        accumulatesProgress()
+        //animateCircle()
     }
 
     
