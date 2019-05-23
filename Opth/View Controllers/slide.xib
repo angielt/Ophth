@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkV-H4-aWv">
-                    <rect key="frame" x="161.5" y="320.5" width="52.5" height="26.5"/>
+                    <rect key="frame" x="161.5" y="60" width="52.5" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -26,7 +26,7 @@
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
                 <constraint firstItem="lkV-H4-aWv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IFc-JV-UGX"/>
-                <constraint firstItem="lkV-H4-aWv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="L0S-SB-8zO"/>
+                <constraint firstItem="lkV-H4-aWv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="KOK-Gb-t0e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

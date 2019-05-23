@@ -63,7 +63,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         slideScrollView.delegate = self
         let slides:[slide] = createSlides()
         setupSlideScrollView(slides: slides)
-        pageControl.numberOfPages = 3
+        pageControl.numberOfPages = 1//3
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
         
@@ -74,20 +74,23 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         setupCircleLayers()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         setupPercentageLabel()
+        
+        accumulatesProgress()
     }
     
     // create slides here (put progress circle here)
     func createSlides() -> [slide] {
         let slide1:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide1.label.text = ""
+        slide1.label.text = "Subtopic Progress"
         
         let slide2:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide2.label.text = ""
+        slide2.label.text = "Topic Progress"
         
         let slide3:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
         slide3.label.text = ""
         
-        return [slide1, slide2, slide3]
+        return [slide1]
+        //return [slide1, slide2, slide3]
     }
     
     
@@ -186,7 +189,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
     
     @objc private func handleTap() {
         print("attempting to animate stroke")
-        accumulatesProgress()
+        //accumulatesProgress()
         //animateCircle()
     }
 
