@@ -10,6 +10,11 @@ import UIKit
 
 class SubTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    @IBAction func backtwo(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topicName: UILabel!
     var topic: Topic!

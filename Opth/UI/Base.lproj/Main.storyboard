@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I7x-iI-znD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -167,15 +167,25 @@
                                     <action selector="reviewButton:" destination="ySm-m1-qaA" eventType="touchUpInside" id="TgV-H4-CMJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-YJ-cE8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFs-YJ-cE8">
                                 <rect key="frame" x="12" y="65" width="24" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="1Iq-Eh-5Ky"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" backgroundImage="left-arrow.png"/>
                                 <connections>
                                     <action selector="backButton:" destination="ySm-m1-qaA" eventType="touchUpInside" id="41l-dm-zFQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgA-pv-a9i">
+                                <rect key="frame" x="12" y="64" width="24" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="EfG-E8-Sku"/>
+                                    <constraint firstAttribute="height" constant="22" id="vnA-IO-LWx"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="left-arrow.png"/>
+                                <connections>
+                                    <action selector="backtwo:" destination="ySm-m1-qaA" eventType="touchUpInside" id="mOe-Kg-ig4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -186,11 +196,13 @@
                             <constraint firstItem="fUK-Yt-0pV" firstAttribute="top" secondItem="AJj-Ey-Qut" secondAttribute="top" constant="20" id="NLu-1j-aSV"/>
                             <constraint firstItem="WMx-rU-0PM" firstAttribute="top" secondItem="1B4-qE-KRa" secondAttribute="bottom" constant="20" id="OOt-dy-sbz"/>
                             <constraint firstItem="1B4-qE-KRa" firstAttribute="top" secondItem="WFs-YJ-cE8" secondAttribute="bottom" constant="40" id="V10-gf-sCY"/>
+                            <constraint firstItem="mgA-pv-a9i" firstAttribute="leading" secondItem="AJj-Ey-Qut" secondAttribute="leading" constant="12" id="XTS-qq-6ne"/>
                             <constraint firstItem="1B4-qE-KRa" firstAttribute="leading" secondItem="AJj-Ey-Qut" secondAttribute="leading" id="fnC-SJ-1be"/>
                             <constraint firstItem="1B4-qE-KRa" firstAttribute="trailing" secondItem="AJj-Ey-Qut" secondAttribute="trailing" id="hqT-6M-cs9"/>
                             <constraint firstItem="fUK-Yt-0pV" firstAttribute="centerX" secondItem="tdz-cc-ayn" secondAttribute="centerX" id="qVG-XB-inE"/>
                             <constraint firstItem="1B4-qE-KRa" firstAttribute="centerX" secondItem="tdz-cc-ayn" secondAttribute="centerX" id="ryS-9P-UDG"/>
                             <constraint firstItem="WMx-rU-0PM" firstAttribute="centerX" secondItem="tdz-cc-ayn" secondAttribute="centerX" id="tsp-Gk-DiS"/>
+                            <constraint firstItem="mgA-pv-a9i" firstAttribute="top" secondItem="AJj-Ey-Qut" secondAttribute="top" constant="20" id="ufs-G4-esD"/>
                             <constraint firstItem="WFs-YJ-cE8" firstAttribute="top" secondItem="AJj-Ey-Qut" secondAttribute="top" constant="21" id="zLR-FC-6br"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AJj-Ey-Qut"/>
@@ -1017,7 +1029,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX6-v7-DyW">
-                                <rect key="frame" x="20" y="44" width="20" height="20"/>
+                                <rect key="frame" x="20" y="64" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="bSa-xa-YPr"/>
                                     <constraint firstAttribute="height" constant="20" id="ecO-Lc-38t"/>
@@ -1031,7 +1043,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HJD-Aw-W6E" firstAttribute="centerY" secondItem="l6V-lm-8R1" secondAttribute="centerY" id="3dV-yJ-vQX"/>
-                            <constraint firstItem="UX6-v7-DyW" firstAttribute="top" secondItem="cwW-3z-BhM" secondAttribute="top" id="WC5-nJ-FFk"/>
+                            <constraint firstItem="UX6-v7-DyW" firstAttribute="top" secondItem="cwW-3z-BhM" secondAttribute="top" constant="20" id="WC5-nJ-FFk"/>
                             <constraint firstItem="HJD-Aw-W6E" firstAttribute="centerX" secondItem="l6V-lm-8R1" secondAttribute="centerX" id="XD3-Xa-RiG"/>
                             <constraint firstItem="UX6-v7-DyW" firstAttribute="leading" secondItem="cwW-3z-BhM" secondAttribute="leading" constant="20" id="qnq-yk-mSA"/>
                         </constraints>
@@ -1331,13 +1343,13 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
     </scenes>
     <resources>
         <image name="TOC_icon" width="9" height="9"/>
-        <image name="down-arrow.png" width="24" height="24"/>
-        <image name="icon" width="3" height="3"/>
-        <image name="information (1).png" width="24" height="24"/>
-        <image name="left-arrow" width="47.505153656005859" height="47.505153656005859"/>
-        <image name="left-arrow.png" width="512" height="512"/>
+        <image name="down-arrow.png" width="48" height="48"/>
+        <image name="icon" width="25" height="25"/>
+        <image name="information (1).png" width="18" height="18"/>
+        <image name="left-arrow" width="512" height="512"/>
+        <image name="left-arrow.png" width="47.505153656005859" height="47.505153656005859"/>
         <image name="progressIcon.png" width="24" height="24"/>
-        <image name="shuffle.png" width="24" height="24"/>
+        <image name="shuffle.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VtJ-2y-YTV"/>
