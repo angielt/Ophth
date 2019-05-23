@@ -63,9 +63,9 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         slideScrollView.delegate = self
         let slides:[slide] = createSlides()
         setupSlideScrollView(slides: slides)
-        pageControl.numberOfPages = 1//3
-        pageControl.currentPage = 0
-        view.bringSubviewToFront(pageControl)
+        //pageControl.numberOfPages = 3
+        //pageControl.currentPage = 0
+        //view.bringSubviewToFront(pageControl)
         
         // for progress
         setupNotificationObservers()
