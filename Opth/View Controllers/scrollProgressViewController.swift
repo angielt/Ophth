@@ -72,7 +72,6 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         // used the set color in extensions file
         view.backgroundColor = UIColor.backgroundColor
         setupCircleLayers()
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         setupPercentageLabel()
         
         accumulatesProgress()
@@ -138,12 +137,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         pulsatingLayer.add(animation, forKey: "pulsing")
     }
     
-    // delete after the tutorial
-    let urlString = "https://firebasestorage.googleapis.com/v0/b/direstorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e28261d0-7219-49d2-b32d-367e1686500c"
-    
     private func accumulatesProgress() {
-        print("Attempting to get progress from student data")
-        
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
         
@@ -162,15 +156,15 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         
        
         //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-        let percentage = doneReviewingSubtopics.count / totalSubtopics.count
+        let percentage = CGFloat(doneReviewingSubtopics.count) / CGFloat(totalSubtopics.count)
         
         // tie the animation to the percentage, so we don't need to run animateCircle() anymore
         DispatchQueue.main.async {
             // changes the percentage of download to show up
             self.percentageLabel.text = "\(Int(doneReviewingSubtopics.count)) / \(Int(totalSubtopics.count))"
-            self.shapeLayer.strokeEnd = CGFloat(percentage)
+            self.shapeLayer.strokeEnd = percentage
         }
-        print (percentage)
+        
     }
     
     
@@ -186,13 +180,6 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         // adds the animation to the shapeLayer to appear in the view
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
     }
-    
-    @objc private func handleTap() {
-        print("attempting to animate stroke")
-        //accumulatesProgress()
-        //animateCircle()
-    }
-
     
     // Set up the frame and size of the slides (prob don't need to edit this function)
     func setupSlideScrollView(slides:[slide]) {
