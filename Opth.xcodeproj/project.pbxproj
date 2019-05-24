@@ -19,7 +19,6 @@
 		629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */; };
 		629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */; };
 		629BB84A2294BF9E0066F20C /* progressIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 629BB8492294BF9C0066F20C /* progressIcon.png */; };
-		629BB8502294E5CF0066F20C /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 629BB84F2294E5CE0066F20C /* left-arrow.png */; };
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
@@ -94,7 +93,6 @@
 		629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; sourceTree = "<group>"; };
 		629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; sourceTree = "<group>"; };
 		629BB8492294BF9C0066F20C /* progressIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressIcon.png; sourceTree = "<group>"; };
-		629BB84F2294E5CE0066F20C /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
@@ -305,7 +303,6 @@
 				FDA541652251C8D100B536E0 /* View */,
 				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
-				629BB84F2294E5CE0066F20C /* left-arrow.png */,
 				629BB8492294BF9C0066F20C /* progressIcon.png */,
 				FDC7A75C2292708200742BDD /* information (1).png */,
 				FDC7A75822926E4900742BDD /* shuffle.png */,
@@ -470,7 +467,6 @@
 				FDC7A7632293DC6200742BDD /* Text_05.20.19.txt in Resources */,
 				629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */,
 				629BB84A2294BF9E0066F20C /* progressIcon.png in Resources */,
-				629BB8502294E5CF0066F20C /* left-arrow.png in Resources */,
 				629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */,
 				FDC7A76922949D6700742BDD /* down-arrow.png in Resources */,
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
