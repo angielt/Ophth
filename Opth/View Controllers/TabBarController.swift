@@ -10,6 +10,7 @@ import UIKit
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate{
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -21,9 +22,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         if viewController is ContentsOfTableViewController{
             //print("hi")
             if(spacedRep.all_active == true){// switch from mass SR store mass SR curReview
-                spacedRep.all_active = false
                 if(spacedRep.all_subtopics.count != 0){
                     spacedRep.all_curReviewIndex = spacedRep.curReviewIndex
+                    spacedRep.all_active = false
                 }
                 spacedRep.clear()
             }
@@ -32,6 +33,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
             spacedRep.all_active = true
             spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
             spacedRep.reviewList = spacedRep.all_subtopics
+        }
+        else if viewController is scrollProgressViewController{
+           status.progressVC?.accumulatesProgress()
+//            status.progressVC?.animatePulsatingLayer()
         }
     }
 

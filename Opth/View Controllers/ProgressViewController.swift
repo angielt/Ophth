@@ -95,7 +95,7 @@ class ProgressViewController: UIViewController, URLSessionDownloadDelegate {
     }
     
     // animate pulsating layer
-    private func animatePulsatingLayer() {
+    func animatePulsatingLayer() {
         //circle int he back is constantly scaling back and forth
         let animation = CABasicAnimation(keyPath: "transform.scale")
         

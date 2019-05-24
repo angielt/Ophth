@@ -60,6 +60,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        status.progressVC = self
         slideScrollView.delegate = self
         let slides:[slide] = createSlides()
         setupSlideScrollView(slides: slides)
@@ -122,7 +123,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // animate pulsating layer
-    private func animatePulsatingLayer() {
+    func animatePulsatingLayer() {
         //circle int he back is constantly scaling back and forth
         let animation = CABasicAnimation(keyPath: "transform.scale")
         
@@ -137,7 +138,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         pulsatingLayer.add(animation, forKey: "pulsing")
     }
     
-    private func accumulatesProgress() {
+    func accumulatesProgress() {
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
         
