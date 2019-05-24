@@ -805,14 +805,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXLJL7MF59;
+				DEVELOPMENT_TEAM = UNFBKU938B;
 				INFOPLIST_FILE = Opth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itzel1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Angie3423;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Opth/View Controllers/Table of Contents/Opth-Bridging-Header.h";
@@ -830,14 +830,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXLJL7MF59;
+				DEVELOPMENT_TEAM = UNFBKU938B;
 				INFOPLIST_FILE = Opth/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itzel1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Angie3423;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Opth/View Controllers/Table of Contents/Opth-Bridging-Header.h";
