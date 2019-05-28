@@ -47,8 +47,10 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     var subtopic: Subtopic!
     var imageCount = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         downIndicator.isHidden = false
         
         subtopicTableView.rowHeight = UITableView.automaticDimension
@@ -115,6 +117,28 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             }
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setScrollIndicatorColor(color: UIColor.white)
+        DispatchQueue.main.asyncAfter(deadline: (.now() + .milliseconds(500))){
+            self.subtopicTableView.flashScrollIndicators()
+        }
+    }
+    
+    func setScrollIndicatorColor(color:UIColor) {
+        for view in self.subtopicTableView.subviews {
+            if view.isKind(of: UIImageView.self),
+                let imageView = view as? UIImageView,
+                let _ = imageView.image {
+                imageView.image = nil
+                view.backgroundColor = color
+            }
+        }
+        self.subtopicTableView.flashScrollIndicators()
+    }
+    
+   
     
     //Fade in effect
     func fadeIn(name: UILabel){
