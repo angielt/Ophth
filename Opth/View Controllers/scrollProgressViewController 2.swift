@@ -20,6 +20,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
     // how the percentage label looks
     let percentageLabel: UILabel = {
         let label = UILabel()
+        label.text = "Start"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textColor = .white
@@ -168,7 +169,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    /*
+    
     fileprivate func animateCircle() {
         // allows the animation of the shapeLayer appearing around the circle
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
@@ -180,7 +181,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         basicAnimation.isRemovedOnCompletion = false
         // adds the animation to the shapeLayer to appear in the view
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
-    }*/
+    }
     
     // Set up the frame and size of the slides (prob don't need to edit this function)
     func setupSlideScrollView(slides:[slide]) {
