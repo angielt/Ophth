@@ -96,16 +96,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             cards.info.range(of: searchText, options: .caseInsensitive) != nil
         })
         
-        func loadData() {
-            // code to load data from network, and refresh the interface
-            tableView.reloadData()
-        }
-        
         // checks
         if (searchBar.text == "") {
             searchActive = false
             dismissKeyboard()
-            loadData()
         }
         else {
             searchActive = true;
@@ -286,6 +280,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
             }
         }
         else{
+            tapTopic = false
             if indexPath.row == 0 {  //Categories
                 if status.CategoryList[indexPath.section].opened == true {
                     status.CategoryList[indexPath.section].opened = false

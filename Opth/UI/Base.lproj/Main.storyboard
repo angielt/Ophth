@@ -127,10 +127,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1B4-qE-KRa">
-                                <rect key="frame" x="0.0" y="126" width="414" height="656"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="675"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="656" id="OHE-yz-5P6"/>
+                                    <constraint firstAttribute="height" constant="675" id="OHE-yz-5P6"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subCell" id="fFZ-bb-5jV">
@@ -195,7 +195,7 @@
                             <constraint firstItem="AJj-Ey-Qut" firstAttribute="bottom" secondItem="WMx-rU-0PM" secondAttribute="bottom" constant="20" id="Lkv-8b-1jK"/>
                             <constraint firstItem="fUK-Yt-0pV" firstAttribute="top" secondItem="AJj-Ey-Qut" secondAttribute="top" constant="20" id="NLu-1j-aSV"/>
                             <constraint firstItem="WMx-rU-0PM" firstAttribute="top" secondItem="1B4-qE-KRa" secondAttribute="bottom" constant="20" id="OOt-dy-sbz"/>
-                            <constraint firstItem="1B4-qE-KRa" firstAttribute="top" secondItem="WFs-YJ-cE8" secondAttribute="bottom" constant="40" id="V10-gf-sCY"/>
+                            <constraint firstItem="1B4-qE-KRa" firstAttribute="top" secondItem="WFs-YJ-cE8" secondAttribute="bottom" constant="21" id="V10-gf-sCY"/>
                             <constraint firstItem="mgA-pv-a9i" firstAttribute="leading" secondItem="AJj-Ey-Qut" secondAttribute="leading" constant="12" id="XTS-qq-6ne"/>
                             <constraint firstItem="1B4-qE-KRa" firstAttribute="leading" secondItem="AJj-Ey-Qut" secondAttribute="leading" id="fnC-SJ-1be"/>
                             <constraint firstItem="1B4-qE-KRa" firstAttribute="trailing" secondItem="AJj-Ey-Qut" secondAttribute="trailing" id="hqT-6M-cs9"/>
@@ -1384,7 +1384,7 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
         <segue reference="gx3-AS-CXo"/>
         <segue reference="Sm6-FY-O2q"/>
         <segue reference="xBR-bm-geq"/>
-        <segue reference="PUi-mI-Naq"/>
+        <segue reference="dc3-Xb-nDd"/>
         <segue reference="hBY-14-0wZ"/>
         <segue reference="BpS-xS-shc"/>
         <segue reference="ueQ-aR-ApD"/>
