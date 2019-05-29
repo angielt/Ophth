@@ -50,7 +50,7 @@ class slide: UIView, UIScrollViewDelegate {
         layer.fillColor = fillColor.cgColor
         layer.lineCap = CAShapeLayerLineCap.round
         // puts circle in the center of view instead of .zero origin on top left corner of screen
-        layer.position = CGPoint(x: self.frame.width/1.8, y: self.frame.height/1.4)
+        layer.position = CGPoint(x: self.frame.width/2, y: self.frame.height/1.7)
         return layer
     }
     
@@ -59,7 +59,7 @@ class slide: UIView, UIScrollViewDelegate {
         // add percentage to the view inside the circle (format)
         addSubview(percentageLabel)
         percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        percentageLabel.center = CGPoint(x: self.frame.width/1.8, y: self.frame.height/1.4) // can use auto layout
+        percentageLabel.center = CGPoint(x: self.frame.width/2, y: self.frame.height/1.7) // can use auto layout
         
     }
     
@@ -102,8 +102,6 @@ class slide: UIView, UIScrollViewDelegate {
     func accumulatesProgress() {
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
-        
-        print(indicator)
         
         //SUBTOPIC
         if indicator == "subtopic"{
