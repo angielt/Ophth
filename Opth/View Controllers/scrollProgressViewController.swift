@@ -40,23 +40,24 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         slide1.setupPercentageLabel()
         slide1.accumulatesProgress()
         
-        let slide2:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide2.label.text = "Topic Progress"
-        slide2.indicator = "topic"
-        slide2.setupNotificationObservers()
-        slide2.setupCircleLayers()
-        slide2.setupPercentageLabel()
-        slide2.accumulatesProgress()
+//        let slide2:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
+//        slide2.label.text = "Topic Progress"
+//        slide2.indicator = "topic"
+//        slide2.setupNotificationObservers()
+//        slide2.setupCircleLayers()
+//        slide2.setupPercentageLabel()
+//        slide2.accumulatesProgress()
+//        
+//        let slide3:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
+//        slide3.label.text = "Category Progress"
+//        slide3.indicator = "category"
+//        slide3.setupNotificationObservers()
+//        slide3.setupCircleLayers()
+//        slide3.setupPercentageLabel()
+//        slide3.accumulatesProgress()
         
-        let slide3:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide3.label.text = "Category Progress"
-        slide3.indicator = "category"
-        slide3.setupNotificationObservers()
-        slide3.setupCircleLayers()
-        slide3.setupPercentageLabel()
-        slide3.accumulatesProgress()
-        
-        return [slide1, slide2, slide3]
+        return [slide1]
+        //return [slide1, slide2, slide3]
     }
     
     
