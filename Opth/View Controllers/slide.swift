@@ -10,6 +10,8 @@ import UIKit
 
 class slide: UIView, UIScrollViewDelegate {
 
+    
+   
     @IBOutlet weak var label: UILabel!
     var indicator = ""
     var shapeLayer: CAShapeLayer!
@@ -99,8 +101,9 @@ class slide: UIView, UIScrollViewDelegate {
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
         
-        //Subtopic
+        //SUBTOPIC
         if indicator == "subtopic"{
+            print("subtopic here ")
             // get data
             var flattenedArray = status.CategoryList.flatMap { category in
                 return category.topics.map { topics in
@@ -126,11 +129,50 @@ class slide: UIView, UIScrollViewDelegate {
                 self.shapeLayer.strokeEnd = percentage
             }
         }
+            // TOPICS
         else if indicator == "topic"{
+            // get data
+            var flattenedArray = status.CategoryList.flatMap { category in
+                return category.topics.map { topics in
+                    return topics
+                }
+            }
+
+            var totalTopics = flattenedArray.flatMap({$0})
+            var doneReviewingTopics = totalTopics.filter{$0.repeat_factor == 1}
             
+            //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
+            let percentage = CGFloat(doneReviewingTopics.count) / CGFloat(totalTopics.count)
+            
+            // tie the animation to the percentage, so we don't need to run animateCircle() anymore
+            DispatchQueue.main.async {
+                // changes the percentage of download to show up
+                self.percentageLabel.text = "\(Int(doneReviewingTopics.count)) / \(Int(totalTopics.count))" + "\n" + "Cards"
+                self.percentageLabel.numberOfLines = 2
+                self.shapeLayer.strokeEnd = percentage
+            }
         }
+            // CATEGORY
         else if indicator == "category"{
+            // get data
+            var flattenedArray = status.CategoryList.flatMap { category in
+                return category
+            }
             
+            var totalCategory = flattenedArray.flatMap({$0})
+            var doneReviewingCategory = totalCategory.filter{$0.repeat_factor == 1}
+            
+            
+            //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
+            let percentage = CGFloat(doneReviewingCategory.count) / CGFloat(totalCategory.count)
+            
+            // tie the animation to the percentage, so we don't need to run animateCircle() anymore
+            DispatchQueue.main.async {
+                // changes the percentage of download to show up
+                self.percentageLabel.text = "\(Int(doneReviewingCategory.count)) / \(Int(totalCategory.count))" + "\n" + "Cards"
+                self.percentageLabel.numberOfLines = 2
+                self.shapeLayer.strokeEnd = percentage
+            }
         }
     }
 }

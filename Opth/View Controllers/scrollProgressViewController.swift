@@ -42,7 +42,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         
         let slide2:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
         slide2.label.text = "Topic Progress"
-        slide1.indicator = "topic"
+        slide2.indicator = "topic"
         slide2.setupNotificationObservers()
         slide2.setupCircleLayers()
         slide2.setupPercentageLabel()
@@ -50,7 +50,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         
         let slide3:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
         slide3.label.text = "Category Progress"
-        slide1.indicator = "category"
+        slide3.indicator = "category"
         slide3.setupNotificationObservers()
         slide3.setupCircleLayers()
         slide3.setupPercentageLabel()
