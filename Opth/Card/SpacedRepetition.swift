@@ -81,9 +81,6 @@ class SpacedRepetition {
     // called ContentsOfTableVC when user clicks topic
     // stores topic object in SpacedRepetition class
     func setReviewTopic(topic:inout Topic){
-        print("Review Topic")
-        print(topic.topicName)
-        print(topic.subtopics.count)
         self.topic = topic
         self.subtopics = topic.subtopics
         //print(topic.topicName)
@@ -150,6 +147,13 @@ class SpacedRepetition {
     // when review is finished, chnage the exit card.
     // plz dont cahnge anything in this function logically
     func easyPressed(){
+        if(spacedRep.finished){
+            if(reviewList[curReviewIndex].score+5 <= max_score){
+                reviewList[curReviewIndex].score = reviewList[curReviewIndex].score+5
+            }
+             reviewList[curReviewIndex].repeat_factor = 1
+        }
+        
         if(curReviewIndex-1 <= self.reviewList.count-1 && curReviewIndex != 0){
             if(reviewList[curReviewIndex-1].score+5 <= max_score){
                 reviewList[curReviewIndex-1].score = reviewList[curReviewIndex-1].score+5

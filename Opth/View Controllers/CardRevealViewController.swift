@@ -35,6 +35,8 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
 
     @IBAction func backButton(_ sender: Any) {
         if spacedRep.all_active{
+            spacedRep.curReviewIndex = spacedRep.curReviewIndex - 1
+            spacedRep.VCreference?.loadData()
             dismiss(animated: true, completion: nil)
         }
         else{
