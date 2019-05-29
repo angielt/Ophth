@@ -20,7 +20,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //status.progressVC = self
+        //status.progressVC = slide()
         slideScrollView.delegate = self
         let slides:[slide] = createSlides()
         setupSlideScrollView(slides: slides)
@@ -55,6 +55,7 @@ class scrollProgressViewController: UIViewController, UIScrollViewDelegate {
         slide3.setupCircleLayers()
         slide3.setupPercentageLabel()
         slide3.accumulatesProgress()
+        
         return [slide1, slide2, slide3]
     }
     

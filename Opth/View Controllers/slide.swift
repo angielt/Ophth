@@ -10,7 +10,9 @@ import UIKit
 
 class slide: UIView, UIScrollViewDelegate {
 
-    
+    override func layoutSubviews() {
+        status.progressVC = self
+    }
    
     @IBOutlet weak var label: UILabel!
     var indicator = ""
@@ -101,9 +103,10 @@ class slide: UIView, UIScrollViewDelegate {
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
         
+        print(indicator)
+        
         //SUBTOPIC
         if indicator == "subtopic"{
-            print("subtopic here ")
             // get data
             var flattenedArray = status.CategoryList.flatMap { category in
                 return category.topics.map { topics in
@@ -129,8 +132,8 @@ class slide: UIView, UIScrollViewDelegate {
                 self.shapeLayer.strokeEnd = percentage
             }
         }
-            // TOPICS
-        else if indicator == "topic"{
+        // TOPICS
+        if indicator == "topic"{
             // get data
             var flattenedArray = status.CategoryList.flatMap { category in
                 return category.topics.map { topics in
@@ -152,8 +155,8 @@ class slide: UIView, UIScrollViewDelegate {
                 self.shapeLayer.strokeEnd = percentage
             }
         }
-            // CATEGORY
-        else if indicator == "category"{
+        // CATEGORY
+        if indicator == "category"{
             // get data
             var flattenedArray = status.CategoryList.flatMap { category in
                 return category
