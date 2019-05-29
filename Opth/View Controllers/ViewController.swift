@@ -63,9 +63,9 @@ class ViewController: UIViewController{
         
         if(spacedRep.finished == true){
             spacedRep.finished = false
-            print("item repeat factor")
+            //print("item repeat factor")
             for item in spacedRep.reviewList{
-                print(item.repeat_factor)
+                //print(item.repeat_factor)
             }
             
             self.dismiss(animated: true, completion: nil) // possible callback to clear spaced rep stuff

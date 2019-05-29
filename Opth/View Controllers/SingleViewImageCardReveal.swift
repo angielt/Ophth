@@ -50,7 +50,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        downIndicator.loadGif(name: "downArrow")
         downIndicator.isHidden = false
         
         subtopicTableView.rowHeight = UITableView.automaticDimension

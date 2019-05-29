@@ -70,6 +70,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        downIndicator.loadGif(name: "downArrow")
         easyButton.isHidden = true
         unsureButton.isHidden = true
         hardButton.isHidden = true

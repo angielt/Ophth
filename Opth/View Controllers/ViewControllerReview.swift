@@ -35,10 +35,10 @@ class ViewControllerReview: UIViewController{
         super.viewDidLoad()
         
         for item in status.CategoryList[0].topics[0].subtopics{
-            print(item.repeat_factor)
+            //print(item.repeat_factor)
         }
         if(spacedRep.all_subtopics.count == 0){
-            print("subtopics 0-1")
+            //print("subtopics 0-1")
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
             spacedRep.curReviewIndex = 0
         }

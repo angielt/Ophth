@@ -12,6 +12,7 @@
 		6208A9E32295DFD40055D727 /* slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6208A9E22295DFD40055D727 /* slide.xib */; };
 		6208A9E52295E00C0055D727 /* slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6208A9E42295E00C0055D727 /* slide.swift */; };
 		6208A9E72295E0DA0055D727 /* scrollProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6208A9E62295E0DA0055D727 /* scrollProgressViewController.swift */; };
+		62420C10229F49120008F4A4 /* downArrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62420C0F229F49120008F4A4 /* downArrow.gif */; };
 		628BAF3F228C07A90086C911 /* SingleViewImageCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */; };
 		628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */; };
 		629720F42290E3F000F10CBE /* 217_Retinoblastoma_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */; };
@@ -30,7 +31,6 @@
 		62ED789A2283A224002D59C4 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78992283A224002D59C4 /* SingleViewController.swift */; };
 		62ED789C22855B04002D59C4 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62ED789B22855B04002D59C4 /* temp.txt */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
-		BC949D152290C868000E15B4 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC949D142290C868000E15B4 /* ProgressViewController.swift */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
 		BC981F82229474C100E09BF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC981F81229474C100E09BF2 /* Extensions.swift */; };
@@ -50,7 +50,6 @@
 		FDC7A75922926E4900742BDD /* shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75822926E4900742BDD /* shuffle.png */; };
 		FDC7A75D2292708200742BDD /* information (1).png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75C2292708200742BDD /* information (1).png */; };
 		FDC7A7632293DC6200742BDD /* Text_05.20.19.txt in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A7622293DC6200742BDD /* Text_05.20.19.txt */; };
-		FDC7A76922949D6700742BDD /* down-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A76822949D6700742BDD /* down-arrow.png */; };
 		FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */; };
 		FDD1932E221B921D000A2F63 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1932D221B921D000A2F63 /* Status.swift */; };
 		FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */; };
@@ -86,6 +85,7 @@
 		6208A9E22295DFD40055D727 /* slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = slide.xib; sourceTree = "<group>"; };
 		6208A9E42295E00C0055D727 /* slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slide.swift; sourceTree = "<group>"; };
 		6208A9E62295E0DA0055D727 /* scrollProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollProgressViewController.swift; sourceTree = "<group>"; };
+		62420C0F229F49120008F4A4 /* downArrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = downArrow.gif; sourceTree = "<group>"; };
 		628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewImageCardReveal.swift; sourceTree = "<group>"; };
 		628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewCardReveal.swift; sourceTree = "<group>"; };
 		629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 217_Retinoblastoma_3.gif; path = images/217_Retinoblastoma_3.gif; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 		73694D2F8A40800434A566FB /* Pods-OpthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthUITests.release.xcconfig"; path = "Target Support Files/Pods-OpthUITests/Pods-OpthUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7842305F1F15E03D21C79C52 /* Pods-Opth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opth.debug.xcconfig"; path = "Target Support Files/Pods-Opth/Pods-Opth.debug.xcconfig"; sourceTree = "<group>"; };
 		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC949D142290C868000E15B4 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsOfTableViewController.swift; sourceTree = "<group>"; };
 		BC95F77F2252F8C6008697EA /* SmallTes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SmallTes.txt; sourceTree = "<group>"; };
 		BC981F81229474C100E09BF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -129,7 +128,6 @@
 		FDC7A75822926E4900742BDD /* shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuffle.png; sourceTree = "<group>"; };
 		FDC7A75C2292708200742BDD /* information (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information (1).png"; sourceTree = "<group>"; };
 		FDC7A7622293DC6200742BDD /* Text_05.20.19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text_05.20.19.txt; sourceTree = "<group>"; };
-		FDC7A76822949D6700742BDD /* down-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down-arrow.png"; sourceTree = "<group>"; };
 		FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableViewCell.swift; sourceTree = "<group>"; };
 		FDD1932D221B921D000A2F63 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FDF2A57022163BBE00B1E1D0 /* Opth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,7 +227,6 @@
 				62ED78992283A224002D59C4 /* SingleViewController.swift */,
 				628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */,
 				628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */,
-				BC949D142290C868000E15B4 /* ProgressViewController.swift */,
 				BC981F81229474C100E09BF2 /* Extensions.swift */,
 				6208A9E22295DFD40055D727 /* slide.xib */,
 				6208A9E42295E00C0055D727 /* slide.swift */,
@@ -305,8 +302,8 @@
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
 				629BB8492294BF9C0066F20C /* progressIcon.png */,
 				FDC7A75C2292708200742BDD /* information (1).png */,
+				62420C0F229F49120008F4A4 /* downArrow.gif */,
 				FDC7A75822926E4900742BDD /* shuffle.png */,
-				FDC7A76822949D6700742BDD /* down-arrow.png */,
 				629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */,
 				629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */,
 				629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */,
@@ -463,12 +460,12 @@
 				FD1FF2C02290B663007A7DA2 /* underlinetest.txt in Resources */,
 				FDC7A75922926E4900742BDD /* shuffle.png in Resources */,
 				629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */,
+				62420C10229F49120008F4A4 /* downArrow.gif in Resources */,
 				6208A9E32295DFD40055D727 /* slide.xib in Resources */,
 				FDC7A7632293DC6200742BDD /* Text_05.20.19.txt in Resources */,
 				629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */,
 				629BB84A2294BF9E0066F20C /* progressIcon.png in Resources */,
 				629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */,
-				FDC7A76922949D6700742BDD /* down-arrow.png in Resources */,
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
@@ -613,7 +610,6 @@
 				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
 				62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
-				BC949D152290C868000E15B4 /* ProgressViewController.swift in Sources */,
 				628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,
 				F86AEED2227031DD00F4FC9C /* NotesViewController.swift in Sources */,

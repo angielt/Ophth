@@ -87,7 +87,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        downIndicator.loadGif(name: "downArrow")
         easyButton.isHidden = true
         unsureButton.isHidden = true
         hardButton.isHidden = true
@@ -192,7 +192,7 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         if(spacedRep.reviewList.count == 0){
-            print(" imagecardreveal spacedRep.reviewList.count == 0")
+            //print(" imagecardreveal spacedRep.reviewList.count == 0")
         }
         let cardCount = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
 
