@@ -161,6 +161,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             cell.Header.text = subtopic.cards[indexPath.row].header
             cell.Info.text = subtopic.cards[indexPath.row].info
             
+            
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan
                 cell.Info.textColor = UIColor.black
