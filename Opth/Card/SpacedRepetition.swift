@@ -109,7 +109,7 @@ class SpacedRepetition {
             }
         }
         
-        self.all_subtopics = flattenedArray.flatMap({$0}).shuffled()
+        self.all_subtopics = flattenedArray.flatMap({$0}).shuffled() // store all subtopics
         self.reviewList = self.all_subtopics
         print("review list set")
     }
