@@ -881,38 +881,38 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                             </scrollView>
-                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8QX-s7-MaT">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8QX-s7-MaT">
                                 <rect key="frame" x="187.5" y="776" width="39" height="37"/>
                             </pageControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCL-sd-6P1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAB-C0-RGQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEV-EJ-0yt">
-                                        <rect key="frame" x="125.5" y="65" width="163" height="25.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Xm-h2-9CE">
+                                        <rect key="frame" x="129" y="81" width="156" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.61406078379999995" green="0.91250835509999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="mEV-EJ-0yt" firstAttribute="top" secondItem="vCL-sd-6P1" secondAttribute="top" constant="65" id="Ccf-kL-L7v"/>
-                                    <constraint firstItem="mEV-EJ-0yt" firstAttribute="centerX" secondItem="vCL-sd-6P1" secondAttribute="centerX" id="RaE-5m-0PD"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Xm-h2-9CE" secondAttribute="bottom" constant="15" id="Hp7-I8-WAK"/>
+                                    <constraint firstItem="8Xm-h2-9CE" firstAttribute="centerX" secondItem="SAB-C0-RGQ" secondAttribute="centerX" id="Ix5-ca-29x"/>
+                                    <constraint firstAttribute="height" constant="120" id="wmq-XO-BNB"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OJx-R8-OKU" firstAttribute="bottom" secondItem="mJ0-fN-Wq9" secondAttribute="bottom" id="DCO-pP-Yjy"/>
+                            <constraint firstItem="SAB-C0-RGQ" firstAttribute="top" secondItem="rrC-hd-rhC" secondAttribute="top" id="Hfu-yr-brc"/>
+                            <constraint firstItem="SAB-C0-RGQ" firstAttribute="leading" secondItem="mJ0-fN-Wq9" secondAttribute="leading" id="JgA-PV-QtB"/>
                             <constraint firstItem="OJx-R8-OKU" firstAttribute="leading" secondItem="mJ0-fN-Wq9" secondAttribute="leading" id="Nlz-UQ-MLa"/>
                             <constraint firstItem="8QX-s7-MaT" firstAttribute="centerX" secondItem="rrC-hd-rhC" secondAttribute="centerX" id="O4x-hE-YKj"/>
-                            <constraint firstItem="vCL-sd-6P1" firstAttribute="leading" secondItem="mJ0-fN-Wq9" secondAttribute="leading" id="RKf-aW-bGn"/>
-                            <constraint firstItem="vCL-sd-6P1" firstAttribute="top" secondItem="rrC-hd-rhC" secondAttribute="top" id="WzK-Ug-hca"/>
+                            <constraint firstItem="SAB-C0-RGQ" firstAttribute="trailing" secondItem="mJ0-fN-Wq9" secondAttribute="trailing" id="cOq-5l-eUe"/>
                             <constraint firstItem="OJx-R8-OKU" firstAttribute="trailing" secondItem="mJ0-fN-Wq9" secondAttribute="trailing" id="cRk-pf-kQs"/>
                             <constraint firstItem="OJx-R8-OKU" firstAttribute="top" secondItem="rrC-hd-rhC" secondAttribute="top" id="fUK-60-RA5"/>
-                            <constraint firstItem="mJ0-fN-Wq9" firstAttribute="trailing" secondItem="vCL-sd-6P1" secondAttribute="trailing" id="iVn-vH-SW4"/>
                             <constraint firstItem="8QX-s7-MaT" firstAttribute="bottom" secondItem="OJx-R8-OKU" secondAttribute="bottom" id="xsl-ak-jEa"/>
-                            <constraint firstItem="OJx-R8-OKU" firstAttribute="top" secondItem="vCL-sd-6P1" secondAttribute="bottom" constant="-5" id="yMa-Ut-VpV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mJ0-fN-Wq9"/>
                     </view>

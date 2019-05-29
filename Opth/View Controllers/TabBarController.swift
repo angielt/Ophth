@@ -35,8 +35,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
             spacedRep.reviewList = spacedRep.all_subtopics
         }
         else if viewController is scrollProgressViewController{
-            status.progressVC?.accumulatesProgress()
-            status.progressVC?.animatePulsatingLayer()
+            //status.progressVC?.accumulatesProgress()
+            //status.progressVC?.animatePulsatingLayer()
         }
     }
 

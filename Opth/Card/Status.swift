@@ -11,7 +11,7 @@ import Foundation
 // when database is decided, this will handle all interactions with the database
 class Status{
     var CategoryList:[Category]
-    var progressVC:scrollProgressViewController?
+    //var progressVC:slide?
     
     init(){
         self.CategoryList = []
