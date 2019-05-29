@@ -20,6 +20,15 @@ class ViewControllerReview: UIViewController{
     @IBAction func backButton(_ sender: Any) {
         self.tabBarController?.selectedIndex = 0
         self.tabBarController?.tabBar.isHidden = false
+        
+        
+        if(spacedRep.all_active == true){// already shuffled all, now exited back to TableofContents
+            if(spacedRep.all_subtopics.count != 0){
+                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // store where user left off in shuffle all
+                spacedRep.all_active = false
+            }
+            spacedRep.clear()
+        }
     }
     
     override func viewDidLoad() {

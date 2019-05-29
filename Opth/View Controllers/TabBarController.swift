@@ -27,10 +27,13 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
                 }
                 spacedRep.clear()
             }
+            // shuffle all last card index stored in when back button is called in ViewControllerReview
         }
         else if viewController is ViewControllerReview{
             spacedRep.all_active = true
             spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
+            print("all curr review index")
+            print(spacedRep.all_curReviewIndex)
             spacedRep.reviewList = spacedRep.all_subtopics
         }
         else if viewController is scrollProgressViewController{
