@@ -40,7 +40,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         //navigationBarAppearace.barTintColor = UIColor.black
-        if let filepath = Bundle.main.path(forResource: "temp", ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: "Text_05.30.19", ofType: "txt") {
                 parse.csv(data: filepath)
         } else {
             print("data file could not be found")

@@ -46,12 +46,12 @@ class Parse{
     }
     
     func setData(row:[String]){
-        //let slide_number:String = row[0]
-        let category:String = row[0]
-        let topic:String = row[1]
-        let subtopic:String = row[2]
-        let img:String = row[3]
-        let imgCap:String = row[4]
+        let slide_number:String = row[0]
+        let category:String = row[1]
+        let topic:String = row[2]
+        let subtopic:String = row[3]
+        let img:String = row[4]
+        let imgCap:String = row[5]
         
         status.addCategory(category: category)
         status.addTopic(category: category, topic: topic)
@@ -59,8 +59,8 @@ class Parse{
         status.addSubtopic(category: category, topic: topic, subtopic: subtopic, img: img, imgCap: imgCap)
         
         // loop through remaining header/info pairs and store
-        for i in 5...(row.count-1){
-            if((i%2 != 0) ){
+        for i in 6...(row.count-1){
+            if((i%2 == 0) ){
                 if((i+1) <= (row.count-1)){ // has subtext
                     status.addCard(category: category, topic: topic, subtopic: subtopic, header: row[i], info: row[i+1])
                 }
