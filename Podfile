@@ -1,4 +1,5 @@
 # Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'Opth' do
@@ -16,7 +17,8 @@ target 'Opth' do
     inherit! :search_paths
     # Pods for testing
   end
-
-  pod 'SMLib'
+  
+  pod 'SwiftRichString'
+  #pod 'SMLib'
 
 end

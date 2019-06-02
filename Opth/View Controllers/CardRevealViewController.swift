@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftRichString
 
 import UIKit
 
@@ -104,10 +105,18 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
+        let underline = Style {
+            $0.font = UIFont.systemFont(ofSize: 17)
+            $0.underline = (style: NSUnderlineStyle.single, color: nil)
+        }
+        
+        let myGroup = StyleGroup(["underline": underline])
         
         // fill cell contents
         if(indexPath.row < spacedRep.reviewList[curReviewIndex].cards.count){
-            cell.Header.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
+            let str = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
+            
+            cell.Header.attributedText = str.set(style: myGroup)
             cell.Info.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
 
             if(indexPath.row == 0 && index <= indexPath.row){

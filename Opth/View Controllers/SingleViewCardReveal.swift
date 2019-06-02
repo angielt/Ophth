@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SwiftRichString
 import UIKit
 
 class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -64,10 +64,16 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
+        let underline = Style {
+            $0.font = UIFont.systemFont(ofSize: 17)
+            $0.underline = (style: NSUnderlineStyle.single, color: nil)
+        }
+        let myGroup = StyleGroup(["underline": underline])
         
         // fill cell contents
         if(indexPath.row < subtopic.cards.count){
-            cell.Header.text = subtopic.cards[indexPath.row].header
+            let str = subtopic.cards[indexPath.row].header
+            cell.Header.attributedText = str.set(style: myGroup)
             cell.Info.text = subtopic.cards[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){

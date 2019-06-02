@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import SwiftRichString
 import UIKit
 
 class imageTapGesture: UITapGestureRecognizer{
@@ -194,12 +194,18 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         if(spacedRep.reviewList.count == 0){
             //print(" imagecardreveal spacedRep.reviewList.count == 0")
         }
+        
+        let underline = Style {
+            $0.font = UIFont.systemFont(ofSize: 17)
+            $0.underline = (style: NSUnderlineStyle.single, color: nil)
+        }
+        let myGroup = StyleGroup(["underline": underline])
         let cardCount = spacedRep.reviewList[spacedRep.curReviewIndex].cards.count
 
-        
         // fill cell contents
         if(indexPath.row < cardCount){
-            cell.Header.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
+            let str = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
+            cell.Header.attributedText = str.set(style: myGroup)
             cell.Info.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
             
             if(indexPath.row == 0 && index <= indexPath.row){

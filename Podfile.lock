@@ -1,16 +1,16 @@
 PODS:
-  - SMLib (1.0.2)
+  - SwiftRichString (2.0.1)
 
 DEPENDENCIES:
-  - SMLib
+  - SwiftRichString
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SMLib
+    - SwiftRichString
 
 SPEC CHECKSUMS:
-  SMLib: 4b5c3a98bb6c1473d4bf952c94e9dc113906cb5f
+  SwiftRichString: 3b29b5f2eb0eb244497532f2fd2ec26318eae584
 
-PODFILE CHECKSUM: 6fdfa4d7afedca6edf2f174325eeb485788bcac6
+PODFILE CHECKSUM: b6fe43ec6e8e4a259a38904e935cbf5435bfcabf
 
 COCOAPODS: 1.6.1

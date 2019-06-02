@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SMLib
+//import SMLib
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

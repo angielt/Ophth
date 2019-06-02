@@ -1,6 +1,0 @@
-framework module SMLib {
-  umbrella header "SMLib-umbrella.h"
-
-  export *
-  module * { export * }
-}
