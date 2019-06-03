@@ -48,6 +48,11 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     var subtopic: Subtopic!
     var imageCount = 0
     
+    //Make the top bar with the time to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -125,6 +130,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
         DispatchQueue.main.asyncAfter(deadline: (.now() + .milliseconds(500))){
             self.subtopicTableView.flashScrollIndicators()
         }
+        navigationController?.navigationBar.barStyle = .black
     }
     
     func setScrollIndicatorColor(color:UIColor) {

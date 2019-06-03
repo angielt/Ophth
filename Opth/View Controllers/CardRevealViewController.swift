@@ -33,6 +33,14 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
+    
+    //Make the top bar with the time to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
 
     @IBAction func backButton(_ sender: Any) {
         if spacedRep.all_active{

@@ -44,6 +44,14 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     var imageCount = 0
     var buttonsVisible:Bool = false
     
+    //Make the top bar with the time to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
     //Buttonss
     @IBAction func backButton(_ sender: Any) {
         if spacedRep.all_active{

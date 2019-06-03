@@ -15,6 +15,14 @@ class FullScreenImageViewController: UIViewController, UIScrollViewDelegate {
     
     var fullImage:UIImage!
     
+    //Make the top bar with the time to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

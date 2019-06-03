@@ -22,6 +22,14 @@ class SubTableViewController: UIViewController, UITableViewDelegate, UITableView
     var index = 0
     var topicIndex = 0
     
+    //Make the top bar with the time to be white
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
     func loadData(){
         self.tableView.reloadData()
         self.view.reloadInputViews()
