@@ -44,14 +44,12 @@ class SubTableViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       // navigationItem.title = topic.topicName
         UserDefaults.standard.synchronize()
         self.tableView.reloadData()
     }
 
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-        //self.loadData()
     }
     
     @IBAction func reviewButton(_ sender: Any) {

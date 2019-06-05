@@ -17,6 +17,8 @@ class ViewControllerReview: UIViewController{
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
     
+    var backButtonPressed = false;
+    
     @IBAction func backButton(_ sender: Any) {
         self.tabBarController?.selectedIndex = 0
         self.tabBarController?.tabBar.isHidden = false
@@ -31,22 +33,26 @@ class ViewControllerReview: UIViewController{
         }
     }
     
+    
     //Make the top bar with the time to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadData()
+    }
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.barStyle = .black
+        self.loadData()
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for item in status.CategoryList[0].topics[0].subtopics{
-            //print(item.repeat_factor)
-        }
+
         if(spacedRep.all_subtopics.count == 0){
-            //print("subtopics 0-1")
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
             spacedRep.curReviewIndex = 0
         }

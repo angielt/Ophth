@@ -52,6 +52,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
             self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
+    
     @IBAction func easyOnClick(_ sender: Any) {
         if(buttonsVisible == true){
             spacedRep.easyPressed()
@@ -160,8 +161,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
                 showInfo = true
                 cell.Info.textColor = UIColor.white
                 index = index+1
-                //print(index)
-                //print(spacedRep.reviewList[curReviewIndex].cards.count)
             }
             else if(showInfo == true){
                 showInfo = false
@@ -183,8 +182,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
 
     // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
-        if let senderVC = sender.source as? NotesViewController {
-
+        if sender.source is NotesViewController {
         }
     }
 }

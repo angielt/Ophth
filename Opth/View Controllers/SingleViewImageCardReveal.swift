@@ -171,8 +171,9 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
         // fill cell contents
         if(indexPath.row < subtopic.cards.count){
             let str = subtopic.cards[indexPath.row].header
+            let str2 = subtopic.cards[indexPath.row].info
             cell.Header.attributedText = str.set(style: myGroup)
-            cell.Info.text = subtopic.cards[indexPath.row].info
+            cell.Info.attributedText = str2.set(style: myGroup)
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan
@@ -203,12 +204,8 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     // tap occlusion
     @objc func handleTap(_ sender:UITapGestureRecognizer){
-        //print("tap")
         
         let visibleIndexPaths = subtopicTableView.indexPathsForVisibleRows
-//        print(visibleIndexPaths)
-//        print(index)
-        
         var visibleRowIndexArray: [Int] = []
         
         for currentIndextPath in visibleIndexPaths! {

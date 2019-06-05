@@ -137,7 +137,7 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     
     // An unwind segue moves backward through one or more segues to return the user to a scene managed by an existing view controller.
     @IBAction func unwindToFlashCardList(sender: UIStoryboardSegue) {
-        if let senderVC = sender.source as? NotesViewController {
+        if sender.source is NotesViewController {
         }
     }
 }

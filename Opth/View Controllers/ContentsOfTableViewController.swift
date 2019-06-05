@@ -42,21 +42,18 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         super.viewDidLoad()
         
         self.tabBarController?.tabBar.isHidden = false
-        
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        //navigationBarAppearace.barTintColor = UIColor.black
+
         if let filepath = Bundle.main.path(forResource: "Text_05.30.19", ofType: "txt") {
-                parse.csv(data: filepath)
+               parse.csv(data: filepath)
         } else {
             print("data file could not be found")
         }
         
         //setup delegate
         searchBar.delegate = self
-        
-        //status.CategoryList.sort(by: {$0.categoryName < $1.categoryName })
         
         for item in status.CategoryList {
             topicAr += item.topics.map{$0} // puts all topics in topicAr
@@ -130,9 +127,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //status.CategoryList[section].topics.sort(by: { $0.topicName < $1.topicName })
-        
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
         if searchActive{
             return filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
         }

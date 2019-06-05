@@ -564,7 +564,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD7-Br-uAZ">
-                                                    <rect key="frame" x="5" y="10" width="345" height="101.5"/>
+                                                    <rect key="frame" x="5" y="10" width="345" height="101"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21.5" id="iS7-Uz-Pdx"/>
                                                     </constraints>
@@ -574,7 +574,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtM-I4-tQ0">
-                                                    <rect key="frame" x="30" y="111.5" width="295" height="20.5"/>
+                                                    <rect key="frame" x="30" y="111" width="295" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -1401,8 +1401,8 @@ Gregor Cresnar, Icomoon, Angie Ta, Freepik</string>
         <segue reference="Fc5-eH-POT"/>
         <segue reference="dc3-Xb-nDd"/>
         <segue reference="4wZ-Ha-UyP"/>
-        <segue reference="swq-kv-bzv"/>
+        <segue reference="BpS-xS-shc"/>
         <segue reference="IRs-yv-0fS"/>
-        <segue reference="LBt-Kh-oXB"/>
+        <segue reference="ihp-7O-gdK"/>
     </inferredMetricsTieBreakers>
 </document>

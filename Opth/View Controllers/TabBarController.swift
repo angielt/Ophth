@@ -31,8 +31,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         else if viewController is ViewControllerReview{
             spacedRep.all_active = true
             spacedRep.curReviewIndex = spacedRep.all_curReviewIndex
-            //print("all curr review index")
-            //print(spacedRep.all_curReviewIndex)
             spacedRep.reviewList = spacedRep.all_subtopics
         }
         else if viewController is scrollProgressViewController{
@@ -40,16 +38,5 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
             status.progressVC?.animatePulsatingLayer()
         }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

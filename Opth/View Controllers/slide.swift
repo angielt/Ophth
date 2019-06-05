@@ -106,7 +106,7 @@ class slide: UIView, UIScrollViewDelegate {
         //SUBTOPIC
         if indicator == "subtopic"{
             // get data
-            var flattenedArray = status.CategoryList.flatMap { category in
+            let flattenedArray = status.CategoryList.flatMap { category in
                 return category.topics.map { topics in
                     return topics.subtopics.map {
                         subtopics in
@@ -115,8 +115,8 @@ class slide: UIView, UIScrollViewDelegate {
                 }
             }
             
-            var totalSubtopics = flattenedArray.flatMap({$0})
-            var doneReviewingSubtopics = totalSubtopics.filter{$0.repeat_factor == 1}
+            let totalSubtopics = flattenedArray.flatMap({$0})
+            let doneReviewingSubtopics = totalSubtopics.filter{$0.repeat_factor == 1}
             
             
             //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
@@ -133,14 +133,14 @@ class slide: UIView, UIScrollViewDelegate {
         // TOPICS
         if indicator == "topic"{
             // get data
-            var flattenedArray = status.CategoryList.flatMap { category in
+            let flattenedArray = status.CategoryList.flatMap { category in
                 return category.topics.map { topics in
                     return topics
                 }
             }
 
-            var totalTopics = flattenedArray.flatMap({$0})
-            var doneReviewingTopics = totalTopics.filter{$0.repeat_factor == 1}
+            let totalTopics = flattenedArray.compactMap({$0})
+            let doneReviewingTopics = totalTopics.filter{$0.repeat_factor == 1}
             
             //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
             let percentage = CGFloat(doneReviewingTopics.count) / CGFloat(totalTopics.count)
@@ -156,12 +156,12 @@ class slide: UIView, UIScrollViewDelegate {
         // CATEGORY
         if indicator == "category"{
             // get data
-            var flattenedArray = status.CategoryList.flatMap { category in
+            let flattenedArray = status.CategoryList.compactMap { category in
                 return category
             }
             
-            var totalCategory = flattenedArray.flatMap({$0})
-            var doneReviewingCategory = totalCategory.filter{$0.repeat_factor == 1}
+            let totalCategory = flattenedArray.compactMap({$0})
+            let doneReviewingCategory = totalCategory.filter{$0.repeat_factor == 1}
             
             
             //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
