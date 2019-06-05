@@ -238,7 +238,6 @@ class SpacedRepetition {
                 }
             }
             topic?.opened = true
-            print(self.reviewList)
         }
         else{
             if(RFList.five.count > 0){
