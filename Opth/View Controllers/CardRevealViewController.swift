@@ -11,6 +11,7 @@ import SwiftRichString
 
 import UIKit
 
+// Reveals card without images in Shuffle All
 class CardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 

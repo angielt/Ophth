@@ -9,7 +9,7 @@
 
 import UIKit
 
-// view controller of card front
+// view controller of card front for Shuffle All
 class ViewControllerReview: UIViewController{
     
     static let cardCornerRadius: CGFloat = 25
@@ -26,7 +26,7 @@ class ViewControllerReview: UIViewController{
         
         if(spacedRep.all_active == true){// already shuffled all, now exited back to TableofContents
             if(spacedRep.all_subtopics.count != 0){
-                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // store where user left off in shuffle all
+//                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // store where user left off in shuffle all
                 spacedRep.all_active = false
             }
             spacedRep.clear()

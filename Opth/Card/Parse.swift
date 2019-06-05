@@ -10,6 +10,9 @@ import Foundation
 
 class Parse{
     
+    // Called in ContentsofTableViewController
+    // handles special characters for formatting and strange excel -> txt behavior
+    // passes each row in excel file to setData
     func csv(data: String) -> [String]{
         var parsedData:[String] = []
         do {
@@ -45,6 +48,8 @@ class Parse{
         return parsedData
     }
     
+    
+    // Seperates columns of each row and stores the data in status instance
     func setData(row:[String]){
         let slide_number:String = row[0]
         let category:String = row[1]

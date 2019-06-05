@@ -14,6 +14,7 @@ class imageTapGesture: UITapGestureRecognizer{
     var imageIndex = 0
 }
 
+// Reveals card with images in Shuffle All
 class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
     
     

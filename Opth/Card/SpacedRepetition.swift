@@ -5,17 +5,6 @@
 //  Created by Angie Ta on 4/24/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
-// EF':=EF+(0.1-(5-q)*(0.08+(5-q)*0.02))   q=0-5 response in our case 0-2
-// generate set of cards ex.20
-// review same 20 cards until all of them are easy
-// by this i mean keep showing the same cards if the use responds hard or unsure
-// must all be good (?)like Anki before completed screen shows
-// TO DO:
-// - add maureen's equation to spaced rep
-// - check if rf values actually stored
-// - work on spaced rep for all subtopics
-// - debug occlusion
-// -make buttons show up only if occusion is finished
 // ReviewList consists of 50% -RF5, 25% -RF4, 12.5%- RF3.. etc
 import Foundation
 
