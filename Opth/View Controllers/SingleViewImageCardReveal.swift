@@ -19,19 +19,17 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     
     @IBOutlet weak var cardTitle: UILabel!
- 
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
     @IBOutlet weak var downIndicator: UIImageView!
+    @IBOutlet weak var subtopicTableView: SubtopicTableView!
+    @IBOutlet weak var addNotes: UIButton!
     
     var imageIndex = 0
     var isBackFromFullScreen = false
     var buttonsVisible:Bool = false
     var isFromSearch = false
-    
-    @IBOutlet weak var subtopicTableView: SubtopicTableView!
-    @IBOutlet weak var addNotes: UIButton!
-    
+
     @IBAction func backButton(_ sender: Any) {
         if isFromSearch{
             dismiss(animated: true, completion: nil)
@@ -69,22 +67,27 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
         
         cardTitle.text = subtopic.subtopicName
         
-        //UI image start from here
+        //UI image
         imageScrollView.delegate = self
         
+        // set image count
         imageCount = subtopic.img_list.count
         
+        // set page indicator count
         imagePageController.numberOfPages = imageCount
         
+        // loop through the images for the specific subtopic and display
         for i in 0..<imageCount{
             let imageView = UIImageView()
             imageView.isUserInteractionEnabled = true  //enable tap on image
-            var img = subtopic.img_list[i]
+            var img = subtopic.img_list[i] // get the image list
+            
+            // display .gif images
             if (img.contains(".gif")){
                 img = img.replacingOccurrences(of: ".gif", with: "")
                 imageView.loadGif(name: img)
             }
-            else{
+            else{  // display .png or .jpg images
                 imageView.image = UIImage(named: img)
             }
             
@@ -143,13 +146,6 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             }
         }
         self.subtopicTableView.flashScrollIndicators()
-    }
-    
-   
-    
-    //Fade in effect
-    func fadeIn(name: UILabel){
-        UIView.animate(withDuration: 0.5, animations: {name.alpha = 0})
     }
     
     // Return the number of rows for the table.

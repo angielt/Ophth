@@ -17,21 +17,18 @@ class imageTapGesture: UITapGestureRecognizer{
 // Reveals card with images in Shuffle All
 class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
     
-    
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var easyButton: UIButton!
     @IBOutlet weak var unsureButton: UIButton!
     @IBOutlet weak var hardButton: UIButton!
-    
     @IBOutlet weak var imageScrollView: UIScrollView!
     @IBOutlet weak var imagePageController: UIPageControl!
-    
     @IBOutlet weak var downIndicator: UIImageView!
-    var imageIndex = 0
-    var isBackFromFullScreen = false
-    
     @IBOutlet weak var subtopicTableView: SubtopicTableView!
     @IBOutlet weak var addNotes: UIButton!
+    
+    var imageIndex = 0
+    var isBackFromFullScreen = false
     
     //count how many taps
     var counter = 0
@@ -109,22 +106,27 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         
         cardTitle.text = spacedRep.reviewList[curReviewIndex].subtopicName
         
-        //UI image start from here
+        //UI image
         imageScrollView.delegate = self
         
+        // set image count
         imageCount = spacedRep.reviewList[curReviewIndex].img_list.count
         
+        // set page indicator count
         imagePageController.numberOfPages = imageCount
 
+        // loop through the images for the specific subtopic and display
         for i in 0..<imageCount{
             let imageView = UIImageView()
             imageView.isUserInteractionEnabled = true  //enable tap on image
-            var img = spacedRep.reviewList[curReviewIndex].img_list[i]
+            var img = spacedRep.reviewList[curReviewIndex].img_list[i]  // get the image list
+            
+            // display .gif images
             if (img.contains(".gif")){
                 img = img.replacingOccurrences(of: ".gif", with: "")
                 imageView.loadGif(name: img)
             }
-            else{
+            else{  // display .png or .jpg images
                 imageView.image = UIImage(named: img)
             }
             
@@ -162,11 +164,6 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
                 self.imageScrollView.addSubview(caption)
             }
         }
-    }
-    
-    //Fade in effect
-    func fadeIn(name: UILabel){
-        UIView.animate(withDuration: 0.5, animations: {name.alpha = 0})
     }
     
     // Return the number of rows for the table.

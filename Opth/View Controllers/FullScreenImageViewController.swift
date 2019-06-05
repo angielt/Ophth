@@ -28,11 +28,13 @@ class FullScreenImageViewController: UIViewController, UIScrollViewDelegate {
         
         self.scrollView.delegate = self
         
+        // set the max and min of the zoom scale for image
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 6.0
         
         imageView.image = fullImage
         
+        // add gesture recognizer
         let imageTap = UITapGestureRecognizer(target: self,action:#selector(FullScreenImageViewController.imageTapped(_:)))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(imageTap)
@@ -46,7 +48,7 @@ class FullScreenImageViewController: UIViewController, UIScrollViewDelegate {
         return self.imageView
     }
     
-    // tap anywhere to go back
+    // tap anywhere to dismiss the image
     @objc func imageTapped(_ sender:UITapGestureRecognizer) {
         dismiss(animated: true, completion: nil)
     }

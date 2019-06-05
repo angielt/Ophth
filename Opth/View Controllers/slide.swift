@@ -15,7 +15,6 @@ class slide: UIView, UIScrollViewDelegate {
     }
    
     @IBOutlet weak var label: UILabel!
-    var indicator = ""
     var shapeLayer: CAShapeLayer!
     // create pulsating layer
     var pulsatingLayer: CAShapeLayer!
@@ -99,81 +98,32 @@ class slide: UIView, UIScrollViewDelegate {
         pulsatingLayer.add(animation, forKey: "pulsing")
     }
     
+    // gets subtopic done data to display onto progress page using space rep data
     func accumulatesProgress() {
         // this is so we start at the 12:00 position
         shapeLayer.strokeEnd = 0
         
-        //SUBTOPIC
-        if indicator == "subtopic"{
-            // get data
-            let flattenedArray = status.CategoryList.flatMap { category in
-                return category.topics.map { topics in
-                    return topics.subtopics.map {
-                        subtopics in
-                        return subtopics
-                    }
+        // get data
+        let flattenedArray = status.CategoryList.flatMap { category in
+            return category.topics.map { topics in
+                return topics.subtopics.map {
+                    subtopics in
+                    return subtopics
                 }
             }
-            
-            let totalSubtopics = flattenedArray.flatMap({$0})
-            let doneReviewingSubtopics = totalSubtopics.filter{$0.repeat_factor == 1}
-            
-            
-            //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-            let percentage = CGFloat(doneReviewingSubtopics.count) / CGFloat(totalSubtopics.count)
-            
-            // tie the animation to the percentage, so we don't need to run animateCircle() anymore
-            DispatchQueue.main.async {
-                // changes the percentage of download to show up
-                self.percentageLabel.text = "\(Int(doneReviewingSubtopics.count)) / \(Int(totalSubtopics.count))" + "\n" + "Cards"
-                self.percentageLabel.numberOfLines = 2
-                self.shapeLayer.strokeEnd = percentage
-            }
         }
-        // TOPICS
-        if indicator == "topic"{
-            // get data
-            let flattenedArray = status.CategoryList.flatMap { category in
-                return category.topics.map { topics in
-                    return topics
-                }
-            }
-
-            let totalTopics = flattenedArray.compactMap({$0})
-            let doneReviewingTopics = totalTopics.filter{$0.repeat_factor == 1}
             
-            //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-            let percentage = CGFloat(doneReviewingTopics.count) / CGFloat(totalTopics.count)
+        let totalSubtopics = flattenedArray.flatMap({$0})
+        let doneReviewingSubtopics = totalSubtopics.filter{$0.repeat_factor == 1}
             
-            // tie the animation to the percentage, so we don't need to run animateCircle() anymore
-            DispatchQueue.main.async {
-                // changes the percentage of download to show up
-                self.percentageLabel.text = "\(Int(doneReviewingTopics.count)) / \(Int(totalTopics.count))" + "\n" + "Cards"
-                self.percentageLabel.numberOfLines = 2
-                self.shapeLayer.strokeEnd = percentage
-            }
-        }
-        // CATEGORY
-        if indicator == "category"{
-            // get data
-            let flattenedArray = status.CategoryList.compactMap { category in
-                return category
-            }
+        let percentage = CGFloat(doneReviewingSubtopics.count) / CGFloat(totalSubtopics.count)
             
-            let totalCategory = flattenedArray.compactMap({$0})
-            let doneReviewingCategory = totalCategory.filter{$0.repeat_factor == 1}
-            
-            
-            //let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-            let percentage = CGFloat(doneReviewingCategory.count) / CGFloat(totalCategory.count)
-            
-            // tie the animation to the percentage, so we don't need to run animateCircle() anymore
-            DispatchQueue.main.async {
-                // changes the percentage of download to show up
-                self.percentageLabel.text = "\(Int(doneReviewingCategory.count)) / \(Int(totalCategory.count))" + "\n" + "Cards"
-                self.percentageLabel.numberOfLines = 2
-                self.shapeLayer.strokeEnd = percentage
-            }
+        // tie the animation to the percentage, so we don't need to run animateCircle() anymore
+        DispatchQueue.main.async {
+            // changes the percentage of download to show up
+            self.percentageLabel.text = "\(Int(doneReviewingSubtopics.count)) / \(Int(totalSubtopics.count))" + "\n" + "Cards"
+            self.percentageLabel.numberOfLines = 2
+            self.shapeLayer.strokeEnd = percentage
         }
     }
 }
