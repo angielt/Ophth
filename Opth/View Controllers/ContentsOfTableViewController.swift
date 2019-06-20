@@ -6,6 +6,8 @@
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
+// code includes implementation for search and table of contents
+
 import UIKit
 import Foundation
 
@@ -19,12 +21,16 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var fSubtopic: Subtopic!
     
     
-    // search
+    // search variables
     @IBOutlet weak var searchBar: UISearchBar!
     var searchActive = false
+    
+    // grabs the parsed data
     var subtopicAr = [Subtopic]()
     var headerInfoAr = [Card]()
     var topicAr = [Topic]()
+    
+    // new array of grabbed data you are searching
     var filteredInfo: [Card] = []
     var filteredHeaders: [Card] = []
     var filteredSubtopics: [Subtopic] = []
@@ -46,7 +52,12 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
 
+<<<<<<< HEAD
         if let filepath = Bundle.main.path(forResource: "Text_06.12.19", ofType: "txt") {
+=======
+        // data file
+        if let filepath = Bundle.main.path(forResource: "Text_05.30.19", ofType: "txt") {
+>>>>>>> d9028094983a528061aa79471b9a8b0c339c7872
                parse.csv(data: filepath)
         } else {
             print("data file could not be found")
@@ -78,6 +89,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
+    // filters through the respective array in order to search for what the user inputs
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredTopics = topicAr.filter({
@@ -128,9 +140,11 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+        // if searching, then returns cells for the searched data
         if searchActive{
             return filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
         }
+        // if not searching, then returns cells for categories, or categories and topics if opened is true
         else if status.CategoryList[section].opened == true {
             return status.CategoryList[section].topics.count + 1
         }
@@ -182,17 +196,18 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.detailTextLabel?.text = "\(category) > \(topic) > \(subtopic)"
             }
             
-            cell.textLabel?.textColor = UIColor.white
-            cell.detailTextLabel?.textColor = UIColor.cyan
+            cell.textLabel?.textColor = UIColor.white // the searched info is in white text
+            cell.detailTextLabel?.textColor = UIColor.cyan // the description of where the word is nested under is in cyan color
             return cell
         }
         else {
             if indexPath.row == 0 {  //Categories
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                     return UITableViewCell()}
+                // gets rid of the white space in front of categories so it is displayed
                 let trimmedCategory = status.CategoryList[indexPath.section].categoryName.replacingOccurrences(of: "\n", with: "")
-                cell.textLabel?.text = trimmedCategory
-                cell.detailTextLabel?.text = ""
+                cell.textLabel?.text = trimmedCategory // the cells displayed are the categories
+                cell.detailTextLabel?.text = "" // has no subtitle under it to be displayed
                 cell.textLabel?.textColor = UIColor.white
                 return cell
             }
@@ -200,9 +215,10 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                     return UITableViewCell()}
                 
+                // the cells display the topics with an indent in front of it as to not be mixed up with categories
                 cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - 1].topicName
                 cell.textLabel?.textColor = UIColor.white
-                cell.detailTextLabel?.text = ""
+                cell.detailTextLabel?.text = "" // they have no subtitle under it to be displayed
                 return cell
             }
         }
@@ -227,6 +243,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 if h < 0 {i -= 1}   // if header is < 0, the decrement the info index
             }
             
+            // segue code for redirection from search to other view controller
             if t > 0{
                 tapTopic = true
                 fTopic = filteredTopics[indexPath.row]
@@ -295,7 +312,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                     tableView.reloadSections(sections, with: .none)
                 }
             }
-            else {  // if search not active
+            else {  // if search not active, segue is performed to go to the subtopics page
                 rowIndex = indexPath.row - 1
                 sectionIndex = indexPath.section
                 performSegue(withIdentifier: "subCell", sender: self)

@@ -96,9 +96,9 @@ class Status{
     
     func addCard(category:String, topic:String, subtopic: String, header:String, info:String){
         var matchExists:Bool = false
-        var topicCategory:Category = Category(name: "null")
-        var subtopicTopic:Topic = Topic(topic: "null", category: "null")
-        var cardSubtopic:Subtopic = Subtopic(subtopic: "null", topic: "null", category: "nill")
+        var topicCategory:Category = Category(name: "nil")
+        var subtopicTopic:Topic = Topic(topic: "nil", category: "nil")
+        var cardSubtopic:Subtopic = Subtopic(subtopic: "nil", topic: "nil", category: "nil")
         
         for item in CategoryList{
             if(item.categoryName == category){

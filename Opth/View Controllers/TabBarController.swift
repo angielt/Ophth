@@ -16,12 +16,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         // Do any additional setup after loading the view.
     }
     
-    // indexes mess up the topic SR need to double check this
+    
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
         if viewController is ContentsOfTableViewController{
             if(spacedRep.all_active == true){// switch from mass SR store mass SR curReview
                 if(spacedRep.all_subtopics.count != 0){
-                    spacedRep.all_curReviewIndex = spacedRep.curReviewIndex
                     spacedRep.all_active = false
                 }
                 spacedRep.clear()
