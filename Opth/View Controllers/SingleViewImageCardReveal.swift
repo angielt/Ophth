@@ -94,7 +94,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             //set the size and position of the image frame and image
             imageView.contentMode = .scaleAspectFit
             let xCordinate = self.view.frame.width * CGFloat(i)
-            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width, height: self.imageScrollView.frame.height - 70)
+            imageView.frame = CGRect(x: xCordinate, y: 0, width: self.imageScrollView.frame.width, height: self.imageScrollView.frame.height)
             self.imageScrollView.contentSize.width = self.view.frame.width * CGFloat(i + 1)
             
             //add tap recognizer for image
@@ -104,26 +104,26 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             imageView.addGestureRecognizer(imageTap)
             self.imageScrollView.addSubview(imageView)
             
-            //add caption for each image
-            if subtopic.img_caption[0] != "nil"{
-                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width,height:50)))
-                caption.text = subtopic.img_caption[i]
-                caption.textColor = UIColor.white
-                caption.font = UIFont.systemFont(ofSize: 14.0)
-                caption.numberOfLines = 3
-                caption.lineBreakMode = .byWordWrapping
-                caption.sizeToFit()
-                let captionLocation = self.imageScrollView.center.x
-                
-                //set the position of the caption
-                if i == 0{
-                    caption.center.x = captionLocation
-                }
-                else{
-                    caption.center.x = captionLocation + self.view.frame.width * CGFloat(i)
-                }
-                self.imageScrollView.addSubview(caption)
-            }
+//            //add caption for each image
+//            if subtopic.img_caption[0] != "nil"{
+//                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width,height:50)))
+//                caption.text = subtopic.img_caption[i]
+//                caption.textColor = UIColor.white
+//                caption.font = UIFont.systemFont(ofSize: 14.0)
+//                caption.numberOfLines = 1
+//                caption.lineBreakMode = .byWordWrapping
+//                caption.sizeToFit()
+//                let captionLocation = self.imageScrollView.center.x
+//
+//                //set the position of the caption
+//                if i == 0{
+//                    caption.center.x = captionLocation
+//                }
+//                else{
+//                    caption.center.x = captionLocation + self.view.frame.width * CGFloat(i)
+//                }
+//                self.imageScrollView.addSubview(caption)
+//            }
         }
     }
     

@@ -52,12 +52,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
 
-<<<<<<< HEAD
-        if let filepath = Bundle.main.path(forResource: "Text_06.12.19", ofType: "txt") {
-=======
+
         // data file
-        if let filepath = Bundle.main.path(forResource: "Text_05.30.19", ofType: "txt") {
->>>>>>> d9028094983a528061aa79471b9a8b0c339c7872
+        if let filepath = Bundle.main.path(forResource: "Text_06.12.19", ofType: "txt") {
                parse.csv(data: filepath)
         } else {
             print("data file could not be found")
@@ -209,6 +206,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = trimmedCategory // the cells displayed are the categories
                 cell.detailTextLabel?.text = "" // has no subtitle under it to be displayed
                 cell.textLabel?.textColor = UIColor.white
+                cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0)
                 return cell
             }
             else {  //Topics
@@ -219,6 +217,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
                 cell.textLabel?.text = "\t" + status.CategoryList[indexPath.section].topics[indexPath.row - 1].topicName
                 cell.textLabel?.textColor = UIColor.white
                 cell.detailTextLabel?.text = "" // they have no subtitle under it to be displayed
+                cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0)
                 return cell
             }
         }

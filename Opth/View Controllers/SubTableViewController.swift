@@ -81,6 +81,8 @@ class SubTableViewController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "subCell", for: indexPath)
         cell.textLabel?.text = topic.subtopics[indexPath.row].subtopicName
         cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0)
+        
     
         // display or hide the note icon
         if (userDefaults.string(forKey: topic.subtopics[indexPath.row].subtopicName)) != nil {

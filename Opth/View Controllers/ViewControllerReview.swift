@@ -16,6 +16,8 @@ class ViewControllerReview: UIViewController{
     
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var tapCardLabel: UILabel!
     
     var backButtonPressed = false;
     
@@ -50,8 +52,6 @@ class ViewControllerReview: UIViewController{
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         if(spacedRep.all_subtopics.count == 0){
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
             spacedRep.curReviewIndex = 0
@@ -64,6 +64,15 @@ class ViewControllerReview: UIViewController{
     }
     
     func loadData(){
+        if self.tabBarController?.tabBar.isHidden == false {
+            backButton.isHidden = true
+            tapCardLabel.isHidden = false
+        }
+        else {
+            backButton.isHidden = false
+            tapCardLabel.isHidden = true
+        }
+        
         if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
             cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
             
@@ -82,7 +91,7 @@ class ViewControllerReview: UIViewController{
     
     func exitCardChange(){
         card.layer.backgroundColor = UIColor.black.cgColor
-        cardFront.text = "Review Finished - tap to exit"
+        cardFront.text = "Review Finished - Tap to Exit"
         cardFront.textColor = UIColor.gray
     }
     
