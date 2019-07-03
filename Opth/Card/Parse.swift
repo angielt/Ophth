@@ -32,6 +32,7 @@ class Parse{
                 newRow = newRow.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "#", with: "•", options: .literal, range: nil)
                 newRow = newRow.replacingOccurrences(of: "Ð", with: "-", options: .literal, range: nil)
+                newRow = newRow.replacingOccurrences(of: "-->", with: "→", options: .literal, range: nil)
                 
                 
                 //print(newRow)

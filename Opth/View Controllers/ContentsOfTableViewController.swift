@@ -11,7 +11,7 @@
 import UIKit
 import Foundation
 
-class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate {
+class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var sectionIndex = 0
     var rowIndex = 0
     
@@ -20,6 +20,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     var fTopic: Topic!
     var fSubtopic: Subtopic!
     
+    @IBOutlet weak var tableView: UITableView!
     
     // search variables
     @IBOutlet weak var searchBar: UISearchBar!
@@ -47,6 +48,9 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.barTintColor = UIColor.darkGray
@@ -54,7 +58,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
 
 
         // data file
-        if let filepath = Bundle.main.path(forResource: "Text_06.12.19", ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: "Text_07.01.19", ofType: "txt") {
                parse.csv(data: filepath)
         } else {
             print("data file could not be found")
@@ -127,7 +131,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     
     
     // MARK: table of contents
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         if searchActive{
             return 1
         }
@@ -136,7 +140,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // if searching, then returns cells for the searched data
         if searchActive{
             return filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
@@ -151,7 +155,7 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if searchActive {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
@@ -223,7 +227,8 @@ class ContentsOfTableViewController: UITableViewController, UISearchBarDelegate 
         }
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         if searchActive{
             let totalCount = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
             var t = filteredTopics.count

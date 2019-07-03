@@ -73,10 +73,25 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
         let underline = Style {
-            $0.font = UIFont.systemFont(ofSize: 17)
+            $0.font = UIFont.systemFont(ofSize: 20)
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
         }
-        let myGroup = StyleGroup(["underline": underline])
+        
+        let italic = Style {
+            //$0.font = UIFont.systemFont(ofSize: 20)
+            $0.font = UIFont.italicSystemFont(ofSize: 20)
+        }
+        
+        let bold = Style {
+            $0.font = UIFont.boldSystemFont(ofSize: 20)
+        }
+        
+        let myGroup = StyleGroup([
+            "u": underline,
+            "i": italic,
+            "b": bold
+            ]
+        )
         
         // fill cell contents
         if(indexPath.row < subtopic.cards.count){

@@ -12,27 +12,27 @@
 		6208A9E32295DFD40055D727 /* slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6208A9E22295DFD40055D727 /* slide.xib */; };
 		6208A9E52295E00C0055D727 /* slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6208A9E42295E00C0055D727 /* slide.swift */; };
 		6208A9E72295E0DA0055D727 /* scrollProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6208A9E62295E0DA0055D727 /* scrollProgressViewController.swift */; };
-		62420C10229F49120008F4A4 /* downArrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62420C0F229F49120008F4A4 /* downArrow.gif */; };
 		628BAF3F228C07A90086C911 /* SingleViewImageCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */; };
 		628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */; };
 		629720F42290E3F000F10CBE /* 217_Retinoblastoma_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */; };
 		629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */; };
 		629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */; };
 		629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */; };
-		629BB84A2294BF9E0066F20C /* progressIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 629BB8492294BF9C0066F20C /* progressIcon.png */; };
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
 		62CE6E6922695A0E00ECD0C0 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */; };
 		62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED789122836C2D002D59C4 /* GifImageViewController.swift */; };
 		62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */; };
-		62ED7896228373B1002D59C4 /* 190_BruchsMembrane_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */; };
 		62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78972283821A002D59C4 /* SpacedRepetition.swift */; };
 		62ED789A2283A224002D59C4 /* SingleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78992283A224002D59C4 /* SingleViewController.swift */; };
 		62ED789C22855B04002D59C4 /* temp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62ED789B22855B04002D59C4 /* temp.txt */; };
 		B15403C68CD78D97600397AD /* Pods_OpthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */; };
 		B9017C4A22BC7EF8009ACFBB /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */; };
 		B997BDBB22B1BA2B0047209B /* Text_06.12.19.txt in Resources */ = {isa = PBXBuildFile; fileRef = B997BDBA22B1BA2B0047209B /* Text_06.12.19.txt */; };
+		B9C70FDF22CC18E300C993A1 /* Text_07.01.19.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9C70FDE22CC18E300C993A1 /* Text_07.01.19.txt */; };
+		B9C70FE122CC264C00C993A1 /* 190_BruchsMembrane_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B9C70FE022CC264C00C993A1 /* 190_BruchsMembrane_1.gif */; };
+		B9C70FE322CC26FB00C993A1 /* downArrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = B9C70FE222CC26FA00C993A1 /* downArrow.gif */; };
 		BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */; };
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
 		BC981F82229474C100E09BF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC981F81229474C100E09BF2 /* Extensions.swift */; };
@@ -50,8 +50,6 @@
 		FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */; };
 		FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */; };
 		FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */; };
-		FDC7A75922926E4900742BDD /* shuffle.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75822926E4900742BDD /* shuffle.png */; };
-		FDC7A75D2292708200742BDD /* information (1).png in Resources */ = {isa = PBXBuildFile; fileRef = FDC7A75C2292708200742BDD /* information (1).png */; };
 		FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */; };
 		FDD1932E221B921D000A2F63 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1932D221B921D000A2F63 /* Status.swift */; };
 		FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF2A57322163BBE00B1E1D0 /* AppDelegate.swift */; };
@@ -87,21 +85,18 @@
 		6208A9E22295DFD40055D727 /* slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = slide.xib; sourceTree = "<group>"; };
 		6208A9E42295E00C0055D727 /* slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slide.swift; sourceTree = "<group>"; };
 		6208A9E62295E0DA0055D727 /* scrollProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollProgressViewController.swift; sourceTree = "<group>"; };
-		62420C0F229F49120008F4A4 /* downArrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = downArrow.gif; sourceTree = "<group>"; };
 		628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewImageCardReveal.swift; sourceTree = "<group>"; };
 		628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewCardReveal.swift; sourceTree = "<group>"; };
 		629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 217_Retinoblastoma_3.gif; path = images/217_Retinoblastoma_3.gif; sourceTree = "<group>"; };
 		629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 257_PeripheralRetina_CystoidDegeneration.gif; path = images/257_PeripheralRetina_CystoidDegeneration.gif; sourceTree = "<group>"; };
 		629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; sourceTree = "<group>"; };
 		629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; sourceTree = "<group>"; };
-		629BB8492294BF9C0066F20C /* progressIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progressIcon.png; sourceTree = "<group>"; };
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
 		62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
 		62ED789122836C2D002D59C4 /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
 		62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_2.gif; path = images/190_BruchsMembrane_2.gif; sourceTree = "<group>"; };
-		62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_1.gif; path = images/190_BruchsMembrane_1.gif; sourceTree = "<group>"; };
 		62ED78972283821A002D59C4 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
 		62ED78992283A224002D59C4 /* SingleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewController.swift; sourceTree = "<group>"; };
 		62ED789B22855B04002D59C4 /* temp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temp.txt; sourceTree = "<group>"; };
@@ -110,6 +105,9 @@
 		9A1F2382DE8BFC72ECB51754 /* Pods_OpthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageViewController.swift; sourceTree = "<group>"; };
 		B997BDBA22B1BA2B0047209B /* Text_06.12.19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text_06.12.19.txt; sourceTree = "<group>"; };
+		B9C70FDE22CC18E300C993A1 /* Text_07.01.19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text_07.01.19.txt; sourceTree = "<group>"; };
+		B9C70FE022CC264C00C993A1 /* 190_BruchsMembrane_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_1.gif; path = images/190_BruchsMembrane_1.gif; sourceTree = "<group>"; };
+		B9C70FE222CC26FA00C993A1 /* downArrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = downArrow.gif; path = images/downArrow.gif; sourceTree = "<group>"; };
 		BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsOfTableViewController.swift; sourceTree = "<group>"; };
 		BC95F77F2252F8C6008697EA /* SmallTes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SmallTes.txt; sourceTree = "<group>"; };
 		BC981F81229474C100E09BF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -130,8 +128,6 @@
 		FDA541682251CFAF00B536E0 /* SubtopicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableView.swift; sourceTree = "<group>"; };
 		FDC3744D221AB878005EAE38 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 		FDC3744F221B81B0005EAE38 /* AnimationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
-		FDC7A75822926E4900742BDD /* shuffle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuffle.png; sourceTree = "<group>"; };
-		FDC7A75C2292708200742BDD /* information (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "information (1).png"; sourceTree = "<group>"; };
 		FDD0577A22544AD700B054C8 /* SubtopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtopicTableViewCell.swift; sourceTree = "<group>"; };
 		FDD1932D221B921D000A2F63 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		FDF2A57022163BBE00B1E1D0 /* Opth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,14 +303,11 @@
 				FDA541652251C8D100B536E0 /* View */,
 				FDD19330221BBB9A000A2F63 /* UI */,
 				FDF2A57A22163BBE00B1E1D0 /* Assets.xcassets */,
-				629BB8492294BF9C0066F20C /* progressIcon.png */,
-				FDC7A75C2292708200742BDD /* information (1).png */,
-				62420C0F229F49120008F4A4 /* downArrow.gif */,
-				FDC7A75822926E4900742BDD /* shuffle.png */,
+				B9C70FE222CC26FA00C993A1 /* downArrow.gif */,
 				629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */,
 				629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */,
 				629720F52290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif */,
-				62ED7894228373B1002D59C4 /* 190_BruchsMembrane_1.gif */,
+				B9C70FE022CC264C00C993A1 /* 190_BruchsMembrane_1.gif */,
 				62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */,
 				629720F32290E3F000F10CBE /* 217_Retinoblastoma_3.gif */,
 				FDD19331221BBBB3000A2F63 /* Animation */,
@@ -346,6 +339,7 @@
 		FDF2A5A322163F0C00B1E1D0 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				B9C70FDE22CC18E300C993A1 /* Text_07.01.19.txt */,
 				B997BDBA22B1BA2B0047209B /* Text_06.12.19.txt */,
 				FD1FF2BF2290B663007A7DA2 /* underlinetest.txt */,
 				62ED789B22855B04002D59C4 /* temp.txt */,
@@ -464,24 +458,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C70FE122CC264C00C993A1 /* 190_BruchsMembrane_1.gif in Resources */,
 				FD1FF2C02290B663007A7DA2 /* underlinetest.txt in Resources */,
-				FDC7A75922926E4900742BDD /* shuffle.png in Resources */,
 				629720F82290E43200F10CBE /* 257_PeripheralRetina_CystoidDegeneration.gif in Resources */,
-				62420C10229F49120008F4A4 /* downArrow.gif in Resources */,
 				6208A9E32295DFD40055D727 /* slide.xib in Resources */,
+				B9C70FDF22CC18E300C993A1 /* Text_07.01.19.txt in Resources */,
 				629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */,
-				629BB84A2294BF9E0066F20C /* progressIcon.png in Resources */,
+				B9C70FE322CC26FB00C993A1 /* downArrow.gif in Resources */,
 				629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */,
 				B997BDBB22B1BA2B0047209B /* Text_06.12.19.txt in Resources */,
 				FDF2A57E22163BBE00B1E1D0 /* LaunchScreen.storyboard in Resources */,
 				FDF2A57B22163BBE00B1E1D0 /* Assets.xcassets in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
-				62ED7896228373B1002D59C4 /* 190_BruchsMembrane_1.gif in Resources */,
 				62ED789C22855B04002D59C4 /* temp.txt in Resources */,
 				BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */,
 				62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */,
 				62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */,
-				FDC7A75D2292708200742BDD /* information (1).png in Resources */,
 				629720F42290E3F000F10CBE /* 217_Retinoblastoma_3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
