@@ -79,7 +79,6 @@ class SpacedRepetition {
         self.curReviewIndex = 0
         //print("MAX LIST SIZE" + String(self.max_list_size))
         generateReviewList(subtopics: self.subtopics)
-        
     }
     
     
@@ -94,7 +93,6 @@ class SpacedRepetition {
                 }
             }
         }
-        
         self.all_subtopics = flattenedArray.flatMap({$0}).shuffled() // store all subtopics
         self.reviewList = self.all_subtopics
     }
@@ -113,7 +111,6 @@ class SpacedRepetition {
         
         var size = self.reviewList.filter{$0.repeat_factor != 1}
         self.max_list_size = size.count
-
         
         if(self.max_list_size > 0)
         {
@@ -149,8 +146,8 @@ class SpacedRepetition {
             }
             reviewList[curReviewIndex-1].repeat_factor = 1
             //            reviewList[curReviewIndex-1].repeat_factor = calculateRepeatFactor(new_score: reviewList[curReviewIndex-1].score, difficulty: 2, old_rf: reviewList[curReviewIndex-1].repeat_factor)
-            
         }
+        
         if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
             if(isReviewFinished() == true){
                 finished = true
@@ -170,7 +167,6 @@ class SpacedRepetition {
             }
             reviewList[curReviewIndex-1].repeat_factor = 3
             //            reviewList[curReviewIndex-1].repeat_factor = calculateRepeatFactor(new_score: reviewList[curReviewIndex-1].score, difficulty: 2, old_rf: reviewList[curReviewIndex-1].repeat_factor)
-            
         }
         if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
             if(isReviewFinished() == true){
@@ -181,7 +177,6 @@ class SpacedRepetition {
                 }
             }
         }
-        
     }
     
     func hardPressed(){
@@ -192,7 +187,6 @@ class SpacedRepetition {
             }
             reviewList[curReviewIndex-1].repeat_factor = 5
             //            reviewList[curReviewIndex-1].repeat_factor = calculateRepeatFactor(new_score: reviewList[curReviewIndex-1].score, difficulty: 2, old_rf: reviewList[curReviewIndex-1].repeat_factor)
-            
         }
         if(curReviewIndex-1 == self.reviewList.count-1){ // all cards in current list are seen, check if some cards are not mastered
             if(isReviewFinished() == true){
@@ -203,7 +197,6 @@ class SpacedRepetition {
                 }
             }
         }
-        
     }
     
     // generate Review Factor List from subtopic review factors
@@ -299,7 +292,6 @@ class SpacedRepetition {
                     }
                 }
             }
-            //print(self.reviewList)
         }
     }
 }
