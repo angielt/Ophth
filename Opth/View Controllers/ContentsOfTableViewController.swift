@@ -58,7 +58,7 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
 
 
         // data file
-        if let filepath = Bundle.main.path(forResource: "Text_07.01.19", ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: "Text_07.13.19", ofType: "txt") {
                parse.csv(data: filepath)
         } else {
             print("data file could not be found")
