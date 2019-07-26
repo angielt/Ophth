@@ -177,8 +177,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         // segue code for redirection from search to other view controller
         if t > 0{
             fTopic = filteredTopics[indexPath.row]
-            
-            //performSegue(withIdentifier: "searchTopic", sender: self)
+            for i in status.CategoryList {
+                if i.categoryName == fTopic.topicCategory {
+                    fCategory = i
+                }
+            }
+            performSegue(withIdentifier: "searchTopic", sender: self)
         }
         else if s > 0{
             for k in 0..<filteredSubtopics.count + 1{

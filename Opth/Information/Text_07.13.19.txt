@@ -1,7 +1,5 @@
 	Category	Topic	Subtopic 	nil	Image Caption	Header 1	Info1	Header2	Info2	Header3	Info3	Header4	Info4	Header5	Info5	Header6	Info6	Header7	Info7	Header8	Info8	Header9	Info9	Header10	Info10	Header11	Info11	Header12	Info12	Header13	Info13	Header14	Info14	Header15	Info15				
-	Fundamentals	nil	nil	nil	nil	nil	nil																																
-	Optics	nil	nil	nil	nil	nil	nil																																
-	Embryology	nil	nil	nil	nil	nil	nil																																
+	General	nil	nil	nil	nil	nil	nil																																
 266	Neuro-Ophthalmology	Optic Disc Anomalies	Morning Glory Anomaly	266_OpticDiscAnomalies_MorningGlory.jpg	nil	# Features:	"Ô- Vessels radiate from periphery of excavation with central glial tuft 
 - Unilateral
 - Female>male (2:1)
@@ -38,8 +36,7 @@
 - Dense inferior VF defects"	# Etiology?	Ô- Mother with diabetes																														
 	Pediatrics/Strabismus	nil	nil	nil	nil	nil	nil																																
 	Oculoplastics	nil	nil	nil	nil	nil	nil																																
-	External Diseases/Cornea	nil	nil	nil	nil	nil	nil																																
-	Lens/Cataract	nil	nil	nil	nil	nil	nil																																
+	Cornea	nil	nil	nil	nil	nil	nil																																
 	Glaucoma	nil	nil	nil	nil	nil	nil																																
 188	Retina	General	Layers of the Retina	188_Retina.jpg	nil	# How often do photoreceptor outer segments renew?	Ô- Every 10 days																																
 189	Retina	General	Wavelengths	nil	nil	_____ is most sensitive to light at what wavelength? (Opsin)	nil	# Rhodopsin	- 510nm (green)	# L cone	- 564-580nm	# M cone	- 534-545nm	# S cone	- 420-440nm	_____ emits light at what wavelength? (Laser)	nil	# Excimer laser	- 193nm (UV)	# Argon retinal laser	- 532nm (green)	# Diode laser	- 810nm (IR)	# Nd:YAG laser	- 1064nm	# Femtosecond laser	- 1053nm												
