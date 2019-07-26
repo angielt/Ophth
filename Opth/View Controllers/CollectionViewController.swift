@@ -33,6 +33,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let trimmedCategory = status.CategoryList[indexPath.item].categoryName.replacingOccurrences(of: "\n", with: "")
         cell.label?.text = trimmedCategory
         
+        let imageCategory = trimmedCategory.replacingOccurrences(of: "/", with: "")
+        cell.image.image = UIImage(named: imageCategory)
+        
         return cell
     }
     

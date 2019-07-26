@@ -45,13 +45,6 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
 
         topicLabel.text = category.categoryName
-        
-        // data file
-        if let filepath = Bundle.main.path(forResource: "Text_07.13.19", ofType: "txt") {
-               parse.csv(data: filepath)
-        } else {
-            print("data file could not be found")
-        }
     }
     
     override func didReceiveMemoryWarning() {
