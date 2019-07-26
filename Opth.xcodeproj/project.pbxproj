@@ -31,6 +31,7 @@
 		B9017C4A22BC7EF8009ACFBB /* AboutPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */; };
 		B951EE2C22EA5C6C00C473A0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951EE2B22EA5C6C00C473A0 /* CollectionViewCell.swift */; };
 		B951EE2E22EA5D0100C473A0 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951EE2D22EA5D0100C473A0 /* CollectionViewController.swift */; };
+		B951EE3022EA7BEC00C473A0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */; };
 		B9B5977722CED97D00B32E3B /* Text_07.04.19.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9B5977622CED97D00B32E3B /* Text_07.04.19.txt */; };
 		B9C70FE122CC264C00C993A1 /* 190_BruchsMembrane_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = B9C70FE022CC264C00C993A1 /* 190_BruchsMembrane_1.gif */; };
 		B9C70FE322CC26FB00C993A1 /* downArrow.gif in Resources */ = {isa = PBXBuildFile; fileRef = B9C70FE222CC26FA00C993A1 /* downArrow.gif */; };
@@ -108,6 +109,7 @@
 		B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPageViewController.swift; sourceTree = "<group>"; };
 		B951EE2B22EA5C6C00C473A0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B951EE2D22EA5D0100C473A0 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B9B5977622CED97D00B32E3B /* Text_07.04.19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text_07.04.19.txt; sourceTree = "<group>"; };
 		B9C70FE022CC264C00C993A1 /* 190_BruchsMembrane_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_1.gif; path = images/190_BruchsMembrane_1.gif; sourceTree = "<group>"; };
 		B9C70FE222CC26FA00C993A1 /* downArrow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = downArrow.gif; path = images/downArrow.gif; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */,
 				B951EE2B22EA5C6C00C473A0 /* CollectionViewCell.swift */,
 				B951EE2D22EA5D0100C473A0 /* CollectionViewController.swift */,
+				B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -606,6 +609,7 @@
 				FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */,
 				62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */,
 				FD5A9CAA228951BA008B3ADB /* TabBarController.swift in Sources */,
+				B951EE3022EA7BEC00C473A0 /* SearchViewController.swift in Sources */,
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
 				62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */,
 				B951EE2E22EA5D0100C473A0 /* CollectionViewController.swift in Sources */,

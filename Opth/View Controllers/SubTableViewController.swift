@@ -20,7 +20,6 @@ class SubTableViewController: UIViewController, UITableViewDelegate, UITableView
     var topic: Topic!
     var subtopic: Subtopic!
     var index = 0
-    var topicIndex = 0
     
     //Make the top bar with the time to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {

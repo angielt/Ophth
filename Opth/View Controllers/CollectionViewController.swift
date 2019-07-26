@@ -10,6 +10,8 @@ import UIKit
 
 class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var cateogryIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,10 +36,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width / 2, height: 155)
     }
@@ -50,5 +48,17 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // row padding
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        cateogryIndex = indexPath.item
+        performSegue(withIdentifier: "topicSeg", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "topicSeg"{
+            let destinationVC = segue.destination as? ContentsOfTableViewController
+            destinationVC?.category = status.CategoryList[cateogryIndex]
+        }
     }
 }
