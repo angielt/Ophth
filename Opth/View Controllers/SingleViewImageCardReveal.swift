@@ -158,13 +158,13 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
+        // font style
         let underline = Style {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
         }
         
         let italic = Style {
-            //$0.font = UIFont.systemFont(ofSize: 20)
             $0.font = UIFont.italicSystemFont(ofSize: 20)
         }
         
@@ -223,16 +223,22 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             //  You now have visible cells in visibleCellsArray
             visibleRowIndexArray.append(currentIndextPath.row)
         }
+        
         if(visibleRowIndexArray.contains(index)){
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
-            if(showInfo == false){
-                showInfo = true
+            
+            // display the last info
+            if (index == subtopic.cards.count-1){
                 cell.Info.textColor = UIColor.white
                 index = index+1
             }
-            else if(showInfo == true){
-                showInfo = false
-                cell.Header.textColor = UIColor.cyan
+            if(visibleRowIndexArray.contains(index+1)){
+                if(index < subtopic.cards.count - 1) {
+                    let a = subtopicTableView.cellForRow(at: IndexPath(row: index + 1, section: 0)) as! SubtopicTableViewCell
+                    cell.Info.textColor = UIColor.white
+                    a.Header.textColor = UIColor.cyan
+                }
+                index = index+1
             }
             if(index == subtopic.cards.count){
                 downIndicator.isHidden = true

@@ -172,14 +172,19 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         if(visibleRowIndexArray.contains(index)){
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
-            if(showInfo == false){
-                showInfo = true
+            
+            // display the last info
+            if (index == spacedRep.reviewList[curReviewIndex].cards.count-1){
                 cell.Info.textColor = UIColor.white
                 index = index+1
             }
-            else if(showInfo == true){
-                showInfo = false
-                cell.Header.textColor = UIColor.cyan
+            if(visibleRowIndexArray.contains(index+1)){
+                if(index < spacedRep.reviewList[curReviewIndex].cards.count - 1) {
+                    let a = subtopicTableView.cellForRow(at: IndexPath(row: index + 1, section: 0)) as! SubtopicTableViewCell
+                    cell.Info.textColor = UIColor.white
+                    a.Header.textColor = UIColor.cyan
+                }
+                index = index+1
             }
             if(index == spacedRep.reviewList[curReviewIndex].cards.count){
                 buttonsVisible = true
