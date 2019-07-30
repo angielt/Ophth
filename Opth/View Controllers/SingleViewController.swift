@@ -8,9 +8,11 @@
 
 import UIKit
 
-class SingleViewController: UIViewController {
+class SingleViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     static let cardCornerRadius: CGFloat = 25
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -21,6 +23,7 @@ class SingleViewController: UIViewController {
     @IBOutlet weak var card: UIView!
     
     var subtopic: Subtopic!
+    var topic: Topic!
     
     //Make the top bar with the time to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -33,6 +36,32 @@ class SingleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        for i in topic.subtopics {
+            print(i.subtopicName)
+        }
+        return topic.subtopics.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SVCell", for: indexPath) as! SVCollectionViewCell
+        
+        cell.label?.text = topic.subtopics[indexPath.item].subtopicName
+        return cell
+    }
+    
+    // column padding
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    // row padding
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
     func loadData(){

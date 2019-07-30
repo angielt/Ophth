@@ -887,6 +887,48 @@
                                     <action selector="backButton:" destination="OpK-c2-obb" eventType="touchUpInside" id="f5T-os-nVi"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JUx-w8-ez4">
+                                <rect key="frame" x="20" y="565" width="374" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LTi-UU-wbI">
+                                    <size key="itemSize" width="374" height="168.5"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SVCell" id="J0Z-71-dez" customClass="SVCollectionViewCell" customModule="Opth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-0.5" width="374" height="168.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="168.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FW-FV-FY6">
+                                                    <rect key="frame" x="0.0" y="74" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4FW-FV-FY6" firstAttribute="width" secondItem="J0Z-71-dez" secondAttribute="width" id="X75-zu-WOx"/>
+                                            <constraint firstItem="4FW-FV-FY6" firstAttribute="centerX" secondItem="J0Z-71-dez" secondAttribute="centerX" id="ji9-VX-o4n"/>
+                                            <constraint firstItem="4FW-FV-FY6" firstAttribute="centerY" secondItem="J0Z-71-dez" secondAttribute="centerY" id="qlm-gA-LB0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="4FW-FV-FY6" id="TRk-EC-auG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="OpK-c2-obb" id="elt-mi-ARd"/>
+                                    <outlet property="delegate" destination="OpK-c2-obb" id="YuV-H9-Ofi"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -901,6 +943,7 @@
                     <connections>
                         <outlet property="card" destination="IEF-x5-qX3" id="T3K-cn-YbC"/>
                         <outlet property="cardFront" destination="py6-xm-YyZ" id="coQ-SF-P7s"/>
+                        <outlet property="collectionView" destination="JUx-w8-ez4" id="751-Q2-9EN"/>
                         <segue destination="Kh0-YB-B7g" kind="presentation" identifier="singleViewImageReveal" id="GXd-lX-OvY"/>
                         <segue destination="9e1-g4-qxj" kind="presentation" identifier="singleViewReveal" id="VtJ-2y-YTV"/>
                     </connections>
@@ -912,7 +955,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="820" y="-631.0344827586207"/>
+            <point key="canvasLocation" x="818.84057971014499" y="-631.47321428571422"/>
         </scene>
         <!--Progress-->
         <scene sceneID="agl-nm-knY">
@@ -1048,11 +1091,11 @@ Janet Jianghua Lee-Coomes, BS</string>
             <objects>
                 <viewController storyboardIdentifier="cardVCSR" id="Wta-HZ-K4Y" customClass="ViewControllerReview" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6V-lm-8R1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJD-Aw-W6E">
-                                <rect key="frame" x="47" y="306.5" width="320" height="200"/>
+                                <rect key="frame" x="47" y="348" width="320" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-fS-xhY">
                                         <rect key="frame" x="32" y="87.5" width="256" height="25.5"/>
@@ -1091,7 +1134,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap card to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjM-5S-HVA">
-                                <rect key="frame" x="140.5" y="516.5" width="133" height="21"/>
+                                <rect key="frame" x="140.5" y="558" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -1545,7 +1588,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gv7-YK-cCC">
-                                <rect key="frame" x="0.0" y="128" width="414" height="685"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="665"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NRK-I5-rDP">
                                     <size key="itemSize" width="187" height="179"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1567,7 +1610,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="190_BruchsMembrane_1" translatesAutoresizingMaskIntoConstraints="NO" id="77n-nB-el0">
-                                                    <rect key="frame" x="8" y="8" width="171" height="110"/>
+                                                    <rect key="frame" x="8" y="8" width="171.00000000000023" height="110"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="110" id="d0q-df-as6"/>
                                                     </constraints>
@@ -1599,7 +1642,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                             <constraint firstItem="gv7-YK-cCC" firstAttribute="top" secondItem="7Dd-L6-F43" secondAttribute="bottom" constant="15" id="0cV-lb-15w"/>
                             <constraint firstItem="JxR-9P-YFt" firstAttribute="trailing" secondItem="gv7-YK-cCC" secondAttribute="trailing" id="1us-Vp-Rkg"/>
                             <constraint firstItem="7Dd-L6-F43" firstAttribute="top" secondItem="JxR-9P-YFt" secondAttribute="top" constant="25" id="EiT-ST-Ig9"/>
-                            <constraint firstItem="JxR-9P-YFt" firstAttribute="bottom" secondItem="gv7-YK-cCC" secondAttribute="bottom" id="G6u-m5-240"/>
+                            <constraint firstItem="JxR-9P-YFt" firstAttribute="bottom" secondItem="gv7-YK-cCC" secondAttribute="bottom" constant="20" id="G6u-m5-240"/>
                             <constraint firstItem="gv7-YK-cCC" firstAttribute="centerX" secondItem="T5G-uj-2pP" secondAttribute="centerX" id="IIP-7K-A70"/>
                             <constraint firstItem="gv7-YK-cCC" firstAttribute="leading" secondItem="JxR-9P-YFt" secondAttribute="leading" id="L7P-jk-61J"/>
                             <constraint firstItem="7Dd-L6-F43" firstAttribute="centerX" secondItem="T5G-uj-2pP" secondAttribute="centerX" id="UdO-RF-lau"/>
@@ -1630,14 +1673,14 @@ Janet Jianghua Lee-Coomes, BS</string>
         <image name="shuffle.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hfe-DW-TFS"/>
-        <segue reference="CUw-Bp-mQ4"/>
-        <segue reference="8of-UO-h7M"/>
+        <segue reference="VtJ-2y-YTV"/>
+        <segue reference="GXd-lX-OvY"/>
+        <segue reference="xBR-bm-geq"/>
         <segue reference="AGR-m3-QCp"/>
         <segue reference="hBY-14-0wZ"/>
         <segue reference="BpS-xS-shc"/>
-        <segue reference="ueQ-aR-ApD"/>
+        <segue reference="T0X-qS-oqu"/>
         <segue reference="ihp-7O-gdK"/>
-        <segue reference="dAp-Lj-wAj"/>
+        <segue reference="gaw-FT-Nr2"/>
     </inferredMetricsTieBreakers>
 </document>

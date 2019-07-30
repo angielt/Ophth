@@ -60,7 +60,7 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if status.CategoryList[section].opened == true {
-            return category.topics[section].subtopics.count
+            return category.topics[section].subtopics.count + 1
         }
         else {
             return 1
@@ -115,6 +115,7 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
             destinationVC.subtopic = category.topics[sectionIndex].subtopics[rowIndex]
+            destinationVC.topic = category.topics[sectionIndex]
         }
     }
 }
