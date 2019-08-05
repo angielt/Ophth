@@ -15,8 +15,7 @@ class singleViewimageTapGesture: UITapGestureRecognizer{
     var imageIndex = 0
 }
 
-class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
-    
+class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching, UIScrollViewDelegate {
     
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var imageScrollView: UIScrollView!
@@ -53,6 +52,8 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        subtopicTableView.prefetchDataSource = self
         
         downIndicator.loadGif(name: "downArrow")
         downIndicator.isHidden = false
@@ -264,5 +265,10 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             let destinationViewController = navigationController?.viewControllers.first as? NotesViewController
             destinationViewController?.subtopic = subtopic.subtopicName
         }
+    }
+    
+    // prefetch table view
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print(indexPaths)
     }
 }

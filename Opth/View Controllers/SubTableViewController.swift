@@ -104,7 +104,7 @@ class SubTableViewController: UIViewController, UITableViewDelegate, UITableView
     // pass in the subtopic to the single view card
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
-            destinationVC.subtopic = subtopic
+            //destinationVC.subtopic = subtopic
         }
     }
 }
