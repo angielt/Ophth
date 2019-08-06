@@ -277,7 +277,8 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
-            image.fullImage = UIImage(named: spacedRep.reviewList[curReviewIndex].img_list[imageIndex])
+            image.subtopic = spacedRep.reviewList[curReviewIndex]
+            image.imageName = spacedRep.reviewList[curReviewIndex].img_list[imageIndex]
         }
         if (segue.identifier == "addNotes") {
             let navigationController = segue.destination as? UINavigationController

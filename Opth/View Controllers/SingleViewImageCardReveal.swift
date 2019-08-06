@@ -34,7 +34,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             dismiss(animated: true, completion: nil)
         }
         else{
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -258,7 +258,8 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
-            image.fullImage = UIImage(named: subtopic.img_list[imageIndex])
+            image.subtopic = subtopic
+            image.imageName = subtopic.img_list[imageIndex]
         }
         if (segue.identifier == "addNotes") {
             let navigationController = segue.destination as? UINavigationController
