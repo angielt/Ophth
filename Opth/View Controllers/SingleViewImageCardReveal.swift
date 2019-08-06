@@ -15,8 +15,7 @@ class singleViewimageTapGesture: UITapGestureRecognizer{
     var imageIndex = 0
 }
 
-class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate{
-    
+class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableViewDataSource, UITableViewDataSourcePrefetching, UIScrollViewDelegate {
     
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var imageScrollView: UIScrollView!
@@ -35,7 +34,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             dismiss(animated: true, completion: nil)
         }
         else{
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -53,6 +52,8 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        subtopicTableView.prefetchDataSource = self
         
         downIndicator.loadGif(name: "downArrow")
         downIndicator.isHidden = false
@@ -257,12 +258,18 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! FullScreenImageViewController
-            image.fullImage = UIImage(named: subtopic.img_list[imageIndex])
+            image.subtopic = subtopic
+            image.imageName = subtopic.img_list[imageIndex]
         }
         if (segue.identifier == "addNotes") {
             let navigationController = segue.destination as? UINavigationController
             let destinationViewController = navigationController?.viewControllers.first as? NotesViewController
             destinationViewController?.subtopic = subtopic.subtopicName
         }
+    }
+    
+    // prefetch table view
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print(indexPaths)
     }
 }

@@ -30,7 +30,7 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
             dismiss(animated: true, completion: nil)
         }
         else{
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
     

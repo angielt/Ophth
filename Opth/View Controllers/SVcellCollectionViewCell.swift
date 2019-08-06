@@ -1,14 +1,13 @@
 //
-//  SVCollectionViewCell.swift
+//  SVcellCollectionViewCell.swift
 //  Opth
 //
-//  Created by Nancy Fong on 7/29/19.
+//  Created by Wai Tong on 8/5/19.
 //  Copyright © 2019 Angie Ta. All rights reserved.
 //
 
 import UIKit
 
-class SVCollectionViewCell: UICollectionViewCell {
-    
+class SVcellCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
 }
