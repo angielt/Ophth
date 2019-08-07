@@ -21,7 +21,6 @@
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
 		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
-		62CE6E6922695A0E00ECD0C0 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */; };
 		62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED789122836C2D002D59C4 /* GifImageViewController.swift */; };
 		62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */; };
 		62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED78972283821A002D59C4 /* SpacedRepetition.swift */; };
@@ -99,7 +98,6 @@
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
 		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
-		62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
 		62ED789122836C2D002D59C4 /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
 		62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_2.gif; path = images/190_BruchsMembrane_2.gif; sourceTree = "<group>"; };
 		62ED78972283821A002D59C4 /* SpacedRepetition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetition.swift; sourceTree = "<group>"; };
@@ -208,6 +206,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C45E8C0B22FAA50F0053EF19 /* Progress page */ = {
+			isa = PBXGroup;
+			children = (
+				BC981F81229474C100E09BF2 /* Extensions.swift */,
+				6208A9E62295E0DA0055D727 /* scrollProgressViewController.swift */,
+				6208A9E42295E00C0055D727 /* slide.swift */,
+				6208A9E22295DFD40055D727 /* slide.xib */,
+			);
+			name = "Progress page";
+			sourceTree = "<group>";
+		};
+		C45E8C0F22FAA6580053EF19 /* Single View */ = {
+			isa = PBXGroup;
+			children = (
+				628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */,
+				62ED78992283A224002D59C4 /* SingleViewController.swift */,
+				628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */,
+				C4C3D75E22F8E078004623F1 /* SVcellCollectionViewCell.swift */,
+			);
+			name = "Single View";
+			sourceTree = "<group>";
+		};
+		C45E8C1022FAA6F90053EF19 /* Table of Content */ = {
+			isa = PBXGroup;
+			children = (
+				B951EE2B22EA5C6C00C473A0 /* CollectionViewCell.swift */,
+				B951EE2D22EA5D0100C473A0 /* CollectionViewController.swift */,
+				BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */,
+			);
+			name = "Table of Content";
+			sourceTree = "<group>";
+		};
+		C45E8C1122FAA7520053EF19 /* Spaced Rep View */ = {
+			isa = PBXGroup;
+			children = (
+				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
+				62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */,
+				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
+				FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */,
+			);
+			name = "Spaced Rep View";
+			sourceTree = "<group>";
+		};
 		FD804CBD2286BE50009A8EDA /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,28 +268,16 @@
 		FDD1932F221BBB80000A2F63 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD27ADF6221B8D2F001E41CB /* CardRevealViewController.swift */,
-				FDF2A57522163BBE00B1E1D0 /* ViewController.swift */,
-				F86AEED1227031DD00F4FC9C /* NotesViewController.swift */,
-				BC95F77B2252F4EE008697EA /* ContentsOfTableViewController.swift */,
-				62CE6E6822695A0E00ECD0C0 /* SubTableViewController.swift */,
-				62C882B422756BA200FA248A /* FullScreenImageViewController.swift */,
-				62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */,
-				FD5A9CA522880E95008B3ADB /* ViewControllerReview.swift */,
-				FD5A9CA9228951BA008B3ADB /* TabBarController.swift */,
-				62ED78992283A224002D59C4 /* SingleViewController.swift */,
-				628BAF3E228C07A90086C911 /* SingleViewImageCardReveal.swift */,
-				628BAF40228C07C10086C911 /* SingleViewCardReveal.swift */,
-				BC981F81229474C100E09BF2 /* Extensions.swift */,
-				6208A9E22295DFD40055D727 /* slide.xib */,
-				6208A9E42295E00C0055D727 /* slide.swift */,
-				6208A9E62295E0DA0055D727 /* scrollProgressViewController.swift */,
+				C45E8C1122FAA7520053EF19 /* Spaced Rep View */,
+				C45E8C0F22FAA6580053EF19 /* Single View */,
+				C45E8C1022FAA6F90053EF19 /* Table of Content */,
+				C45E8C0B22FAA50F0053EF19 /* Progress page */,
 				B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */,
-				B951EE2B22EA5C6C00C473A0 /* CollectionViewCell.swift */,
-				B951EE2D22EA5D0100C473A0 /* CollectionViewController.swift */,
-				B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */,
-				C4C3D75E22F8E078004623F1 /* SVcellCollectionViewCell.swift */,
+				62C882B422756BA200FA248A /* FullScreenImageViewController.swift */,
 				C45E8C0822F8FC6F0053EF19 /* ImageCollectionViewCell.swift */,
+				F86AEED1227031DD00F4FC9C /* NotesViewController.swift */,
+				B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */,
+				FD5A9CA9228951BA008B3ADB /* TabBarController.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -621,7 +650,6 @@
 				62ED78982283821A002D59C4 /* SpacedRepetition.swift in Sources */,
 				B951EE2E22EA5D0100C473A0 /* CollectionViewController.swift in Sources */,
 				FDF2A57422163BBE00B1E1D0 /* AppDelegate.swift in Sources */,
-				62CE6E6922695A0E00ECD0C0 /* SubTableViewController.swift in Sources */,
 				B9017C4A22BC7EF8009ACFBB /* AboutPageViewController.swift in Sources */,
 				FDC3744E221AB878005EAE38 /* FlipPresentAnimationController.swift in Sources */,
 				6208A9E72295E0DA0055D727 /* scrollProgressViewController.swift in Sources */,

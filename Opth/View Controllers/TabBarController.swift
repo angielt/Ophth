@@ -37,5 +37,4 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
             status.progressVC?.animatePulsatingLayer()
         }
     }
-
 }

@@ -44,16 +44,20 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // down arrow gif image
         downIndicator.loadGif(name: "downArrow")
         downIndicator.isHidden = false
-        subtopicTableView.rowHeight = UITableView.automaticDimension
+        
+        // add tap gesture
         let tap = UITapGestureRecognizer(target: self, action: #selector(CardRevealViewController.handleTap(_:)))
         tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 1
         subtopicTableView.addGestureRecognizer(tap)
         subtopicTableView.isUserInteractionEnabled = true
-        indexMax = subtopic.cards.count //spacedRep.reviewList.count
+        subtopicTableView.rowHeight = UITableView.automaticDimension
         
+        indexMax = subtopic.cards.count
         cardTitle.text = subtopic.subtopicName
     }
     
@@ -72,20 +76,17 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
+        // text style
         let underline = Style {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
         }
-        
         let italic = Style {
-            //$0.font = UIFont.systemFont(ofSize: 20)
             $0.font = UIFont.italicSystemFont(ofSize: 20)
         }
-        
         let bold = Style {
             $0.font = UIFont.boldSystemFont(ofSize: 20)
         }
-        
         let myGroup = StyleGroup([
             "u": underline,
             "i": italic,

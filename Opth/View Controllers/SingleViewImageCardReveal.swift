@@ -105,7 +105,10 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             imageView.addGestureRecognizer(imageTap)
             self.imageScrollView.addSubview(imageView)
             
-//            //add caption for each image
+            /***
+                uncommit code below to add caption for each image
+            ***/
+            
 //            if subtopic.img_caption[0] != "nil"{
 //                let caption = UILabel(frame: CGRect.init(origin: CGPoint.init(x:0,y:self.imageScrollView.frame.height - 62), size: CGSize.init(width:self.view.frame.width,height:50)))
 //                caption.text = subtopic.img_caption[i]
@@ -225,6 +228,7 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
             visibleRowIndexArray.append(currentIndextPath.row)
         }
         
+        // display info and header at the same time
         if(visibleRowIndexArray.contains(index)){
             let cell = subtopicTableView.cellForRow(at: IndexPath(row: index, section: 0)) as! SubtopicTableViewCell
             
