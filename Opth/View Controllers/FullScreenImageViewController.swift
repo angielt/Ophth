@@ -65,6 +65,7 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegate,
         
         cell.image.image = UIImage(named: subtopic.img_list[indexPath.item])
         imageView = cell.image
+        print(imageView.image)
         return cell
     }
     
