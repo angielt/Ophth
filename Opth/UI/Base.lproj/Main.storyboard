@@ -1504,7 +1504,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                                     <constraint firstItem="Cia-CK-M9e" firstAttribute="top" secondItem="7Dd-L6-F43" secondAttribute="top" id="nb2-F0-HaJ"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gv7-YK-cCC">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gv7-YK-cCC">
                                 <rect key="frame" x="0.0" y="128" width="414" height="665"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NRK-I5-rDP">
                                     <size key="itemSize" width="187" height="179"/>
@@ -1527,7 +1527,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="190_BruchsMembrane_1" translatesAutoresizingMaskIntoConstraints="NO" id="77n-nB-el0">
-                                                    <rect key="frame" x="8" y="8" width="171.00000000000023" height="134.5"/>
+                                                    <rect key="frame" x="8" y="8" width="171" height="125.5"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -1537,7 +1537,7 @@ Janet Jianghua Lee-Coomes, BS</string>
                                             <constraint firstItem="77n-nB-el0" firstAttribute="top" secondItem="7qd-02-FxB" secondAttribute="topMargin" id="CIk-gk-6zl"/>
                                             <constraint firstItem="77n-nB-el0" firstAttribute="centerX" secondItem="7qd-02-FxB" secondAttribute="centerX" id="Lbf-Mf-4YA"/>
                                             <constraint firstItem="77n-nB-el0" firstAttribute="leading" secondItem="7qd-02-FxB" secondAttribute="leadingMargin" id="b5K-TD-Z3y"/>
-                                            <constraint firstItem="77n-nB-el0" firstAttribute="height" secondItem="7qd-02-FxB" secondAttribute="height" multiplier="0.75" id="dPT-gd-K7b"/>
+                                            <constraint firstItem="77n-nB-el0" firstAttribute="height" secondItem="7qd-02-FxB" secondAttribute="height" multiplier="0.7" id="dPT-gd-K7b"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="77n-nB-el0" secondAttribute="trailing" id="o9O-LB-5tR"/>
                                         </constraints>
                                         <connections>
@@ -1591,9 +1591,9 @@ Janet Jianghua Lee-Coomes, BS</string>
         <segue reference="GXd-lX-OvY"/>
         <segue reference="Fc5-eH-POT"/>
         <segue reference="twx-Q5-Hgw"/>
-        <segue reference="4wZ-Ha-UyP"/>
+        <segue reference="hBY-14-0wZ"/>
         <segue reference="FrC-2p-OWa"/>
-        <segue reference="IRs-yv-0fS"/>
+        <segue reference="ueQ-aR-ApD"/>
         <segue reference="LBt-Kh-oXB"/>
         <segue reference="gaw-FT-Nr2"/>
     </inferredMetricsTieBreakers>

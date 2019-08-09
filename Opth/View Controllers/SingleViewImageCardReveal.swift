@@ -274,6 +274,6 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     
     // prefetch table view
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        print(indexPaths)
+        
     }
 }

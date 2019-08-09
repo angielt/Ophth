@@ -243,6 +243,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         else if segue.identifier == "searchSubtopic"{
             let destinationVC = segue.destination as? SingleViewController
             destinationVC?.subtopic = fSubtopic
+            destinationVC?.topic = fTopic
         }
         else if segue.identifier == "searchHeader"{
             let destinationVC = segue.destination as? SingleViewCardReveal

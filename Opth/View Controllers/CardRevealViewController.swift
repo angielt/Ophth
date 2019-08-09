@@ -121,7 +121,6 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
         }
         let italic = Style {
-            //$0.font = UIFont.systemFont(ofSize: 20)
             $0.font = UIFont.italicSystemFont(ofSize: 20)
         }
         let bold = Style {
