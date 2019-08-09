@@ -10,10 +10,10 @@ import UIKit
 
 class FullScreenImageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
-    
     var imageName = ""
     var subtopic: Subtopic!
     var imageView = UIImageView()
+    var imgCell: ImageCollectionViewCell!
     
     //Make the top bar with the time to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -42,8 +42,8 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegate,
         collectionView.isUserInteractionEnabled = true
         collectionView.addGestureRecognizer(imageTap)
         
-        self.collectionView.minimumZoomScale = 1.0
-        self.collectionView.maximumZoomScale = 6.0
+//        self.collectionView.minimumZoomScale = 1.0
+//        self.collectionView.maximumZoomScale = 6.0
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
