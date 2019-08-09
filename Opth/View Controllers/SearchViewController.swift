@@ -80,7 +80,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             (cards: Card) -> Bool in return
             cards.info.range(of: searchText, options: .caseInsensitive) != nil
         })
-        
         self.tableView.reloadData()
     }
     
@@ -188,6 +187,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             for k in 0..<filteredSubtopics.count + 1{
                 if k == indexPath.row - filteredTopics.count{
                     fSubtopic = filteredSubtopics[k]
+                    for i in status.CategoryList {
+                        for j in i.topics {
+                            let temp = j.topicName.replacingOccurrences(of: " ", with: "")
+                            if temp == fSubtopic.subtopicTopic {
+                                fTopic = j
+                            }
+                        }
+                    }
                     performSegue(withIdentifier: "searchSubtopic", sender: self)
                 }
             }

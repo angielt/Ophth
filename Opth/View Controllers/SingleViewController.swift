@@ -18,6 +18,7 @@ class SingleViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var subtopic: Subtopic!
     var topic: Topic!
+    var isSearch = false
     var index = 0
     var viewDidLayoutSubviewsForTheFirstTime = true
     
@@ -45,6 +46,7 @@ class SingleViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
             index += 1
         }
+        
     }
     
     override func viewDidLoad() {
