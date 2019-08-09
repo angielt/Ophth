@@ -19,6 +19,7 @@ class SingleViewController: UIViewController, UICollectionViewDelegate, UICollec
     var subtopic: Subtopic!
     var topic: Topic!
     var index = 0
+    var viewDidLayoutSubviewsForTheFirstTime = true
     
     //Make the top bar with the time to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -30,6 +31,13 @@ class SingleViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     // start at specific index according to user's choice
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Make sure this is the first time, else return
+        guard viewDidLayoutSubviewsForTheFirstTime == true else {return}
+        viewDidLayoutSubviewsForTheFirstTime = false
+        
+        // Create the layout
         var index = 0
         for i in topic.subtopics{
             if i.subtopicName == subtopic.subtopicName{

@@ -14,6 +14,7 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegate,
     var subtopic: Subtopic!
     var imageView = UIImageView()
     var imgCell: ImageCollectionViewCell!
+    var viewDidLayoutSubviewsForTheFirstTime = true
     
     //Make the top bar with the time to be white
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -25,6 +26,13 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegate,
     
     // start at specific index according to user's choice
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Make sure this is the first time, else return
+        guard viewDidLayoutSubviewsForTheFirstTime == true else {return}
+        viewDidLayoutSubviewsForTheFirstTime = false
+        
+        // Create the layout
         var index = 0
         for i in subtopic.img_list{
             if i == imageName{
