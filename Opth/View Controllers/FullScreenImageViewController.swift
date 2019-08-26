@@ -65,7 +65,6 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegate,
         
         cell.image.image = UIImage(named: subtopic.img_list[indexPath.item])
         imageView = cell.image
-        print(imageView.image)
         return cell
     }
     
@@ -85,6 +84,8 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegate,
     }
 
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        print("...")
+        print(imageView)
         return imageView
     }
     

@@ -39,6 +39,10 @@
 		BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC95F77F2252F8C6008697EA /* SmallTes.txt */; };
 		BC981F82229474C100E09BF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC981F81229474C100E09BF2 /* Extensions.swift */; };
 		C45E8C0922F8FC6F0053EF19 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E8C0822F8FC6F0053EF19 /* ImageCollectionViewCell.swift */; };
+		C45E8C13231343700053EF19 /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E8C12231343700053EF19 /* ImageScrollViewController.swift */; };
+		C45E8C15231343C30053EF19 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E8C14231343C30053EF19 /* ImageScrollView.swift */; };
+		C45E8C17231344A90053EF19 /* testImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C45E8C16231344A90053EF19 /* testImage1.jpg */; };
+		C45E8C19231358E70053EF19 /* photoViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E8C18231358E70053EF19 /* photoViewViewController.swift */; };
 		C4C3D75F22F8E078004623F1 /* SVcellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3D75E22F8E078004623F1 /* SVcellCollectionViewCell.swift */; };
 		F86AEED2227031DD00F4FC9C /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86AEED1227031DD00F4FC9C /* NotesViewController.swift */; };
 		F8EB321D22A3455400ED9E5B /* SwiftRichString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EB321C22A3455400ED9E5B /* SwiftRichString.framework */; };
@@ -118,6 +122,10 @@
 		BC95F77F2252F8C6008697EA /* SmallTes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SmallTes.txt; sourceTree = "<group>"; };
 		BC981F81229474C100E09BF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C45E8C0822F8FC6F0053EF19 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C45E8C12231343700053EF19 /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
+		C45E8C14231343C30053EF19 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		C45E8C16231344A90053EF19 /* testImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = testImage1.jpg; path = ../../../testImage1.jpg; sourceTree = "<group>"; };
+		C45E8C18231358E70053EF19 /* photoViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoViewViewController.swift; sourceTree = "<group>"; };
 		C4C3D75E22F8E078004623F1 /* SVcellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVcellCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4294AB1A1663C9CE4584AF2 /* Pods-OpthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpthTests.release.xcconfig"; path = "Target Support Files/Pods-OpthTests/Pods-OpthTests.release.xcconfig"; sourceTree = "<group>"; };
 		F86AEED1227031DD00F4FC9C /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = "Opth/View Controllers/NotesViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -278,6 +286,10 @@
 				F86AEED1227031DD00F4FC9C /* NotesViewController.swift */,
 				B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */,
 				FD5A9CA9228951BA008B3ADB /* TabBarController.swift */,
+				C45E8C12231343700053EF19 /* ImageScrollViewController.swift */,
+				C45E8C14231343C30053EF19 /* ImageScrollView.swift */,
+				C45E8C16231344A90053EF19 /* testImage1.jpg */,
+				C45E8C18231358E70053EF19 /* photoViewViewController.swift */,
 			);
 			name = "View Controllers";
 			path = "Opth/View Controllers";
@@ -515,6 +527,7 @@
 				B9F261D422DA848F00FEDCC9 /* Text_07.13.19.txt in Resources */,
 				FDF2A57922163BBE00B1E1D0 /* Main.storyboard in Resources */,
 				62ED789C22855B04002D59C4 /* temp.txt in Resources */,
+				C45E8C17231344A90053EF19 /* testImage1.jpg in Resources */,
 				BC95F7802252F8C6008697EA /* SmallTes.txt in Resources */,
 				62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */,
 				62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */,
@@ -639,6 +652,7 @@
 				BC981F82229474C100E09BF2 /* Extensions.swift in Sources */,
 				FD056E702238811E003CBB68 /* Subtopic.swift in Sources */,
 				FDF2A57622163BBE00B1E1D0 /* ViewController.swift in Sources */,
+				C45E8C13231343700053EF19 /* ImageScrollViewController.swift in Sources */,
 				62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */,
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
@@ -655,7 +669,9 @@
 				6208A9E72295E0DA0055D727 /* scrollProgressViewController.swift in Sources */,
 				FDD0577B22544AD700B054C8 /* SubtopicTableViewCell.swift in Sources */,
 				62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */,
+				C45E8C15231343C30053EF19 /* ImageScrollView.swift in Sources */,
 				FDD1932E221B921D000A2F63 /* Status.swift in Sources */,
+				C45E8C19231358E70053EF19 /* photoViewViewController.swift in Sources */,
 				B951EE2C22EA5C6C00C473A0 /* CollectionViewCell.swift in Sources */,
 				628BAF41228C07C10086C911 /* SingleViewCardReveal.swift in Sources */,
 				FD2B771E221E27E800A41328 /* Parse.swift in Sources */,

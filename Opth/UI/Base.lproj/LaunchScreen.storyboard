@@ -18,23 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="eyeImage" image="eyeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="OhY-ZU-5XL">
-                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="eyeImage" image="pocketOphth" translatesAutoresizingMaskIntoConstraints="NO" id="OhY-ZU-5XL">
+                                <rect key="frame" x="152.5" y="298.5" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="dtb-91-1mj"/>
-                                    <constraint firstAttribute="height" constant="40" id="etG-47-bJO"/>
+                                    <constraint firstAttribute="width" constant="70" id="dtb-91-1mj"/>
+                                    <constraint firstAttribute="height" constant="70" id="etG-47-bJO"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PocketOphtho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvW-wz-LgE">
-                                <rect key="frame" x="119.5" y="353.5" width="136.5" height="24"/>
+                                <rect key="frame" x="119.5" y="378.5" width="136.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QvW-wz-LgE" firstAttribute="top" secondItem="OhY-ZU-5XL" secondAttribute="bottom" id="8dS-W2-XER"/>
+                            <constraint firstItem="QvW-wz-LgE" firstAttribute="top" secondItem="OhY-ZU-5XL" secondAttribute="bottom" constant="10" id="8dS-W2-XER"/>
                             <constraint firstItem="OhY-ZU-5XL" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Sce-AI-oNx"/>
                             <constraint firstItem="QvW-wz-LgE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dUL-iw-25P"/>
                             <constraint firstItem="OhY-ZU-5XL" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sLW-ac-KcX"/>
@@ -48,6 +48,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eyeIcon" width="512" height="512"/>
+        <image name="pocketOphth" width="1179" height="1179"/>
     </resources>
 </document>
