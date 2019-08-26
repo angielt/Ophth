@@ -46,7 +46,6 @@ class SingleViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
             index += 1
         }
-        
     }
     
     override func viewDidLoad() {

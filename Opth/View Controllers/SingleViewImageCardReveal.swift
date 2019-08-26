@@ -261,9 +261,12 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     // segue from image to full screen image
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
-            let image = segue.destination as! FullScreenImageViewController
-            image.subtopic = subtopic
-            image.imageName = subtopic.img_list[imageIndex]
+            let image = segue.destination as! photoViewViewController
+//            image.subtopic = subtopic
+//            image.imageName = subtopic.img_list[imageIndex]
+            image.imageIndex = imageIndex
+            image.imageArray = subtopic.img_list
+            
         }
         if (segue.identifier == "addNotes") {
             let navigationController = segue.destination as? UINavigationController
