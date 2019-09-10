@@ -23,6 +23,10 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
     var sectionIndex = 0
     var rowIndex = 0
     
+    @IBAction func categoryShuffle(_ sender: Any) {
+        performSegue(withIdentifier: "categoryShuffle", sender: self)
+    }
+    
     @IBOutlet weak var tableView: UITableView!
 
     //Make the top bar with the time to be white
@@ -116,6 +120,9 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
         if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
             destinationVC.subtopic = category.topics[sectionIndex].subtopics[rowIndex]
             destinationVC.topic = category.topics[sectionIndex]
+        }
+        else if segue.identifier == "categoryShuffle", let destinationVC = segue.destination as? ViewController{
+            destinationVC.category = category
         }
     }
 }

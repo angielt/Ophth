@@ -69,17 +69,16 @@ class SpacedRepetition {
     // For spaced repetition with specific topic clicked from table of contents
     // called ContentsOfTableVC when user clicks topic
     // stores topic object in SpacedRepetition class
-    func setReviewTopic(topic:inout Topic){
-        self.topic = topic
-        self.subtopics = topic.subtopics
-        //print(topic.topicName)
-        
-        // first ReviewList
-        self.max_list_size = self.subtopics.count
-        self.curReviewIndex = 0
-        //print("MAX LIST SIZE" + String(self.max_list_size))
-        generateReviewList(subtopics: self.subtopics)
+    func setReviewCategory(category:inout Category){
+        var flattenedArray = category.topics.map { topics in
+            return topics.subtopics.map {
+                subtopics in
+                return subtopics
+            }
+        }
+        self.reviewList = flattenedArray.flatMap({$0})
     }
+
     
     
     // For mass subtopics spaced repetition (all subtopics)
