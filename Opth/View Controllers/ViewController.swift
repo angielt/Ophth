@@ -20,6 +20,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var backButton: UIButton!
     
     @IBAction func backButton(_ sender: Any) {
+        if(spacedRep.all_active == false){// category shuffle, now exited back to TableofContents
+            if(spacedRep.curReviewIndex != 0){
+                spacedRep.category_curReviewIndex = spacedRep.curReviewIndex // store where user left off in shuffle all
+            }
+            spacedRep.clear()
+        }
+        
         dismiss(animated: true, completion: nil)
         self.reloadInputViews()
     }
@@ -87,6 +94,7 @@ class ViewController: UIViewController{
                 }
 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    // condition needs testing for last card
                     if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
                         spacedRep.curReviewIndex = spacedRep.curReviewIndex + 1
                         self.loadCard()

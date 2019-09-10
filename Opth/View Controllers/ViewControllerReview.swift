@@ -28,7 +28,7 @@ class ViewControllerReview: UIViewController{
         
         if(spacedRep.all_active == true){// already shuffled all, now exited back to TableofContents
             if(spacedRep.all_subtopics.count != 0){
-//                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // store where user left off in shuffle all
+                spacedRep.all_curReviewIndex = spacedRep.curReviewIndex // store where user left off in shuffle all
                 spacedRep.all_active = false
             }
             spacedRep.clear()
@@ -55,6 +55,9 @@ class ViewControllerReview: UIViewController{
         if(spacedRep.all_subtopics.count == 0){
             spacedRep.setReviewTopics(category_list: &status.CategoryList)
             spacedRep.curReviewIndex = 0
+        }
+        else if(spacedRep.all_curReviewIndex != 0){
+            spacedRep.curReviewIndex = spacedRep.all_curReviewIndex 
         }
         spacedRep.all_active = true
         

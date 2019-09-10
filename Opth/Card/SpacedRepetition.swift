@@ -42,6 +42,7 @@ class SpacedRepetition {
     var all_subtopics:[Subtopic]
     var all_active:Bool = false
     var all_curReviewIndex = 0
+    var category_curReviewIndex = 0
     
     init(){
         self.curReviewIndex = 0
