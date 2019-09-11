@@ -13,6 +13,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var label: UILabel!
+    
     // grabs the parsed data
     var subtopicAr = [Subtopic]()
     var headerInfoAr = [Card]()
@@ -60,6 +62,15 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
 
     // filters through the respective array in order to search for what the user inputs
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text != ""{
+            tableView.isHidden = false
+            label.isHidden = true
+        }
+        else {
+            tableView.isHidden = true
+            label.isHidden = false
+        }
         
         filteredTopics = topicAr.filter({
             (topics: Topic) -> Bool in return
