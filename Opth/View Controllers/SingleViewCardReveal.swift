@@ -76,7 +76,7 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
-        // text style
+        // font style
         let underline = Style {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
@@ -97,8 +97,9 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         // fill cell contents
         if(indexPath.row < subtopic.cards.count){
             let str = subtopic.cards[indexPath.row].header
+            let str2 = subtopic.cards[indexPath.row].info
             cell.Header.attributedText = str.set(style: myGroup)
-            cell.Info.text = subtopic.cards[indexPath.row].info
+            cell.Info.attributedText = str2.set(style: myGroup)
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan

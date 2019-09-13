@@ -262,8 +262,6 @@ class SingleViewImageCardReveal: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
             let image = segue.destination as! photoViewViewController
-//            image.subtopic = subtopic
-//            image.imageName = subtopic.img_list[imageIndex]
             image.imageIndex = imageIndex
             image.imageArray = subtopic.img_list
             

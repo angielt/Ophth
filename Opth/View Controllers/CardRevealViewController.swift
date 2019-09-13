@@ -115,7 +115,7 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
-        // text style
+        // font style
         let underline = Style {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
@@ -136,9 +136,9 @@ class CardRevealViewController: UIViewController, UITableViewDelegate, UITableVi
         // fill cell contents
         if(indexPath.row < spacedRep.reviewList[curReviewIndex].cards.count){
             let str = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
-            
+            let str2 = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
             cell.Header.attributedText = str.set(style: myGroup)
-            cell.Info.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
+            cell.Info.attributedText = str2.set(style: myGroup)
 
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan

@@ -180,20 +180,17 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         // fetch cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubtopicInfoCell", for: indexPath) as! SubtopicTableViewCell
         
+        // font style
         let underline = Style {
             $0.font = UIFont.systemFont(ofSize: 20)
             $0.underline = (style: NSUnderlineStyle.single, color: nil)
         }
-        
         let italic = Style {
-            //$0.font = UIFont.systemFont(ofSize: 20)
             $0.font = UIFont.italicSystemFont(ofSize: 20)
         }
-        
         let bold = Style {
             $0.font = UIFont.boldSystemFont(ofSize: 20)
         }
-        
         let myGroup = StyleGroup([
             "u": underline,
             "i": italic,
@@ -206,8 +203,9 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
         // fill cell contents
         if(indexPath.row < cardCount){
             let str = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].header
+            let str2 = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
             cell.Header.attributedText = str.set(style: myGroup)
-            cell.Info.text = spacedRep.reviewList[curReviewIndex].cards[indexPath.row].info
+            cell.Info.attributedText = str2.set(style: myGroup)
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan
@@ -281,9 +279,9 @@ class ImageCardRevealViewController: UIViewController, UITableViewDelegate, UITa
     // segue from image to full screen image
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fullImage"){
-            let image = segue.destination as! FullScreenImageViewController
-            image.subtopic = spacedRep.reviewList[curReviewIndex]
-            image.imageName = spacedRep.reviewList[curReviewIndex].img_list[imageIndex]
+            let image = segue.destination as! photoViewViewController
+            image.imageIndex = imageIndex
+            image.imageArray = spacedRep.reviewList[curReviewIndex].img_list
         }
         if (segue.identifier == "addNotes") {
             let navigationController = segue.destination as? UINavigationController

@@ -736,7 +736,7 @@
                         <outlet property="imageScrollView" destination="Chy-ML-7Q3" id="xpx-wp-OVI"/>
                         <outlet property="subtopicTableView" destination="oaF-ZK-bZY" id="3nS-mI-Jf5"/>
                         <outlet property="unsureButton" destination="tcc-59-la2" id="l5X-MQ-aGz"/>
-                        <segue destination="N7a-tw-eeG" kind="presentation" identifier="fullImage" modalTransitionStyle="crossDissolve" id="4wZ-Ha-UyP"/>
+                        <segue destination="6Wa-vb-fSW" kind="presentation" identifier="fullImage" id="mDX-Va-zCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CW2-zj-uCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -868,6 +868,11 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXB-ym-vqD">
                                                     <rect key="frame" x="8" y="0.0" width="146" height="119"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-0V-h93">
                                                     <rect key="frame" x="15.5" y="47" width="131" height="25.5"/>
@@ -1599,7 +1604,7 @@ Itzel Hernandez Nomuna Batmandakh</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="190_BruchsMembrane_1" translatesAutoresizingMaskIntoConstraints="NO" id="77n-nB-el0">
-                                                    <rect key="frame" x="8" y="8" width="171.00000000000023" height="125.5"/>
+                                                    <rect key="frame" x="8" y="8" width="171" height="125.5"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -1660,12 +1665,13 @@ Itzel Hernandez Nomuna Batmandakh</string>
         <image name="shuffle.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hfe-DW-TFS"/>
-        <segue reference="CUw-Bp-mQ4"/>
-        <segue reference="xBR-bm-geq"/>
+        <segue reference="VtJ-2y-YTV"/>
+        <segue reference="GXd-lX-OvY"/>
+        <segue reference="Fc5-eH-POT"/>
         <segue reference="AGR-m3-QCp"/>
+        <segue reference="mDX-Va-zCA"/>
         <segue reference="swq-kv-bzv"/>
-        <segue reference="T0X-qS-oqu"/>
+        <segue reference="IRs-yv-0fS"/>
         <segue reference="LBt-Kh-oXB"/>
         <segue reference="dAp-Lj-wAj"/>
     </inferredMetricsTieBreakers>
