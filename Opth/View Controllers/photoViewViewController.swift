@@ -12,10 +12,8 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
     
     let pagePadding: CGFloat = 10
     var pagingScrollView: UIScrollView!
-    
-//    var recycledPages: Set<ImageScrollView> = []
-//    var visiblePages: Set<ImageScrollView> = []
-//    var firstVisiblePageIndexBeforeRotation: Int!
+    var recycledPages: Set<ImageScrollView> = []
+    var visiblePages: Set<ImageScrollView> = []
 
     var image = [UIImage]()
     var imageArray = [String]()
@@ -39,18 +37,68 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
         self.pagingScrollView.showsHorizontalScrollIndicator = false
         self.pagingScrollView.isPagingEnabled = true
         self.pagingScrollView.contentSize = self.contentSizeForPagingScrollView()
+        self.pagingScrollView.delegate = self
         self.view.addSubview(self.pagingScrollView)
         
-        for index in 0..<self.imageArray.count {
-            let page = ImageScrollView()
-            self.configure(page, for: index)
-            self.pagingScrollView.addSubview(page)
-        }
+        self.tilePages()
         
         // add gesture recognizer
         let imageTap = UITapGestureRecognizer(target: self,action:#selector(photoViewViewController.imageTapped(_:)))
         pagingScrollView.isUserInteractionEnabled = true
         pagingScrollView.addGestureRecognizer(imageTap)
+    }
+    
+    //MARK: - Tiling and page configuration
+    func tilePages() {
+        //1.  Calculate which pages should now be visible
+        let visibleBounds = pagingScrollView.bounds
+        
+        var firstNeededPageIndex: Int = Int(floor(visibleBounds.minX/visibleBounds.width))
+        var lastNeededPageIndex: Int = Int(floor((visibleBounds.maxX - 1)/visibleBounds.width))
+        firstNeededPageIndex = max(firstNeededPageIndex, 0)
+        lastNeededPageIndex = min(lastNeededPageIndex, self.imageArray.count - 1)
+        
+        
+        //2. Recycle no longer needs pages
+        for page in self.visiblePages {
+            if ((page.index < firstNeededPageIndex) || (page.index > lastNeededPageIndex)) {
+                self.recycledPages.insert(page)
+                page.removeFromSuperview()
+            }
+        }
+        self.visiblePages.subtract(self.recycledPages)
+        
+        
+        //3. Add missing pages
+        for index in firstNeededPageIndex...lastNeededPageIndex {
+            if !self.isDisplayingPage(forIndex: index) {
+                
+                let page = self.dequeueRecycledPage() ?? ImageScrollView()
+                self.configure(page, for: index)
+                self.pagingScrollView.addSubview(page)
+                self.visiblePages.insert(page)
+            }
+        }
+    }
+    
+    
+    
+    func dequeueRecycledPage() -> ImageScrollView? {
+        if let page = self.recycledPages.first {
+            self.recycledPages.remove(page)
+            return page
+        }
+        return nil
+    }
+    
+    
+    func isDisplayingPage(forIndex index: Int) -> Bool {
+        for page in self.visiblePages {
+            if page.index == index {
+                return true
+            }
+        }
+        return false
     }
     
     //MARK: - Frame calculations
@@ -75,8 +123,13 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func configure(_ page: ImageScrollView, for index: Int) {
+        page.index = index
         page.frame = self.frameForPage(at: index)
         page.display(self.image[index])
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.tilePages()
     }
     
     // tap anywhere to dismiss the image
@@ -84,3 +137,4 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
         dismiss(animated: true, completion: nil)
     }
 }
+

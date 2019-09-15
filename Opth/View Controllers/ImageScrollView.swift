@@ -10,6 +10,7 @@ import UIKit
 
 class ImageScrollView: UIScrollView, UIScrollViewDelegate {
     
+    var index: Int!
     var zoomView: UIImageView!
     
     override init(frame: CGRect) {
