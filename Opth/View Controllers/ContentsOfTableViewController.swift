@@ -49,6 +49,15 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
 
         topicLabel.text = category.categoryName
+        self.loadData()
+    }
+    
+    func loadData() {
+        view.reloadInputViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,7 +82,7 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {  //Categories
+        if indexPath.row == 0 {  //topics
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             cell.textLabel?.text = category.topics[indexPath.section].topicName // the cells displayed are the categories
@@ -82,7 +91,7 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
             cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0)
             return cell
         }
-        else {  //Topics
+        else {  //subtopics
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
                 return UITableViewCell()}
             
@@ -90,25 +99,35 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
             cell.textLabel?.textColor = UIColor.white
             cell.detailTextLabel?.text = "" // they have no subtitle under it to be displayed
             cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0)
+            
+            if UserDefaults.standard.string(forKey: category.topics[indexPath.section].subtopics[indexPath.row-1].subtopicName) != nil {
+                let imageview = UIImageView(image: UIImage(named: "fileIcon"))
+                imageview.frame = CGRect(x: 304, y: 45, width: 25, height: 25)
+                cell.accessoryView = imageview
+            }
+            else {
+                cell.accessoryView = UIImageView(image: UIImage(named: ""))
+            }
+            
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row == 0 {  //Categories
+        if indexPath.row == 0 {  //Topics
             if status.CategoryList[indexPath.section].opened == true {
                 status.CategoryList[indexPath.section].opened = false
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
-            else {  //Open to topics
+            else {  //Open to subtopic
                 status.CategoryList[indexPath.section].opened = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
         }
-        else {  // if search not active, segue is performed to go to the subtopics page
+        else {
             rowIndex = indexPath.row - 1
             sectionIndex = indexPath.section
             performSegue(withIdentifier: "fromSubTableSegue", sender: self)
