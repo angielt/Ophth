@@ -36,7 +36,9 @@ class SpacedRepetition {
     var topic:Topic?
     var RFList:RepeatFactorList
     var reviewList:[Subtopic] // list space rep cycles through
-    var finished:Bool = false // review completed
+    var categoryShuffleList:[Subtopic] = []
+    var shuffleAllList:[Subtopic] = []
+    var finished:Bool = false
     
     // all topics spaced repetition
     var all_subtopics:[Subtopic]
@@ -77,7 +79,8 @@ class SpacedRepetition {
                 return subtopics
             }
         }
-        self.reviewList = flattenedArray.flatMap({$0})
+        self.categoryShuffleList = flattenedArray.flatMap({$0}).shuffled()
+        self.reviewList = self.categoryShuffleList
     }
 
     

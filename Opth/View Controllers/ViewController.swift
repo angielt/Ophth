@@ -43,14 +43,15 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         
         spacedRep.all_active = false
-        spacedRep.setReviewCategory(category: &category)
+
         self.loadCard()
         
     }
     
     func loadCard(){
-        cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
-      
+        if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+            cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+        }
     }
     
     func exitCardChange(){

@@ -142,6 +142,13 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
         }
         else if segue.identifier == "categoryShuffle", let destinationVC = segue.destination as? ViewController{
             destinationVC.category = category
+            if (spacedRep.categoryShuffleList.isEmpty){
+                spacedRep.setReviewCategory(category: &category)
+            }
+            else{
+                spacedRep.reviewList = spacedRep.categoryShuffleList
+                spacedRep.curReviewIndex = spacedRep.category_curReviewIndex
+            }
         }
     }
 }
