@@ -15,13 +15,15 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
     var recycledPages: Set<ImageScrollView> = []
     var visiblePages: Set<ImageScrollView> = []
 
+    var firstView = false
     var image = [UIImage]()
     var imageArray = [String]()
-    var imageIndex = 0
-    var viewDidLayoutSubviewsForTheFirstTime = true
+    var imageIndex = 0ß
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstView = true
         
         for i in imageArray {
             image.append(UIImage(named: i)!)
@@ -126,6 +128,11 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
         page.index = index
         page.frame = self.frameForPage(at: index)
         page.display(self.image[index])
+        if firstView{
+            firstView = false
+            let frame = frameForPage(at: imageIndex)
+            self.pagingScrollView.contentOffset.x = frame.origin.x - 10
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

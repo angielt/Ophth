@@ -13,7 +13,9 @@ class ViewController: UIViewController{
 
     static let cardCornerRadius: CGFloat = 25
     
-    var category:Category!
+    var category: Category!
+    var categoryCount = 0
+    var tempCategoryName = ""
 
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
@@ -44,17 +46,24 @@ class ViewController: UIViewController{
         
         spacedRep.all_active = false
         spacedRep.setReviewCategory(category: &category)
+        
         self.loadCard()
         
     }
     
     func loadCard(){
-        cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
-      
+        if spacedRep.curReviewIndex < spacedRep.reviewList.count {
+            cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+        }
     }
     
     func exitCardChange(){
-     
+        card.layer.backgroundColor = UIColor.black.cgColor
+        card.layer.borderWidth = 1.0
+        card.layer.borderColor = UIColor.gray.cgColor
+        cardFront.text = "Review Finished - Tap to Exit"
+        cardFront.textColor = UIColor.gray
+        backButton.isHidden = true
     }
     
     func newListCardChange(){

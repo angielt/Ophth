@@ -19,7 +19,6 @@
 		629720F92290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */; };
 		629720FA2290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */; };
 		62BF6EC2227FDFCC00B1088F /* captionTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 62BF6EC1227FDFCC00B1088F /* captionTest.txt */; };
-		62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B422756BA200FA248A /* FullScreenImageViewController.swift */; };
 		62C882B72276563D00FA248A /* ImageCardRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */; };
 		62ED789222836C2D002D59C4 /* GifImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62ED789122836C2D002D59C4 /* GifImageViewController.swift */; };
 		62ED7895228373B1002D59C4 /* 190_BruchsMembrane_2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */; };
@@ -98,7 +97,6 @@
 		629720F62290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_2.gif; sourceTree = "<group>"; };
 		629720F72290E43200F10CBE /* 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; path = images/254_CrystallineDystrophies_Systemic_Cystinosis_3.gif; sourceTree = "<group>"; };
 		62BF6EC1227FDFCC00B1088F /* captionTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = captionTest.txt; sourceTree = "<group>"; };
-		62C882B422756BA200FA248A /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
 		62C882B62276563D00FA248A /* ImageCardRevealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardRevealViewController.swift; sourceTree = "<group>"; };
 		62ED789122836C2D002D59C4 /* GifImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImageViewController.swift; sourceTree = "<group>"; };
 		62ED7893228373B1002D59C4 /* 190_BruchsMembrane_2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 190_BruchsMembrane_2.gif; path = images/190_BruchsMembrane_2.gif; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 				C45E8C1022FAA6F90053EF19 /* Table of Content */,
 				C45E8C0B22FAA50F0053EF19 /* Progress page */,
 				B9017C4922BC7EF8009ACFBB /* AboutPageViewController.swift */,
-				62C882B422756BA200FA248A /* FullScreenImageViewController.swift */,
 				C45E8C0822F8FC6F0053EF19 /* ImageCollectionViewCell.swift */,
 				F86AEED1227031DD00F4FC9C /* NotesViewController.swift */,
 				B951EE2F22EA7BEC00C473A0 /* SearchViewController.swift */,
@@ -649,7 +646,6 @@
 				BC95F77C2252F4EE008697EA /* ContentsOfTableViewController.swift in Sources */,
 				FDA541692251CFAF00B536E0 /* SubtopicTableView.swift in Sources */,
 				FD056E6E22387E1D003CBB68 /* Topic.swift in Sources */,
-				62C882B522756BA200FA248A /* FullScreenImageViewController.swift in Sources */,
 				FD5A9CAA228951BA008B3ADB /* TabBarController.swift in Sources */,
 				B951EE3022EA7BEC00C473A0 /* SearchViewController.swift in Sources */,
 				FDC37450221B81B0005EAE38 /* AnimationHelper.swift in Sources */,
