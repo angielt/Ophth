@@ -77,18 +77,25 @@ class ViewControllerReview: UIViewController{
         }
         
         if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
-            cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+            if spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName == "nil"{
+                spacedRep.curReviewIndex += 1
+            }
+            if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+                
+                cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
+                
+                card.layer.cornerRadius = 4.0
+                card.layer.borderWidth = 1.0
+                card.layer.borderColor = UIColor.clear.cgColor
+                card.layer.masksToBounds = false
+                card.layer.shadowColor = UIColor.gray.cgColor
+                card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+                card.layer.shadowRadius = 4.0
+                card.layer.shadowOpacity = 1.0
+                card.layer.masksToBounds = false
+                card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
+            }
             
-            card.layer.cornerRadius = 4.0
-            card.layer.borderWidth = 1.0
-            card.layer.borderColor = UIColor.clear.cgColor
-            card.layer.masksToBounds = false
-            card.layer.shadowColor = UIColor.gray.cgColor
-            card.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-            card.layer.shadowRadius = 4.0
-            card.layer.shadowOpacity = 1.0
-            card.layer.masksToBounds = false
-            card.layer.shadowPath = UIBezierPath(roundedRect: card.bounds, cornerRadius: card.layer.cornerRadius).cgPath
         }
     }
     
@@ -115,11 +122,19 @@ class ViewControllerReview: UIViewController{
             self.dismiss(animated: true, completion: {spacedRep.VCreference?.dismiss(animated: true, completion: nil)}) // possible callback to clear spaced rep stuff
         }
         else if (spacedRep.reviewList[spacedRep.curReviewIndex].img_list.isEmpty){
+            if spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName == "nil" {
+                spacedRep.curReviewIndex += 1
+                print("1")
+            }
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()
         }
         else {
+            if spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName == "nil" {
+                spacedRep.curReviewIndex += 1
+                print("2")
+            }
             let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "imageCardRevealVC") as UIViewController
             viewController.modalTransitionStyle = .flipHorizontal
             self.loadData()
