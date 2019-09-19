@@ -13,7 +13,9 @@ class ViewController: UIViewController{
 
     static let cardCornerRadius: CGFloat = 25
     
-    var category:Category!
+    var category: Category!
+    var categoryCount = 0
+    var tempCategoryName = ""
 
     @IBOutlet weak var cardFront: UILabel!
     @IBOutlet weak var card: UIView!
@@ -43,23 +45,21 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         
         spacedRep.all_active = false
-
         self.loadCard()
         
     }
     
     func loadCard(){
-        if(spacedRep.curReviewIndex < spacedRep.reviewList.count){
+        if spacedRep.curReviewIndex < spacedRep.reviewList.count {
             cardFront.text = spacedRep.reviewList[spacedRep.curReviewIndex].subtopicName
         }
     }
     
     func exitCardChange(){
-     
     }
     
     func newListCardChange(){
-       
+    
     }
     
     @IBAction func handleTap(_ sender: Any) {
@@ -110,6 +110,8 @@ class ViewController: UIViewController{
         }
 
     }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "reveal",
@@ -124,6 +126,7 @@ class ViewController: UIViewController{
         }
     }
 }
+
 
 extension ViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController,
