@@ -56,6 +56,11 @@ class ViewController: UIViewController{
     }
     
     func exitCardChange(){
+        card.layer.backgroundColor = UIColor.black.cgColor
+        cardFront.text = "Review Finished - Tap to Exit"
+        cardFront.textColor = UIColor.gray
+        card.layer.borderColor = UIColor.gray.cgColor
+        card.layer.borderWidth = 1
     }
     
     func newListCardChange(){
