@@ -18,7 +18,7 @@ class photoViewViewController: UIViewController, UIScrollViewDelegate {
     var firstView = false
     var image = [UIImage]()
     var imageArray = [String]()
-    var imageIndex = 0ß
+    var imageIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
