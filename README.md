@@ -1,9 +1,10 @@
 # PocketOphtho
-An interactive iOS application created for the UC Davis School of Medicine for Clinical Ophthalmology. 
+Developed closely with members of the UC Davis School of Medicine and UC Davis Eye Center.
+PocketOphtho is an interactive ophthalmology review app designed for residents and fellows preparing for OKAPs and written boards. With the use of spaced repetition, a learning technique that takes advantage of the psychological spacing effect, PocketOphtho aims to be the new standard for clinical review apps.
 <br>
-For an in-depth documentation please feel free to contact members of the team. 
+For a complete in-depth documentation and user guide please feel free to contact members of the team. 
 <br>
-Pictures and information is copyright to Dr. Glenn C. Yiu and the UC Davis Medical Center.
+Pictures and information presented in the app is copyright to Dr. Glenn C. Yiu and the UC Davis Medical Center.
 
 # Developed using Swift and XCode
 
