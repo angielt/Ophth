@@ -13,21 +13,21 @@ Information Hierarchy:
 Category -> Topic -> Subtopic/Card -> Header/Information
 
 # Features:
-##Search
+## Search
 Searches through all the category, topic, and subtopics for user input string
-##Image slide
+## Image slide
 Each subtopic contains a list of images at the top of the view. Users can swipe through, click and zoom 
 through images.
-##Text Occulsion
+## Text Occulsion
 For ease of review, as each subtopic's header and information is presented after the user taps.
-##User Input Buttons
+## User Input Buttons
 When all the information is shown, the user has an option to press the easy, medium or hard buttons at the bottom to 
 represent how well they memorize the material.
-##Notes
+## Notes
 Each subtopic, the user can enter notes. These notes will show up next time the subtopic is viewed.
-##Progress Tracker
+## Progress Tracker
 Subtopics that the user knows well is counted.
-##Review
+## Review
 The user has the option to review all cards shuffled or cards per category.
 
 
