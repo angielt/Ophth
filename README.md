@@ -2,6 +2,7 @@
 An interactive iOS application created for the UC Davis School of Medicine for Clinical Ophthalmology. 
 <br>
 For an in-depth documentation please feel free to contact members of the team. 
+<br>
 Pictures and information is copyright to Dr. Glenn C. Yiu and the UC Davis Medical Center.
 
 # Developed using Swift and XCode
