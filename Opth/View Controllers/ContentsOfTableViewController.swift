@@ -72,7 +72,7 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if status.CategoryList[section].opened == true {
+        if category.topics[section].opened == true {
             return category.topics[section].subtopics.count + 1
         }
         else {
@@ -116,13 +116,13 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {  //Topics
-            if status.CategoryList[indexPath.section].opened == true {
-                status.CategoryList[indexPath.section].opened = false
+            if category.topics[indexPath.section].opened == true {
+                category.topics[indexPath.section].opened = false
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
             else {  //Open to subtopic
-                status.CategoryList[indexPath.section].opened = true
+                category.topics[indexPath.section].opened = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)
             }
