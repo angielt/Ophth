@@ -19,8 +19,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="OyJ-Tx-SVA" kind="relationship" relationship="viewControllers" id="gh6-hQ-LpQ"/>
-                        <segue destination="Wta-HZ-K4Y" kind="relationship" relationship="viewControllers" id="8of-UO-h7M"/>
-                        <segue destination="KnV-4Z-O5S" kind="relationship" relationship="viewControllers" id="bTp-Ri-3en"/>
                         <segue destination="iBs-a6-dot" kind="relationship" relationship="viewControllers" id="MIp-8w-sVV"/>
                         <segue destination="LCV-S5-DfS" kind="relationship" relationship="viewControllers" id="VWu-zQ-XbF"/>
                     </connections>
@@ -158,6 +156,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Table of Content" image="icon" id="hxX-oL-zfO"/>
                     <connections>
+                        <outlet property="shuffleButton" destination="Vkg-h5-48U" id="KH0-3W-01F"/>
                         <outlet property="tableView" destination="rgk-Xx-Im3" id="fRX-E7-1mJ"/>
                         <outlet property="topicLabel" destination="st5-O5-npx" id="CMX-Xh-lkp"/>
                         <segue destination="OpK-c2-obb" kind="presentation" identifier="fromSubTableSegue" id="twx-Q5-Hgw"/>
@@ -861,15 +860,15 @@
             <objects>
                 <viewController id="KnV-4Z-O5S" customClass="scrollProgressViewController" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rrC-hd-rhC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJx-R8-OKU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </scrollView>
                             <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8QX-s7-MaT">
-                                <rect key="frame" x="187.5" y="776" width="39" height="37"/>
+                                <rect key="frame" x="187.5" y="825" width="39" height="37"/>
                             </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9V-6j-Wdi">
                                 <rect key="frame" x="0.0" y="69" width="414" height="44"/>
@@ -1001,11 +1000,11 @@ Itzel Hernandez Nomuna Batmandakh</string>
             <objects>
                 <viewController storyboardIdentifier="cardVCSR" id="Wta-HZ-K4Y" customClass="ViewControllerReview" customModule="Opth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6V-lm-8R1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJD-Aw-W6E">
-                                <rect key="frame" x="47" y="306.5" width="320" height="200"/>
+                                <rect key="frame" x="47" y="321" width="320" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbU-fS-xhY">
                                         <rect key="frame" x="32" y="87.5" width="256" height="25.5"/>
@@ -1033,7 +1032,7 @@ Itzel Hernandez Nomuna Batmandakh</string>
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX6-v7-DyW">
-                                <rect key="frame" x="15" y="72" width="24" height="24"/>
+                                <rect key="frame" x="15" y="28" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="bSa-xa-YPr"/>
                                     <constraint firstAttribute="height" constant="24" id="ecO-Lc-38t"/>
@@ -1044,7 +1043,7 @@ Itzel Hernandez Nomuna Batmandakh</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap card to begin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjM-5S-HVA">
-                                <rect key="frame" x="140.5" y="516.5" width="133" height="21"/>
+                                <rect key="frame" x="140.5" y="531" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                 <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -1587,12 +1586,12 @@ Itzel Hernandez Nomuna Batmandakh</string>
     <inferredMetricsTieBreakers>
         <segue reference="8b6-Fk-uyB"/>
         <segue reference="mXJ-hu-Hz9"/>
-        <segue reference="8of-UO-h7M"/>
+        <segue reference="Fc5-eH-POT"/>
         <segue reference="twx-Q5-Hgw"/>
         <segue reference="eU3-9L-qb4"/>
-        <segue reference="swq-kv-bzv"/>
+        <segue reference="BpS-xS-shc"/>
         <segue reference="ueQ-aR-ApD"/>
-        <segue reference="LBt-Kh-oXB"/>
+        <segue reference="ihp-7O-gdK"/>
         <segue reference="dAp-Lj-wAj"/>
     </inferredMetricsTieBreakers>
     <resources>
