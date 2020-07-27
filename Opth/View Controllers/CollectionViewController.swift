@@ -19,7 +19,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let filepath = Bundle.main.path(forResource: "Text_07.13.19", ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: "Text_06.07.20", ofType: "txt") {
             parse.csv(data: filepath)
         } else {
             print("data file could not be found")

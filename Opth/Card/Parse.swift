@@ -17,7 +17,7 @@ class Parse{
         var parsedData:[String] = []
         do {
             let data = try NSString(contentsOfFile: data,
-                                    encoding: String.Encoding.ascii.rawValue)
+                                    encoding: String.Encoding.utf16.rawValue)
             let parsedCSV: [String] = data
                 .components(separatedBy: "\r")
             
