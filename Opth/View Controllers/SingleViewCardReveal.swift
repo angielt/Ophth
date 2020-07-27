@@ -96,10 +96,15 @@ class SingleViewCardReveal: UIViewController, UITableViewDelegate, UITableViewDa
         
         // fill cell contents
         if(indexPath.row < subtopic.cards.count){
-            let str = subtopic.cards[indexPath.row].header
-            let str2 = subtopic.cards[indexPath.row].info
-            cell.Header.attributedText = str.set(style: myGroup)
-            cell.Info.attributedText = str2.set(style: myGroup)
+            let str = subtopic.cards[indexPath.row].header.removingExcelSmartQuotes()
+            let str2 = subtopic.cards[indexPath.row].info.removingExcelSmartQuotes()
+
+            let attrStr = str.set(style: myGroup)
+            let attrStr2 = str2.set(style: myGroup)
+            attrStr2.indentLines(by: 14, originalStr: str2)
+
+            cell.Header.attributedText = attrStr
+            cell.Info.attributedText = attrStr2
             
             if(indexPath.row == 0 && index <= indexPath.row){
                 cell.Header.textColor = UIColor.cyan
