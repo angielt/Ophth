@@ -93,6 +93,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         })
         self.tableView.reloadData()
     }
+        
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -166,6 +170,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.view.endEditing(true)
         tableView.deselectRow(at: indexPath, animated: true)
         let totalCount = filteredTopics.count + filteredSubtopics.count + filteredHeaders.count + filteredInfo.count
         var t = filteredTopics.count
