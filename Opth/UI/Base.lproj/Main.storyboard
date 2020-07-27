@@ -161,6 +161,8 @@
                         <outlet property="tableView" destination="rgk-Xx-Im3" id="fRX-E7-1mJ"/>
                         <outlet property="topicLabel" destination="st5-O5-npx" id="CMX-Xh-lkp"/>
                         <segue destination="OpK-c2-obb" kind="presentation" identifier="fromSubTableSegue" id="twx-Q5-Hgw"/>
+                        <segue destination="Kh0-YB-B7g" kind="presentation" identifier="contentsToSingleViewImageCard" id="mXJ-hu-Hz9"/>
+                        <segue destination="9e1-g4-qxj" kind="presentation" identifier="contentsToSingleViewCard" id="8b6-Fk-uyB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4Q-ak-v4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1583,13 +1585,13 @@ Itzel Hernandez Nomuna Batmandakh</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hfe-DW-TFS"/>
-        <segue reference="CUw-Bp-mQ4"/>
+        <segue reference="8b6-Fk-uyB"/>
+        <segue reference="mXJ-hu-Hz9"/>
         <segue reference="8of-UO-h7M"/>
-        <segue reference="AGR-m3-QCp"/>
-        <segue reference="mDX-Va-zCA"/>
+        <segue reference="twx-Q5-Hgw"/>
+        <segue reference="eU3-9L-qb4"/>
         <segue reference="swq-kv-bzv"/>
-        <segue reference="IRs-yv-0fS"/>
+        <segue reference="ueQ-aR-ApD"/>
         <segue reference="LBt-Kh-oXB"/>
         <segue reference="dAp-Lj-wAj"/>
     </inferredMetricsTieBreakers>

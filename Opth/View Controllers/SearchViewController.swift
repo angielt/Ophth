@@ -200,6 +200,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             performSegue(withIdentifier: "searchTopic", sender: self)
         }
         else if s > 0{
+            // Example: search for "antibiotics" will get here
             for k in 0..<filteredSubtopics.count + 1{
                 if k == indexPath.row - filteredTopics.count{
                     fSubtopic = filteredSubtopics[k]
@@ -211,7 +212,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
                             }
                         }
                     }
-                    performSegue(withIdentifier: "searchSubtopic", sender: self)
+                    // TODO: Change logic so that this calls performSegue() on "searchHeaderImg" and "searchHeader"
+                    if fSubtopic.img_list[0] != "nil" {
+                        performSegue(withIdentifier: "searchHeaderImg", sender: self)
+                    } else {
+                        performSegue(withIdentifier: "searchHeader", sender: self)
+                    }
+                    //performSegue(withIdentifier: "searchSubtopic", sender: self)
                 }
             }
         }

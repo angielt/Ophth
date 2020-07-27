@@ -130,16 +130,27 @@ class ContentsOfTableViewController: UIViewController,UITableViewDelegate, UITab
         else {
             rowIndex = indexPath.row - 1
             sectionIndex = indexPath.section
-            performSegue(withIdentifier: "fromSubTableSegue", sender: self)
+            //performSegue(withIdentifier: "fromSubTableSegue", sender: self)
+            if category.topics[sectionIndex].subtopics[rowIndex].img_list[0] == "nil" {
+                performSegue(withIdentifier: "contentsToSingleViewCard", sender: nil)
+            } else {
+                performSegue(withIdentifier: "contentsToSingleViewImageCard", sender: nil)
+            }
         }
     }
     
     //pass in the topic index into SubTableViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
-            destinationVC.subtopic = category.topics[sectionIndex].subtopics[rowIndex]
-            destinationVC.topic = category.topics[sectionIndex]
+        if segue.identifier == "contentsToSingleViewCard", let destinationViewController = segue.destination as? SingleViewCardReveal {
+            destinationViewController.subtopic = category.topics[sectionIndex].subtopics[rowIndex]
         }
+        else if segue.identifier == "contentsToSingleViewImageCard", let destinationViewController = segue.destination as? SingleViewImageCardReveal {
+            destinationViewController.subtopic = category.topics[sectionIndex].subtopics[rowIndex]
+        }
+//        else if segue.identifier == "fromSubTableSegue", let destinationVC = segue.destination as? SingleViewController{
+//            destinationVC.subtopic = category.topics[sectionIndex].subtopics[rowIndex]
+//            destinationVC.topic = category.topics[sectionIndex]
+//        }
         else if segue.identifier == "categoryShuffle", let destinationVC = segue.destination as? ViewController{
             destinationVC.category = category
             if (spacedRep.categoryShuffleList.isEmpty){
